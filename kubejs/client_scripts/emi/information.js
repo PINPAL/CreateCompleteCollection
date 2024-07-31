@@ -10,21 +10,26 @@ JEIEvents.information((event) => {
 		},
 		{
 			id: "minecraft:granite",
-			desc: ["Spawns in massive veins underground in Mountain and Hill biomes."],
+			desc: ["Spawns in massive veins underground."],
 		},
 		{
 			id: "minecraft:diorite",
-			desc: ["Spawns in massive veins underground in Savanna, Jungle and Mushroom biomes."],
+			desc: ["Spawns most commonly in Mediterranean Islands and Thermal Taigas Biomes."],
 		},
 		{
 			id: "minecraft:andesite",
-			desc: ["Spawns in massive veins underground in Forest biomes."],
+			desc: ["Spawns most commonly in Andesite Crags Biomes."],
 		},
 		{
 			id: "supplementaries:ash",
 			desc: ["Spawns in veins around the nether, most commonly in Basalt Deltas."],
 		},
-	].forEach((item) => event.addItem(item.id, item.desc));
+		{
+			id: "minecraft:sugar_cane",
+			desc: ["Sugar Cane is most commonly found within tropical and swamp biome types."],
+		},
+	];
+	itemsToDescriptionate.forEach((item) => event.addItem(item.id, item.desc));
 
 	const undergroundStoneTypes = [
 		"minecraft:tuff",
@@ -34,11 +39,11 @@ JEIEvents.information((event) => {
 		"create:asurine",
 		"create:ochrum",
 		"create:veridium",
-		"create_dd:potassic",
+		"create_dd:dolomite",
 		"create_dd:gabbro",
-	].forEach((item) => event.addItem(item, ["Spawns in veins underground."]));
+	];
+	undergroundStoneTypes.forEach((item) => event.addItem(item, ["Spawns in veins underground."]));
 
-	const netherStoneTypes = ["create:scoria", "create:scorchia", "tfmg:sulfur"].forEach((item) =>
-		event.addItem(item, ["Spawns in veins around The Nether."])
-	);
+	const netherStoneTypes = ["create:scoria", "create:scorchia", "tfmg:sulfur"];
+	netherStoneTypes.forEach((item) => event.addItem(item, ["Spawns in veins around The Nether."]));
 });

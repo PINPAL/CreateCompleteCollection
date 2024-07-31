@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "create_cc:item/bucket/molten_powdered_obsidian_bucket"
+	}
+}

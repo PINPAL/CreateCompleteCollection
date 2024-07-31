@@ -1,10 +1,12 @@
 {
+  "mm": {
+    "controller_progress": true
+  },
   "minecraft": {
     "item_storage.show_name_amount": 5,
     "furnace": true,
     "harvest_tool.show_unbreakable": true,
     "animal_owner": true,
-    "animal_owner.fetch_names": true,
     "harvest_tool.effective_tool": true,
     "item_storage.normal_amount": 9,
     "item_storage": true,
@@ -51,8 +53,33 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "jade": {
+    "coordinates.rel": false,
+    "distance": false,
+    "block_face": false,
+    "coordinates": false,
+    "registry_name": "OFF",
+    "mod_name": false
+  },
+  "lootr": {
+    "info": true
+  },
+  "melter": {
+    "melter_data": true
+  },
+  "productivebees": {
+    "solitary_nest": true,
+    "jar": true,
+    "canvas_beehive": true,
+    "bee_attributes": true,
+    "productive_bee": true
+  },
   "jadeaddons": {
     "equipment_requirement": ""
+  },
+  "exposure": {
+    "lightroom": true,
+    "photograph_frame": true
   },
   "easy_villagers": {
     "villager": true,
@@ -61,14 +88,6 @@
   },
   "supplementaries": {
     "hat_stand": true
-  },
-  "jade": {
-    "coordinates.rel": false,
-    "distance": false,
-    "block_face": false,
-    "coordinates": false,
-    "registry_name": "OFF",
-    "mod_name": false
   },
   "create": {
     "filter": true,
@@ -83,9 +102,6 @@
   },
   "corpse": {
     "corpse": true
-  },
-  "melter": {
-    "melter_data": true
   },
   "storagedrawers": {
     "display.stacklimit": true,

@@ -55,7 +55,7 @@ ServerEvents.recipes((event) => {
 	);
 
 	// Infinity Range Upgrade
-	event.remove({ id: "rsinfinitybooster:infinity_card" });
+	event.remove({ output: "rsinfinitybooster:infinity_card" });
 	event.recipes
 		.createSequencedAssembly(
 			[
@@ -79,16 +79,16 @@ ServerEvents.recipes((event) => {
 				]),
 				event.recipes.createDeploying("refinedstorage:upgrade", [
 					"refinedstorage:upgrade",
-					"create_dd:shadow_steel",
+					"#forge:ingots/shadow_steel",
 				]),
 				event.recipes.createDeploying("refinedstorage:upgrade", [
 					"refinedstorage:upgrade",
-					"create_dd:chromatic_compound",
+					"#forge:ingots/refined_radiance",
 				]),
 				event.recipes.create.pressing("refinedstorage:upgrade", "refinedstorage:upgrade"),
 			]
 		)
-		.id("kubejs:refined_storage/infinity_card")
+		.id("create_cc:refined_storage/infinity_card")
 		.transitionalItem("refinedstorage:upgrade")
 		.loops(12);
 
@@ -113,7 +113,7 @@ ServerEvents.recipes((event) => {
 				]),
 			]
 		)
-		.id("kubejs:refined_storage/dimension_card")
+		.id("create_cc:refined_storage/dimension_card")
 		.transitionalItem("rsinfinitybooster:infinity_card")
 		.loops(3);
 });

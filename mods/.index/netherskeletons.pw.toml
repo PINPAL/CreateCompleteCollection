@@ -1,0 +1,13 @@
+filename = 'netherskeletons1.20.1.jar'
+name = 'Nether Skeletons'
+side = 'both'
+
+[download]
+hash = '41d4ab4e24bf06b2f524a3666a3357a41d3306310a24a999c43672cda772be15b2960fa44664af08fb43dfb9fad60065efd3dcadbde583c9a06d6bb3bf7daebe'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/M36xhGy8/versions/yjsjKZnz/netherskeletons1.20.1.jar'
+
+[update.modrinth]
+mod-id = 'M36xhGy8'
+version = 'yjsjKZnz'

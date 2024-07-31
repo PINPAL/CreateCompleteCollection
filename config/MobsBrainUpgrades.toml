@@ -1,0 +1,47 @@
+
+[Zombies]
+#Zombies will not attempt to break blocks in this field
+"Block Blacklist" = "minecraft:bedrock, minecraft:command_block, minecraft:jigsaw, minecraft:barrier, smartermobs:broken_block"
+#Multiplier on how long zombies will take to break blocks, this will be multiplied to the amount of hits taken to break all blocks globally, so setting this at 2 means zombies will take twice as much time to break
+"Breaking Multiplier" = 1.0
+#Allow wether or not zombies should be allowed to place blocks
+"Can zombies build" = true
+#Allow wether or not zombies should be allowed to break blocks
+"Can zombies break" = true
+#Enables or disables wether blocks destroyed by zombies regenerate after some time
+"Block regeneration" = true
+
+[Spiders]
+#This will modify the duration of the webbed effect spiders apply when shooting spider webs, value is in TICKS (20 ticks = 1 second)
+"Webbed effect duration" = 100.0
+#controls wether webs that come in contact with a block and not an entity should spawn a spider web
+"Spawn Spiderwebs" = true
+
+[Skeletons]
+#Should skeletons attempt to back away from enemies who are too close?
+"Skeletons back away" = true
+#Skeletons will attempt to starfe away from arrows
+"Skeletons Dodge Arrows" = true
+
+[Creepers]
+#Should creepers explode themselves if they run into a block they cant get through? (warning: destructive, defaults to false)
+"Creepers Siege Walls" = false
+#List of blocks that creepers should not attempt to blow up
+"Creeper block blacklist" = "minecraft:bedrock, minecraft:command_block, minecraft:jigsaw, minecraft:barrier, minecraft:tall_grass,"
+
+["Iron Golems"]
+#Should iron golems jump to attempt to reach their target?
+"Golem jump" = true
+
+["Wither Skeletons"]
+#Wither skeletons will not attempt to break blocks in this field
+"Wither skeleton Block Blacklist" = "minecraft:bedrock, minecraft:command_block, minecraft:jigsaw, minecraft:barrier"
+#Multiplier on how long wither skeletons will take to break blocks, this will be multiplied to the amount of hits taken to break all blocks globally, so setting this at 2 means zombies will take twice as much time to break
+"Wither skeleton Break multiplier" = 0.75
+#Controls wether blocks broken by wither skeletons should regenerate
+"Regenerate blocks" = true
+"Wither skeleton block break" = true
+
+[Villagers]
+#Allows villagers to call iron golems for aid when damaged, as well as run to their location
+"Villagers call golems" = true

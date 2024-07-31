@@ -132,7 +132,21 @@
     "de.keksuccino.fancymenu.menu.fancy.helper.ui.FMConfigScreen": true,
     "fr.iglee42.createcasing.screen.BrassShaftScreen": true,
     "com.jaquadro.minecraft.storagedrawers.inventory.DrawerScreen$Slot2": true,
-    "com.petrolpark.destroy.client.gui.BetterValueSettingsScreen": true
+    "com.petrolpark.destroy.client.gui.BetterValueSettingsScreen": true,
+    "top.theillusivec4.curios.client.gui.CuriosScreenV2": true,
+    "com.minenash.seamless_loading_screen.FadeScreen": true,
+    "com.ultramega.creativecrafter.gui.CreativeCrafterScreen": true,
+    "fuzs.illagerinvasion.client.gui.screens.inventory.ImbuingScreen": true,
+    "io.github.mortuusars.exposure.gui.screen.camera.ViewfinderControlsScreen": true,
+    "io.github.mortuusars.exposure.gui.screen.camera.CameraAttachmentsScreen": true,
+    "io.github.mortuusars.exposure.gui.screen.camera.CameraAttachmentsScreen$1": true,
+    "io.github.mortuusars.exposure.gui.screen.LightroomScreen": true,
+    "io.github.mortuusars.exposure.gui.screen.FilmFrameInspectScreen": true,
+    "com.tacz.guns.client.gui.GunSmithTableScreen": true,
+    "com.tacz.guns.client.gui.GunRefitScreen": true,
+    "com.tom.createores.menu.OreVeinAtlasScreen": true,
+    "earth.terrarium.adastra.client.screens.machines.SolarPanelScreen": true,
+    "earth.terrarium.adastra.client.screens.vehicles.LanderScreen": true
   },
   "hideBackground": {
     "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackScreen": false

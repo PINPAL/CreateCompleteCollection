@@ -6,23 +6,23 @@ ItemEvents.tooltip((tooltip) => {
 		text.add(1, [Text.of("Can ").gray(), Text.of("ONLY ").red(), Text.of("work on moving contraptions.").gray()]);
 	});
 	const customItems = [
-		"kubejs:rainbow_valve_handle",
-		"kubejs:rainbow_wool",
-		"kubejs:rainbow_concrete",
-		"kubejs:metal_alloy_block",
-		"kubejs:rainbow_toolbox",
-		"kubejs:rainbow_canvas_sign",
-		"kubejs:rainbow_placard",
-		"kubejs:rainbow_dye",
-		"kubejs:rainbow_candle",
-		"kubejs:creative_potion",
-		"kubejs:creative_splash_potion",
-		"kubejs:creative_lingering_potion",
+		"create_cc:rainbow_valve_handle",
+		"create_cc:rainbow_wool",
+		"create_cc:rainbow_concrete",
+		"create_cc:metal_alloy_block",
+		"create_cc:rainbow_toolbox",
+		"create_cc:rainbow_canvas_sign",
+		"create_cc:rainbow_placard",
+		"create_cc:rainbow_dye",
+		"create_cc:rainbow_candle",
+		"create_cc:creative_potion",
+		"create_cc:creative_splash_potion",
+		"create_cc:creative_lingering_potion",
 	];
 	customItems.forEach((customItem) => {
 		tooltip.addAdvanced(customItem, (item, advanced, text) => {
 			text.add(1, [Text.of("End Game Crafting Ingredient").gray()]);
-			text.add(1, [Text.of("Functionally Useless").gold()]);
+			text.add(2, [Text().of("Functionally Useless").color(0xc7954b)]);
 		});
 	});
 
@@ -58,12 +58,18 @@ ItemEvents.tooltip((tooltip) => {
 		});
 	});
 
-	// TODO: Add tooltips for the following items
-	const decorativeItems = [""];
+	const decorativeItems = ["create:industrial_iron_block", "design_decor:industrial_plating_block"];
 	decorativeItems.forEach((decorativeItem) => {
 		tooltip.addAdvanced(decorativeItem, (item, advanced, text) => {
 			text.add(1, [Text.of("Decorative Only").gray()]);
 		});
+	});
+
+	tooltip.addAdvanced("create:industrial_iron_block", (item, advanced, text) => {
+		text.add(2, [Text.of("Connected Textures: ").color(0xc7954b), Text.of("Disabled").color(0xeeda78)]);
+	});
+	tooltip.addAdvanced("design_decor:industrial_plating_block", (item, advanced, text) => {
+		text.add(2, [Text.of("Connected Textures: ").color(0xc7954b), Text.of("Enabled").color(0xeeda78)]);
 	});
 
 	const moltenMetals = [
@@ -72,7 +78,6 @@ ItemEvents.tooltip((tooltip) => {
 		{ name: "gold", type: "ingot" },
 		{ name: "zinc", type: "ingot" },
 		{ name: "brass", type: "ingot" },
-		{ name: "tin", type: "ingot" },
 		{ name: "bronze", type: "ingot" },
 		{ name: "steel", type: "ingot" },
 		{ name: "cast_iron", type: "ingot" },
@@ -82,7 +87,7 @@ ItemEvents.tooltip((tooltip) => {
 		{ name: "redstone", type: "gem" },
 	];
 	moltenMetals.forEach((moltenMetal) => {
-		tooltip.addAdvanced(`kubejs:molten_${moltenMetal.name}_block`, (item, advanced, text) => {
+		tooltip.addAdvanced(`create_cc:molten_${moltenMetal.name}_block`, (item, advanced, text) => {
 			text.add(1, [
 				Text.of("Consists of ").gray(),
 				Text.of("1080").aqua(),
@@ -94,7 +99,7 @@ ItemEvents.tooltip((tooltip) => {
 		});
 	});
 
-	const endGameIngredients = ["kubejs:creative_omega_potion"];
+	const endGameIngredients = ["create_cc:creative_omega_potion"];
 	endGameIngredients.forEach((customItem) => {
 		tooltip.addAdvanced(customItem, (item, advanced, text) => {
 			text.add(1, [Text.of("End Game Crafting Ingredient").aqua()]);
@@ -105,17 +110,17 @@ ItemEvents.tooltip((tooltip) => {
 		"minecraft:enchanting_table",
 		"minecraft:anvil",
 		"minecraft:brewing_stand",
-		"kubejs:anvil",
-		"kubejs:brewing_stand",
+		"create_cc:anvil",
+		"create_cc:brewing_stand",
 	];
 	disabledItems.forEach((disabledItem) => {
 		tooltip.addAdvanced(disabledItem, (item, advanced, text) => {
 			text.add(1, [Text.of("Decorative Only").gray()]);
-			text.add(1, [Text.of("Functionally Useless").gold()]);
+			text.add(2, [Text().of("Functionally Useless").color(0xc7954b)]);
 		});
 	});
 
-	tooltip.addAdvanced(/kubejs:broken_.*/, (item, advanced, text) => {
+	tooltip.addAdvanced(/create_cc:broken_.*/, (item, advanced, text) => {
 		text.add(1, [Text.of("Item is Broken").darkRed()]);
 		text.add(2, [Text.of("Requires Repair").red()]);
 	});

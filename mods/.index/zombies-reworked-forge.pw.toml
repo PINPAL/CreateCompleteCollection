@@ -1,0 +1,13 @@
+filename = 'Zombies_Reworked_1.20.1_1.0.4.jar'
+name = 'Zombies Reworked [Forge]'
+side = 'both'
+
+[download]
+hash = '60a3037bd81a66f8d9e21e9f161df36b31988204'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5004213
+project-id = 944522

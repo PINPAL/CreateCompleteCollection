@@ -1,0 +1,13 @@
+filename = 'oculus-flywheel-compat-forge-1.20.1-1.1.0.jar'
+name = 'Oculus Flywheel Compat'
+side = 'both'
+
+[download]
+hash = '75eb2967a652eed2b930c6db830720e55f0aa8dd26cd1babf7862c106d258571a9a69374a6548df6cece2968c813a29549766d8a060cf8fed994caf6521e181e'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/ndHYMY2K/versions/BXM0PbYp/oculus-flywheel-compat-forge-1.20.1-1.1.0.jar'
+
+[update.modrinth]
+mod-id = 'ndHYMY2K'
+version = 'BXM0PbYp'

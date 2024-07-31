@@ -1,49 +1,64 @@
 ServerEvents.recipes((event) => {
 	// Drawer Key
-	event.shaped("storagedrawers:drawer_key", ["  R", " R ", "C  "], {
-		C: "createdeco:gold_coin",
-		R: "#forge:rods/gold",
-	});
+	event
+		.shaped("storagedrawers:drawer_key", ["  R", " R ", "C  "], {
+			C: "createdeco:gold_coin",
+			R: "#forge:rods/gold",
+		})
+		.id("create_cc:drawers/drawer_key");
 	// Quantify Key
-	event.shapeless("storagedrawers:quantify_key", ["storagedrawers:drawer_key", "#minecraft:signs"]);
+	event
+		.shapeless("storagedrawers:quantify_key", ["storagedrawers:drawer_key", "#minecraft:signs"])
+		.id("create_cc:drawers/quantify_key");
 	// Concealment Key
-	event.shapeless("storagedrawers:shroud_key", ["storagedrawers:drawer_key", "#forge:nuggets/gold"]);
+	event
+		.shapeless("storagedrawers:shroud_key", ["storagedrawers:drawer_key", "#forge:nuggets/gold"])
+		.id("create_cc:drawers/concealment_key");
 
 	// Void Upgrade
-	event.shaped("storagedrawers:void_upgrade", ["EOE", "OUO", "EOE"], {
-		U: "sophisticatedbackpacks:upgrade_base",
-		E: "#forge:ender_pearls",
-		O: "#forge:obsidian",
-	});
+	event
+		.shaped("storagedrawers:void_upgrade", ["EOE", "OUO", "EOE"], {
+			U: "sophisticatedbackpacks:upgrade_base",
+			E: "#forge:ender_pearls",
+			O: "#forge:obsidian",
+		})
+		.id("create_cc:drawers/void_upgrade");
 
 	// Redstone Upgrade
-	event.shapeless("storagedrawers:redstone_upgrade", ["sophisticatedbackpacks:upgrade_base", "minecraft:comparator"]);
+	event
+		.shapeless("storagedrawers:redstone_upgrade", ["sophisticatedbackpacks:upgrade_base", "minecraft:comparator"])
+		.id("create_cc:drawers/redstone_upgrade");
 
 	// Min Redstone Upgrade
-	event.shapeless("storagedrawers:min_redstone_upgrade", [
-		"sophisticatedbackpacks:upgrade_base",
-		"minecraft:comparator",
-		"minecraft:redstone",
-	]);
+	event
+		.shapeless("storagedrawers:min_redstone_upgrade", [
+			"sophisticatedbackpacks:upgrade_base",
+			"minecraft:comparator",
+			"minecraft:redstone",
+		])
+		.id("create_cc:drawers/min_redstone_upgrade");
 
 	// Max Redstone Upgrade
-	event.shapeless("storagedrawers:max_redstone_upgrade", [
-		"sophisticatedbackpacks:upgrade_base",
-		"minecraft:comparator",
-		"2x minecraft:redstone",
-	]);
+	event
+		.shapeless("storagedrawers:max_redstone_upgrade", [
+			"sophisticatedbackpacks:upgrade_base",
+			"minecraft:comparator",
+			"2x minecraft:redstone",
+		])
+		.id("create_cc:drawers/max_redstone_upgrade");
 
 	// Illumination Upgrade
-	event.shapeless("3x storagedrawers:illumination_upgrade", [
-		"sophisticatedbackpacks:upgrade_base",
-		"minecraft:glow_ink_sac",
-	]);
+	event
+		.shapeless("3x storagedrawers:illumination_upgrade", [
+			"sophisticatedbackpacks:upgrade_base",
+			"minecraft:glow_ink_sac",
+		])
+		.id("create_cc:drawers/illumination_upgrade");
 
 	// Fill Level Upgrade
-	event.shapeless("3x storagedrawers:fill_level_upgrade", [
-		"sophisticatedbackpacks:upgrade_base",
-		"#minecraft:signs",
-	]);
+	event
+		.shapeless("3x storagedrawers:fill_level_upgrade", ["sophisticatedbackpacks:upgrade_base", "#minecraft:signs"])
+		.id("create_cc:drawers/fill_level_upgrade");
 
 	const drawerWoodTypes = [
 		{ name: "oak", type: "logs", mod: "storagedrawers:" },
@@ -54,30 +69,6 @@ ServerEvents.recipes((event) => {
 		{ name: "dark_oak", type: "logs", mod: "storagedrawers:" },
 		{ name: "crimson", type: "stems", mod: "storagedrawers:" },
 		{ name: "warped", type: "stems", mod: "storagedrawers:" },
-		{
-			name: "bamboo",
-			type: "custom",
-			mod: "everycomp:sd/quark/",
-			customIngredient: "quark:bamboo_planks",
-		},
-		{
-			name: "spirit",
-			type: "custom",
-			mod: "everycomp:sd/create_dd/",
-			customIngredient: "#create_dd:spirit_logs",
-		},
-		{
-			name: "rose",
-			type: "custom",
-			mod: "everycomp:sd/create_dd/",
-			customIngredient: "#create_dd:rose_logs",
-		},
-		{
-			name: "smoked",
-			type: "custom",
-			mod: "everycomp:sd/create_dd/",
-			customIngredient: "#create_dd:smoked_logs",
-		},
 		{
 			name: "walnut",
 			type: "custom",
@@ -105,15 +96,23 @@ ServerEvents.recipes((event) => {
 	];
 	drawerWoodTypes.forEach((wood) => {
 		// Recipe for Drawers
-		event.shaped(`${wood.mod}${wood.name}_full_drawers_1`, ["V V", " W ", "V V"], {
-			W: getDrawerLogTag(wood),
-			V: "create:item_vault",
-		});
+		event
+			.shaped(`${wood.mod}${wood.name}_full_drawers_1`, ["V V", " W ", "V V"], {
+				W: getDrawerLogTag(wood),
+				V: "create:item_vault",
+			})
+			.id(`create_cc:drawers/${wood.name}_crafting`);
 		// Stone Cutting 1x1 Drawers into 2x2 & 2x1 Drawers
-		event.stonecutting(`${wood.mod}${wood.name}_full_drawers_2`, `#kubejs:${wood.name}_drawers`);
-		event.stonecutting(`${wood.mod}${wood.name}_full_drawers_4`, `#kubejs:${wood.name}_drawers`);
+		event
+			.stonecutting(`${wood.mod}${wood.name}_full_drawers_2`, `#create_cc:${wood.name}_drawers`)
+			.id(`create_cc:drawers/${wood.name}_stonecutting_2x1`); // 2x1 Drawers
+		event
+			.stonecutting(`${wood.mod}${wood.name}_full_drawers_4`, `#create_cc:${wood.name}_drawers`)
+			.id(`create_cc:drawers/${wood.name}_stonecutting_2x2`); // 2x2 Drawers
 		// Converting Drawer Wood Type
-		event.shapeless(`${wood.mod}${wood.name}_full_drawers_1`, [getDrawerLogTag(wood), "#storagedrawers:drawers"]);
+		event
+			.shapeless(`${wood.mod}${wood.name}_full_drawers_1`, [getDrawerLogTag(wood), "#storagedrawers:drawers"])
+			.id(`create_cc:drawers/${wood.name}_recycle`);
 	});
 	function getDrawerLogTag(wood) {
 		if (wood.type === "custom") {
@@ -126,33 +125,45 @@ ServerEvents.recipes((event) => {
 	// Stack Upgrades
 	// =================
 	// Tier 1
-	event.recipes.create.deploying("storagedrawers:obsidian_storage_upgrade", [
-		"sophisticatedbackpacks:upgrade_base",
-		"create_dd:andesite_sheet",
-	]);
+	event.recipes.create
+		.deploying("storagedrawers:obsidian_storage_upgrade", [
+			"sophisticatedbackpacks:upgrade_base",
+			"#forge:plates/andesite",
+		])
+		.id("create_cc:drawers/upgrade/tier1");
 	// Tier 2
-	event.recipes.create.deploying("storagedrawers:iron_storage_upgrade", [
-		"storagedrawers:obsidian_storage_upgrade",
-		"create:copper_sheet",
-	]);
+	event.recipes.create
+		.deploying("storagedrawers:iron_storage_upgrade", [
+			"storagedrawers:obsidian_storage_upgrade",
+			"#forge:plates/copper",
+		])
+		.id("create_cc:drawers/upgrade/tier2");
 	// Tier 3
-	event.recipes.create.deploying("storagedrawers:gold_storage_upgrade", [
-		"storagedrawers:iron_storage_upgrade",
-		"create:brass_sheet",
-	]);
+	event.recipes.create
+		.deploying("storagedrawers:gold_storage_upgrade", [
+			"storagedrawers:iron_storage_upgrade",
+			"#forge:plates/brass",
+		])
+		.id("create_cc:drawers/upgrade/tier3");
 	// Tier 4
-	event.recipes.create.deploying("storagedrawers:diamond_storage_upgrade", [
-		"storagedrawers:gold_storage_upgrade",
-		"create:sturdy_sheet",
-	]);
+	event.recipes.create
+		.deploying("storagedrawers:diamond_storage_upgrade", [
+			"storagedrawers:gold_storage_upgrade",
+			"#forge:plates/sturdy_steel",
+		])
+		.id("create_cc:drawers/upgrade/tier4");
 	// Tier 5
-	event.recipes.create.deploying("storagedrawers:emerald_storage_upgrade", [
-		"storagedrawers:diamond_storage_upgrade",
-		"createdeco:netherite_sheet",
-	]);
+	event.recipes.create
+		.deploying("storagedrawers:emerald_storage_upgrade", [
+			"storagedrawers:diamond_storage_upgrade",
+			"#forge:plates/netherite",
+		])
+		.id("create_cc:drawers/upgrade/tier5");
 	// Tier 6
-	event.recipes.create.deploying("storagedrawers:creative_storage_upgrade", [
-		"storagedrawers:emerald_storage_upgrade",
-		"create_dd:refined_radiance_sheet",
-	]);
+	event.recipes.create
+		.deploying("storagedrawers:creative_storage_upgrade", [
+			"storagedrawers:emerald_storage_upgrade",
+			"#forge:plates/refined_radiance",
+		])
+		.id("create_cc:drawers/upgrade/tier6");
 });

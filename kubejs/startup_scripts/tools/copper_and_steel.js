@@ -35,14 +35,18 @@ StartupEvents.registry("item", (event) => {
 	const types = ["sword", "hoe", "helmet", "chestplate", "leggings", "boots"];
 	types.forEach((type) => {
 		event
-			.create(`copper_${type}`, `${type}`)
+			.create("create_cc:" + `copper_${type}`, `${type}`)
 			.displayName(`Copper ${formatName(type)}`)
 			.tier("copper")
 			.unstackable();
 		event
-			.create(`steel_${type}`, `${type}`)
+			.create("create_cc:" + `steel_${type}`, `${type}`)
 			.displayName(`Steel ${formatName(type)}`)
 			.tier("steel")
 			.unstackable();
 	});
+	event
+		.create("create_cc:" + `steel_knife`, "farmersdelight:knife")
+		.displayName("Steel Knife")
+		.tier("steel");
 });

@@ -1,13 +1,13 @@
-filename = 'jeed-1.20-2.1.12.jar'
+filename = 'jeed-1.20-2.2.1.jar'
 name = 'Just Enough Effects Descriptions'
 side = 'both'
 
 [download]
-hash = '513a7f8f20797d326f1300433c06e966a138ca3fff8e2c9620f89c9fa5c4248f9eb0c239c64e6feaf35853c6740c9eb78d95717788d9bebca77f66fc79f9bff4'
+hash = 'd2b273317a8016410059f2d84adfdf64ccea7528e19ebcfd8c720a792e5f3d49586737ff343155a5e264df840b5dee9297b5f9f1c2fd99fc58a0c2c8fca27b73'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/EO27GKs1/versions/rONG0iY3/jeed-1.20-2.1.12.jar'
+url = 'https://cdn.modrinth.com/data/EO27GKs1/versions/cCbKMLHm/jeed-1.20-2.2.1.jar'
 
 [update.modrinth]
 mod-id = 'EO27GKs1'
-version = 'rONG0iY3'
+version = 'cCbKMLHm'

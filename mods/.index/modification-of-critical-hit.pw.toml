@@ -1,0 +1,13 @@
+filename = 'modification_of_critical_hit-1.20.1-forge-1.0.jar'
+name = 'Modification Of Critical Hit'
+side = 'both'
+
+[download]
+hash = 'b9bde5851047b3e6462e6762504213792da1f662'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5378719
+project-id = 913026

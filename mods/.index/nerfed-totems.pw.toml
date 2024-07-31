@@ -1,0 +1,13 @@
+filename = 'nerfed_totems.jar'
+name = 'Nerfed Totems'
+side = 'both'
+
+[download]
+hash = '2b944f8e4ecdb017d714709e3c9a3dfb76625e50a555bbdfa88af09773ee0aceb0fab9ee1b8e206e9b971abc2c5d22d5794b2cf8729a1d9ce647e0f679e5f4d0'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/PlszFgUf/versions/E6YWrhB6/nerfed_totems.jar'
+
+[update.modrinth]
+mod-id = 'PlszFgUf'
+version = 'E6YWrhB6'

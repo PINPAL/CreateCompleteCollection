@@ -1,0 +1,13 @@
+filename = 'gamephase-1.0.2.jar'
+name = 'Game Phase'
+side = 'both'
+
+[download]
+hash = '7d6a9a6af7ceb843ded882c21d60d38c0726c085bf08d532a96f300f912d3636bdb0d2db9e685a99ce763cc30f8fe361fd07841a0a6a4f3712105136529d0bf8'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Rjr0gZy1/versions/xAGzZH7s/gamephase-1.0.2.jar'
+
+[update.modrinth]
+mod-id = 'Rjr0gZy1'
+version = 'xAGzZH7s'

@@ -2,42 +2,44 @@ ServerEvents.recipes((event) => {
 	const unpackingRecipes = [
 		{
 			input: "createdeco:andesite_trapdoor",
-			output: "create:andesite_alloy",
+			output: "#forge:ingots/andesite",
 			count: 4,
 		},
 		{
 			input: "createdeco:brass_trapdoor",
-			output: "create:brass_ingot",
+			output: "#forge:ingots/brass",
 			count: 4,
 		},
 		{
-			input: "createdeco:cast_iron_trapdoor",
-			output: "createdeco:cast_iron_ingot",
+			input: "createdeco:industrial_iron_trapdoor",
+			output: "#forge:ingots/industrial_iron",
 			count: 4,
 		},
 		{
 			input: "createdeco:copper_trapdoor",
-			output: "create:copper_ingot",
+			output: "#forge:ingots/copper",
 			count: 4,
 		},
 		{
 			input: "createdeco:zinc_trapdoor",
-			output: "create:zinc_ingot",
+			output: "#forge:ingots/zinc",
 			count: 4,
 		},
 		{
 			input: "supplementaries:gold_trapdoor",
-			output: "minecraft:gold_ingot",
+			output: "#forge:ingots/gold",
 			count: 4,
 		},
 		{
-			input: "tfmg:steel_trapdoor",
-			output: "create_dd:steel_ingot",
-			count: 6,
+			input: "ad_astra:steel_trapdoor",
+			output: "#forge:ingots/steel",
+			count: 2,
 		},
 	];
 
 	unpackingRecipes.forEach((recipe) => {
-		event.recipes.create.crushing(`${recipe.count}x ${recipe.output}`, recipe.input);
+		event.recipes.create
+			.crushing(`${recipe.count}x ${recipe.output}`, recipe.input)
+			.id(`create_cc:unpacking_recipes/${recipe.input.replace(/.*:/, "")}_crushing`);
 	});
 });

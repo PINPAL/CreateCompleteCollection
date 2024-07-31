@@ -21,11 +21,6 @@ const idsToRemove = [
 	"supplementaries:soap/dirty_glass",
 	"supplementaries:item_lore_display",
 
-	// Quark
-	"quark:tweaks/crafting/utility/bent/paper",
-	"quark:tweaks/smelting/bone_meal_utility",
-	"quark:tweaks/crafting/utility/misc/easy_sticks",
-
 	// Farmers Delight
 	"farmersdelight:book_from_canvas",
 	"farmersdelight:cake_from_milk_bottle",
@@ -62,12 +57,6 @@ const idsToRemove = [
 	"create_dd:compacting/steel_ingot",
 	"create_dd:crafting/asphalt_hazard_block",
 
-	// Create Paper Line
-	"create_paper_line:mixing/wood_pulp",
-	"create_paper_line:mixing/wood_pulp_with_saw_dust",
-	"create_paper_line:mixing/wood_pulp_from_saw_dust",
-	"create_paper_line:mixing/whitened_wood_pulp",
-
 	// Decorative Blocks
 	"decorative_blocks:lattice",
 
@@ -93,10 +82,6 @@ const idsToRemove = [
 	"create:crafting/curiosities/cake",
 	"create:pressing/sugar_cane",
 	"create:splashing/crushed_raw_iron",
-
-	// Broken Recipes
-	"tfmg:colored_concrete/full_block/pink_concrete",
-	"create_crystal_clear:steel_tinted_glass_casing",
 ];
 
 ServerEvents.recipes((event) => {

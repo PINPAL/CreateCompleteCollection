@@ -1,0 +1,73 @@
+const metals = [
+	{ name: "iron" },
+	{ name: "copper" },
+	{ name: "gold" },
+	{ name: "zinc" },
+	{ name: "brass" },
+	{ name: "tin" },
+	{ name: "bronze" },
+	{ name: "steel" },
+	{ name: "cast_iron" },
+	{ name: "diamond" },
+	{ name: "emerald" },
+	{ name: "powdered_obsidian" },
+	{ name: "redstone" },
+];
+
+ServerEvents.recipes((event) => {
+	metals.forEach((metal) => {
+		// iron block -> molten iron fluid
+		event.recipes
+			.melterMelting(Fluid.of("create_cc:molten_" + metal.name, 10), `#forge:storage_blocks/${metal.name}`)
+			.processingTime(200)
+			.minimumHeat(16);
+
+		// molten iron fluid -> molten iron ingot
+		event.custom({
+			type: "create_dd:freezing",
+			ingredients: [
+				{
+					item: `create_cc:molten_${metal.name}_bucket`,
+				},
+			],
+			results: [
+				{
+					item: `create_cc:molten_${metal.name}_ingot`,
+					count: 1,
+				},
+				{
+					item: "minecraft:bucket",
+					count: 1,
+				},
+			],
+		});
+
+		// molten iron ingot -> molten iron block
+		event.recipes.create
+			.compacting(
+				Item.of(`create_cc:molten_${metal.name}_block`),
+				Item.of(`11x create_cc:molten_${metal.name}_ingot`)
+			)
+			.superheated();
+	});
+
+	event.recipes.create.mechanical_crafting(
+		"create_cc:metal_alloy_block",
+		["  a  ", " 123 ", "b456c", " 789 ", "  d  "],
+		{
+			1: "create_cc:molten_iron_block",
+			2: "create_cc:molten_copper_block",
+			3: "create_cc:molten_gold_block",
+			4: "create_cc:molten_zinc_block",
+			5: "create_cc:molten_brass_block",
+			6: "create_cc:belt_scroll",
+			7: "create_cc:molten_bronze_block",
+			8: "create_cc:molten_steel_block",
+			9: "create_cc:molten_cast_iron_block",
+			a: "create_cc:molten_diamond_block",
+			b: "create_cc:molten_emerald_block",
+			c: "create_cc:molten_powdered_obsidian_block",
+			d: "create_cc:molten_redstone_block",
+		}
+	);
+});

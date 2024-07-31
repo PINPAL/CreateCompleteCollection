@@ -33,5 +33,10 @@ config/cucumber*
 config/bocchud/*
 config/xaerominimap_entities.json
 
+# ingore temporary kubeJS files
+# kubejs/client_scripts/example.js
+# kubejs/server_scripts/example.js
+# kubejs/startup_scripts/example.js
+
 # ignore config bak files
 config/*.bak

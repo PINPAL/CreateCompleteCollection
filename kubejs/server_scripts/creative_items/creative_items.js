@@ -13,9 +13,9 @@ ServerEvents.recipes((event) => {
 			"ZZZ   ZZZ",
 		],
 		{
-			M: "kubejs:metal_alloy_block",
-			O: "kubejs:creative_omega_potion",
-			Z: "kubejs:rainbow_core",
+			M: "create_cc:metal_alloy_block",
+			O: "create_cc:creative_omega_potion",
+			Z: "create_cc:rainbow_core",
 			R: "minecraft:recovery_compass",
 			B: "create_dd:overcharge_alloy",
 		}
@@ -36,7 +36,7 @@ ServerEvents.recipes((event) => {
 		{
 			M: "create:creative_motor",
 			P: "tfmg:plastic_block",
-			S: "create_dd:mithril_casing",
+			S: "create:shadow_steel_casing",
 			L: "create_dd:overburden_casing",
 			C: "createaddition:connector",
 			s: "createaddition:large_connector",

@@ -1,0 +1,10 @@
+{
+	"itemGroup.create_cc.base": "Create Complete Collection",
+	"platform.create_cc.name": "Create Complete Collection",
+	"platform.create_cc": "Create Complete Collection",
+	"create_cc": "Create Complete Collection",
+
+	"curios.identifier.grid": "Wireless Grid",
+	"curios.identifier.magnet": "Magnet",
+	"curios.identifier.totem": "Totem"
+}

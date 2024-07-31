@@ -1,0 +1,13 @@
+filename = 'InvMoveCompats-1.20-0.3.2-Forge.jar'
+name = 'InvMoveCompats'
+side = 'client'
+
+[download]
+hash = '4252ed3f7d4fc5644856e578c170554cf65bb855b8efad6632c4fd2ecc99d58021fb783d23c84f9d156deeb6aeb156b3458832a9722f5f576097b175d8100ffc'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/6IpcGP7T/versions/5voBKyma/InvMoveCompats-1.20-0.3.2-Forge.jar'
+
+[update.modrinth]
+mod-id = '6IpcGP7T'
+version = '5voBKyma'

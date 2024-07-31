@@ -1,0 +1,13 @@
+filename = 'cratedelight-2024.07.12-1.20.1-forge.jar'
+name = 'Crate Delight (Forge)'
+side = 'both'
+
+[download]
+hash = '7c975b91019663680560552f337285ac1c6ca1fa'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5522199
+project-id = 958291

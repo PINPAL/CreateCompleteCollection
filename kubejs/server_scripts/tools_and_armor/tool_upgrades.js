@@ -6,13 +6,14 @@ const toolUpgradingTiers = [
 			hasArmor: false,
 			hasHorseArmor: false,
 			hasTools: true,
-			hasKnife: false,
+			hasKnife: true,
 			hasBackpack: false,
-			paxel: "easypaxellite:stone_paxel",
+			knife: "moredelight:stone_knife",
 		},
 		previousTier: {
+			name: "wooden",
 			prefix: "minecraft:wooden",
-			paxel: "easypaxellite:wood_paxel",
+			knife: "moredelight:wooden_knife",
 		},
 	},
 	{
@@ -32,7 +33,7 @@ const toolUpgradingTiers = [
 	{
 		tier: "copper",
 		properties: {
-			prefix: "kubejs:copper",
+			prefix: "create_cc:copper",
 			hasArmor: true,
 			hasHorseArmor: true,
 			hasTools: true,
@@ -40,14 +41,13 @@ const toolUpgradingTiers = [
 			hasBackpack: false,
 			horseArmor: "minecraft:golden_horse_armor",
 			knife: "create_things_and_misc:copper_knife",
-			paxel: "easypaxellite:golden_paxel",
 		},
 		previousTier: {
+			name: "stone",
 			prefix: "minecraft:stone",
 			horseArmor: "minecraft:leather_horse_armor",
 			armorPrefix: "minecraft:chainmail",
-			knife: "farmersdelight:flint_knife",
-			paxel: "easypaxellite:stone_paxel",
+			knife: "moredelight:stone_knife",
 		},
 	},
 	{
@@ -61,33 +61,31 @@ const toolUpgradingTiers = [
 			hasBackpack: true,
 			horseArmor: "minecraft:iron_horse_armor",
 			knife: "farmersdelight:iron_knife",
-			paxel: "easypaxellite:iron_paxel",
 		},
 		previousTier: {
-			prefix: "kubejs:copper",
+			name: "copper",
+			prefix: "create_cc:copper",
 			horseArmor: "minecraft:golden_horse_armor",
-			armorPrefix: "kubejs:copper",
+			armorPrefix: "create_cc:copper",
 			knife: "create_things_and_misc:copper_knife",
-			paxel: "easypaxellite:golden_paxel",
 		},
 	},
 	{
 		tier: "steel",
 		properties: {
-			prefix: "kubejs:steel",
+			prefix: "create_cc:steel",
 			hasArmor: true,
 			hasHorseArmor: false,
 			hasTools: true,
-			hasKnife: true,
 			hasBackpack: true,
-			knife: "kubejs:steel_knife",
-			paxel: "easypaxellite:diamond_paxel",
+			hasKnife: true,
+			knife: "create_cc:steel_knife",
 		},
 		previousTier: {
+			name: "iron",
 			prefix: "minecraft:iron",
 			armorPrefix: "minecraft:iron",
 			knife: "farmersdelight:iron_knife",
-			paxel: "easypaxellite:iron_paxel",
 		},
 	},
 	{
@@ -101,14 +99,13 @@ const toolUpgradingTiers = [
 			hasBackpack: true,
 			horseArmor: "minecraft:diamond_horse_armor",
 			knife: "farmersdelight:diamond_knife",
-			paxel: "easypaxellite:netherite_paxel",
 		},
 		previousTier: {
-			prefix: "kubejs:steel",
+			name: "steel",
+			prefix: "create_cc:steel",
 			horseArmor: "minecraft:iron_horse_armor",
-			armorPrefix: "kubejs:steel",
-			knife: "kubejs:steel_knife",
-			paxel: "easypaxellite:diamond_paxel",
+			armorPrefix: "create_cc:steel",
+			knife: "create_cc:steel_knife",
 		},
 	},
 	{
@@ -122,14 +119,13 @@ const toolUpgradingTiers = [
 			hasBackpack: true,
 			horseArmor: "netherite_horse_armor:netherite_horse_armor",
 			knife: "farmersdelight:netherite_knife",
-			paxel: "easypaxellite:tempered_netherite_paxel",
 		},
 		previousTier: {
+			name: "diamond",
 			prefix: "minecraft:diamond",
 			horseArmor: "minecraft:diamond_horse_armor",
 			armorPrefix: "minecraft:diamond",
 			knife: "farmersdelight:diamond_knife",
-			paxel: "easypaxellite:netherite_paxel",
 		},
 	},
 ];
@@ -145,79 +141,115 @@ ServerEvents.recipes((event) => {
 		// ============================
 		if (tier.properties.hasArmor) {
 			// Helmet
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_helmet`, `${tier.properties.prefix}_helmet`);
-			event.smithing(
-				`${tier.properties.prefix}_helmet`,
-				`${tier.previousTier.armorPrefix}_helmet`,
-				`kubejs:${tier.tier}_stitching`
-			);
+			event.recipes.create
+				.crushing(`create_cc:broken_${tier.tier}_helmet`, `${tier.properties.prefix}_helmet`)
+				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_helmet`);
+			event
+				.smithing(
+					`${tier.properties.prefix}_helmet`,
+					`${tier.previousTier.armorPrefix}_helmet`,
+					`create_cc:${tier.tier}_stitching`
+				)
+				.id(`create_cc:tool_upgrading/${tier.tier}_helmet`);
 			// Chestplate
-			event.recipes.create.crushing(
-				`kubejs:broken_${tier.tier}_chestplate`,
-				`${tier.properties.prefix}_chestplate`
-			);
-			event.smithing(
-				`${tier.properties.prefix}_chestplate`,
-				`${tier.previousTier.armorPrefix}_chestplate`,
-				`kubejs:${tier.tier}_stitching`
-			);
+			event.recipes.create
+				.crushing(`create_cc:broken_${tier.tier}_chestplate`, `${tier.properties.prefix}_chestplate`)
+				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_chestplate`);
+			event
+				.smithing(
+					`${tier.properties.prefix}_chestplate`,
+					`${tier.previousTier.armorPrefix}_chestplate`,
+					`create_cc:${tier.tier}_stitching`
+				)
+				.id(`create_cc:tool_upgrading/${tier.tier}_chestplate`);
 			// Leggings
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_leggings`, `${tier.properties.prefix}_leggings`);
-			event.smithing(
-				`${tier.properties.prefix}_leggings`,
-				`${tier.previousTier.armorPrefix}_leggings`,
-				`kubejs:${tier.tier}_stitching`
-			);
+			event.recipes.create
+				.crushing(`create_cc:broken_${tier.tier}_leggings`, `${tier.properties.prefix}_leggings`)
+				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_leggings`);
+			event
+				.smithing(
+					`${tier.properties.prefix}_leggings`,
+					`${tier.previousTier.armorPrefix}_leggings`,
+					`create_cc:${tier.tier}_stitching`
+				)
+				.id(`create_cc:tool_upgrading/${tier.tier}_leggings`);
 			// Boots
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_boots`, `${tier.properties.prefix}_boots`);
-			event.smithing(
-				`${tier.properties.prefix}_boots`,
-				`${tier.previousTier.armorPrefix}_boots`,
-				`kubejs:${tier.tier}_stitching`
-			);
+			event.recipes.create
+				.crushing(`create_cc:broken_${tier.tier}_boots`, `${tier.properties.prefix}_boots`)
+				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_boots`);
+			event
+				.smithing(
+					`${tier.properties.prefix}_boots`,
+					`${tier.previousTier.armorPrefix}_boots`,
+					`create_cc:${tier.tier}_stitching`
+				)
+				.id(`create_cc:tool_upgrading/${tier.tier}_boots`);
 		}
 		// KNIFE
 		// ============================
 		if (tier.properties.hasKnife) {
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_knife`, tier.properties.knife);
-			event.smithing(
-				// Unbreakable IF netherite
-				tier.tier == "netherite"
-					? Item.of("farmersdelight:netherite_knife").withNBT("{Unbreakable:1b}")
-					: tier.properties.knife,
-				tier.previousTier.knife,
-				`kubejs:${tier.tier}_blade`
-			);
+			event.recipes.create
+				.crushing(`create_cc:broken_${tier.tier}_knife`, tier.properties.knife)
+				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_knife`);
+
+			event
+				.smithing(
+					// Unbreakable IF netherite
+					tier.tier == "netherite"
+						? Item.of("farmersdelight:netherite_knife").withNBT("{Unbreakable:1b}")
+						: tier.properties.knife,
+					tier.previousTier.knife,
+					`create_cc:${tier.tier}_blade`
+				)
+				.id(`create_cc:tool_upgrading/${tier.tier}_knife`);
 		}
 		// HOE, SWORD, PAXEL
 		// ============================
 		if (tier.properties.hasTools) {
 			// Sword
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_sword`, `${tier.properties.prefix}_sword`);
-			event.smithing(
-				`${tier.properties.prefix}_sword`,
-				`${tier.previousTier.prefix}_sword`,
-				`kubejs:${tier.tier}_blade`
-			);
+			event.recipes.create
+				.crushing(`create_cc:broken_${tier.tier}_sword`, `${tier.properties.prefix}_sword`)
+				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_sword`);
+			event
+				.smithing(
+					`${tier.properties.prefix}_sword`,
+					`${tier.previousTier.prefix}_sword`,
+					`create_cc:${tier.tier}_blade`
+				)
+				.id(`create_cc:tool_upgrading/${tier.tier}_sword`);
 			// Hoe
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_hoe`, `${tier.properties.prefix}_hoe`);
-			event.smithing(
-				`${tier.properties.prefix}_hoe`,
-				`${tier.previousTier.prefix}_hoe`,
-				`kubejs:${tier.tier}_blade`
-			);
+			event.recipes.create
+				.crushing(`create_cc:broken_${tier.tier}_hoe`, `${tier.properties.prefix}_hoe`)
+				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_hoe`);
+			event
+				.smithing(
+					`${tier.properties.prefix}_hoe`,
+					`${tier.previousTier.prefix}_hoe`,
+					`create_cc:${tier.tier}_blade`
+				)
+				.id(`create_cc:tool_upgrading/${tier.tier}_hoe`);
 			// Paxel
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_paxel`, tier.properties.paxel);
-			event.smithing(tier.properties.paxel, tier.previousTier.paxel, `kubejs:${tier.tier}_head`);
+			event.recipes.create
+				.crushing(`create_cc:broken_${tier.tier}_paxel`, `create_cc:${tier.tier}_paxel`)
+				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_paxel`);
+			event
+				.smithing(
+					`create_cc:${tier.tier}_paxel`,
+					`create_cc:${tier.previousTier.name}_paxel`,
+					`create_cc:${tier.tier}_head`
+				)
+				.id(`create_cc:tool_upgrading/${tier.tier}_paxel`);
 		}
 		// HORSE ARMOR
 		// ============================
 		if (tier.properties.hasHorseArmor) {
-			event.smithing(
-				tier.properties.horseArmor,
-				tier.previousTier.horseArmor,
-				Item.of(`kubejs:unfinished_${tier.tier}_stitching`).weakNBT()
-			);
+			event
+				.smithing(
+					tier.properties.horseArmor,
+					tier.previousTier.horseArmor,
+					Item.of(`create_cc:unfinished_${tier.tier}_stitching`).weakNBT()
+				)
+				.id(`create_cc:tool_upgrading/${tier.tier}_horse_armor`);
 		}
 	});
 });

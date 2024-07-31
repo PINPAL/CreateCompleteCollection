@@ -37,12 +37,18 @@
 		"*.properties*": true,
 		"*.dat*": true,
 		"*.json*": true,
+		"defaultconfigs": true,
 		"kubejs/assets": true,
 		"kubejs/config": true,
 		"kubejs/exported": true,
 		"kubejs/jsconfig.json": true,
 		"kubejs/README.txt": true,
 		"kubejs/probe": true,
-		"logs/*.log.gz*": true
+		".probe*": true,
+		"logs/*.log.gz*": true,
+		"logs/*.log": true,
+		"logs/telemetry": true,
+		"mod_data": true,
+		"mods": true
 	}
 }

@@ -1,0 +1,13 @@
+filename = 'tagfoods-1.3.0.jar'
+name = 'TagFoods'
+side = 'both'
+
+[download]
+hash = '7b2ec292cb7a882cc7dd7bc2267d2ac73b0ca910'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5245140
+project-id = 504465

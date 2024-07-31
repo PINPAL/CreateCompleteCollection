@@ -1,7 +1,7 @@
 {
-  "parent": "create_things_and_misc:item/_template_sing",
-  "texture_size": [12, 12],
-  "textures": {
-    "0": "create_things_and_misc:blocks/green4"
-  }
+	"parent": "create_things_and_misc:item/_template_sing",
+	"texture_size": [12, 12],
+	"textures": {
+		"0": "create_things_and_misc:block/green4"
+	}
 }

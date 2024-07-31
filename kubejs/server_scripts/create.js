@@ -1,22 +1,22 @@
 ServerEvents.recipes((event) => {
 	const automatedPacking = [
-		{ mod: "minecraft", item: "coal", type: "gems" },
-		{ mod: "minecraft", item: "gold", type: "ingots" },
-		{ mod: "minecraft", item: "iron", type: "ingots" },
-		{ mod: "minecraft", item: "copper", type: "ingots" },
-		{ mod: "minecraft", item: "redstone", type: "gems" },
-		{ mod: "minecraft", item: "diamond", type: "gems" },
-		{ mod: "minecraft", item: "netherite", type: "ingots" },
-		{ mod: "minecraft", item: "emerald", type: "gems" },
-		{ mod: "minecraft", item: "lapis", type: "gems" },
-		{ mod: "create_dd", item: "tin", type: "ingots" },
-		{ mod: "create", item: "zinc", type: "ingots" },
-		{ mod: "create", item: "brass", type: "ingots" },
-		{ mod: "create_dd", item: "bronze", type: "ingots" },
-		{ mod: "create_dd", item: "steel", type: "ingots" },
-		{ mod: "create_dd", item: "mithril", type: "ingots" },
-		{ mod: "createdeco", item: "cast_iron", type: "ingots" },
-	].forEach((block) => {
+		{ item: "coal", type: "gems" },
+		{ item: "gold", type: "ingots" },
+		{ item: "iron", type: "ingots" },
+		{ item: "copper", type: "ingots" },
+		{ item: "redstone", type: "gems" },
+		{ item: "diamond", type: "gems" },
+		{ item: "netherite", type: "ingots" },
+		{ item: "emerald", type: "gems" },
+		{ item: "lapis", type: "gems" },
+		{ item: "tin", type: "ingots" },
+		{ item: "zinc", type: "ingots" },
+		{ item: "brass", type: "ingots" },
+		{ item: "bronze", type: "ingots" },
+		{ item: "steel", type: "ingots" },
+		{ item: "cast_iron", type: "ingots" },
+	];
+	automatedPacking.forEach((block) => {
 		// Block from Ingots
 		event.remove({
 			type: "minecraft:crafting_shaped",
@@ -34,46 +34,65 @@ ServerEvents.recipes((event) => {
 
 		// Block from ingots
 		event.recipes.create
-			.compacting(`${block.mod}:${block.item}_block`, `9x #forge:${block.type}/${block.item}`)
-			.id("kubejs:compacting/" + block.item + "_block_from_ingots");
+			.compacting(`#forge:storage_blocks/${block.item}`, `9x #forge:${block.type}/${block.item}`)
+			.id("create_cc:create/compacting/" + block.item + "_block_from_ingots");
 		// Ingots from nuggets
 		if (block.type == "ingots") {
 			event.recipes.create
 				.compacting(`#forge:ingots/${block.item}`, `9x #forge:nuggets/${block.item}`)
-				.id("kubejs:compacting/" + block.item + "_ingot_from_nuggets");
+				.id("create_cc:create/compacting/" + block.item + "_ingot_from_nuggets");
 		}
 	});
 
 	// Lapis Alloy
-	event.recipes.create.mixing("create_dd:lapis_alloy", ["minecraft:lapis_lazuli", "#forge:nuggets/tin"]);
+	event.recipes.create
+		.mixing("create_dd:lapis_alloy", ["minecraft:lapis_lazuli", "#forge:nuggets/tin"])
+		.id("create_cc:create/lapis_alloy");
 
 	// Raw Iron Washing
-	event.recipes.create.splashing("9x minecraft:iron_nugget", "create:crushed_raw_iron");
+	event.recipes.create
+		.splashing("9x minecraft:iron_nugget", "create:crushed_raw_iron")
+		.id("create_cc:create/raw_iron_washing");
 
 	// Diamond Grit Sandpaper
-	event.shapeless(Item.of("createaddition:diamond_grit_sandpaper").withNBT("{Unbreakable:1b}"), [
-		"#create:sandpaper",
-		"kubejs:molten_diamond_ingot",
-	]);
+	event.remove({ output: "createaddition:diamond_grit_sandpaper" });
+	event
+		.shapeless(Item.of("createaddition:diamond_grit_sandpaper").withNBT("{Unbreakable:1b}"), [
+			"#create:sandpaper",
+			"create_cc:molten_diamond_ingot",
+		])
+		.id("create_cc:create/diamond_grit_sandpaper");
 
 	// Harder Minecart Assembler
-	event.shaped("create:cart_assembler", ["   ", "TRT", "B B"], {
-		T: "create:railway_casing",
-		R: "create:controls",
-		B: "create:brass_casing",
-	});
+	event.remove({ output: "create:cart_assembler" });
+	event
+		.shaped("create:cart_assembler", ["   ", "TRT", "B B"], {
+			T: "create:railway_casing",
+			R: "create:controls",
+			B: "create:brass_casing",
+		})
+		.id("create_cc:create/cart_assembler");
 
 	// Harder Rotation Speed Controller
-	event.shaped("create:rotation_speed_controller", [" M ", " B ", "   "], {
-		M: "create_dd:integrated_mechanism",
-		B: "create:brass_casing",
-	});
+	event.remove({ output: "create:rotation_speed_controller" });
+	event
+		.shaped("create:rotation_speed_controller", [" M ", " B ", "   "], {
+			M: "create_dd:integrated_mechanism",
+			B: "create:brass_casing",
+		})
+		.id("create_cc:create/rotation_speed_controller");
 
 	// Cheap Hand Crank
-	event.shaped(Item.of("create:hand_crank"), ["PPP", "  S", "   "], {
-		P: "#minecraft:planks",
-		S: "minecraft:stick",
-	});
+	event
+		.shaped(Item.of("create:hand_crank"), ["PPP", "  S", "   "], {
+			P: "#minecraft:planks",
+			S: "minecraft:stick",
+		})
+		.id("create_cc:create/hand_crank");
+	// Cheap Crank Wheel
+	event
+		.shapeless("create_connected:crank_wheel", ["#minecraft:planks", "create:hand_crank"])
+		.id("create_cc:create/crank_wheel");
 
 	// Infernal Mechanism
 	event.recipes
@@ -96,134 +115,122 @@ ServerEvents.recipes((event) => {
 			]),
 		])
 		.transitionalItem("create_dd:incomplete_infernal_mechanism")
-		.loops(2);
+		.loops(2)
+		.id("create_cc:create/infernal_mechanism");
 
 	// Harder Hydraulic Press
-	event.shaped(Item.of("create_dd:hydraulic_press"), [" S ", " H ", " B "], {
-		S: "create_dd:sealed_mechanism",
-		H: "create_dd:hydraulic_casing",
-		B: "create_dd:bronze_casing",
-	});
+	event.remove({ output: "create_dd:hydraulic_press" });
+	event.recipes.create
+		.mechanical_crafting("create_dd:hydraulic_press", [" S ", " H ", "CPC"], {
+			S: "create_dd:sealed_mechanism",
+			H: "create_dd:hydraulic_casing",
+			B: "#forge:storage_blocks/copper",
+			P: "create:mechanical_press",
+		})
+		.id("create_cc:create/hydraulic_press");
 
 	// Harder Spout
-	event.shaped(Item.of("create:spout"), [" C ", " K ", " S "], {
-		C: "create:copper_casing",
-		K: "minecraft:dried_kelp",
-		S: "create_dd:sealed_mechanism",
-	});
+	event.remove({ output: "create:spout" });
+	event
+		.shaped(Item.of("create:spout"), [" C ", " K ", " S "], {
+			C: "create:copper_casing",
+			K: "minecraft:dried_kelp",
+			S: "create_dd:sealed_mechanism",
+		})
+		.id("create_cc:create/spout");
 
 	// Harder Fluid Tank
-	event.shaped("create:fluid_tank", [" C ", " B ", " C "], {
-		C: "#forge:plates/copper",
-		B: "metalbarrels:gold_barrel",
-	});
-
-	// Harder Bronze Casing
-	event.shapeless("create_dd:reinforcement_plating", [
-		"#forge:storage_blocks/steel",
-		"#forge:storage_blocks/bronze",
-		"#forge:storage_blocks/bronze",
-		"#forge:storage_blocks/steel",
-	]);
-	event.recipes.create.deploying("create_dd:bronze_casing", [
-		"create_dd:reinforcement_plating",
-		"create_dd:bronze_ingot",
-	]);
+	event.remove({ output: "create:fluid_tank" });
+	event.remove({ output: "create_connected:fluid_vessel" });
+	event
+		.shaped("create:fluid_tank", [" C ", " B ", " C "], {
+			C: "#forge:plates/copper",
+			B: "metalbarrels:gold_barrel",
+		})
+		.id("create_cc:create/fluid_tank");
+	event
+		.shaped("create_connected:fluid_vessel", ["   ", "CBC", "   "], {
+			C: "#forge:plates/copper",
+			B: "metalbarrels:gold_barrel",
+		})
+		.id("create_cc:create/fluid_vessel");
+	event
+		.shapeless("create:fluid_tank", ["create_connected:fluid_vessel"])
+		.id("create_cc:create/fluid_tank_conversion");
+	event
+		.shapeless("create_connected:fluid_vessel", ["create:fluid_tank"])
+		.id("create_cc:create/fluid_vessel_conversion");
 
 	// Concrete
-	event.stonecutting("2x tfmg:concrete_slab", "tfmg:concrete");
-	event.stonecutting("tfmg:concrete_stairs", "tfmg:concrete");
-	event.stonecutting("tfmg:concrete_wall", "tfmg:concrete");
-	event.recipes.create.filling("tfmg:liquid_concrete_bucket", [
-		Fluid.of("tfmg:liquid_concrete_fluid", 500),
-		"minecraft:bucket",
-	]);
-	event.recipes.create.emptying(
-		[Fluid.of("tfmg:liquid_concrete_fluid", 500), "minecraft:bucket"],
-		"tfmg:liquid_concrete_bucket"
-	);
+	event.stonecutting("2x tfmg:concrete_slab", "tfmg:concrete").id("create_cc:create/concrete_slab");
+	event.stonecutting("tfmg:concrete_stairs", "tfmg:concrete").id("create_cc:create/concrete_stairs");
+	event.stonecutting("tfmg:concrete_wall", "tfmg:concrete").id("create_cc:create/concrete_wall");
 
-	// Harder steam engine
-	event.shaped(Item.of("create:steam_engine"), [" G ", "IMS", " C "], {
-		G: "create:golden_sheet",
-		I: "create_dd:infernal_mechanism",
-		M: "create_dd:integrated_mechanism",
-		S: "create_dd:sealed_mechanism",
-		C: "minecraft:copper_block",
-	});
-
-	// Harder Deployer
-	event.shaped(Item.of("create:deployer"), [" E ", " A ", " B "], {
-		E: "create:electron_tube",
-		A: "create:andesite_casing",
-		B: "create:brass_hand",
-	});
-
-	// Harder Train Controls
-	event.shaped("create:controls", [" L ", " T ", "P I"], {
-		L: "minecraft:lever",
-		T: "create:railway_casing",
-		P: "create:precision_mechanism",
-		I: "create_dd:integrated_mechanism",
-	});
+	// Harder Steam Engine
+	event.remove({ output: "create:steam_engine" });
+	event
+		.shaped(Item.of("create:steam_engine"), [" G ", "IMS", " C "], {
+			G: "create:golden_sheet",
+			I: "create_dd:infernal_mechanism",
+			M: "create_dd:integrated_mechanism",
+			S: "create_dd:sealed_mechanism",
+			C: "minecraft:copper_block",
+		})
+		.id("create_cc:create/steam_engine");
 
 	// Harder Drill
-	event.shaped(Item.of("create:mechanical_drill"), [" A ", "ASA", " C "], {
-		A: "create:andesite_alloy",
-		S: "#forge:plates/steel",
-		C: "create:andesite_casing",
-	});
+	event.remove({ output: "create:mechanical_drill" });
+	event
+		.shaped(Item.of("create:mechanical_drill"), [" A ", "ASA", " C "], {
+			A: "#forge:ingots/andesite",
+
+			S: "#forge:plates/steel",
+			C: "create:andesite_casing",
+		})
+		.id("create_cc:create/mechanical_drill");
 
 	// Shadow Steel
 	event.recipes.create
-		.mixing([Item.of("create_dd:shadow_steel")], ["minecraft:netherite_block", "8x #forge:plates/steel"])
-		.superheated();
+		.mixing(["#forge:ingots/shadow_steel"], ["#forge:storage_blocks/netherite", "8x #forge:plates/steel"])
+		.superheated()
+		.id("create_cc:create/shadow_steel");
 
 	// Fix brass speaker craft
-	event.shaped(Item.of("create_things_and_misc:brass_speaker"), [" R ", " N ", " R "], {
-		R: "create:railway_casing",
-		N: "minecraft:note_block",
-	});
+	event
+		.shaped(Item.of("create_things_and_misc:brass_speaker"), [" R ", " N ", " R "], {
+			R: "create:railway_casing",
+			N: "minecraft:note_block",
+		})
+		.id("create_cc:create/brass_speaker");
 
 	// Radar
-	event.shaped("create_things_and_misc:radar", ["ASA", "AMA", "AAA"], {
-		A: "create:andesite_alloy",
-		S: "create:display_board",
-		M: "create_dd:integrated_mechanism",
-	});
+	event.remove({ output: "create_things_and_misc:radar" });
+	event
+		.shaped("create_things_and_misc:radar", ["ASA", "AMA", "AAA"], {
+			A: "#forge:ingots/andesite",
+			S: "create:display_board",
+			M: "create_dd:integrated_mechanism",
+		})
+		.id("create_cc:create/radar");
 
-	// Mithril Ingot
-	event.recipes.create
-		.mixing(
-			["create_dd:mithril_ingot"],
-			[
-				"4x create:experience_nugget",
-				"#forge:ingots/steel",
-				"#forge:ingots/bronze",
-				"create_dd:chromatic_compound",
-				Fluid.of("tfmg:liquid_plastic", 1000),
-			]
-		)
-		.superheated();
-
-	// Asphalt
-	event.recipes.create
-		.mixing(["16x create_dd:asphalt_block"], ["2x create:scoria", Fluid.of("create_things_and_misc:slime", 100)])
-		.heated();
-
-	// Electron Tube
-	event.shaped("8x create:electron_tube", [" R ", " N ", " P "], {
-		R: "create:polished_rose_quartz",
-		N: "#forge:nuggets/copper",
-		P: "tfmg:plastic_sheet",
-	});
+	// Harder Electron Tube
+	event.remove({ output: "create:electron_tube" });
+	event
+		.shaped("8x create:electron_tube", [" R ", " N ", " P "], {
+			R: "create:polished_rose_quartz",
+			N: "#forge:nuggets/copper",
+			P: "tfmg:plastic_sheet",
+		})
+		.id("create_cc:create/electron_tube");
 
 	// Fix Dough
 	event.replaceInput({ input: "create:dough" }, "create:dough", "#forge:dough");
 	event.replaceInput({ input: "farmersdelight:wheat_dough" }, "farmersdelight:wheat_dough", "#forge:dough");
 
 	// Nerf Tuff Crusing
-	event.recipes.create.crushing(["create_dd:potassic_cobble"], "#create:stone_types/tuff");
+	event.recipes.create
+		.crushing(["create_dd:dolomite"], "#create:stone_types/tuff")
+		.id("create_cc:create/tuff_crushing");
 
 	// Remove Electrum
 	event.replaceOutput(
@@ -233,13 +240,13 @@ ServerEvents.recipes((event) => {
 	);
 
 	// Fix Coal Coke
-	event.recipes.create.mixing("tfmg:coal_coke", "#minecraft:coals").heated();
+	event.recipes.create.mixing("tfmg:coal_coke", "#minecraft:coals").heated().id("create_cc:create/coal_coke");
 
 	// Harder Steel
 	event.recipes.create
-		.compacting("create_dd:steel_ingot", ["2x #forge:ingots/cast_iron", "tfmg:coal_coke"])
+		.compacting("#forge:ingots/steel", ["2x #forge:ingots/cast_iron", "tfmg:coal_coke"])
 		.heated()
-		.id("kubejs:steel_ingot");
+		.id("create_cc:create/steel_ingot");
 
 	// Harder Sails
 	const sailWoods = [
@@ -256,9 +263,8 @@ ServerEvents.recipes((event) => {
 	];
 	sailWoods.forEach((wood) => {
 		event.remove({ output: `create_things_and_misc:${wood}_sail` });
-		event.shapeless(`create_things_and_misc:${wood}_sail`, [
-			"#kubejs:windmill_sails",
-			wood == "bamboo" ? `quark:bamboo_planks` : `minecraft:${wood}_planks`,
-		]);
+		event
+			.shapeless(`create_things_and_misc:${wood}_sail`, ["#create_cc:windmill_sails", `minecraft:${wood}_planks`])
+			.id("create_cc:create/sails/" + wood);
 	});
 });

@@ -1,0 +1,13 @@
+filename = 'cucumberjs-0.0.4-1.20.1.jar'
+name = 'CucumberJS'
+side = 'both'
+
+[download]
+hash = '1f474ad85646286d0a0b2600e17135491f39e556'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5170423
+project-id = 981646

@@ -64,13 +64,56 @@ const decals = [
 	"design_decor:american_sign",
 	"design_decor:magnet_sign",
 	"design_decor:blank_sign",
+	"design_decor:a_sign",
+	"design_decor:b_sign",
+	"design_decor:c_sign",
+	"design_decor:d_sign",
+	"design_decor:e_sign",
+	"design_decor:f_sign",
+	"design_decor:g_sign",
+	"design_decor:h_sign",
+	"design_decor:i_sign",
+	"design_decor:j_sign",
+	"design_decor:k_sign",
+	"design_decor:l_sign",
+	"design_decor:m_sign",
+	"design_decor:n_sign",
+	"design_decor:o_sign",
+	"design_decor:p_sign",
+	"design_decor:q_sign",
+	"design_decor:r_sign",
+	"design_decor:s_sign",
+	"design_decor:t_sign",
+	"design_decor:u_sign",
+	"design_decor:v_sign",
+	"design_decor:w_sign",
+	"design_decor:x_sign",
+	"design_decor:y_sign",
+	"design_decor:z_sign",
+	"design_decor:0_sign",
+	"design_decor:1_sign",
+	"design_decor:2_sign",
+	"design_decor:3_sign",
+	"design_decor:4_sign",
+	"design_decor:5_sign",
+	"design_decor:6_sign",
+	"design_decor:7_sign",
+	"design_decor:8_sign",
+	"design_decor:9_sign",
+	"design_decor:letter_sign",
 ];
 
 ServerEvents.recipes((event) => {
 	decals.forEach((decal) => {
 		event.remove({ output: decal });
 
-		event.stonecutting(decal, "#forge:nuggets/zinc").id("create_complete_collection:" + decal.replace(":", "_"));
-		event.stonecutting(decal, "#kubejs:create_decals");
+		event.stonecutting(decal, "#forge:nuggets/zinc").id("create_cc:" + decal.replace(":", "_"));
+		event.stonecutting(decal, "#create_cc:create_decals");
+	});
+});
+
+ServerEvents.tags("item", (event) => {
+	decals.forEach((decal) => {
+		event.add("create_cc:create_decals", decal);
 	});
 });

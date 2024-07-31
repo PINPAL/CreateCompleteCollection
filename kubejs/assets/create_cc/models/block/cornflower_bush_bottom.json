@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/cross",
+	"textures": {
+		"cross": "create_cc:block/cornflower_bush_bottom"
+	}
+}

@@ -1,242 +1,305 @@
 {
-  "providers": [
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/efficiency.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfc0"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/luck.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfc1"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/protection.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfc2"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/fire_protection.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfc3"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/blast_protection.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfc4"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/projectile_protection.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfc5"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/feather_falling.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfc6"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/respiration.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfc7"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/aqua_infinity.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfc8"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/depth_strider.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfc9"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/thorns.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfca"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/soul_speed.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfcb"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/frost_walker.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfcc"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/unbreaking.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfcd"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/mending.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfce"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/curse.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfcf"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/sharpness.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfd0"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/smite.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfd1"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/bane_of_arthropods.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfd2"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/fire_aspect.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfd3"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/knockback.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfd4"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/sweeping_edge.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfd5"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/punch.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfd6"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/power.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfd7"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/flame.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfd8"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/infinity.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfd9"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/multishot.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfda"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/piercing.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfdb"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/quick_charge.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfdc"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/silk_touch.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfdd"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/lure.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfde"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/luck_of_the_sea.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfdf"]
-    },
-    {
-      "type": "bitmap",
-      "file": "minecraft:item/trident.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEfef"]
-    },
-    {
-      "type": "bitmap",
-      "file": "icons:enchantments/swift_sneak.png",
-      "ascent": 8,
-      "height": 8,
-      "chars": ["\uEff0"]
-    }
-  ]
+	"providers": [
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/efficiency.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfc0"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/luck.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfc1"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/protection.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfc2"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/fire_protection.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfc3"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/blast_protection.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfc4"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/projectile_protection.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfc5"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/feather_falling.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfc6"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/respiration.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfc7"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/aqua_infinity.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfc8"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/depth_strider.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfc9"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/thorns.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfca"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/soul_speed.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfcb"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/frost_walker.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfcc"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/unbreaking.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfcd"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/mending.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfce"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/curse.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfcf"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/sharpness.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfd0"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/smite.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfd1"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/bane_of_arthropods.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfd2"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/fire_aspect.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfd3"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/knockback.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfd4"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/sweeping_edge.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfd5"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/punch.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfd6"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/power.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfd7"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/flame.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfd8"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/infinity.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfd9"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/multishot.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfda"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/piercing.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfdb"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/quick_charge.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfdc"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/silk_touch.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfdd"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/lure.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfde"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/luck_of_the_sea.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfdf"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/trident.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEfef"]
+		},
+		{
+			"type": "bitmap",
+			"file": "icons:enchantments/swift_sneak.png",
+			"ascent": 8,
+			"height": 8,
+			"chars": ["\uEff0"]
+		},
+		{
+			"type": "bitmap",
+			"file": "create_cc:food_hunches/carbs_outline.png",
+			"ascent": 9,
+			"height": 9,
+			"chars": ["\uEff1"]
+		},
+		{
+			"type": "bitmap",
+			"file": "create_cc:food_hunches/carbs_fill.png",
+			"ascent": 9,
+			"height": 9,
+			"chars": ["\uEff2"]
+		},
+		{
+			"type": "bitmap",
+			"file": "create_cc:food_hunches/protein_outline.png",
+			"ascent": 9,
+			"height": 9,
+			"chars": ["\uEff3"]
+		},
+		{
+			"type": "bitmap",
+			"file": "create_cc:food_hunches/protein_fill.png",
+			"ascent": 9,
+			"height": 9,
+			"chars": ["\uEff4"]
+		},
+		{
+			"type": "bitmap",
+			"file": "create_cc:food_hunches/veggies_outline.png",
+			"ascent": 9,
+			"height": 9,
+			"chars": ["\uEff5"]
+		},
+		{
+			"type": "bitmap",
+			"file": "create_cc:food_hunches/veggies_fill.png",
+			"ascent": 9,
+			"height": 9,
+			"chars": ["\uEff6"]
+		},
+		{
+			"type": "bitmap",
+			"file": "create_cc:food_hunches/veggies_half.png",
+			"ascent": 9,
+			"height": 9,
+			"chars": ["\uEff7"]
+		},
+		{
+			"type": "bitmap",
+			"file": "create_cc:food_hunches/protein_half.png",
+			"ascent": 9,
+			"height": 9,
+			"chars": ["\uEff8"]
+		},
+		{
+			"type": "bitmap",
+			"file": "create_cc:food_hunches/carbs_half.png",
+			"ascent": 9,
+			"height": 9,
+			"chars": ["\uEff9"]
+		}
+	]
 }

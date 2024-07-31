@@ -1,0 +1,13 @@
+filename = 'TotemOfImmortality-1.20.1-1.0.jar'
+name = 'Totem of Immortality'
+side = 'both'
+
+[download]
+hash = 'c1e0fe2c3efca18958b592f7e6a87c2dd2a13055'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5170557
+project-id = 985092

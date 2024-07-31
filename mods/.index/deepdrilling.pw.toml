@@ -1,0 +1,13 @@
+filename = 'deepdrilling-1.0.1+forge-1.20.1-forge.jar'
+name = 'Deep Drilling'
+side = 'both'
+
+[download]
+hash = 'e6415492771e6739da5487245441ea34404cfe20fbd72e0598176450fe03dc1854990a861478e2b4ab3160ec721117a0d0ef55abfd4abd8857b8bc867a931176'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/7voFu8fj/versions/xNLR5QOw/deepdrilling-1.0.1%2Bforge-1.20.1-forge.jar'
+
+[update.modrinth]
+mod-id = '7voFu8fj'
+version = 'xNLR5QOw'

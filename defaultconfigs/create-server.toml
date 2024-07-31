@@ -68,14 +68,30 @@ disableStress = false
 #.
 #Maximum length in blocks of mechanical belts.
 #Range: > 5
-maxBeltLength = 999
+maxBeltLength = 20
 #.
 #Damage dealt by active Crushing Wheels.
 #Range: > 0
 crushingDamage = 4
 #.
 #[in Revolutions per Minute]
-#Maximum allowed rotation speed for any Kinetic Block.
+#Maximum allowed speed of a configurable motor.
+#[@cui:RequiresReload:both]
+#Range: > 64
+maxMotorSpeed = 256
+#.
+#[in Revolutions per Minute]
+#Added rotation speed by a water wheel when at least one flow is present.
+#Range: > 1
+waterWheelBaseSpeed = 4
+#.
+#[in Revolutions per Minute]
+#Rotation speed gained by a water wheel for each side with running fluids. (halved if not against blades)
+#Range: > 1
+waterWheelFlowSpeed = 4
+#.
+#[in Revolutions per Minute]
+#Maximum allowed rotation speed for any Kinetic Tile.
 #Range: > 64
 maxRotationSpeed = 256
 #.
@@ -130,7 +146,7 @@ fanRotationArgmax = 256
 #.
 #Game ticks required for a Fan-based processing recipe to take effect.
 #Range: > 0
-fanProcessingTime = 150
+inWorldProcessingTime = 150
 
 #.
 #Moving Contraptions
@@ -190,13 +206,6 @@ harvestPartiallyGrown = false
 #.
 #Whether harvesters should replant crops after harvesting.
 harvesterReplants = true
-#.
-#Maximum depth of blocks filled in using a Mechanical Roller.
-#Range: > 1
-rollerFillDepth = 24
-#.
-#Whether minecart contraptions can be placed into container items.
-minecartContraptionInContainers = false
 
 [kinetics.stressValues]
 
@@ -217,21 +226,21 @@ adjustable_chain_gearshift = 0.0
 mechanical_pump = 4.0
 mechanical_mixer = 4.0
 mechanical_arm = 2.0
-andesite_encased_shaft = 0.5
+andesite_encased_shaft = 0.0
 mechanical_press = 8.0
 mechanical_drill = 4.0
 stressometer = 0.0
 shaft = 0.5
 gearshift = 0.5
 weighted_ejector = 2.0
-andesite_encased_cogwheel = 0.0
+andesite_encased_cogwheel = 0.5
 mechanical_crafter = 2.0
 display_board = 0.0
 mechanical_piston = 4.0
 mechanical_bearing = 4.0
 encased_chain_drive = 0.5
 rotation_speed_controller = 0.0
-brass_encased_large_cogwheel = 0.0
+brass_encased_large_cogwheel = 0.5
 mysterious_cuckoo_clock = 1.0
 hose_pulley = 4.0
 millstone = 4.0
@@ -240,7 +249,7 @@ mechanical_saw = 4.0
 crushing_wheel = 8.0
 gantry_shaft = 0.0
 large_cogwheel = 0.5
-andesite_encased_large_cogwheel = 0.0
+andesite_encased_large_cogwheel = 0.5
 sequenced_gearshift = 0.0
 gearbox = 0.5
 clockwork_bearing = 4.0
@@ -251,26 +260,39 @@ brass_encased_shaft = 0.0
 turntable = 4.0
 sticky_mechanical_piston = 4.0
 cogwheel = 0.5
-belt = 0.0
-brass_encased_cogwheel = 0.0
-netherite_backtank = 4.0
-elevator_pulley = 4.0
+belt = 0.5
+brass_encased_cogwheel = 0.5
 
 #.
 #[in Stress Units]
 #Configure how much stress a source can accommodate for.
 [kinetics.stressValues.v2.capacity]
+blue_valve_handle = 8.0
 copper_valve_handle = 8.0
+pink_valve_handle = 8.0
 hand_crank = 8.0
+black_valve_handle = 8.0
+magenta_valve_handle = 8.0
+white_valve_handle = 8.0
+yellow_valve_handle = 8.0
+brown_valve_handle = 8.0
+cyan_valve_handle = 8.0
 windmill_bearing = 512.0
+light_blue_valve_handle = 8.0
+lime_valve_handle = 8.0
+purple_valve_handle = 8.0
+red_valve_handle = 8.0
 steam_engine = 1024.0
 creative_motor = 16384.0
+gray_valve_handle = 8.0
 water_wheel = 16.0
-large_water_wheel = 128.0
+orange_valve_handle = 8.0
+light_gray_valve_handle = 8.0
+green_valve_handle = 8.0
 
 #.
 #Configure speed/capacity levels for requirements and indicators.
-[kinetics.stats]
+[kinetics.stressValues.stats]
 #.
 #[in Revolutions per Minute]
 #Minimum speed of rotation to be considered 'medium'
@@ -295,7 +317,7 @@ highStressImpact = 8.0
 #[in Stress Units]
 #Minimum added Capacity by sources to be considered 'medium'
 #Range: 0.0 ~ 4096.0
-mediumCapacity = 256.0
+mediumCapacity = 128.0
 #.
 #[in Stress Units]
 #Minimum added Capacity by sources to be considered 'high'
@@ -338,18 +360,19 @@ fillInfinite = false
 #.
 #Configure which fluids can be drained infinitely.
 #Allowed Values: ALLOW_ALL, DENY_ALL, ALLOW_BY_TAG, DENY_BY_TAG
-bottomlessFluidMode = "ALLOW_ALL"
+bottomlessFluidMode = "ALLOW_BY_TAG"
 #.
-#Whether hose pulleys should be allowed to place fluid sources.
-fluidFillPlaceFluidSourceBlocks = true
-#.
-#Whether open-ended pipes should be allowed to place fluid sources.
-pipesPlaceFluidSourceBlocks = true
+#Whether open-ended pipes and hose pulleys should be allowed to place fluid sources.
+placeFluidSourceBlocks = true
 
 #.
 #Tweaks for logistical components
 [logistics]
 #.
+#.
+#The maximum amount of items a funnel pulls at a time without an applied filter.
+#Range: 1 ~ 64
+defaultExtractionLimit = 64
 #.
 #The amount of ticks a funnel waits between item transferrals, when it is not re-activated by redstone.
 #Range: > 1
@@ -361,26 +384,19 @@ psiTimeout = 20
 #.
 #Maximum distance in blocks a Mechanical Arm can reach across.
 #Range: > 1
-mechanicalArmRange = 12
+mechanicalArmRange = 7
 #.
 #Maximum possible range in blocks of redstone link connections.
 #Range: > 1
-linkRange = 2048
+linkRange = 256
 #.
 #Maximum possible distance in blocks between data gatherers and their target.
 #Range: > 1
-displayLinkRange = 128
+displayLinkRange = 64
 #.
 #The total amount of stacks a vault can hold per block in size.
 #Range: > 1
 vaultCapacity = 54
-#.
-#The amount of ticks a brass tunnel waits between distributions.
-#Range: 1 ~ 10
-brassTunnelTimer = 1
-#.
-#Whether hostile mobs walking near a seat will start riding it.
-seatHostileMobs = true
 
 #.
 #Everything related to Schematic tools
@@ -388,17 +404,17 @@ seatHostileMobs = true
 #.
 #.
 #Whether placing a Schematic directly in Creative Mode should replace world blocks with Air
-creativePrintIncludesAir = true
+creativePrintIncludesAir = false
 #.
 #[in KiloBytes]
 #The maximum allowed file size of uploaded Schematics.
 #Range: > 16
-maxSchematics = 2024
+maxSchematics = 2048
 #.
 #[in Bytes]
 #The maximum packet size uploaded Schematics are split into.
 #Range: 256 ~ 32767
-maxSchematicPacketSize = 1024
+maxSchematicPacketSize = 2048
 #.
 #Amount of game ticks without new packets arriving until an active schematic upload process is discarded.
 #Range: > 100
@@ -419,6 +435,39 @@ schematicannonGunpowderWorth = 1.5625
 #% of Schematicannon's Fuel used for each fired block.
 #Range: 0.0 ~ 100.0
 schematicannonFuelUsage = 0.125
+
+#.
+#Gadgets and other Shenanigans added by Create
+[curiosities]
+#.
+#.
+#The Maximum Distance to an active mirror for the symmetry wand to trigger.
+#Range: > 10
+maxSymmetryWandRange = 64
+#.
+#The Maximum Distance a Block placed by Create's placement assist will have to its interaction point.
+#Range: > 3
+placementAssistRange = 12
+#.
+#The Maximum Distance at which a Toolbox can interact with Players' Inventories.
+#Range: > 1
+toolboxRange = 32
+#.
+#The Maximum volume of Air that can be stored in a backtank = Seconds of underwater breathing
+#Range: > 1
+airInBacktank = 1800
+#.
+#The volume of Air added by each level of the backtanks Capacity Enchantment
+#Range: > 1
+enchantedBacktankCapacity = 1800
+#.
+#Amount of free Extendo Grip actions provided by one filled Copper Backtank. Set to 0 makes Extendo Grips unbreakable
+#Range: > 0
+maxExtendoGripActions = 2048
+#.
+#Amount of free Potato Cannon shots provided by one filled Copper Backtank. Set to 0 makes Potato Cannons unbreakable
+#Range: > 0
+maxPotatoCannonShots = 200
 
 #.
 #Create's builtin Railway systems
@@ -481,36 +530,3 @@ poweredTrainTurningTopSpeed = 80.0
 #The acceleration of powered Trains.
 #Range: 0.0 ~ 3.4028234663852886E38
 poweredTrainAcceleration = 5.0
-
-#.
-#Equipment and gadgets added by Create
-[equipment]
-#.
-#.
-#The Maximum Distance to an active mirror for the symmetry wand to trigger.
-#Range: > 10
-maxSymmetryWandRange = 50
-#.
-#The Maximum Distance a Block placed by Create's placement assist will have to its interaction point.
-#Range: > 3
-placementAssistRange = 12
-#.
-#The Maximum Distance at which a Toolbox can interact with Players' Inventories.
-#Range: > 1
-toolboxRange = 32
-#.
-#The Maximum volume of Air that can be stored in a backtank = Seconds of underwater breathing
-#Range: > 1
-airInBacktank = 900
-#.
-#The volume of Air added by each level of the backtanks Capacity Enchantment
-#Range: > 1
-enchantedBacktankCapacity = 900
-#.
-#Amount of free Extendo Grip actions provided by one filled Copper Backtank. Set to 0 makes Extendo Grips unbreakable
-#Range: > 0
-maxExtendoGripActions = 1000
-#.
-#Amount of free Potato Cannon shots provided by one filled Copper Backtank. Set to 0 makes Potato Cannons unbreakable
-#Range: > 0
-maxPotatoCannonShots = 200

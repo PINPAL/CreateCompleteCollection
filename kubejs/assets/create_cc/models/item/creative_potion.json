@@ -1,0 +1,7 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "create_cc:item/creative_potion_overlay",
+		"layer1": "create_cc:item/creative_potion"
+	}
+}
