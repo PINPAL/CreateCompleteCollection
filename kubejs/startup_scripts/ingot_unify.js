@@ -1,66 +1,55 @@
 const unifiedIngots = [
-	"steel",
-	"industrial_iron",
-	"zinc",
-	"brass",
-	"copper",
-	"netherite",
-	"iron",
-	"gold",
-	"aluminum",
+	{ name: "steel", type: "ingot" },
+	{ name: "industrial_iron", type: "ingot" },
+	{ name: "zinc", type: "ingot" },
+	{ name: "brass", type: "ingot" },
+	{ name: "copper", type: "ingot" },
+	{ name: "netherite", type: "ingot" },
+	{ name: "iron", type: "ingot" },
+	{ name: "gold", type: "ingot" },
+	{ name: "aluminum", type: "ingot" },
 
-	// 1.20+ Additions
-	// "bronze",
-	// "tin"
-	"nickel",
-	"lead",
+	{ name: "nickel", type: "ingot" },
+	{ name: "lead", type: "ingot" },
 
-	// Ad Astra
-	"desh",
-	"ostrum",
-	"calorite",
+	{ name: "desh", type: "ingot" },
+	{ name: "ostrum", type: "ingot" },
+	{ name: "calorite", type: "ingot" },
+
+	{ name: "andesite", type: "alloy" },
+	{ name: "refined_radiance", type: "null" },
+	{ name: "shadow_steel", type: "null" },
+	{ name: "lapis", type: "alloy" },
 ];
 
 StartupEvents.registry("item", (event) => {
-	unifiedIngots.forEach((ingot) => {
-		event.create("create_cc:" + ingot + "_ingot").displayName(formatName(ingot) + " Ingot");
+	unifiedIngots.forEach((ingotObject) => {
+		let ingot = ingotObject.name;
+		let type = formatName(ingotObject.type);
+		if (ingotObject.type === "null") {
+			type = "";
+		}
+		event.create("create_cc:" + ingot + "_ingot").displayName(formatName(ingot) + " " + type);
 		event.create("create_cc:" + ingot + "_nugget").displayName(formatName(ingot) + " Nugget");
 		event.create("create_cc:" + ingot + "_sheet").displayName(formatName(ingot) + " Sheet");
 	});
-
-	// Andesite Alloy
-	event.create("create_cc:andesite_ingot").displayName("Andesite Alloy");
-	event.create("create_cc:andesite_nugget").displayName("Andesite Alloy Nugget");
-	event.create("create_cc:andesite_sheet").displayName("Andesite Alloy Sheet");
-
-	// Refined Radiance
-	event.create("create_cc:refined_radiance_ingot").displayName("Refined Radiance");
-	event.create("create_cc:refined_radiance_nugget").displayName("Refined Radiance Nugget");
-	event.create("create_cc:refined_radiance_sheet").displayName("Refined Radiance Sheet");
-
-	// Shadow Steel
-	event.create("create_cc:shadow_steel_ingot").displayName("Shadow Steel");
-	event.create("create_cc:shadow_steel_nugget").displayName("Shadow Steel Nugget");
-	event.create("create_cc:shadow_steel_sheet").displayName("Shadow Steel Sheet");
 });
 
 StartupEvents.registry("block", (event) => {
-	unifiedIngots.forEach((ingot) => {
+	unifiedIngots.forEach((ingotObject) => {
+		// Generate a formatted name for the ingot
+		// eg: "industrial_iron" becomes "Industrial Iron"
+		// eg: ""
+		let formattedName = formatName(unifiedIngots.name);
+		if (ingotObject.type === "alloy") {
+			formattedName += " Alloy";
+		}
 		event
-			.create("create_cc:" + ingot + "_block")
-			.displayName("Block of " + formatName(ingot))
+			.create("create_cc:" + ingotObject.name + "_block")
+			.displayName("Block of " + formattedName)
 			.hardness(50)
 			.tagBlock("minecraft:mineable/pickaxe")
 			.mapColor("metal")
 			.soundType("metal");
 	});
-
-	// Andesite Alloy
-	event
-		.create("create_cc:andesite_block")
-		.displayName("Andesite Alloy Block")
-		.hardness(50)
-		.tagBlock("minecraft:mineable/pickaxe")
-		.mapColor("metal")
-		.soundType("metal");
 });

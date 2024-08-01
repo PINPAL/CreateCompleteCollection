@@ -41,14 +41,24 @@ StartupEvents.registry("block", (event) => {
 		.box(1, 0, 1, 15, 2, 15)
 		// second bounding  a 2x2 column in the center that stops 2 pixels short of the top
 		.box(7, 2, 7, 9, 14, 9);
+	event.create("create_cc:vault_casing").displayName("Vault Casing").soundType("metal").hardness(1.5).resistance(6.0);
+	event
+		.create("create_cc:industrial_casing")
+		.displayName("Industrial Casing")
+		.soundType("metal")
+		.hardness(1.5)
+		.resistance(6.0);
 });
 
 StartupEvents.registry("item", (event) => {
 	// Refined Rock
 	event.create("create_cc:refined_stone").displayName("Refined Rock");
+	// Cornflower Bush Item
 	event
 		.create("create_cc:cornflower_bush_item")
 		.displayName("Cornflower Bush")
 		.tag("minecraft:flowers")
 		.tag("minecraft:tall_flowers");
+	// Insulation Tube
+	event.create("insulation_brush").displayName("Insulating Glue").maxDamage(99);
 });

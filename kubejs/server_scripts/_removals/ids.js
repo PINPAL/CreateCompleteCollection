@@ -1,7 +1,6 @@
 // priority: 1
 const idsToRemove = [
 	// Minecraft
-	"minecraft:compacting/cast_iron_ingot",
 	"minecraft:paper",
 	"minecraft:book",
 	"minecraft:cake",
@@ -69,6 +68,10 @@ const idsToRemove = [
 	"tfmg:compacting/steel_block",
 	"tfmg:mixing/napalm",
 	"tfmg:crafting/electron_tube_from_plastic",
+	"tfmg:mixing/liquid_concrete_",
+
+	// Metallurgy
+	"createmetallurgy:alloying/alloying_steel",
 
 	// Create
 	"create:crafting/kinetics/item_vault",
@@ -82,6 +85,9 @@ const idsToRemove = [
 	"create:crafting/curiosities/cake",
 	"create:pressing/sugar_cane",
 	"create:splashing/crushed_raw_iron",
+
+	// Every Compat
+	/everycomp:sd\/.*_drawers.*/,
 ];
 
 ServerEvents.recipes((event) => {

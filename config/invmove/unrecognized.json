@@ -146,7 +146,9 @@
     "com.tacz.guns.client.gui.GunRefitScreen": true,
     "com.tom.createores.menu.OreVeinAtlasScreen": true,
     "earth.terrarium.adastra.client.screens.machines.SolarPanelScreen": true,
-    "earth.terrarium.adastra.client.screens.vehicles.LanderScreen": true
+    "earth.terrarium.adastra.client.screens.vehicles.LanderScreen": true,
+    "me.shedaniel.rei.impl.client.gui.screen.CompositeDisplayViewingScreen": true,
+    "com.negodya1.vintageimprovements.content.kinetics.lathe.recipe_card.RecipeCardScreen": true
   },
   "hideBackground": {
     "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackScreen": false

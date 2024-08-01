@@ -1,6 +1,7 @@
 // priority: 99
 
 const unifiedIngots = [
+	{ name: "andesite", modsUsing: ["create", "createdeco", "vintageimprovements"], notIngot: "alloy" },
 	{ name: "steel", modsUsing: ["tfmg", "create_dd", "ad_astra", "createmetallurgy"] },
 	{ name: "industrial_iron", modsUsing: ["createdeco"] },
 	{ name: "zinc", modsUsing: ["create", "create_dd", "createaddition", "destroy"] },
@@ -18,20 +19,24 @@ const unifiedIngots = [
 ];
 
 ServerEvents.recipes((event) => {
+	// Handle cast_iron -> industrial_iron conversion
+	event.replaceInput(
+		{ input: "#forge:ingots/cast_iron" },
+		"#forge:ingots/cast_iron",
+		"#forge:ingots/industrial_iron"
+	);
 	// Replace all modded ingots with unified ingots
 	unifiedIngots.forEach((ingot) => {
 		ingot.modsUsing.forEach((mod) => {
 			// Ingots
-			event.replaceInput(
-				{ input: mod + ":" + ingot.name + "_ingot" },
-				mod + ":" + ingot.name + "_ingot",
-				"#forge:ingots/" + ingot.name
-			);
-			event.replaceOutput(
-				{ output: mod + ":" + ingot.name + "_ingot" },
-				mod + ":" + ingot.name + "_ingot",
-				"#forge:ingots/" + ingot.name
-			);
+			let modIngot = mod + ":" + ingot.name + "_ingot";
+			// If the ingot has a different name eg: andesite_alloy not andesite_ingot
+			if (ingot.hasOwnProperty("notIngot")) {
+				modIngot = mod + ":" + ingot.name + "_" + ingot.notIngot;
+			}
+			// Replace all instances of the modded ingot with the unified ingot
+			event.replaceInput({ input: modIngot }, modIngot, "#forge:ingots/" + ingot.name);
+			event.replaceOutput({ output: modIngot }, modIngot, "#forge:ingots/" + ingot.name);
 
 			// Nuggets
 			event.replaceInput(

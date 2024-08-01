@@ -32,6 +32,11 @@ ServerEvents.tags("item", (event) => {
 		event.add("create_cc:copper_armor", item);
 	});
 
+	let item_vaults = ["create_cc:item_vault", "create_connected:item_silo"];
+	item_vaults.forEach((item) => {
+		event.add("create_cc:item_vaults", item);
+	});
+
 	let forge_armors = [
 		"create:netherite_diving_boots",
 		"create:netherite_diving_helmet",

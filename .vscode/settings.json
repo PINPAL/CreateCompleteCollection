@@ -46,7 +46,6 @@
 		"kubejs/probe": true,
 		".probe*": true,
 		"logs/*.log.gz*": true,
-		"logs/*.log": true,
 		"logs/telemetry": true,
 		"mod_data": true,
 		"mods": true

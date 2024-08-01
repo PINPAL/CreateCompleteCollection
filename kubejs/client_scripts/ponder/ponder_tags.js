@@ -34,7 +34,7 @@ Ponder.tags((event) => {
 			"createdeco:iron_coinstack",
 			"createdeco:gold_coinstack",
 			"createdeco:netherite_coinstack",
-			"createdeco:cast_iron_coinstack",
+			"createdeco:industrial_iron_coinstack",
 		]
 	);
 });

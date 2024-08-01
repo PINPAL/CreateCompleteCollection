@@ -24,7 +24,6 @@ ServerEvents.tags("item", (event) => {
 
 	// Resources
 	event.add("as:iron", /(_|:)iron($|_)/);
-	event.add("as:cast_iron", /(_|:)cast_iron($|_)/);
 	event.add("as:gold", /(_|:)gold($|_)/);
 	event.add("as:gold", /(_|:)golden($|_)/);
 	event.add("as:coal", /(_|:)coal($|_)/);
@@ -36,6 +35,7 @@ ServerEvents.tags("item", (event) => {
 	event.add("as:diamond", /(_|:)diamond($|_)/);
 	event.add("as:netherite", /(_|:)netherite($|_)/);
 	event.add("as:industrial_iron", /(_|:)industrial_iron($|_)/);
+	event.add("as:industrial_iron", /(_|:)cast_iron($|_)/);
 	event.add("as:steel", /(_|:)steel($|_)/);
 	event.add("as:copper", /(_|:)copper($|_)/);
 	event.add("as:bronze", /(_|:)bronze($|_)/);

@@ -41,6 +41,7 @@ JEIEvents.information((event) => {
 		"create:veridium",
 		"create_dd:dolomite",
 		"create_dd:gabbro",
+		"tfmg:fireclay",
 	];
 	undergroundStoneTypes.forEach((item) => event.addItem(item, ["Spawns in veins underground."]));
 

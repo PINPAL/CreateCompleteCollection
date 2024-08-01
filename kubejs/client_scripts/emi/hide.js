@@ -7,7 +7,6 @@ const hideFromJEI = [
 	/wands:*/,
 	/ftbquests:*/,
 	/chunkloaders:*/,
-	/doubleslabs:.*/,
 	/metalbarrels:.*/,
 	/petrolpark:.*/,
 	"dragonlib:dragon",
@@ -56,6 +55,9 @@ const hideFromJEI = [
 JEIEvents.hideItems((event) => {
 	// Hide Items
 	hideFromJEI.forEach((item) => {
+		event.hide(item);
+	});
+	global.removedItems.forEach((item) => {
 		event.hide(item);
 	});
 });

@@ -15,7 +15,7 @@ ServerEvents.recipes((event) => {
 	event.recipes.create.haunting("minecraft:hanging_roots", "minecraft:mangrove_propagule");
 
 	// Cheaper Jukebox
-	event.replaceInput({ id: "minecraft:jukebox" }, "minecraft:diamond", "#forge:ingots/cast_iron");
+	event.replaceInput({ id: "minecraft:jukebox" }, "minecraft:diamond", "#forge:ingots/industrial_iron");
 
 	// Rooted Dirt
 	event.recipes.create.deploying("minecraft:rooted_dirt", ["minecraft:dirt", "minecraft:hanging_roots"]);

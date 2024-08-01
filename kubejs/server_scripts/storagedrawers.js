@@ -99,9 +99,21 @@ ServerEvents.recipes((event) => {
 		event
 			.shaped(`${wood.mod}${wood.name}_full_drawers_1`, ["V V", " W ", "V V"], {
 				W: getDrawerLogTag(wood),
-				V: "create:item_vault",
+				V: "#create_cc:item_vaults",
 			})
-			.id(`create_cc:drawers/${wood.name}_crafting`);
+			.id(`create_cc:drawers/${wood.name}_crafting_1x1`);
+		event
+			.shaped(`${wood.mod}${wood.name}_full_drawers_4`, [" V ", "VWV", " V "], {
+				W: getDrawerLogTag(wood),
+				V: "#create_cc:item_vaults",
+			})
+			.id(`create_cc:drawers/${wood.name}_crafting_2x2`);
+		event
+			.shaped(`${wood.mod}${wood.name}_full_drawers_2`, ["VV ", " W ", " VV"], {
+				W: getDrawerLogTag(wood),
+				V: "#create_cc:item_vaults",
+			})
+			.id(`create_cc:drawers/${wood.name}_crafting_1x2`);
 		// Stone Cutting 1x1 Drawers into 2x2 & 2x1 Drawers
 		event
 			.stonecutting(`${wood.mod}${wood.name}_full_drawers_2`, `#create_cc:${wood.name}_drawers`)

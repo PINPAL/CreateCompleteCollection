@@ -1,12 +1,13 @@
 const addToJEI = [
-	"create:copper_nugget",
 	"tfmg:liquid_concrete_bucket",
 	"tfmg:concrete",
 	"tfmg:concrete_slab",
 	"tfmg:concrete_stairs",
 	"tfmg:concrete_wall",
 	"tfmg:concrete_pillar",
+
 	"ftbquests:book",
+j
 	"sophisticatedbackpacks:backpack",
 	"sophisticatedbackpacks:iron_backpack",
 	"sophisticatedbackpacks:gold_backpack",
@@ -23,6 +24,7 @@ const addToJEI = [
 	"sophisticatedbackpacks:everlasting_upgrade",
 	"sophisticatedbackpacks:crafting_upgrade",
 	"sophisticatedbackpacks:stonecutter_upgrade",
+
 	"refinedstorage:quartz_enriched_iron",
 	"refinedstorageaddons:wireless_crafting_grid",
 	"refinedstorage:wireless_fluid_grid",
@@ -50,31 +52,27 @@ const addToJEI = [
 	"refinedstorage:speed_upgrade",
 	"refinedstorage:stack_upgrade",
 	"refinedstorage:crafting_upgrade",
+
 	"simplemagnets:advancedmagnet",
 	"simplemagnets:advanced_demagnetization_coil",
+
 	"wands:palette",
+
 	"chunkloaders:ultimate_chunk_loader",
+
 	"metalbarrels:iron_barrel",
 	"metalbarrels:gold_barrel",
 	"metalbarrels:diamond_barrel",
 	"metalbarrels:wood_to_iron",
 	"metalbarrels:iron_to_gold",
 	"metalbarrels:gold_to_diamond",
+
 	"create:andesite_encased_shaft",
 	"create:andesite_encased_cogwheel",
 	"create:andesite_encased_large_cogwheel",
 	"create:brass_encased_shaft",
 	"create:brass_encased_cogwheel",
 	"create:brass_encased_large_cogwheel",
-
-	"createdeco:gold_sheet_slab_vert",
-	"createdeco:netherite_sheet_slab_vert",
-	"createdeco:andesite_sheet_slab_vert",
-	"createdeco:brass_sheet_slab_vert",
-	"createdeco:cast_iron_sheet_slab_vert",
-	"createdeco:iron_sheet_slab_vert",
-	"createdeco:copper_sheet_slab_vert",
-	"createdeco:zinc_sheet_slab_vert",
 ];
 
 JEIEvents.addItems((event) => {

@@ -7,11 +7,7 @@
 	id: "42D297EC7D3BE68E"
 	images: [
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 20.59750213430505d
-			hover: [ ]
 			image: "fancymenu:textures/title-banner.png"
 			rotation: 0.0d
 			width: 27.47764d
@@ -19,11 +15,7 @@
 			y: -9.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 35.0d
-			hover: [ ]
 			image: "quests:textures/background.png"
 			order: -1
 			rotation: 0.0d
@@ -32,11 +24,7 @@
 			y: 7.125d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 20.0d
-			hover: [ ]
 			image: "quests:textures/cog_border.png"
 			rotation: 0.0d
 			width: 10.0d
@@ -44,11 +32,7 @@
 			y: 4.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 20.0d
-			hover: [ ]
 			image: "quests:textures/cog_border.png"
 			rotation: -180.0d
 			width: 10.0d
@@ -56,11 +40,7 @@
 			y: 12.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 17.5d
-			hover: [ ]
 			image: "quests:textures/creative_background.png"
 			rotation: 0.0d
 			width: 17.5d
@@ -68,11 +48,7 @@
 			y: -5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "quests:textures/belt_scroll.png"
 			rotation: 0.0d
 			width: 0.06666666666666667d
@@ -80,11 +56,7 @@
 			y: -27.125d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 3.0d
-			hover: [ ]
 			image: "kubejs:block/belt_scroll"
 			order: -100
 			rotation: 90.0d
@@ -93,11 +65,7 @@
 			y: 0.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 3.0d
-			hover: [ ]
 			image: "kubejs:block/belt_scroll"
 			rotation: 90.0d
 			width: 3.0d
@@ -105,11 +73,7 @@
 			y: 0.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 3.0d
-			hover: [ ]
 			image: "kubejs:block/belt_scroll"
 			rotation: 90.0d
 			width: 3.0d
@@ -117,11 +81,7 @@
 			y: 0.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 3.0d
-			hover: [ ]
 			image: "kubejs:block/belt_scroll"
 			order: -100
 			rotation: 90.0d
@@ -130,11 +90,7 @@
 			y: 0.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: [ ]
 			image: "quests:textures/creative_title.png"
 			rotation: 0.0d
 			width: 15.0d
@@ -142,11 +98,7 @@
 			y: -12.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 17.5d
-			hover: [ ]
 			image: "quests:textures/copper_background.png"
 			rotation: 0.0d
 			width: 17.5d
@@ -154,11 +106,7 @@
 			y: 14.625d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 3.0d
-			hover: [ ]
 			image: "kubejs:block/belt_scroll"
 			order: -100
 			rotation: -90.0d
@@ -167,11 +115,7 @@
 			y: 18.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 3.0d
-			hover: [ ]
 			image: "kubejs:block/belt_scroll"
 			order: -100
 			rotation: -90.0d
@@ -180,11 +124,7 @@
 			y: 18.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 3.0d
-			hover: [ ]
 			image: "kubejs:block/belt_scroll"
 			order: -100
 			rotation: -90.0d
@@ -193,11 +133,7 @@
 			y: 18.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 3.0d
-			hover: [ ]
 			image: "kubejs:block/belt_scroll"
 			order: -100
 			rotation: -90.0d
@@ -206,11 +142,7 @@
 			y: 18.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: [ ]
 			image: "quests:textures/dyeing_title.png"
 			rotation: 0.0d
 			width: 15.0d
@@ -218,11 +150,7 @@
 			y: 7.5d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 17.5d
-			hover: [ ]
 			image: "quests:textures/iron_background.png"
 			order: -9999
 			rotation: 0.0d
@@ -231,11 +159,7 @@
 			y: -5.0d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: [ ]
 			image: "quests:textures/farming_title.png"
 			rotation: 0.0d
 			width: 15.0d
@@ -243,11 +167,7 @@
 			y: -12.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 17.5d
-			hover: [ ]
 			image: "quests:textures/potions_background.png"
 			rotation: 0.0d
 			width: 17.5d
@@ -255,11 +175,7 @@
 			y: 14.62d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 5.0d
-			hover: [ ]
 			image: "quests:textures/potion_title.png"
 			rotation: 0.0d
 			width: 15.0d
@@ -267,11 +183,7 @@
 			y: 7.5d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 6.5d
-			hover: [ ]
 			image: "quests:textures/brewing_guide.png"
 			rotation: 0.0d
 			width: 6.5d
@@ -279,11 +191,7 @@
 			y: 13.625d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.5d
-			hover: [ ]
 			image: "quests:textures/pin.png"
 			rotation: 0.0d
 			width: 1.5d
@@ -291,11 +199,7 @@
 			y: 11.05d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "quests:textures/brewing_arrow.png"
 			rotation: 0.0d
 			width: 0.5d
@@ -303,11 +207,7 @@
 			y: 12.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "quests:textures/brewing_arrow.png"
 			rotation: 0.0d
 			width: 0.5d
@@ -315,11 +215,7 @@
 			y: 13.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "quests:textures/brewing_arrow.png"
 			rotation: 0.0d
 			width: 0.5d
@@ -327,11 +223,7 @@
 			y: 14.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "quests:textures/brewing_arrow.png"
 			rotation: 0.0d
 			width: 0.5d
@@ -339,11 +231,7 @@
 			y: 12.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "quests:textures/brewing_arrow.png"
 			rotation: 0.0d
 			width: 0.5d
@@ -351,11 +239,7 @@
 			y: 13.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "quests:textures/brewing_arrow.png"
 			rotation: 0.0d
 			width: 0.5d
@@ -363,11 +247,7 @@
 			y: 14.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "quests:textures/brewing_strong.png"
 			rotation: 0.0d
 			width: 1.0d
@@ -375,11 +255,7 @@
 			y: 12.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "quests:textures/brewing_lingering.png"
 			rotation: 0.0d
 			width: 1.0d
@@ -387,11 +263,7 @@
 			y: 15.625d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "quests:textures/brewing_splash.png"
 			rotation: 0.0d
 			width: 1.0d
@@ -399,11 +271,7 @@
 			y: 14.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 1.0d
-			hover: [ ]
 			image: "quests:textures/brewing_long.png"
 			rotation: 0.0d
 			width: 1.0d
@@ -411,11 +279,7 @@
 			y: 13.25d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "quests:textures/brewing_arrow_down.png"
 			rotation: 0.0d
 			width: 0.5d
@@ -423,11 +287,7 @@
 			y: 14.925d
 		}
 		{
-			click: ""
-			corner: false
-			dev: false
 			height: 0.5d
-			hover: [ ]
 			image: "quests:textures/brewing_arrow_invert.png"
 			rotation: 0.0d
 			width: 0.5d
@@ -609,7 +469,7 @@
 			tasks: [{
 				id: "1645AF99B5B4BD07"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:wooden_sword"
 					tag: {
 						Damage: 0
@@ -724,7 +584,7 @@
 			dependencies: ["6E931AE38AE91C4F"]
 			hide: true
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "create:sand_paper"
 				tag: {
 					Damage: 0
@@ -735,7 +595,7 @@
 			tasks: [{
 				id: "12271AE86589AA8A"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "create:sandpaper"
@@ -757,7 +617,7 @@
 			tasks: [{
 				id: "66F68E9621BE389A"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "design_decor:crushing_wheels"
@@ -805,7 +665,7 @@
 			rewards: [{
 				id: "5FF469414CD932C0"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:water_bucket"
 					tag: { }
 				}
@@ -845,7 +705,7 @@
 					icon: "create:white_sail"
 					id: "77DA0BF17E05E9BC"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "kubejs:windmill_sails"
@@ -937,7 +797,7 @@
 			tasks: [{
 				id: "697A9CAF2BFBA370"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:iron_sword"
 					tag: {
 						Damage: 0
@@ -959,7 +819,7 @@
 			tasks: [{
 				id: "1B85B3A1309E52A7"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:iron_hoe"
 					tag: {
 						Damage: 0
@@ -999,7 +859,7 @@
 			tasks: [{
 				id: "4D9788F980B0B4D3"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "storagedrawers:drawers"
@@ -1220,7 +1080,7 @@
 			tasks: [{
 				id: "28D21275C042E2F8"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "kubejs:electric_connector"
@@ -1291,7 +1151,7 @@
 			hide: true
 			hide_dependency_lines: true
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:chainmail_chestplate"
 				tag: {
 					Damage: 0
@@ -1310,7 +1170,7 @@
 			tasks: [{
 				id: "25A34E42DE0B0B08"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "kubejs:chainmail_armor"
@@ -1327,7 +1187,7 @@
 			dependencies: ["26D185F68C821538"]
 			hide: true
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:leather_chestplate"
 				tag: {
 					Damage: 0
@@ -1343,7 +1203,7 @@
 			tasks: [{
 				id: "0C231792360146AC"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "kubejs:leather_armor"
@@ -1360,7 +1220,7 @@
 			dependencies: ["568E4C255A477E20"]
 			hide: true
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:iron_chestplate"
 				tag: {
 					Damage: 0
@@ -1372,7 +1232,7 @@
 			tasks: [{
 				id: "06F2166A623E1766"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "kubejs:iron_armor"
@@ -1401,7 +1261,7 @@
 			tasks: [{
 				id: "6CE66F0BF87F4DE1"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "kubejs:steel_armor"
@@ -1418,7 +1278,7 @@
 			dependencies: ["11866A0A040998FA"]
 			hide: true
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:diamond_chestplate"
 				tag: {
 					Damage: 0
@@ -1430,7 +1290,7 @@
 			tasks: [{
 				id: "11D33E0000772BDE"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "kubejs:diamond_armor"
@@ -1447,7 +1307,7 @@
 			dependencies: ["2E7775FE373386DA"]
 			hide: true
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:netherite_chestplate"
 				tag: {
 					Damage: 0
@@ -1465,7 +1325,7 @@
 			tasks: [{
 				id: "67EF0A6F9B34C957"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "kubejs:netherite_armor"
@@ -1869,7 +1729,7 @@
 			tasks: [{
 				id: "0456C40633D4796B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "kubejs:train_tracks"
@@ -1919,7 +1779,7 @@
 				count: 64L
 				id: "2144BBD1ED30B468"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "minecraft:coals"
@@ -2049,7 +1909,7 @@
 			rewards: [{
 				id: "6A3729BBCF546F1A"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:enchanted_book"
 					tag: {
 						display: {
@@ -2177,7 +2037,7 @@
 			tasks: [{
 				id: "5BAF76103844FECF"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "create:extendo_grip"
 					tag: {
 						Damage: 0
@@ -2195,7 +2055,7 @@
 			tasks: [{
 				id: "22322138A9DEA3C0"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "wands:netherite_wand"
 					tag: {
 						Damage: 0
@@ -2214,7 +2074,7 @@
 			tasks: [{
 				id: "1A0811D431BA807F"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "wands:palette"
 					tag: { }
 				}
@@ -2254,7 +2114,7 @@
 			tasks: [{
 				id: "18719282FDFB6558"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "forge:seeds"
@@ -2283,7 +2143,7 @@
 				count: 32L
 				id: "4E2BCA7404FCF983"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "forge:nutrients/carbs"
@@ -2312,7 +2172,7 @@
 				count: 32L
 				id: "596E8F5AC1ABC8C7"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "forge:foods/meat/cooked"
@@ -2341,7 +2201,7 @@
 				count: 32L
 				id: "0439FD780535EE7B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "forge:nutrients/vegetables"
@@ -2457,7 +2317,7 @@
 			tasks: [{
 				id: "61102D4EBDF66F8B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "shrink:shrinking_device"
 					tag: { }
 				}
@@ -2475,7 +2335,7 @@
 			tasks: [{
 				id: "770DF739137A9987"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "simplemagnets:advancedmagnet"
 					tag: { }
 				}
@@ -2513,7 +2373,7 @@
 				{
 					id: "7783CADB77B29DDF"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "railways:conductor_caps"
@@ -3162,7 +3022,7 @@
 					count: 256L
 					id: "21D7745773E15940"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "forge:stripped_logs"
@@ -3211,7 +3071,7 @@
 				{
 					id: "54EE5FB2908CF8F9"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "minecraft:logs"
@@ -3284,7 +3144,7 @@
 					count: 16L
 					id: "79A6A6FF83BD06FD"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "quests:brass_sorter"
@@ -3297,7 +3157,7 @@
 					count: 16L
 					id: "5714C1E401ED6B04"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "quests:storage_blocks"
@@ -3330,7 +3190,7 @@
 			tasks: [{
 				id: "3B11CC8A46B4975B"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "itemfilters:tag"
 					tag: {
 						value: "create:toolboxes"
@@ -3581,7 +3441,7 @@
 					icon: "create:brown_toolbox"
 					id: "701C94713AB46CA8"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "itemfilters:tag"
 						tag: {
 							value: "create:toolboxes"
@@ -3610,7 +3470,7 @@
 				{
 					id: "36D8D8C9649009D8"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "create:netherite_backtank"
 						tag: {
 							Air: 900
@@ -3621,7 +3481,7 @@
 				{
 					id: "207F94D9B7E22BE7"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "create:netherite_diving_helmet"
 						tag: {
 							Damage: 0
@@ -3632,7 +3492,7 @@
 				{
 					id: "7A0A1DF13A0E6281"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "create:netherite_diving_boots"
 						tag: {
 							Damage: 0
@@ -3643,7 +3503,7 @@
 				{
 					id: "62A30DDF32E11AE4"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:netherite_leggings"
 						tag: {
 							Damage: 0
@@ -3665,7 +3525,7 @@
 				{
 					id: "1EE38723F1A0568B"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:netherite_sword"
 						tag: {
 							Damage: 0
@@ -3676,7 +3536,7 @@
 				{
 					id: "06FC83ADB0171B5E"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:netherite_hoe"
 						tag: {
 							Damage: 0
@@ -3697,7 +3557,7 @@
 				{
 					id: "7296535A61E405B6"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "simplemagnets:advancedmagnet"
 						tag: { }
 					}
@@ -3706,7 +3566,7 @@
 				{
 					id: "553330F53484E06A"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "wands:netherite_wand"
 						tag: {
 							Damage: 0
@@ -3718,7 +3578,7 @@
 				{
 					id: "7DEF6C0952174C70"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:water_bucket"
 						tag: {
 							CustomModelData: 1
@@ -4373,7 +4233,7 @@
 			tasks: [{
 				id: "3A3BE3505286ADEB"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:golden_sword"
 					tag: {
 						Damage: 0
@@ -4426,7 +4286,7 @@
 			rewards: [{
 				id: "4609569B381E84F9"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:flint_and_steel"
 					tag: {
 						Damage: 0
@@ -4463,7 +4323,7 @@
 			tasks: [{
 				id: "0EADA06D6CCD8FE8"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:shears"
 					tag: {
 						Damage: 0
@@ -4813,7 +4673,7 @@
 			tasks: [{
 				id: "78DC217647284516"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "create:super_glue"
 					tag: {
 						Damage: 0
@@ -5615,7 +5475,7 @@
 		{
 			dependencies: ["082C430EB95745A6"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:swiftness"
@@ -5626,7 +5486,7 @@
 				{
 					id: "4249F706E0CE296A"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:swiftness"
@@ -5646,7 +5506,7 @@
 		{
 			dependencies: ["1625247354325070"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:leaping"
@@ -5657,7 +5517,7 @@
 				{
 					id: "302DEDC8D78BE6CD"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:leaping"
@@ -5677,7 +5537,7 @@
 		{
 			dependencies: ["1335A8D160CF57B0"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:healing"
@@ -5688,7 +5548,7 @@
 				{
 					id: "6DBF23ECB20A9113"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:healing"
@@ -5708,7 +5568,7 @@
 		{
 			dependencies: ["301841AACDF3F6FE"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:poison"
@@ -5719,7 +5579,7 @@
 				{
 					id: "5801AF07E6229D89"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:poison"
@@ -5739,7 +5599,7 @@
 		{
 			dependencies: ["1772D6FD91D7C43A"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:night_vision"
@@ -5750,7 +5610,7 @@
 				{
 					id: "7257CFCC4A55E7CC"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:night_vision"
@@ -5793,7 +5653,7 @@
 		{
 			dependencies: ["5673AFEC35A85D43"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:slowness"
@@ -5804,7 +5664,7 @@
 				{
 					id: "655513783F63DFA3"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:slowness"
@@ -5866,7 +5726,7 @@
 		{
 			dependencies: ["51B9D2A57DFF2A7C"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:harming"
@@ -5877,7 +5737,7 @@
 				{
 					id: "720248DE5340132B"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:harming"
@@ -5897,7 +5757,7 @@
 		{
 			dependencies: ["743508D9053EB0D6"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:invisibility"
@@ -5908,7 +5768,7 @@
 				{
 					id: "55F4F175DB9FCC4A"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:invisibility"
@@ -5927,7 +5787,7 @@
 		}
 		{
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:water"
@@ -5939,7 +5799,7 @@
 				{
 					id: "058B54DBC74D7FC4"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:water"
@@ -5978,7 +5838,7 @@
 		{
 			dependencies: ["2CAFDA58643DD9A7"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:weakness"
@@ -5989,7 +5849,7 @@
 				{
 					id: "416E1BC9F489295D"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:weakness"
@@ -6028,7 +5888,7 @@
 		{
 			dependencies: ["0C1AAE9CF97D56A3"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:turtle_helmet"
 				tag: {
 					Damage: 0
@@ -6039,7 +5899,7 @@
 				{
 					id: "10BF26FC62E27732"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:turtle_helmet"
 						tag: {
 							Damage: 0
@@ -6135,7 +5995,7 @@
 		{
 			dependencies: ["2AF1986F0EAC8BD6"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:slow_falling"
@@ -6146,7 +6006,7 @@
 				{
 					id: "2917074D9DA6F292"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:slow_falling"
@@ -6166,7 +6026,7 @@
 		{
 			dependencies: ["328C416F38F3A883"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:water_breathing"
@@ -6177,7 +6037,7 @@
 				{
 					id: "0F285F7481AE8676"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:water_breathing"
@@ -6197,7 +6057,7 @@
 		{
 			dependencies: ["0006F0F40F552FCA"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:fire_resistance"
@@ -6208,7 +6068,7 @@
 				{
 					id: "0D131E4F5021E468"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:fire_resistance"
@@ -6228,7 +6088,7 @@
 		{
 			dependencies: ["617C506C5B7979EB"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:regeneration"
@@ -6239,7 +6099,7 @@
 				{
 					id: "762367AAF50E88EA"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:regeneration"
@@ -6259,7 +6119,7 @@
 		{
 			dependencies: ["074BD881AC214C0C"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:strength"
@@ -6270,7 +6130,7 @@
 				{
 					id: "2738E78EEC4C2DF3"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:strength"
@@ -6290,7 +6150,7 @@
 		{
 			dependencies: ["6BFED5A3753A50BA"]
 			icon: {
-				Count: 1b
+				Count: 1
 				id: "minecraft:potion"
 				tag: {
 					Potion: "minecraft:turtle_master"
@@ -6301,7 +6161,7 @@
 				{
 					id: "075475829F8C03B6"
 					item: {
-						Count: 1b
+						Count: 1
 						id: "minecraft:potion"
 						tag: {
 							Potion: "minecraft:turtle_master"
@@ -6410,7 +6270,7 @@
 			tasks: [{
 				id: "3EACDEBBED7CA0AB"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:potion"
 					tag: {
 						Potion: "minecraft:water"
@@ -6430,7 +6290,7 @@
 			tasks: [{
 				id: "6DC96800AF314628"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:potion"
 					tag: {
 						Potion: "minecraft:water"
@@ -6450,7 +6310,7 @@
 			tasks: [{
 				id: "1BDA0FCE38CB47A3"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:potion"
 					tag: {
 						Potion: "minecraft:water"
@@ -6570,7 +6430,7 @@
 			rewards: [{
 				id: "7562399834313560"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "farmersdelight:iron_knife"
 					tag: {
 						Damage: 0
@@ -6602,7 +6462,7 @@
 				{
 					id: "7FD1C475C7B55E32"
 					item: {
-						Count: 1b
+						Count: 1
 						ForgeCaps: {
 							Parent: { }
 						}
@@ -6675,7 +6535,7 @@
 			tasks: [{
 				id: "20D8F98DE3CF4DF8"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:splash_potion"
 					tag: {
 						Potion: "minecraft:water"
@@ -6696,7 +6556,7 @@
 			tasks: [{
 				id: "3BECFAABA8DA73D4"
 				item: {
-					Count: 1b
+					Count: 1
 					id: "minecraft:lingering_potion"
 					tag: {
 						Potion: "minecraft:water"

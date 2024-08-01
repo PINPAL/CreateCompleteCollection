@@ -433,7 +433,7 @@
 	 * Whether development functions should be enabled. Not recommended for general
 	 * play.
 	 */
-	dev-mode: false;
+	dev-mode: true;
 
 	/**
 	 * Whether editing the index is enabled
@@ -443,7 +443,7 @@
 	/**
 	 * Whether to log untranslated tags as warnings.
 	 */
-	log-untranslated-tags: false;
+	log-untranslated-tags: true;
 
 	/**
 	 * Whether to log ingredients that don't have a representative tag as warnings.

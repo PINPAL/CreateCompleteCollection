@@ -7,7 +7,7 @@ const metals = [
 	{ name: "tin" },
 	{ name: "bronze" },
 	{ name: "steel" },
-	{ name: "cast_iron" },
+	{ name: "industrial_iron" },
 	{ name: "diamond" },
 	{ name: "emerald" },
 	{ name: "powdered_obsidian" },

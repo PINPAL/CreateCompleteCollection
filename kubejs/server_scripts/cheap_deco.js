@@ -12,8 +12,8 @@ ServerEvents.recipes((event) => {
 	});
 	// Cheap Cast Iron
 	event.recipes.create
-		.compacting("createdeco:cast_iron_ingot", "minecraft:iron_ingot")
-		.id("create_cc:deco/cast_iron_ingot");
+		.compacting("#forge:ingots/industrial_iron", "#forge:ingots/iron")
+		.id("create_cc:deco/industrial_iron_ingot");
 	// Cheap Asphalt
 	event.recipes.create
 		.mixing("16x tfmg:asphalt_block", ["2x create:scoria", "minecraft:slime_ball"])
@@ -81,11 +81,12 @@ ServerEvents.recipes((event) => {
 		{
 			outputMat: "steel",
 			trapdoor: "ad_astra:steel_trapdoor",
-			door: "ad_astra:steel_door",
+			door: "tfmg:steel_door",
+			outputMultiplier: 2,
 		},
 	];
 	decorativeMats.forEach((decorativeMat) => {
-		// Make Netherite even cheaper
+		// Make expensive materials even cheaper
 		let outputMultiplier = 1;
 		if (decorativeMat.hasOwnProperty("outputMultiplier")) {
 			outputMultiplier = decorativeMat.outputMultiplier;

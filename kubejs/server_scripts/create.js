@@ -14,7 +14,7 @@ ServerEvents.recipes((event) => {
 		{ item: "brass", type: "ingots" },
 		{ item: "bronze", type: "ingots" },
 		{ item: "steel", type: "ingots" },
-		{ item: "cast_iron", type: "ingots" },
+		{ item: "industrial_iron", type: "ingots" },
 	];
 	automatedPacking.forEach((block) => {
 		// Block from Ingots
@@ -129,6 +129,21 @@ ServerEvents.recipes((event) => {
 		})
 		.id("create_cc:create/hydraulic_press");
 
+	// Harder Item Vault
+	event
+		.shaped("create:item_vault", [" I ", " C ", " I "], {
+			I: "#forge:plates/iron",
+			C: "create_cc:vault_casing",
+		})
+		.id("create_cc:create/item_vault");
+	event.remove({ id: "create_connected:crafting/kinetics/item_silo" });
+	event
+		.shaped("create_connected:item_silo", ["   ", "ICI", "   "], {
+			I: "#forge:plates/iron",
+			C: "create_cc:vault_casing",
+		})
+		.id("create_cc:create/item_silo");
+
 	// Harder Spout
 	event.remove({ output: "create:spout" });
 	event
@@ -165,6 +180,29 @@ ServerEvents.recipes((event) => {
 	event.stonecutting("2x tfmg:concrete_slab", "tfmg:concrete").id("create_cc:create/concrete_slab");
 	event.stonecutting("tfmg:concrete_stairs", "tfmg:concrete").id("create_cc:create/concrete_stairs");
 	event.stonecutting("tfmg:concrete_wall", "tfmg:concrete").id("create_cc:create/concrete_wall");
+
+	// Insulaton Brush
+	event
+		.shaped("create_cc:insulation_brush", ["HP", "NH"], {
+			H: "minecraft:honeycomb",
+			P: "#forge:plates/iron",
+			N: "#forge:nuggets/iron",
+		})
+		.id("create_cc:create/insulation_brush");
+	event
+		.shapeless("create_cc:insulation_brush", ["2x minecraft:honeycomb", "create_things_and_misc:glue_packaging"])
+		.id("create_cc:create/insulation_brush_alt");
+
+	// Waterproof Planks
+	event.recipes.create
+		.deploying("create_cc:waterproof_planks", ["#minecraft:planks", "create_cc:insulation_brush"])
+		.id("create_cc:create/waterproof_planks");
+
+	// Copper Casing
+	event.remove({ output: "create:copper_casing" });
+	event.recipes.create
+		.deploying("create:copper_casing", ["create_cc:waterproof_planks", "#forge:plates/copper"])
+		.id("create_cc:create/copper_casing");
 
 	// Harder Steam Engine
 	event.remove({ output: "create:steam_engine" });
@@ -241,12 +279,6 @@ ServerEvents.recipes((event) => {
 
 	// Fix Coal Coke
 	event.recipes.create.mixing("tfmg:coal_coke", "#minecraft:coals").heated().id("create_cc:create/coal_coke");
-
-	// Harder Steel
-	event.recipes.create
-		.compacting("#forge:ingots/steel", ["2x #forge:ingots/cast_iron", "tfmg:coal_coke"])
-		.heated()
-		.id("create_cc:create/steel_ingot");
 
 	// Harder Sails
 	const sailWoods = [

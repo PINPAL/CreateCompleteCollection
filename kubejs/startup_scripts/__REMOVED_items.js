@@ -13,14 +13,12 @@ global.removedItems = [
 	/createcasing:.*bamboo_shaft/,
 	/createcasing:.*cherry_shaft/,
 
-	/everycomp:.*\/q\/.*azalea.*/,
-	/supplementaries:q\/.*azalea.*/,
-
 	/.*spawn_egg.*/,
 
 	/minecraft:.*pickaxe.*/,
 	/minecraft:.*shovel.*/,
 	/minecraft:.*axe.*/,
+	"minecraft:firework_rocket",
 	"minecraft:elytra",
 	"minecraft:anvil",
 	"minecraft:chipped_anvil",
@@ -39,6 +37,9 @@ global.removedItems = [
 	"easy_villagers:farmer",
 
 	/metalbarrels:.*_to_.*/,
+
+	/everycomp:sd\/.*_half_drawers.*/,
+	/everycomp:sd\/.*_trim.*/,
 
 	"farmersdelight:golden_knife",
 	"create_things_and_misc:zinc_knife",
@@ -78,9 +79,6 @@ global.removedItems = [
 	"create_dd:caramel_milkshake_bucket",
 	"create_dd:hot_chocolate_bucket",
 	"create_dd:chocolate_milkshake_bucket",
-	"create_dd:industrial_iron_ingot",
-	"create_dd:industrial_iron_nugget",
-	"create_dd:industrial_iron_sheet",
 	"create_dd:deforester_saw",
 	/create_dd:.*rubber.*/,
 	/create_dd:.*_sail/,
@@ -152,6 +150,7 @@ global.removedItems = [
 	"createsifter:custom_mesh",
 	"createsifter:zinc_mesh",
 
+	"tfmg:molten_steel",
 	"tfmg:napalm_bomb",
 	"tfmg:napalm_bucket",
 	"tfmg:thermite_grenade",
@@ -160,14 +159,13 @@ global.removedItems = [
 	"tfmg:napalm",
 	"tfmg:factory_floor",
 	"tfmg:factory_floor_slab",
-	"tfmg:steel_ingot",
-	"tfmg:cast_iron_ingot",
 	"tfmg:cast_iron_block",
 	"tfmg:heavy_plate",
 	"tfmg:steel_scaffolding",
 	"tfmg:industrial_barrel",
 	"tfmg:caution_block",
 	/tfmg:.*concrete.*/,
+	"tfmg:concrete_mixture",
 	"tfmg:factory_floor",
 	"tfmg:factory_floor_slab",
 	"tfmg:heavy_plate",
@@ -190,10 +188,15 @@ global.removedItems = [
 	"tfmg:lead_axe",
 	"tfmg:lead_shovel",
 	"tfmg:lead_hoe",
+	"tfmg:lithium_blade",
 	/tfmg:.*_caution_block/,
+	"tfmg:casting_basin",
+	"tfmg:casting_spout",
 
 	/createmetallurgy:.*wolframite.*/,
 	/createmetallurgy:.*tungsten.*/,
+	"createmetallurgy:graphite_plate_mold",
+	"createmetallurgy:coke_block",
 
 	"railways:track_create_dd_rose",
 	"railways:track_create_dd_rose_wide",
@@ -320,11 +323,9 @@ global.removedItems = [
 	"create:copper_backtank_placeable",
 	"create:netherite_backtank_placeable",
 
-	"ad_astra:steel_ingot",
-	"ad_astra:steel_nugget",
-	"ad_astra:steel_block",
 	"ad_astra:steel_plate",
 	"ad_astra:steel_rod",
+	"ad_astra:steel_door",
 	"ad_astra:water_pump",
 	"ad_astra:energizer",
 	"ad_astra:fuel_refinery",
@@ -335,6 +336,7 @@ global.removedItems = [
 	"ad_astra:desh_fluid_pipe",
 	"ad_astra:ostrum_fluid_pipe",
 	"ad_astra:solar_panel",
+	"ad_astra:etrionic_blast_furnace",
 
 	"crushedastra:crushed_raw_aerolyte",
 
@@ -350,8 +352,6 @@ global.removedItems = [
 	"destroy:nylon",
 	"destroy:polystyrene_butadiene",
 	"destroy:zinc_sheet",
-	"destroy:nickel_ingot",
-	"destroy:nickel_block",
 	"destroy:anfo_block",
 	"destroy:cordite",
 	"destroy:dynamite_block",
@@ -370,3 +370,7 @@ global.removedItems = [
 	/vintageimprovements:vanadium.*/,
 	"vintageimprovements:copper_sulfate",
 ];
+
+StartupEvents.modifyCreativeTab("minecraft:building_blocks", (event) => {
+	event.remove("minecraft:stone");
+});

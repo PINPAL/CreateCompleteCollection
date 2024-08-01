@@ -80,7 +80,7 @@ ItemEvents.tooltip((tooltip) => {
 		{ name: "brass", type: "ingot" },
 		{ name: "bronze", type: "ingot" },
 		{ name: "steel", type: "ingot" },
-		{ name: "cast_iron", type: "ingot" },
+		{ name: "industrial_iron", type: "ingot" },
 		{ name: "diamond", type: "plural" },
 		{ name: "emerald", type: "plural" },
 		{ name: "powdered_obsidian", type: "gem" },
