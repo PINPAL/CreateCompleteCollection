@@ -6,6 +6,14 @@
     "Quality is a modifier applied to the weight. The final weight used is weight + quality * current difficulty"
   ],
   "MAINHAND": {
+    "create_cc:copper_sword": [
+      3290,
+      0.0371
+    ],
+    "create_cc:steel_sword": [
+      1896,
+      2.0735214
+    ],
     "create_dd:deforester_saw": [
       2639,
       1.1101819
@@ -29,18 +37,6 @@
     "create_things_and_misc:zinc_knife": [
       3464,
       0.019699998
-    ],
-    "kubejs:copper_sword": [
-      3290,
-      0.0371
-    ],
-    "kubejs:steel_sword": [
-      1896,
-      2.0735214
-    ],
-    "kubejs:wrench_axe": [
-      3401,
-      0.025999999
     ],
     "minecraft:bow": [
       1093,
@@ -194,6 +190,14 @@
       1216,
       1.9030677
     ],
+    "create_cc:copper_boots": [
+      2025,
+      0.8583848
+    ],
+    "create_cc:steel_boots": [
+      1300,
+      1.7933697
+    ],
     "create_things_and_misc:sticky_boots_boots": [
       1222,
       1.8952204
@@ -201,14 +205,6 @@
     "destroy:wellington_boots": [
       2784,
       0.0066999993
-    ],
-    "kubejs:copper_boots": [
-      2025,
-      0.8583848
-    ],
-    "kubejs:steel_boots": [
-      1300,
-      1.7933697
     ],
     "minecraft:chainmail_boots": [
       2259,
@@ -252,17 +248,17 @@
       1659,
       1.397999
     ],
-    "destroy:hazmat_leggings": [
-      2835,
-      0.0069999998
-    ],
-    "kubejs:copper_leggings": [
+    "create_cc:copper_leggings": [
       2079,
       0.8583848
     ],
-    "kubejs:steel_leggings": [
+    "create_cc:steel_leggings": [
       1354,
       1.7933697
+    ],
+    "destroy:hazmat_leggings": [
+      2835,
+      0.0069999998
     ],
     "minecraft:chainmail_leggings": [
       2313,
@@ -314,17 +310,17 @@
       1233,
       1.9030677
     ],
-    "destroy:hazmat_suit": [
-      2799,
-      0.0069
-    ],
-    "kubejs:copper_chestplate": [
+    "create_cc:copper_chestplate": [
       2042,
       0.8583848
     ],
-    "kubejs:steel_chestplate": [
+    "create_cc:steel_chestplate": [
       1317,
       1.7933697
+    ],
+    "destroy:hazmat_suit": [
+      2799,
+      0.0069
     ],
     "minecraft:chainmail_chestplate": [
       2276,
@@ -376,11 +372,11 @@
       1359,
       1.9030677
     ],
-    "kubejs:copper_helmet": [
+    "create_cc:copper_helmet": [
       2168,
       0.8583848
     ],
-    "kubejs:steel_helmet": [
+    "create_cc:steel_helmet": [
       1443,
       1.7933697
     ],
@@ -411,10 +407,6 @@
     "minecraft:turtle_helmet": [
       2098,
       0.948558
-    ],
-    "productivebees:bee_nest_diamond_helmet": [
-      1486,
-      1.7373508
     ],
     "railways:black_conductor_cap": [
       2364,

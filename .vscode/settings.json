@@ -1,53 +1,57 @@
 {
-	"json.schemas": [
-		{
-			"fileMatch": ["/lang/*.json"],
-			"url": "./.vscode/probe.lang-schema.json"
-		},
-		{
-			"fileMatch": ["/probe/docs/*.json"],
-			"url": "./.vscode/probe.doc-schema.json"
-		}
-	],
-	"files.exclude": {
-		".vscode": true,
-		"debug": true,
-		"XaeroWorldMap": true,
-		"XaeroWaypoints*": true,
-		"resources": true,
-		"coremods*": true,
-		"crash-reports*": true,
-		"Distant_Horizons_server_data*": true,
-		"fancymenu*": true,
-		"global_packs*": true,
-		"lightspeed*": true,
-		"local*": true,
-		"resourcepacks*": true,
-		"saves*": true,
-		"config": true,
-		"schematics*": true,
-		"screenshots*": true,
-		"server-resource-packs*": true,
-		"shaderpacks*": true,
-		"texturepacks*": true,
-		"*.nbt*": true,
-		"*.marker*": true,
-		"*.png*": true,
-		"*.txt*": true,
-		"*.properties*": true,
-		"*.dat*": true,
-		"*.json*": true,
-		"defaultconfigs": true,
-		"kubejs/assets": true,
-		"kubejs/config": true,
-		"kubejs/exported": true,
-		"kubejs/jsconfig.json": true,
-		"kubejs/README.txt": true,
-		"kubejs/probe": true,
-		".probe*": true,
-		"logs/*.log.gz*": true,
-		"logs/telemetry": true,
-		"mod_data": true,
-		"mods": true
-	}
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/lang/*.json"
+            ],
+            "url": "./.vscode/probe.lang-schema.json"
+        },
+        {
+            "fileMatch": [
+                "/probe/docs/*.json"
+            ],
+            "url": "./.vscode/probe.doc-schema.json"
+        }
+    ],
+    "files.exclude": {
+        ".vscode": true,
+        "debug": true,
+        "XaeroWorldMap": true,
+        "XaeroWaypoints*": true,
+        "resources": true,
+        "coremods*": true,
+        "crash-reports*": true,
+        "Distant_Horizons_server_data*": true,
+        "fancymenu*": true,
+        "global_packs*": true,
+        "lightspeed*": true,
+        "local*": true,
+        "resourcepacks*": true,
+        "saves*": true,
+        "config": true,
+        "schematics*": true,
+        "screenshots*": true,
+        "server-resource-packs*": true,
+        "shaderpacks*": true,
+        "texturepacks*": true,
+        "*.nbt*": true,
+        "*.marker*": true,
+        "*.png*": true,
+        "*.txt*": true,
+        "*.properties*": true,
+        "*.dat*": true,
+        "*.json*": true,
+        "defaultconfigs": true,
+        "kubejs/assets": true,
+        "kubejs/config": true,
+        "kubejs/exported": true,
+        "kubejs/jsconfig.json": true,
+        "kubejs/README.txt": true,
+        "kubejs/probe": true,
+        ".probe*": true,
+        "logs/*.log.gz*": true,
+        "logs/telemetry": true,
+        "mod_data": true,
+        "mods": true
+    }
 }

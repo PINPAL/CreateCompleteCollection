@@ -56,7 +56,7 @@ ServerEvents.recipes((event) => {
 				"minecraft:golden_apple",
 			]),
 			event.recipes.create.filling("create_cc:incomplete_totem_of_undying", [
-				Fluid.of("create_cc:molten_gold", 40),
+				Fluid.of("createmetallurgy:molten_gold", 40),
 				"create_cc:incomplete_totem_of_undying",
 			]),
 			event.recipes.createDeploying("create_cc:incomplete_totem_of_undying", [

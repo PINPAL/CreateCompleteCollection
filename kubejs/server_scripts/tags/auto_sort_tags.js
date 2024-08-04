@@ -87,6 +87,9 @@ ServerEvents.tags("item", (event) => {
 	// Broken Tools
 	event.add("as:broken", /create_cc:broken($|_)/);
 
+	// Machine Cores
+	event.add("as:machine_core", /create_cc:t[0-9]_.*_machine/);
+
 	// Upgrading Materials
 	event.add("as:upgrade_material", /create_cc:.*_blade/);
 	event.add("as:upgrade_material", /create_cc:.*_head/);

@@ -131,7 +131,7 @@
 	/**
 	 * Whether recipes should have a button to show the recipe tree.
 	 */
-	recipe-tree-button: false;
+	recipe-tree-button: true;
 
 	/**
 	 * Whether recipes should have a button to fill the ingredients in a handler.
@@ -334,7 +334,7 @@
 	/**
 	 * Display the recipe tree for a given stack.
 	 */
-	view-stack-tree: "key.keyboard.unknown";
+	view-stack-tree: "ctrl shift key.keyboard.r";
 
 	/**
 	 * Display the recipe tree.
@@ -433,7 +433,7 @@
 	 * Whether development functions should be enabled. Not recommended for general
 	 * play.
 	 */
-	dev-mode: true;
+	dev-mode: false;
 
 	/**
 	 * Whether editing the index is enabled

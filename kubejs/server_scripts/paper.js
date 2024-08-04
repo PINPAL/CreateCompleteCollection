@@ -5,6 +5,16 @@ ServerEvents.recipes((event) => {
 		S: "#minecraft:wooden_slabs",
 	}); */
 
+	// Cheap Paper Fixes
+	event.replaceInput({ output: "create:sand_paper" }, "minecraft:paper", "#create_cc:cheap_papers");
+	event.replaceInput({ output: "create:red_sand_paper" }, "minecraft:paper", "#create_cc:cheap_papers");
+	event.replaceInput({ output: "minecraft:cartography_table" }, "minecraft:paper", "#create_cc:cheap_papers");
+	event.replaceInput({ output: "minecraft:nametag" }, "minecraft:paper", "#create_cc:cheap_papers");
+	event.replaceInput({ output: "minecraft:map" }, "minecraft:paper", "#create_cc:cheap_papers");
+
+	// Sugar Paper
+	event.shapeless("create_cc:sugar_paper", ["3x minecraft:sugar_cane"]).id("create_cc:paper/sugar_paper");
+
 	// Wood Pulping
 	event.recipes.create
 		.mixing(

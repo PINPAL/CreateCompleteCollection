@@ -5,7 +5,7 @@
 	"Enable difficulty scaling" = true
 	#Time in ticks for which the difficulty shouldnt increase at the beginning. One full minecraft day is 24000 ticks
 	#Range: > 0
-	"Difficulty Delay" = 0
+	"Difficulty Delay" = 168000
 	#If true ignores mobs from spawners
 	"Ignore Spawner" = false
 	#Handles increase in difficulty regarding current difficulty.
@@ -54,7 +54,7 @@
 	#<#minecraft:raiders|ATTRIBUTES> will add all entities in the raiders tag to everything except attributes
 	#<minecraft:sheep|ATTRIBUTES> will add sheep to everything except attributes
 	#<minecraft> disables everything for all minecraft mobs
-	"Entity Configs" = ["ecologics:squirrel", "ad_astra:glacian_ram", "productivebees:mason_bee", "productivebees:hoarder_bee", "productivebees:reed_bee", "productivebees:bumble_bee", "minecraft:glow_squid", "minecraft:strider", "minecraft:trader_llama", "minecraft:parrot", "productivebees:rancher_bee", "productivebees:creeper_bee", "bosses_of_mass_destruction:lich", "minecraft:horse", "productivebees:digger_bee", "minecraft:polar_bear", "minecraft:bat", "minecraft:wandering_trader", "productivebees:green_carpenter_bee", "productivebees:dye_bee", "productivebees:sweat_bee", "productivebees:blue_banded_bee", "minecraft:llama", "minecraft:pig", "ad_astra:lunarian", "minecraft:frog", "minecraft:iron_golem", "minecraft:turtle", "minecraft:sheep", "productivebees:cupid_bee", "bosses_of_mass_destruction:gauntlet", "bosses_of_mass_destruction:obsidilith", "productivebees:nomad_bee", "create_things_and_misc:balloon_blaze", "minecraft:tadpole", "minecraft:goat", "minecraft:dolphin", "ecologics:coconut_crab", "railways:conductor", "productivebees:ashy_mining_bee", "corundumguardian:shockwave", "minecraft:cod", "productivebees:neon_cuckoo_bee", "minecraft:donkey", "productivebees:collector_bee", "endertrigon:baby_ender_dragon", "minecraft:squid", "minecraft:mule", "minecraft:skeleton_horse", "productivebees:chocolate_mining_bee", "minecraft:sniffer", "minecraft:cow", "minecraft:zombie_horse", "minecraft:camel", "productivebees:lumber_bee", "minecraft:bee", "productivebees:configurable_bee", "minecraft:cat", "minecraft:pufferfish", "minecraft:salmon", "minecraft:fox", "productivebees:farmer_bee", "productivebees:resin_bee", "bosses_of_mass_destruction:void_blossom", "minecraft:allay", "ecologics:penguin", "productivebees:yellow_black_carpenter_bee", "minecraft:tropical_fish", "minecraft:snow_golem", "minecraft:mooshroom", "minecraft:villager", "ad_astra:lunarian_wandering_trader", "minecraft:ocelot", "productivebees:quarry_bee", "minecraft:chicken", "minecraft:wolf", "supplementaries:red_merchant", "minecraft:panda", "minecraft:rabbit", "productivebees:leafcutter_bee", "minecraft:axolotl"]
+	"Entity Configs" = ["ecologics:squirrel", "ad_astra:glacian_ram", "minecraft:glow_squid", "minecraft:strider", "minecraft:trader_llama", "minecraft:parrot", "bosses_of_mass_destruction:lich", "minecraft:horse", "minecraft:polar_bear", "minecraft:bat", "minecraft:wandering_trader", "minecraft:llama", "minecraft:pig", "ad_astra:lunarian", "minecraft:frog", "minecraft:iron_golem", "minecraft:turtle", "minecraft:sheep", "bosses_of_mass_destruction:gauntlet", "bosses_of_mass_destruction:obsidilith", "create_things_and_misc:balloon_blaze", "minecraft:tadpole", "minecraft:goat", "minecraft:dolphin", "ecologics:coconut_crab", "railways:conductor", "corundumguardian:shockwave", "minecraft:cod", "minecraft:donkey", "endertrigon:baby_ender_dragon", "minecraft:squid", "minecraft:mule", "minecraft:skeleton_horse", "minecraft:sniffer", "minecraft:cow", "minecraft:zombie_horse", "minecraft:camel", "minecraft:bee", "minecraft:cat", "minecraft:pufferfish", "minecraft:salmon", "minecraft:fox", "bosses_of_mass_destruction:void_blossom", "minecraft:allay", "ecologics:penguin", "minecraft:tropical_fish", "minecraft:snow_golem", "minecraft:mooshroom", "minecraft:villager", "ad_astra:lunarian_wandering_trader", "minecraft:ocelot", "minecraft:chicken", "minecraft:wolf", "supplementaries:red_merchant", "minecraft:panda", "minecraft:rabbit", "minecraft:axolotl"]
 	#Any of the following 
 	#[ATTRIBUTES, ARMOR, HELDITEMS, BLOCKBREAK, USEITEM, LADDER, STEAL, GUARDIAN, PARROT, TARGETVILLAGER, NEUTRALAGGRO]
 	#added here will disable that feature completely.
@@ -105,7 +105,7 @@
 	#Whitelist for blocks, which can be actively broken. 
 	#Usage: id|namespace|#tag. Put "!" infront to exclude blocks. E.g. "minecraft", "minecraft:dirt" or "#minecraft:planks"
 	#Note: If you include common blocks (like grass blocks) the pathfinding can have undesirable results.
-	"Block Break Whitelist" = ["#forge:glass", "#forge:glass_panes", "#minecraft:fence_gates", "#forge:fence_gates", "#minecraft:wooden_doors"]
+	"Block Break Whitelist" = ["#forge:glass", "#forge:glass_panes", "#minecraft:fence_gates", "#forge:fence_gates", "#minecraft:wooden_doors", "minecraft:cobblestone", "minecraft:deepslate", "#minecraft:planks"]
 	#Treat Block Whitelist as Blocklist
 	"Breaklist as Blacklist" = false
 	#Use the block breaking sound instead of a knocking sound
@@ -124,7 +124,7 @@
 	#Blocks will be restored after x ticks being broken. If set to 0 will never restore
 	#This will not restore block entity data!
 	#Range: > 0
-	"Restore delay" = 0
+	"Restore delay" = 600
 	#If mobs should break blocks when not chasing a target
 	"Idle Break" = false
 	#Chance for a mob to be able to steal items from inventory blocks
@@ -145,10 +145,10 @@
 	"Auto Target List" = []
 	#Difficulty at which mobs are able to break blocks
 	#Range: 0.0 ~ 1.7976931348623157E308
-	"Difficulty Break AI" = 0.0
+	"Difficulty Break AI" = 10.0
 	#Difficulty at which mobs are able to steal items
 	#Range: 0.0 ~ 1.7976931348623157E308
-	"Difficulty Steal AI" = 0.0
+	"Difficulty Steal AI" = 30.0
 	#Chance for mobs to be able to summon an aquatic mount
 	#Range: 0.0 ~ 1.0
 	"Guardian Chance" = 0.5
@@ -226,13 +226,13 @@
 	"Damage Increase Multiplier" = 1.0
 	#Damage will be multiplied by at maximum this. Set to 0 means no limit
 	#Range: 0.0 ~ 1.7976931348623157E308
-	"Max Damage Increase" = 3.0
+	"Max Damage Increase" = 4.0
 	#Speed will be increased by difficulty*0.0008*x. Set to 0 to disable
 	#Range: 0.0 ~ 1.7976931348623157E308
 	"Speed Increase" = 1.0
 	#Maximum increase in speed
 	#Range: 0.0 ~ 1.0
-	"Max Speed" = 0.1
+	"Max Speed" = 0.2
 	#Knockback will be increased by difficulty*0.002*x. Set to 0 to disable
 	#Range: 0.0 ~ 1.7976931348623157E308
 	"Knockback Increase" = 1.0
@@ -250,7 +250,7 @@
 	"Projectile Damage Increase" = 1.0
 	#Projectile damage will be multiplied by maximum of this
 	#Range: 0.0 ~ 1.7976931348623157E308
-	"Max Projectile Damage" = 2.0
+	"Max Projectile Damage" = 3.0
 	#Explosion Damage will be multiplied by 1 + difficulty*0.003*x. Set to 0 to disable
 	#Range: 0.0 ~ 1.7976931348623157E308
 	"Explosion Damage Increase" = 1.0

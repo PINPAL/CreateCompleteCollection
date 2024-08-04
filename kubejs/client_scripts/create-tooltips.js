@@ -412,6 +412,15 @@ const itemsToTooltip = [
 			},
 		],
 	},
+	{
+		item: "create_cc:sugar_paper",
+		summary: [
+			"A $cheaper$ alternative to ",
+			"$wood based$ paper. Some",
+			"recipes may require a",
+			"$higher quality$ of paper.",
+		],
+	},
 ];
 
 const allPaxels = [
@@ -476,7 +485,7 @@ const drawerControls = [
 		text: ["Places $all items of that type$ into the $Drawer$."],
 	},
 	{
-		control: "Crouch & R-Clicked with Empty Hand",
+		control: "Crouch & R-Click with Empty Hand",
 		requiresHold: true,
 		text: ["Opens the $Configuration Interface$"],
 	},
@@ -498,6 +507,29 @@ drawerWoodTypes.forEach((woodType) => {
 		controls: drawerControls,
 	});
 });
+
+for (const key in global.lootboxes) {
+	let lootbox = `create_cc:lootbox_${key}`;
+	itemsToTooltip.push({
+		item: lootbox,
+		summary: [
+			`Rolls $${global.lootboxes[key].rolls}$ Time${global.lootboxes[key].rolls > 1 ? "s" : ""}.`,
+			`Contains $${global.lootboxes[key].items.length}$ Unique Items.`,
+		],
+		controls: [
+			{
+				control: "R-Clicked",
+				requiresHold: false,
+				text: ["$Places$ the $Lootbox$ in the world."],
+			},
+			{
+				control: "Crouch & R-Click with Empty Hand",
+				requiresHold: true,
+				text: ["Opens the $Lootbox$. Throws unboxed", "$items$ onto the ground."],
+			},
+		],
+	});
+}
 
 ItemEvents.tooltip((tooltip) => {
 	itemsToTooltip.forEach((tooltipItem) => {

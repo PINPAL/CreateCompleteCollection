@@ -35,3 +35,21 @@ ServerEvents.recipes((event) => {
 			.id("create_cc:wood/" + wood.name + "_pressure_plate");
 	});
 });
+
+let allWoodTypes = [];
+ServerEvents.tags("item", (event) => {
+	allWoodTypes = event.get("minecraft:planks").getObjectIds();
+});
+ServerEvents.recipes((event) => {
+	console.log("running recipe");
+	allWoodTypes.forEach((wood) => {
+		let planks = wood.toString();
+		let woodID = wood.toString().replace("_planks", "");
+		let button = "2x " + woodID + "_button";
+		let slab = woodID + "_slab";
+		let recipeID = "create_cc:wood/" + wood.getNamespace() + "/" + wood.getPath().replace("_planks", "_button");
+
+		event.recipes.create.cutting(button, slab).id(recipeID);
+		event.recipes.create.cutting(button, planks).id(recipeID + "_from_planks");
+	});
+});

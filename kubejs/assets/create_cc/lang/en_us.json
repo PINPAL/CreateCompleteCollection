@@ -4,6 +4,10 @@
 	"platform.create_cc": "Create Complete Collection",
 	"create_cc": "Create Complete Collection",
 
+	"subtitle.create_cc.lootbox_place": "Lootbox Placed",
+	"subtitle.create_cc.lootbox_open": "Lootbox Opened",
+	"subtitle.create_cc.lootbox_break": "Lootbox Broken",
+
 	"curios.identifier.grid": "Wireless Grid",
 	"curios.identifier.magnet": "Magnet",
 	"curios.identifier.totem": "Totem"

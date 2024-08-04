@@ -15,6 +15,14 @@ ServerEvents.recipes((event) => {
 		{ item: "bronze", type: "ingots" },
 		{ item: "steel", type: "ingots" },
 		{ item: "industrial_iron", type: "ingots" },
+		{ item: "shadow_steel", type: "ingots" },
+		{ item: "refined_radiance", type: "ingots" },
+		{ item: "andesite", type: "ingots" },
+		{ item: "lead", type: "ingots" },
+		{ item: "nickel", type: "ingots" },
+		{ item: "desh", type: "ingots" },
+		{ item: "ostrum", type: "ingots" },
+		{ item: "calorite", type: "ingots" },
 	];
 	automatedPacking.forEach((block) => {
 		// Block from Ingots
@@ -42,6 +50,16 @@ ServerEvents.recipes((event) => {
 				.compacting(`#forge:ingots/${block.item}`, `9x #forge:nuggets/${block.item}`)
 				.id("create_cc:create/compacting/" + block.item + "_ingot_from_nuggets");
 		}
+
+		// Nuggets from Ingots
+		event.remove({
+			type: "minecraft:crafting_shapeless",
+			output: `#forge:nuggets/${block.item}`,
+			input: `#forge:ingots/${block.item}`,
+		});
+		event.recipes.farmersdelight.cutting("#forge:ingots/" + block.item, "#forge:tools/knives", [
+			"9x #forge:nuggets/" + block.item,
+		]);
 	});
 
 	// Lapis Alloy
@@ -53,15 +71,6 @@ ServerEvents.recipes((event) => {
 	event.recipes.create
 		.splashing("9x minecraft:iron_nugget", "create:crushed_raw_iron")
 		.id("create_cc:create/raw_iron_washing");
-
-	// Diamond Grit Sandpaper
-	event.remove({ output: "createaddition:diamond_grit_sandpaper" });
-	event
-		.shapeless(Item.of("createaddition:diamond_grit_sandpaper").withNBT("{Unbreakable:1b}"), [
-			"#create:sandpaper",
-			"create_cc:molten_diamond_ingot",
-		])
-		.id("create_cc:create/diamond_grit_sandpaper");
 
 	// Harder Minecart Assembler
 	event.remove({ output: "create:cart_assembler" });

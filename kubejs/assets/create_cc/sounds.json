@@ -1,0 +1,14 @@
+{
+	"lootbox_place": {
+		"subtitle": "subtitle.create_cc.lootbox_place",
+		"sounds": ["create_cc:lootbox_place"]
+	},
+	"lootbox_break": {
+		"subtitle": "subtitle.create_cc.lootbox_break",
+		"sounds": ["create_cc:lootbox_break"]
+	},
+	"lootbox_open": {
+		"subtitle": "subtitle.create_cc.lootbox_open",
+		"sounds": ["create_cc:lootbox_open"]
+	}
+}

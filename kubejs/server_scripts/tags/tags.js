@@ -62,6 +62,12 @@ ServerEvents.tags("item", (event) => {
 		event.add("forge:boots", item);
 	});
 
+	let papers = ["minecraft:paper", "create_cc:sugar_paper"];
+	papers.forEach((item) => {
+		event.add("create_cc:cheap_papers", item);
+		event.add("exposure:photo_papers", item);
+	});
+
 	let forge_helmets = [
 		"create:netherite_diving_helmet",
 		"create:copper_diving_helmet",

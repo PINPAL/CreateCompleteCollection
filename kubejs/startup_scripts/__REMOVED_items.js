@@ -1,3 +1,5 @@
+//priority: 10
+
 global.removedItems = [
 	/createcasing:.*oak_shaft/,
 	/createcasing:.*spruce_shaft/,
@@ -144,7 +146,7 @@ global.removedItems = [
 	"design_decor:hepatizon_large_chain",
 	"design_decor:pig_iron_large_chain",
 	"design_decor:knightslime_large_chain",
-	"design_decor_queen_slime_large_chain",
+	"design_decor:queen_slime_large_chain",
 	/design_decor:.*wallpaper_/,
 
 	"createsifter:custom_mesh",
@@ -370,7 +372,3 @@ global.removedItems = [
 	/vintageimprovements:vanadium.*/,
 	"vintageimprovements:copper_sulfate",
 ];
-
-StartupEvents.modifyCreativeTab("minecraft:building_blocks", (event) => {
-	event.remove("minecraft:stone");
-});

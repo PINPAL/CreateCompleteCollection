@@ -38,15 +38,15 @@ StartupEvents.registry("item", (event) => {
 StartupEvents.registry("block", (event) => {
 	unifiedIngots.forEach((ingotObject) => {
 		// Generate a formatted name for the ingot
-		// eg: "industrial_iron" becomes "Industrial Iron"
-		// eg: ""
-		let formattedName = formatName(unifiedIngots.name);
+		// eg: "industrial_iron" becomes "Block of Industrial Iron"
+		// eg: "andesite" becomes "Block of Andesite Alloy"
+		let formattedName = "Block of " + formatName(ingotObject.name);
 		if (ingotObject.type === "alloy") {
 			formattedName += " Alloy";
 		}
 		event
 			.create("create_cc:" + ingotObject.name + "_block")
-			.displayName("Block of " + formattedName)
+			.displayName(formattedName)
 			.hardness(50)
 			.tagBlock("minecraft:mineable/pickaxe")
 			.mapColor("metal")

@@ -60,5 +60,7 @@ StartupEvents.registry("item", (event) => {
 		.tag("minecraft:flowers")
 		.tag("minecraft:tall_flowers");
 	// Insulation Tube
-	event.create("insulation_brush").displayName("Insulating Glue").maxDamage(99);
+	event.create("create_cc:insulation_brush").displayName("Insulating Glue").maxDamage(99);
+	// Sugar Paper
+	event.create("create_cc:sugar_paper").displayName("Sugar Paper");
 });

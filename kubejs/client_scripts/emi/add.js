@@ -7,7 +7,7 @@ const addToJEI = [
 	"tfmg:concrete_pillar",
 
 	"ftbquests:book",
-j
+
 	"sophisticatedbackpacks:backpack",
 	"sophisticatedbackpacks:iron_backpack",
 	"sophisticatedbackpacks:gold_backpack",

@@ -34,7 +34,7 @@ const hideFromJEI = [
 
 	// Replaced by NBT items
 	"create:extendo_grip",
-	Item.of("createaddition:diamond_grit_sandpaper").weakNBT(),
+	"createaddition:diamond_grit_sandpaper",
 	"farmersdelight:netherite_knife",
 
 	// Minecraft
