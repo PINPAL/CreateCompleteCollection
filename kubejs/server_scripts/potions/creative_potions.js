@@ -110,14 +110,18 @@ for (let i = 0; i < creativeFullPotionList.length; i++) {
 const recipeShape = ["  abc  ", " defgh ", "ijklmno", "pqrstuv", "wxyzABC", " DEFGH ", "  IJK  "];
 
 ServerEvents.recipes((event) => {
-	event.recipes.create.mechanical_crafting("create_cc:creative_potion", recipeShape, creativePotionIngredients);
 	event.recipes.create.mechanical_crafting(
-		"create_cc:creative_splash_potion",
+		"create_cosmic_contraptions:creative_potion",
+		recipeShape,
+		creativePotionIngredients
+	);
+	event.recipes.create.mechanical_crafting(
+		"create_cosmic_contraptions:creative_splash_potion",
 		recipeShape,
 		creativeSplashPotionIngredients
 	);
 	event.recipes.create.mechanical_crafting(
-		"create_cc:creative_lingering_potion",
+		"create_cosmic_contraptions:creative_lingering_potion",
 		recipeShape,
 		creativeLingeringPotionIngredients
 	);
@@ -125,23 +129,23 @@ ServerEvents.recipes((event) => {
 	// Divine Potion
 	event.recipes.create
 		.sequenced_assembly(
-			[Item.of("create_cc:creative_omega_potion")],
+			[Item.of("create_cosmic_contraptions:creative_omega_potion")],
 			"create_enchantment_industry:hyper_experience_bottle",
 			[
-				event.recipes.createDeploying("create_cc:incomplete_creative_omega_potion", [
-					"create_cc:incomplete_creative_omega_potion",
-					"create_cc:creative_potion",
+				event.recipes.createDeploying("create_cosmic_contraptions:incomplete_creative_omega_potion", [
+					"create_cosmic_contraptions:incomplete_creative_omega_potion",
+					"create_cosmic_contraptions:creative_potion",
 				]),
-				event.recipes.createDeploying("create_cc:incomplete_creative_omega_potion", [
-					"create_cc:incomplete_creative_omega_potion",
-					"create_cc:creative_splash_potion",
+				event.recipes.createDeploying("create_cosmic_contraptions:incomplete_creative_omega_potion", [
+					"create_cosmic_contraptions:incomplete_creative_omega_potion",
+					"create_cosmic_contraptions:creative_splash_potion",
 				]),
-				event.recipes.createDeploying("create_cc:incomplete_creative_omega_potion", [
-					"create_cc:incomplete_creative_omega_potion",
-					"create_cc:creative_lingering_potion",
+				event.recipes.createDeploying("create_cosmic_contraptions:incomplete_creative_omega_potion", [
+					"create_cosmic_contraptions:incomplete_creative_omega_potion",
+					"create_cosmic_contraptions:creative_lingering_potion",
 				]),
 			]
 		)
-		.transitionalItem("create_cc:incomplete_creative_omega_potion")
+		.transitionalItem("create_cosmic_contraptions:incomplete_creative_omega_potion")
 		.loops(3);
 });

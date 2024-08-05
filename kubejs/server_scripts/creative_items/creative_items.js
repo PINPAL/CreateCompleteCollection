@@ -13,9 +13,9 @@ ServerEvents.recipes((event) => {
 			"ZZZ   ZZZ",
 		],
 		{
-			M: "create_cc:metal_alloy_block",
-			O: "create_cc:creative_omega_potion",
-			Z: "create_cc:rainbow_core",
+			M: "create_cosmic_contraptions:metal_alloy_block",
+			O: "create_cosmic_contraptions:creative_omega_potion",
+			Z: "create_cosmic_contraptions:rainbow_core",
 			R: "minecraft:recovery_compass",
 			B: "create_dd:overcharge_alloy",
 		}

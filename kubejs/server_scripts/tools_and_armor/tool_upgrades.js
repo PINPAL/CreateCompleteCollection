@@ -33,7 +33,7 @@ const toolUpgradingTiers = [
 	{
 		tier: "copper",
 		properties: {
-			prefix: "create_cc:copper",
+			prefix: "create_cosmic_contraptions:copper",
 			hasArmor: true,
 			hasHorseArmor: true,
 			hasTools: true,
@@ -64,22 +64,22 @@ const toolUpgradingTiers = [
 		},
 		previousTier: {
 			name: "copper",
-			prefix: "create_cc:copper",
+			prefix: "create_cosmic_contraptions:copper",
 			horseArmor: "minecraft:golden_horse_armor",
-			armorPrefix: "create_cc:copper",
+			armorPrefix: "create_cosmic_contraptions:copper",
 			knife: "create_things_and_misc:copper_knife",
 		},
 	},
 	{
 		tier: "steel",
 		properties: {
-			prefix: "create_cc:steel",
+			prefix: "create_cosmic_contraptions:steel",
 			hasArmor: true,
 			hasHorseArmor: false,
 			hasTools: true,
 			hasBackpack: true,
 			hasKnife: true,
-			knife: "create_cc:steel_knife",
+			knife: "create_cosmic_contraptions:steel_knife",
 		},
 		previousTier: {
 			name: "iron",
@@ -102,10 +102,10 @@ const toolUpgradingTiers = [
 		},
 		previousTier: {
 			name: "steel",
-			prefix: "create_cc:steel",
+			prefix: "create_cosmic_contraptions:steel",
 			horseArmor: "minecraft:iron_horse_armor",
-			armorPrefix: "create_cc:steel",
-			knife: "create_cc:steel_knife",
+			armorPrefix: "create_cosmic_contraptions:steel",
+			knife: "create_cosmic_contraptions:steel_knife",
 		},
 	},
 	{
@@ -142,55 +142,61 @@ ServerEvents.recipes((event) => {
 		if (tier.properties.hasArmor) {
 			// Helmet
 			event.recipes.create
-				.crushing(`create_cc:broken_${tier.tier}_helmet`, `${tier.properties.prefix}_helmet`)
-				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_helmet`);
+				.crushing(`create_cosmic_contraptions:broken_${tier.tier}_helmet`, `${tier.properties.prefix}_helmet`)
+				.id(`create_cosmic_contraptions:tool_upgrading/crushing/broken_${tier.tier}_helmet`);
 			event
 				.smithing(
 					`${tier.properties.prefix}_helmet`,
 					`${tier.previousTier.armorPrefix}_helmet`,
-					`create_cc:${tier.tier}_stitching`
+					`create_cosmic_contraptions:${tier.tier}_stitching`
 				)
-				.id(`create_cc:tool_upgrading/${tier.tier}_helmet`);
+				.id(`create_cosmic_contraptions:tool_upgrading/${tier.tier}_helmet`);
 			// Chestplate
 			event.recipes.create
-				.crushing(`create_cc:broken_${tier.tier}_chestplate`, `${tier.properties.prefix}_chestplate`)
-				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_chestplate`);
+				.crushing(
+					`create_cosmic_contraptions:broken_${tier.tier}_chestplate`,
+					`${tier.properties.prefix}_chestplate`
+				)
+				.id(`create_cosmic_contraptions:tool_upgrading/crushing/broken_${tier.tier}_chestplate`);
 			event
 				.smithing(
 					`${tier.properties.prefix}_chestplate`,
 					`${tier.previousTier.armorPrefix}_chestplate`,
-					`create_cc:${tier.tier}_stitching`
+					`create_cosmic_contraptions:${tier.tier}_stitching`
 				)
-				.id(`create_cc:tool_upgrading/${tier.tier}_chestplate`);
+				.id(`create_cosmic_contraptions:tool_upgrading/${tier.tier}_chestplate`);
 			// Leggings
 			event.recipes.create
-				.crushing(`create_cc:broken_${tier.tier}_leggings`, `${tier.properties.prefix}_leggings`)
-				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_leggings`);
+				.crushing(
+					`create_cosmic_contraptions:broken_${tier.tier}_leggings`,
+					`${tier.properties.prefix}_leggings`
+				)
+				.id(`create_cosmic_contraptions:tool_upgrading/crushing/broken_${tier.tier}_leggings`);
 			event
 				.smithing(
 					`${tier.properties.prefix}_leggings`,
 					`${tier.previousTier.armorPrefix}_leggings`,
-					`create_cc:${tier.tier}_stitching`
+					`create_cosmic_contraptions:${tier.tier}_stitching`
 				)
-				.id(`create_cc:tool_upgrading/${tier.tier}_leggings`);
+				.id(`create_cosmic_contraptions:tool_upgrading/${tier.tier}_leggings`);
 			// Boots
 			event.recipes.create
-				.crushing(`create_cc:broken_${tier.tier}_boots`, `${tier.properties.prefix}_boots`)
-				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_boots`);
+				.crushing(`create_cosmic_contraptions:broken_${tier.tier}_boots`, `${tier.properties.prefix}_boots`)
+				.id(`create_cosmic_contraptions:tool_upgrading/crushing/broken_${tier.tier}_boots`);
 			event
 				.smithing(
 					`${tier.properties.prefix}_boots`,
 					`${tier.previousTier.armorPrefix}_boots`,
-					`create_cc:${tier.tier}_stitching`
+					`create_cosmic_contraptions:${tier.tier}_stitching`
 				)
-				.id(`create_cc:tool_upgrading/${tier.tier}_boots`);
+				.id(`create_cosmic_contraptions:tool_upgrading/${tier.tier}_boots`);
 		}
 		// KNIFE
 		// ============================
 		if (tier.properties.hasKnife) {
 			event.recipes.create
-				.crushing(`create_cc:broken_${tier.tier}_knife`, tier.properties.knife)
-				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_knife`);
+				.crushing(`create_cosmic_contraptions:broken_${tier.tier}_knife`, tier.properties.knife)
+				.id(`create_cosmic_contraptions:tool_upgrading/crushing/broken_${tier.tier}_knife`);
 
 			event
 				.smithing(
@@ -199,46 +205,49 @@ ServerEvents.recipes((event) => {
 						? Item.of("farmersdelight:netherite_knife").withNBT("{Unbreakable:1b}")
 						: tier.properties.knife,
 					tier.previousTier.knife,
-					`create_cc:${tier.tier}_blade`
+					`create_cosmic_contraptions:${tier.tier}_blade`
 				)
-				.id(`create_cc:tool_upgrading/${tier.tier}_knife`);
+				.id(`create_cosmic_contraptions:tool_upgrading/${tier.tier}_knife`);
 		}
 		// HOE, SWORD, PAXEL
 		// ============================
 		if (tier.properties.hasTools) {
 			// Sword
 			event.recipes.create
-				.crushing(`create_cc:broken_${tier.tier}_sword`, `${tier.properties.prefix}_sword`)
-				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_sword`);
+				.crushing(`create_cosmic_contraptions:broken_${tier.tier}_sword`, `${tier.properties.prefix}_sword`)
+				.id(`create_cosmic_contraptions:tool_upgrading/crushing/broken_${tier.tier}_sword`);
 			event
 				.smithing(
 					`${tier.properties.prefix}_sword`,
 					`${tier.previousTier.prefix}_sword`,
-					`create_cc:${tier.tier}_blade`
+					`create_cosmic_contraptions:${tier.tier}_blade`
 				)
-				.id(`create_cc:tool_upgrading/${tier.tier}_sword`);
+				.id(`create_cosmic_contraptions:tool_upgrading/${tier.tier}_sword`);
 			// Hoe
 			event.recipes.create
-				.crushing(`create_cc:broken_${tier.tier}_hoe`, `${tier.properties.prefix}_hoe`)
-				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_hoe`);
+				.crushing(`create_cosmic_contraptions:broken_${tier.tier}_hoe`, `${tier.properties.prefix}_hoe`)
+				.id(`create_cosmic_contraptions:tool_upgrading/crushing/broken_${tier.tier}_hoe`);
 			event
 				.smithing(
 					`${tier.properties.prefix}_hoe`,
 					`${tier.previousTier.prefix}_hoe`,
-					`create_cc:${tier.tier}_blade`
+					`create_cosmic_contraptions:${tier.tier}_blade`
 				)
-				.id(`create_cc:tool_upgrading/${tier.tier}_hoe`);
+				.id(`create_cosmic_contraptions:tool_upgrading/${tier.tier}_hoe`);
 			// Paxel
 			event.recipes.create
-				.crushing(`create_cc:broken_${tier.tier}_paxel`, `create_cc:${tier.tier}_paxel`)
-				.id(`create_cc:tool_upgrading/crushing/broken_${tier.tier}_paxel`);
+				.crushing(
+					`create_cosmic_contraptions:broken_${tier.tier}_paxel`,
+					`create_cosmic_contraptions:${tier.tier}_paxel`
+				)
+				.id(`create_cosmic_contraptions:tool_upgrading/crushing/broken_${tier.tier}_paxel`);
 			event
 				.smithing(
-					`create_cc:${tier.tier}_paxel`,
-					`create_cc:${tier.previousTier.name}_paxel`,
-					`create_cc:${tier.tier}_head`
+					`create_cosmic_contraptions:${tier.tier}_paxel`,
+					`create_cosmic_contraptions:${tier.previousTier.name}_paxel`,
+					`create_cosmic_contraptions:${tier.tier}_head`
 				)
-				.id(`create_cc:tool_upgrading/${tier.tier}_paxel`);
+				.id(`create_cosmic_contraptions:tool_upgrading/${tier.tier}_paxel`);
 		}
 		// HORSE ARMOR
 		// ============================
@@ -247,9 +256,9 @@ ServerEvents.recipes((event) => {
 				.smithing(
 					tier.properties.horseArmor,
 					tier.previousTier.horseArmor,
-					Item.of(`create_cc:unfinished_${tier.tier}_stitching`).weakNBT()
+					Item.of(`create_cosmic_contraptions:unfinished_${tier.tier}_stitching`).weakNBT()
 				)
-				.id(`create_cc:tool_upgrading/${tier.tier}_horse_armor`);
+				.id(`create_cosmic_contraptions:tool_upgrading/${tier.tier}_horse_armor`);
 		}
 	});
 });

@@ -39,14 +39,14 @@ paxelTiers.forEach((tier) => {
 	// Register Paxel
 	StartupEvents.registry("item", (event) => {
 		event
-			.create("create_cc:" + `${tier.name}_paxel`, "paxel")
+			.create("create_cosmic_contraptions:" + `${tier.name}_paxel`, "paxel")
 			.displayName(`${formatName(tier.name)} Paxel`)
 			.tier(tier.material)
 			.unstackable();
 	});
 	// Adjust Durability
 	ItemEvents.modification((event) => {
-		event.modify(`create_cc:${tier.name}_paxel`, (item) => {
+		event.modify(`create_cosmic_contraptions:${tier.name}_paxel`, (item) => {
 			item.maxDamage = tier.maxDamage;
 		});
 	});

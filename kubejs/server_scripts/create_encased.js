@@ -84,7 +84,7 @@ createCasings.forEach((casing) => {
 			event.recipes.create
 				.item_application(encasedBlockName, [encasedBlock.originalItem, casing.casingId])
 				.keepHeldItem()
-				.id("create_cc:encased/" + casing.name + "/" + encasedBlock.name.replace("$$_", ""));
+				.id("create_cosmic_contraptions:encased/" + casing.name + "/" + encasedBlock.name.replace("$$_", ""));
 		});
 
 		// Modify loot table so that they drop the original Create item

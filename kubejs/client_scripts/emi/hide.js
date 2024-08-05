@@ -16,7 +16,7 @@ const hideFromJEI = [
 	// Unfinished Items
 	/tfmg:unprocessed_.*/,
 	/create_central_kitchen:incomplete_.*/,
-	/create_cc:incomplete_.*/,
+	/create_cosmic_contraptions:incomplete_.*/,
 	/destroy:unprocessed_.*/,
 	/create:unprocessed_.*/,
 	/tfmg:unfinished_.*/,
@@ -29,8 +29,9 @@ const hideFromJEI = [
 	/create_connected:incomplete_.*/,
 
 	// Create-CC
-	"create_cc:belt_scroll",
-	/create_cc:broken_.*/,
+	"create_cosmic_contraptions:belt_scroll",
+	/create_cosmic_contraptions:broken_.*/,
+	"create_cosmic_contraptions:wrench_axe",
 
 	// Replaced by NBT items
 	"create:extendo_grip",

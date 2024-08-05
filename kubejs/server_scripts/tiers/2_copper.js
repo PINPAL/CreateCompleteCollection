@@ -26,43 +26,47 @@ ServerEvents.recipes((event) => {
 		)
 		.transitionalItem("create_dd:incomplete_kinetic_mechanism")
 		.loops(1)
-		.id("create_cc:tiers/2_copper/kinetic_mechanism");
+		.id("create_cosmic_contraptions:tiers/2_copper/kinetic_mechanism");
 
 	// Insulaton Brush
 	event
-		.shaped("create_cc:insulation_brush", ["HP", "NH"], {
+		.shaped("create_cosmic_contraptions:insulation_brush", ["HP", "NH"], {
 			H: "minecraft:honeycomb",
 			P: "#forge:plates/zinc",
 			N: "#forge:nuggets/zinc",
 		})
-		.id("create_cc:tiers/2_copper/insulation_brush");
+		.id("create_cosmic_contraptions:tiers/2_copper/insulation_brush");
 	// Glue Packing
 
 	// Copper Machine
 	event.recipes
-		.shaped("create_cc:t2_copper_machine", ["AMA", " C ", "ATA"], {
+		.shaped("create_cosmic_contraptions:t2_copper_machine", ["AMA", " C ", "ATA"], {
 			A: "createdeco:copper_coin",
 			C: "create:copper_casing",
-			T: "create_cc:t1_andesite_machine",
+			T: "create_cosmic_contraptions:t1_andesite_machine",
 			M: "create_dd:kinetic_mechanism",
 		})
-		.id("create_cc:tiers/2_copper/copper_machine_crafting");
+		.id("create_cosmic_contraptions:tiers/2_copper/copper_machine_crafting");
 	event.recipes
-		.createSequencedAssembly(["create_cc:t2_copper_machine"], "create_cc:t1_andesite_machine", [
-			event.recipes.createDeploying("create_cc:incomplete_t2_copper_machine", [
-				"create_cc:incomplete_t2_copper_machine",
-				"createdeco:copper_coinstack",
-			]),
-			event.recipes.createDeploying("create_cc:incomplete_t2_copper_machine", [
-				"create_cc:incomplete_t2_copper_machine",
-				"create:copper_casing",
-			]),
-			event.recipes.createDeploying("create_cc:incomplete_t2_copper_machine", [
-				"create_cc:incomplete_t2_copper_machine",
-				"create_dd:kinetic_mechanism",
-			]),
-		])
-		.transitionalItem("create_cc:incomplete_t2_copper_machine")
+		.createSequencedAssembly(
+			["create_cosmic_contraptions:t2_copper_machine"],
+			"create_cosmic_contraptions:t1_andesite_machine",
+			[
+				event.recipes.createDeploying("create_cosmic_contraptions:incomplete_t2_copper_machine", [
+					"create_cosmic_contraptions:incomplete_t2_copper_machine",
+					"createdeco:copper_coinstack",
+				]),
+				event.recipes.createDeploying("create_cosmic_contraptions:incomplete_t2_copper_machine", [
+					"create_cosmic_contraptions:incomplete_t2_copper_machine",
+					"create:copper_casing",
+				]),
+				event.recipes.createDeploying("create_cosmic_contraptions:incomplete_t2_copper_machine", [
+					"create_cosmic_contraptions:incomplete_t2_copper_machine",
+					"create_dd:kinetic_mechanism",
+				]),
+			]
+		)
+		.transitionalItem("create_cosmic_contraptions:incomplete_t2_copper_machine")
 		.loops(1)
-		.id("create_cc:tiers/2_copper/copper_machine");
+		.id("create_cosmic_contraptions:tiers/2_copper/copper_machine");
 });

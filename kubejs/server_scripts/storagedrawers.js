@@ -5,15 +5,15 @@ ServerEvents.recipes((event) => {
 			C: "createdeco:gold_coin",
 			R: "#forge:rods/gold",
 		})
-		.id("create_cc:drawers/drawer_key");
+		.id("create_cosmic_contraptions:drawers/drawer_key");
 	// Quantify Key
 	event
 		.shapeless("storagedrawers:quantify_key", ["storagedrawers:drawer_key", "#minecraft:signs"])
-		.id("create_cc:drawers/quantify_key");
+		.id("create_cosmic_contraptions:drawers/quantify_key");
 	// Concealment Key
 	event
 		.shapeless("storagedrawers:shroud_key", ["storagedrawers:drawer_key", "#forge:nuggets/gold"])
-		.id("create_cc:drawers/concealment_key");
+		.id("create_cosmic_contraptions:drawers/concealment_key");
 
 	// Void Upgrade
 	event
@@ -22,12 +22,12 @@ ServerEvents.recipes((event) => {
 			E: "#forge:ender_pearls",
 			O: "#forge:obsidian",
 		})
-		.id("create_cc:drawers/void_upgrade");
+		.id("create_cosmic_contraptions:drawers/void_upgrade");
 
 	// Redstone Upgrade
 	event
 		.shapeless("storagedrawers:redstone_upgrade", ["sophisticatedbackpacks:upgrade_base", "minecraft:comparator"])
-		.id("create_cc:drawers/redstone_upgrade");
+		.id("create_cosmic_contraptions:drawers/redstone_upgrade");
 
 	// Min Redstone Upgrade
 	event
@@ -36,7 +36,7 @@ ServerEvents.recipes((event) => {
 			"minecraft:comparator",
 			"minecraft:redstone",
 		])
-		.id("create_cc:drawers/min_redstone_upgrade");
+		.id("create_cosmic_contraptions:drawers/min_redstone_upgrade");
 
 	// Max Redstone Upgrade
 	event
@@ -45,7 +45,7 @@ ServerEvents.recipes((event) => {
 			"minecraft:comparator",
 			"2x minecraft:redstone",
 		])
-		.id("create_cc:drawers/max_redstone_upgrade");
+		.id("create_cosmic_contraptions:drawers/max_redstone_upgrade");
 
 	// Illumination Upgrade
 	event
@@ -53,12 +53,12 @@ ServerEvents.recipes((event) => {
 			"sophisticatedbackpacks:upgrade_base",
 			"minecraft:glow_ink_sac",
 		])
-		.id("create_cc:drawers/illumination_upgrade");
+		.id("create_cosmic_contraptions:drawers/illumination_upgrade");
 
 	// Fill Level Upgrade
 	event
 		.shapeless("3x storagedrawers:fill_level_upgrade", ["sophisticatedbackpacks:upgrade_base", "#minecraft:signs"])
-		.id("create_cc:drawers/fill_level_upgrade");
+		.id("create_cosmic_contraptions:drawers/fill_level_upgrade");
 
 	const drawerWoodTypes = [
 		{ name: "oak", type: "logs", mod: "storagedrawers:" },
@@ -99,32 +99,32 @@ ServerEvents.recipes((event) => {
 		event
 			.shaped(`${wood.mod}${wood.name}_full_drawers_1`, ["V V", " W ", "V V"], {
 				W: getDrawerLogTag(wood),
-				V: "#create_cc:item_vaults",
+				V: "#create_cosmic_contraptions:item_vaults",
 			})
-			.id(`create_cc:drawers/${wood.name}_crafting_1x1`);
+			.id(`create_cosmic_contraptions:drawers/${wood.name}_crafting_1x1`);
 		event
 			.shaped(`${wood.mod}${wood.name}_full_drawers_4`, [" V ", "VWV", " V "], {
 				W: getDrawerLogTag(wood),
-				V: "#create_cc:item_vaults",
+				V: "#create_cosmic_contraptions:item_vaults",
 			})
-			.id(`create_cc:drawers/${wood.name}_crafting_2x2`);
+			.id(`create_cosmic_contraptions:drawers/${wood.name}_crafting_2x2`);
 		event
 			.shaped(`${wood.mod}${wood.name}_full_drawers_2`, ["VV ", " W ", " VV"], {
 				W: getDrawerLogTag(wood),
-				V: "#create_cc:item_vaults",
+				V: "#create_cosmic_contraptions:item_vaults",
 			})
-			.id(`create_cc:drawers/${wood.name}_crafting_1x2`);
+			.id(`create_cosmic_contraptions:drawers/${wood.name}_crafting_1x2`);
 		// Stone Cutting 1x1 Drawers into 2x2 & 2x1 Drawers
 		event
-			.stonecutting(`${wood.mod}${wood.name}_full_drawers_2`, `#create_cc:${wood.name}_drawers`)
-			.id(`create_cc:drawers/${wood.name}_stonecutting_2x1`); // 2x1 Drawers
+			.stonecutting(`${wood.mod}${wood.name}_full_drawers_2`, `#create_cosmic_contraptions:${wood.name}_drawers`)
+			.id(`create_cosmic_contraptions:drawers/${wood.name}_stonecutting_2x1`); // 2x1 Drawers
 		event
-			.stonecutting(`${wood.mod}${wood.name}_full_drawers_4`, `#create_cc:${wood.name}_drawers`)
-			.id(`create_cc:drawers/${wood.name}_stonecutting_2x2`); // 2x2 Drawers
+			.stonecutting(`${wood.mod}${wood.name}_full_drawers_4`, `#create_cosmic_contraptions:${wood.name}_drawers`)
+			.id(`create_cosmic_contraptions:drawers/${wood.name}_stonecutting_2x2`); // 2x2 Drawers
 		// Converting Drawer Wood Type
 		event
 			.shapeless(`${wood.mod}${wood.name}_full_drawers_1`, [getDrawerLogTag(wood), "#storagedrawers:drawers"])
-			.id(`create_cc:drawers/${wood.name}_recycle`);
+			.id(`create_cosmic_contraptions:drawers/${wood.name}_recycle`);
 	});
 	function getDrawerLogTag(wood) {
 		if (wood.type === "custom") {
@@ -142,40 +142,40 @@ ServerEvents.recipes((event) => {
 			"sophisticatedbackpacks:upgrade_base",
 			"#forge:plates/andesite",
 		])
-		.id("create_cc:drawers/upgrade/tier1");
+		.id("create_cosmic_contraptions:drawers/upgrade/tier1");
 	// Tier 2
 	event.recipes.create
 		.deploying("storagedrawers:iron_storage_upgrade", [
 			"storagedrawers:obsidian_storage_upgrade",
 			"#forge:plates/copper",
 		])
-		.id("create_cc:drawers/upgrade/tier2");
+		.id("create_cosmic_contraptions:drawers/upgrade/tier2");
 	// Tier 3
 	event.recipes.create
 		.deploying("storagedrawers:gold_storage_upgrade", [
 			"storagedrawers:iron_storage_upgrade",
 			"#forge:plates/brass",
 		])
-		.id("create_cc:drawers/upgrade/tier3");
+		.id("create_cosmic_contraptions:drawers/upgrade/tier3");
 	// Tier 4
 	event.recipes.create
 		.deploying("storagedrawers:diamond_storage_upgrade", [
 			"storagedrawers:gold_storage_upgrade",
 			"#forge:plates/sturdy_steel",
 		])
-		.id("create_cc:drawers/upgrade/tier4");
+		.id("create_cosmic_contraptions:drawers/upgrade/tier4");
 	// Tier 5
 	event.recipes.create
 		.deploying("storagedrawers:emerald_storage_upgrade", [
 			"storagedrawers:diamond_storage_upgrade",
 			"#forge:plates/netherite",
 		])
-		.id("create_cc:drawers/upgrade/tier5");
+		.id("create_cosmic_contraptions:drawers/upgrade/tier5");
 	// Tier 6
 	event.recipes.create
 		.deploying("storagedrawers:creative_storage_upgrade", [
 			"storagedrawers:emerald_storage_upgrade",
 			"#forge:plates/refined_radiance",
 		])
-		.id("create_cc:drawers/upgrade/tier6");
+		.id("create_cosmic_contraptions:drawers/upgrade/tier6");
 });

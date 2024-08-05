@@ -7,7 +7,7 @@ StartupEvents.registry("item", (event) => {
 	armorMaterials.forEach((material) => {
 		armors.forEach((armor) => {
 			event
-				.create("create_cc:" + `broken_${material}_${armor}`)
+				.create("create_cosmic_contraptions:" + `broken_${material}_${armor}`)
 				.displayName(`Broken ${formatName(material)} ${formatName(armor)}`)
 				.unstackable();
 		});
@@ -16,7 +16,7 @@ StartupEvents.registry("item", (event) => {
 	// Broken Diving Gear
 	divingGear.forEach((item) => {
 		event
-			.create("create_cc:" + `broken_${item}`)
+			.create("create_cosmic_contraptions:" + `broken_${item}`)
 			.displayName("Broken " + formatName(item))
 			.unstackable();
 	});

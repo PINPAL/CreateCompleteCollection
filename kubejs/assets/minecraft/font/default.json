@@ -240,63 +240,63 @@
 		},
 		{
 			"type": "bitmap",
-			"file": "create_cc:food_hunches/carbs_outline.png",
+			"file": "create_cosmic_contraptions:food_hunches/carbs_outline.png",
 			"ascent": 9,
 			"height": 9,
 			"chars": ["\uEff1"]
 		},
 		{
 			"type": "bitmap",
-			"file": "create_cc:food_hunches/carbs_fill.png",
+			"file": "create_cosmic_contraptions:food_hunches/carbs_fill.png",
 			"ascent": 9,
 			"height": 9,
 			"chars": ["\uEff2"]
 		},
 		{
 			"type": "bitmap",
-			"file": "create_cc:food_hunches/protein_outline.png",
+			"file": "create_cosmic_contraptions:food_hunches/protein_outline.png",
 			"ascent": 9,
 			"height": 9,
 			"chars": ["\uEff3"]
 		},
 		{
 			"type": "bitmap",
-			"file": "create_cc:food_hunches/protein_fill.png",
+			"file": "create_cosmic_contraptions:food_hunches/protein_fill.png",
 			"ascent": 9,
 			"height": 9,
 			"chars": ["\uEff4"]
 		},
 		{
 			"type": "bitmap",
-			"file": "create_cc:food_hunches/veggies_outline.png",
+			"file": "create_cosmic_contraptions:food_hunches/veggies_outline.png",
 			"ascent": 9,
 			"height": 9,
 			"chars": ["\uEff5"]
 		},
 		{
 			"type": "bitmap",
-			"file": "create_cc:food_hunches/veggies_fill.png",
+			"file": "create_cosmic_contraptions:food_hunches/veggies_fill.png",
 			"ascent": 9,
 			"height": 9,
 			"chars": ["\uEff6"]
 		},
 		{
 			"type": "bitmap",
-			"file": "create_cc:food_hunches/veggies_half.png",
+			"file": "create_cosmic_contraptions:food_hunches/veggies_half.png",
 			"ascent": 9,
 			"height": 9,
 			"chars": ["\uEff7"]
 		},
 		{
 			"type": "bitmap",
-			"file": "create_cc:food_hunches/protein_half.png",
+			"file": "create_cosmic_contraptions:food_hunches/protein_half.png",
 			"ascent": 9,
 			"height": 9,
 			"chars": ["\uEff8"]
 		},
 		{
 			"type": "bitmap",
-			"file": "create_cc:food_hunches/carbs_half.png",
+			"file": "create_cosmic_contraptions:food_hunches/carbs_half.png",
 			"ascent": 9,
 			"height": 9,
 			"chars": ["\uEff9"]

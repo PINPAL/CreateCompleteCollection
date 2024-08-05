@@ -2,7 +2,7 @@ ServerEvents.recipes((event) => {
 	// Brine
 	event.recipes.create
 		.mixing(
-			[Fluid.of("create_cc:brine", 1000)],
+			[Fluid.of("create_cosmic_contraptions:brine", 1000)],
 			[
 				"salt:salt",
 				"salt:salt",
@@ -18,7 +18,7 @@ ServerEvents.recipes((event) => {
 		.heated();
 	// Biomethane
 	event.recipes.create.mixing(
-		[Fluid.of("create_cc:biomethane", 500)],
+		[Fluid.of("create_cosmic_contraptions:biomethane", 500)],
 		[
 			"minecraft:rotten_flesh",
 			"minecraft:rotten_flesh",
@@ -37,8 +37,8 @@ ServerEvents.recipes((event) => {
 	);
 	// Methyl Chloride
 	event.recipes.create.mixing(
-		[Fluid.of("create_cc:methyl_chloride", 500)],
-		[Fluid.of("create_cc:chlorine", 500), Fluid.of("create_cc:biomethane", 500)]
+		[Fluid.of("create_cosmic_contraptions:methyl_chloride", 500)],
+		[Fluid.of("create_cosmic_contraptions:chlorine", 500), Fluid.of("create_cosmic_contraptions:biomethane", 500)]
 	);
 	// Silicon Quartz
 	event.recipes.create
@@ -58,7 +58,7 @@ ServerEvents.recipes((event) => {
 	event.recipes.create
 		.mixing(
 			[Item.of("refinedstorage:silicon").withChance(0.25)],
-			["refinedstorage:quartz_enriched_iron", Fluid.of("create_cc:methyl_chloride", 1000)]
+			["refinedstorage:quartz_enriched_iron", Fluid.of("create_cosmic_contraptions:methyl_chloride", 1000)]
 		)
 		.superheated();
 });

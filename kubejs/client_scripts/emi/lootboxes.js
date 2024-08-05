@@ -10,12 +10,20 @@ let guiHeight = navHeight + padding + rows * (slotSize + slotSize / 2);
 JEIAddedEvents.registerCategories((event) => {
 	const guiHelper = event.data.jeiHelpers.guiHelper;
 
-	event.custom("create_cc:lootbox_results", (category) => {
+	event.custom("create_cosmic_contraptions:lootbox_results", (category) => {
 		category
 			//https://github.com/mezz/JustEnoughItems/blob/1.20.1/CommonApi/src/main/java/mezz/jei/api/helpers/IGuiHelper.java
 			.title("Lootbox Results")
-			.background(guiHelper.createDrawable("create_cc:textures/gui/lootbox_jei.png", 2, 2, guiWidth, guiHeight))
-			.icon(guiHelper.createDrawableItemStack(Item.of("create_cc:lootbox_basic")))
+			.background(
+				guiHelper.createDrawable(
+					"create_cosmic_contraptions:textures/gui/lootbox_jei.png",
+					2,
+					2,
+					guiWidth,
+					guiHeight
+				)
+			)
+			.icon(guiHelper.createDrawableItemStack(Item.of("create_cosmic_contraptions:lootbox_basic")))
 			// Validate
 			// Ensure that the recipe has an input
 			// Ensure that the recipe has outputs
@@ -53,7 +61,7 @@ JEIAddedEvents.registerCategories((event) => {
 				guiGraphics.drawWordWrap(Client.font, Text.of(recipe.data.name).white(), 30, 6, guiWidth - 30, 0);
 				guiGraphics.drawWordWrap(
 					Client.font,
-					Text.of(`Rolls ${recipe.data.rolls} Items`).color(0xa8a8a8),
+					Text.of(`Rolls ${recipe.data.rolls} Item${recipe.data.rolls > 1 ? "s" : ""}`).color(0xa8a8a8),
 					30,
 					18,
 					guiWidth - 30,
@@ -129,9 +137,9 @@ JEIAddedEvents.registerRecipes((event) => {
 			outputWeights.push(calculateRarityPercentage(item.weight, lootbox));
 		});
 
-		event.custom("create_cc:lootbox_results").add({
+		event.custom("create_cosmic_contraptions:lootbox_results").add({
 			name: global.formatName(lootbox.name),
-			input: `create_cc:lootbox_${key}`,
+			input: `create_cosmic_contraptions:lootbox_${key}`,
 			outputs: outputs,
 			outputWeights: outputWeights,
 			rolls: lootbox.rolls,

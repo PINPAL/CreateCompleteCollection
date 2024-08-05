@@ -6,18 +6,18 @@ ItemEvents.tooltip((tooltip) => {
 		text.add(1, [Text.of("Can ").gray(), Text.of("ONLY ").red(), Text.of("work on moving contraptions.").gray()]);
 	});
 	const customItems = [
-		"create_cc:rainbow_valve_handle",
-		"create_cc:rainbow_wool",
-		"create_cc:rainbow_concrete",
-		"create_cc:metal_alloy_block",
-		"create_cc:rainbow_toolbox",
-		"create_cc:rainbow_canvas_sign",
-		"create_cc:rainbow_placard",
-		"create_cc:rainbow_dye",
-		"create_cc:rainbow_candle",
-		"create_cc:creative_potion",
-		"create_cc:creative_splash_potion",
-		"create_cc:creative_lingering_potion",
+		"create_cosmic_contraptions:rainbow_valve_handle",
+		"create_cosmic_contraptions:rainbow_wool",
+		"create_cosmic_contraptions:rainbow_concrete",
+		"create_cosmic_contraptions:metal_alloy_block",
+		"create_cosmic_contraptions:rainbow_toolbox",
+		"create_cosmic_contraptions:rainbow_canvas_sign",
+		"create_cosmic_contraptions:rainbow_placard",
+		"create_cosmic_contraptions:rainbow_dye",
+		"create_cosmic_contraptions:rainbow_candle",
+		"create_cosmic_contraptions:creative_potion",
+		"create_cosmic_contraptions:creative_splash_potion",
+		"create_cosmic_contraptions:creative_lingering_potion",
 	];
 	customItems.forEach((customItem) => {
 		tooltip.addAdvanced(customItem, (item, advanced, text) => {
@@ -87,7 +87,7 @@ ItemEvents.tooltip((tooltip) => {
 		{ name: "redstone", type: "gem" },
 	];
 	moltenMetals.forEach((moltenMetal) => {
-		tooltip.addAdvanced(`create_cc:molten_${moltenMetal.name}_block`, (item, advanced, text) => {
+		tooltip.addAdvanced(`create_cosmic_contraptions:molten_${moltenMetal.name}_block`, (item, advanced, text) => {
 			text.add(1, [
 				Text.of("Consists of ").gray(),
 				Text.of("1080").aqua(),
@@ -99,7 +99,7 @@ ItemEvents.tooltip((tooltip) => {
 		});
 	});
 
-	const endGameIngredients = ["create_cc:creative_omega_potion"];
+	const endGameIngredients = ["create_cosmic_contraptions:creative_omega_potion"];
 	endGameIngredients.forEach((customItem) => {
 		tooltip.addAdvanced(customItem, (item, advanced, text) => {
 			text.add(1, [Text.of("End Game Crafting Ingredient").aqua()]);
@@ -110,8 +110,8 @@ ItemEvents.tooltip((tooltip) => {
 		"minecraft:enchanting_table",
 		"minecraft:anvil",
 		"minecraft:brewing_stand",
-		"create_cc:anvil",
-		"create_cc:brewing_stand",
+		"create_cosmic_contraptions:anvil",
+		"create_cosmic_contraptions:brewing_stand",
 	];
 	disabledItems.forEach((disabledItem) => {
 		tooltip.addAdvanced(disabledItem, (item, advanced, text) => {
@@ -120,7 +120,7 @@ ItemEvents.tooltip((tooltip) => {
 		});
 	});
 
-	tooltip.addAdvanced(/create_cc:broken_.*/, (item, advanced, text) => {
+	tooltip.addAdvanced(/create_cosmic_contraptions:broken_.*/, (item, advanced, text) => {
 		text.add(1, [Text.of("Item is Broken").darkRed()]);
 		text.add(2, [Text.of("Requires Repair").red()]);
 	});

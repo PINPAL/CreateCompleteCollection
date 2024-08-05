@@ -1,0 +1,13 @@
+filename = 'betterbiomeblend-1.4.2.jar'
+name = 'Better Biome Reblend'
+side = 'both'
+
+[download]
+hash = '02cb03cfd38763177928855083207e8381bf659f'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5362745
+project-id = 1018276

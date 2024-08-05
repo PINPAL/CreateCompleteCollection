@@ -68,10 +68,10 @@ ServerEvents.recipes((event) => {
 unifiedIngots.forEach((ingot) => {
 	ServerEvents.tags("item", (event) => {
 		// Add tags for all unified ingots
-		event.add("forge:ingots/" + ingot.name, "create_cc:" + ingot.name + "_ingot");
-		event.add("forge:nuggets/" + ingot.name, "create_cc:" + ingot.name + "_nugget");
-		event.add("forge:plates/" + ingot.name, "create_cc:" + ingot.name + "_sheet");
-		event.add("forge:storage_blocks/" + ingot.name, "create_cc:" + ingot.name + "_block");
+		event.add("forge:ingots/" + ingot.name, "create_cosmic_contraptions:" + ingot.name + "_ingot");
+		event.add("forge:nuggets/" + ingot.name, "create_cosmic_contraptions:" + ingot.name + "_nugget");
+		event.add("forge:plates/" + ingot.name, "create_cosmic_contraptions:" + ingot.name + "_sheet");
+		event.add("forge:storage_blocks/" + ingot.name, "create_cosmic_contraptions:" + ingot.name + "_block");
 
 		// Remove tags for all modded ingots
 		ingot.modsUsing.forEach((mod) => {

@@ -1,7 +1,7 @@
 Ponder.registry((event) => {
 	event
 		.create("refinedstorage:crafting_grid")
-		.scene("connecting_your_grid", "Connecting your Grid", "create_cc:screen", (scene, util) => {
+		.scene("connecting_your_grid", "Connecting your Grid", "create_cosmic_contraptions:screen", (scene, util) => {
 			// Base Plate
 			for (let x = 0; x < 5; x++) {
 				for (let z = 0; z < 5; z++) {

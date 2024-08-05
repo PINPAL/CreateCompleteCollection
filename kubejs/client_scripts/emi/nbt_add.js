@@ -17,12 +17,6 @@ ClientEvents.highPriorityAssets((event) => {
 		Item.of("farmersdelight:netherite_knife").withNBT({ Unbreakable: "1b" }),
 	];
 
-	// Add all lootboxes
-	for (const key in global.lootboxes) {
-		// Add the item
-		addNBTtoJEI.push(global.getLootboxItemStack(key));
-	}
-
 	// Define the JSON
 	let json = {
 		added: [],

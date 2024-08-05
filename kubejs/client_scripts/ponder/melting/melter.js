@@ -1,5 +1,5 @@
 Ponder.registry((event) => {
-	event.create("melter:melter").scene("melter", "Melting", "create_cc:melter", (scene, util) => {
+	event.create("melter:melter").scene("melter", "Melting", "create_cosmic_contraptions:melter", (scene, util) => {
 		// Base Plate
 		for (let x = 0; x < 3; x++) {
 			for (let z = 0; z < 3; z++) {

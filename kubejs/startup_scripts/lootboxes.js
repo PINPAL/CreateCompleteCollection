@@ -4,7 +4,7 @@ global.lootboxes = {
 		rolls: 16,
 		items: [
 			{
-				item: "create_cc:refined_stone",
+				item: "create_cosmic_contraptions:refined_stone",
 				weight: 3,
 			},
 			{
@@ -50,7 +50,7 @@ global.lootboxes = {
 				weight: 3,
 			},
 			{
-				item: "create_cc:t1_andesite_machine",
+				item: "create_cosmic_contraptions:t1_andesite_machine",
 				weight: 2,
 			},
 			{
@@ -76,7 +76,7 @@ global.lootboxes = {
 		rolls: 1,
 		items: [
 			{
-				item: Item.of("create_cc:lootbox", '{BlockEntityTag:{data:{lootboxId:"andesite"}}}'),
+				item: Item.of("create_cosmic_contraptions:lootbox", '{BlockEntityTag:{data:{lootboxId:"andesite"}}}'),
 				weight: 1,
 			},
 		],
@@ -145,10 +145,166 @@ global.lootboxes = {
 				item: "toimmortality:totem_of_immortality",
 				weight: 1,
 			},
+			{
+				item: "refinedstorage:creative_storage_block",
+				weight: 1,
+			},
 		],
 	},
-	enchantments: {
-		name: "Random Enchantment",
+	enchantments_weapon: {
+		name: "Weapon Enchants",
+		rolls: 1,
+		items: [
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:sharpness", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:smite", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:bane_of_arthropods", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:knockback", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:fire_aspect", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:looting", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:sweeping", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:power", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:punch", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:flame", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:infinity", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:multishot", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:quick_charge", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:piercing", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:loyalty", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:impaling", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:riptide", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:channeling", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of(
+					"minecraft:enchanted_book",
+					1,
+					'{StoredEnchantments:[{id:"modification_of_critical_hit:criteffect",lvl:1s}]}'
+				),
+				weight: 1,
+			},
+			{
+				item: Item.of(
+					"minecraft:enchanted_book",
+					1,
+					'{StoredEnchantments:[{id:"modification_of_critical_hit:critchance",lvl:1s}]}'
+				),
+				weight: 1,
+			},
+		],
+	},
+	enchantments_generic: {
+		name: "Random Enchants",
+		rolls: 1,
+		items: [
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:luck_of_the_sea", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:lure", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:mending", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:vanishing_curse", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of(
+					"minecraft:enchanted_book",
+					1,
+					'{StoredEnchantments:[{id:"create:potato_recovery",lvl:1s}]}'
+				),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book", 1, '{StoredEnchantments:[{id:"create:capacity",lvl:1s}]}'),
+				weight: 1,
+			},
+			{
+				item: Item.of(
+					"minecraft:enchanted_book",
+					1,
+					'{StoredEnchantments:[{id:"farmersdelight:backstabbing",lvl:1s}]}'
+				),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:efficiency", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:silk_touch", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:unbreaking", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:fortune", 1),
+				weight: 1,
+			},
+		],
+	},
+	enchantments_armor: {
+		name: "Armor Enchants",
 		rolls: 1,
 		items: [
 			{
@@ -159,37 +315,76 @@ global.lootboxes = {
 				item: Item.of("minecraft:enchanted_book").enchant("minecraft:fire_protection", 1),
 				weight: 1,
 			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:feather_falling", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:blast_protection", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:projectile_protection", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:respiration", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:aqua_affinity", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:thorns", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:depth_strider", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:frost_walker", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:binding_curse", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:swift_sneak", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:soul_speed", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of(
+					"minecraft:enchanted_book",
+					1,
+					'{StoredEnchantments:[{id:"ensorcellation:air_affinity",lvl:1s}]}'
+				),
+				weight: 1,
+			},
 		],
 	},
 };
 
 StartupEvents.registry("block", (event) => {
-	/* 	for (const key in global.lootboxes) {
+	for (const key in global.lootboxes) {
 		let lootbox = global.lootboxes[key];
 
 		event
-			.create(`create_cc:lootbox_${key}`)
+			.create(`create_cosmic_contraptions:lootbox_${key}`)
 			.displayName(`${lootbox.name} Lootbox`)
 			.soundType("wood")
 			.hardness(2)
 			.tagBlock("minecraft:mineable/pickaxe")
-			.tagBlock("create_cc:lootbox")
-			.tagItem("create_cc:lootbox")
-			.model("create_cc:block/lootbox")
+			.tagBlock("create_cosmic_contraptions:lootbox")
+			.tagItem("create_cosmic_contraptions:lootbox")
+			.model("create_cosmic_contraptions:block/lootbox")
 			.noValidSpawns(true)
 			.suffocating(false);
-	} */
-
-	event
-		.create("create_cc:lootbox")
-		.displayName("Lootbox")
-		.model("create_cc:block/lootbox")
-		.noValidSpawns(true)
-		.suffocating(false)
-		.tagBlock("minecraft:mineable/pickaxe")
-		.tagBlock("create_cc:lootbox")
-		.tagItem("create_cc:lootbox")
-		.soundType("wood")
-		.hardness(2)
-		.blockEntity((entityInfo) => {});
+	}
 });

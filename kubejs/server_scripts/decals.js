@@ -107,13 +107,13 @@ ServerEvents.recipes((event) => {
 	decals.forEach((decal) => {
 		event.remove({ output: decal });
 
-		event.stonecutting(decal, "#forge:nuggets/zinc").id("create_cc:" + decal.replace(":", "_"));
-		event.stonecutting(decal, "#create_cc:create_decals");
+		event.stonecutting(decal, "#forge:nuggets/zinc").id("create_cosmic_contraptions:" + decal.replace(":", "_"));
+		event.stonecutting(decal, "#create_cosmic_contraptions:create_decals");
 	});
 });
 
 ServerEvents.tags("item", (event) => {
 	decals.forEach((decal) => {
-		event.add("create_cc:create_decals", decal);
+		event.add("create_cosmic_contraptions:create_decals", decal);
 	});
 });

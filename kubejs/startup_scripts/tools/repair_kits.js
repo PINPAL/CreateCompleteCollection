@@ -14,7 +14,7 @@ const repairKitMaterials = [
 StartupEvents.registry("item", (event) => {
 	repairKitMaterials.forEach((material) => {
 		event
-			.create("create_cc:" + material + "_repair_kit")
+			.create("create_cosmic_contraptions:" + material + "_repair_kit")
 			.displayName(formatName(material) + " Repair Kit")
 			.unstackable();
 	});

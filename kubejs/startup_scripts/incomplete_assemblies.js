@@ -3,7 +3,7 @@ const incompleteAssemblies = ["saddle", "totem_of_undying", "creative_omega_poti
 StartupEvents.registry("item", (event) => {
 	incompleteAssemblies.forEach((assembly) => {
 		event
-			.create("create_cc:incomplete_" + assembly)
+			.create("create_cosmic_contraptions:incomplete_" + assembly)
 			.displayName("Incomplete " + formatName(assembly))
 			.unstackable();
 	});

@@ -35,7 +35,7 @@ ServerEvents.recipes((event) => {
 				],
 				[`${ore.mod}:raw_${ore.name}`]
 			)
-			.id(`create_cc:ore_crushing/raw_${ore.name}`);
+			.id(`create_cosmic_contraptions:ore_crushing/raw_${ore.name}`);
 
 		event.recipes.create
 			.crushing(
@@ -46,10 +46,10 @@ ServerEvents.recipes((event) => {
 				],
 				[`#forge:ores/${ore.name}`]
 			)
-			.id(`create_cc:ore_crushing/${ore.name}_ore`);
+			.id(`create_cosmic_contraptions:ore_crushing/${ore.name}_ore`);
 
 		event.recipes.create
 			.crushing([Item.of(`create:crushed_raw_${ore.name}`).withChance(0.25)], [`${ore.rockMod}:${ore.rock}`])
-			.id(`create_cc:ore_crushing/${ore.name}_from_${ore.rock}`);
+			.id(`create_cosmic_contraptions:ore_crushing/${ore.name}_from_${ore.rock}`);
 	});
 });

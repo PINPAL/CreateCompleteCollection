@@ -81,10 +81,10 @@
   "kubejs.ponder.zinc_coinstack.text_6": "",
   "kubejs.ponder.zinc_coinstack.text_7": "",
   "kubejs.ponder.zinc_coinstack.text_8": "",
-  "create_cc.ponder.tag.digital_storage": "Digital Storage",
-  "create_cc.ponder.tag.digital_storage.description": "Storing Items Digitally",
-  "create_cc.ponder.tag.coin_stacks": "Coin Stacking",
-  "create_cc.ponder.tag.coin_stacks.description": "Display Your Wealth in Style",
-  "create_cc.ponder.tag.melting": "Melter",
-  "create_cc.ponder.tag.melting.description": "Melting Blocks into Fluids"
+  "create_cosmic_contraptions.ponder.tag.digital_storage": "Digital Storage",
+  "create_cosmic_contraptions.ponder.tag.digital_storage.description": "Storing Items Digitally",
+  "create_cosmic_contraptions.ponder.tag.coin_stacks": "Coin Stacking",
+  "create_cosmic_contraptions.ponder.tag.coin_stacks.description": "Display Your Wealth in Style",
+  "create_cosmic_contraptions.ponder.tag.melting": "Melter",
+  "create_cosmic_contraptions.ponder.tag.melting.description": "Melting Blocks into Fluids"
 }

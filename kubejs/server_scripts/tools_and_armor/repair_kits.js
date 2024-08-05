@@ -12,7 +12,7 @@ ServerEvents.recipes((event) => {
 		},
 		{
 			name: "steel",
-			modId: "create_cc",
+			modId: "create_cosmic_contraptions",
 			noKnife: true,
 			material: "#forge:ingots/steel",
 		},
@@ -23,12 +23,12 @@ ServerEvents.recipes((event) => {
 		{
 			name: "copper",
 			knifeMod: "create_things_and_misc",
-			modId: "create_cc",
+			modId: "create_cosmic_contraptions",
 			material: "#forge:ingots/copper",
 		},
 		{
 			name: "stone",
-			material: "create_cc:refined_stone",
+			material: "create_cosmic_contraptions:refined_stone",
 			noArmor: true,
 			noKnife: true,
 		},
@@ -53,13 +53,21 @@ ServerEvents.recipes((event) => {
 	];
 
 	// Shield
-	event.smithing("minecraft:shield", "create_cc:broken_shield", "create_cc:iron_repair_kit");
+	event.smithing(
+		"minecraft:shield",
+		"create_cosmic_contraptions:broken_shield",
+		"create_cosmic_contraptions:iron_repair_kit"
+	);
 
 	materials.forEach((material) => {
 		if (material.name == "netherite") {
-			event.smithing("create_cc:netherite_repair_kit", "create_cc:diamond_repair_kit", "#forge:ingots/netherite");
+			event.smithing(
+				"create_cosmic_contraptions:netherite_repair_kit",
+				"create_cosmic_contraptions:diamond_repair_kit",
+				"#forge:ingots/netherite"
+			);
 		} else {
-			event.shaped("create_cc:" + material.name + "_repair_kit", [" A ", "ALA", " A "], {
+			event.shaped("create_cosmic_contraptions:" + material.name + "_repair_kit", [" A ", "ALA", " A "], {
 				A: material.material,
 				L: "minecraft:string",
 			});
@@ -74,7 +82,11 @@ ServerEvents.recipes((event) => {
 				// If the material has a minecraftId, use that, otherwise use the material name (eg: wooden instead of wood)
 				// Add the item name (eg: sword)
 				let repairedItem =
-					(item == "paxel" ? "create_cc" : material.hasOwnProperty("modId") ? material.modId : "minecraft") +
+					(item == "paxel"
+						? "create_cosmic_contraptions"
+						: material.hasOwnProperty("modId")
+						? material.modId
+						: "minecraft") +
 					":" +
 					material.name +
 					"_" +
@@ -82,8 +94,8 @@ ServerEvents.recipes((event) => {
 				// Recipe
 				event.smithing(
 					repairedItem,
-					`create_cc:broken_${material.name}_${item}`,
-					`create_cc:${material.name}_repair_kit`
+					`create_cosmic_contraptions:broken_${material.name}_${item}`,
+					`create_cosmic_contraptions:${material.name}_repair_kit`
 				);
 			});
 		}
@@ -100,8 +112,8 @@ ServerEvents.recipes((event) => {
 			// Recipe
 			event.smithing(
 				repairedItem,
-				`create_cc:broken_${material.name}_knife`,
-				`create_cc:${material.name}_repair_kit`
+				`create_cosmic_contraptions:broken_${material.name}_knife`,
+				`create_cosmic_contraptions:${material.name}_repair_kit`
 			);
 		}
 
@@ -121,8 +133,8 @@ ServerEvents.recipes((event) => {
 				// Recipe
 				event.smithing(
 					repairedItem,
-					`create_cc:broken_${material.name}_${item}`,
-					`create_cc:${material.name}_repair_kit`
+					`create_cosmic_contraptions:broken_${material.name}_${item}`,
+					`create_cosmic_contraptions:${material.name}_repair_kit`
 				);
 			});
 		}
@@ -136,6 +148,10 @@ ServerEvents.recipes((event) => {
 		{ id: "copper_diving_boots", material: "copper" },
 	];
 	divingGear.forEach((item) => {
-		event.smithing(`create:${item.id}`, `create_cc:broken_${item.id}`, `create_cc:${item.material}_repair_kit`);
+		event.smithing(
+			`create:${item.id}`,
+			`create_cosmic_contraptions:broken_${item.id}`,
+			`create_cosmic_contraptions:${item.material}_repair_kit`
+		);
 	});
 });

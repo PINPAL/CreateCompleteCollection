@@ -8,14 +8,14 @@ ItemEvents.toolTierRegistry((event) => {
 });
 StartupEvents.registry("item", (event) => {
 	event
-		.create("create_cc:" + "wrench_axe", "axe")
+		.create("create_cosmic_contraptions:" + "wrench_axe", "axe")
 		.displayName("Wrench")
 		.tier("fake_wrench")
 		.unstackable();
 });
 
 ItemEvents.modification((event) => {
-	event.modify("create_cc:wrench_axe", (item) => {
+	event.modify("create_cosmic_contraptions:wrench_axe", (item) => {
 		item.digSpeed = 0;
 		item.attackSpeed = 1000;
 		let attribute = item.getAttributes("generic.attack_damage").get(0);

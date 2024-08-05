@@ -4,7 +4,7 @@ StartupEvents.registry("block", (event) => {
 	let index = 0;
 	tierMachines.forEach((tier) => {
 		event
-			.create(`create_cc:t${index}_${tier}_machine`)
+			.create(`create_cosmic_contraptions:t${index}_${tier}_machine`)
 			.displayName(`${formatName(tier)} Machine`)
 			.soundType("metal")
 			.tagBlock("minecraft:mineable/paxel")
@@ -18,7 +18,7 @@ StartupEvents.registry("item", (event) => {
 	let index = 0;
 	tierMachines.forEach((tier) => {
 		event
-			.create(`create_cc:incomplete_t${index}_${tier}_machine`)
+			.create(`create_cosmic_contraptions:incomplete_t${index}_${tier}_machine`)
 			.displayName(`${formatName(tier)} Machine`)
 			.unstackable();
 		index++;

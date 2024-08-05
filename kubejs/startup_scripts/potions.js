@@ -1,17 +1,17 @@
 StartupEvents.registry("item", (event) => {
-	event.create("create_cc:creative_potion").displayName("Creative Potion").unstackable();
+	event.create("create_cosmic_contraptions:creative_potion").displayName("Creative Potion").unstackable();
 	event
-		.create("create_cc:creative_splash_potion")
+		.create("create_cosmic_contraptions:creative_splash_potion")
 		.displayName("Creative Splash Potion")
 		.unstackable()
 		.tag("create:upright_on_belt");
 	event
-		.create("create_cc:creative_lingering_potion")
+		.create("create_cosmic_contraptions:creative_lingering_potion")
 		.displayName("Creative Lingering Potion")
 		.unstackable()
 		.tag("create:upright_on_belt");
 	event
-		.create("create_cc:creative_omega_potion")
+		.create("create_cosmic_contraptions:creative_omega_potion")
 		.displayName("Creative Divine Potion")
 		.unstackable()
 		.tag("create:upright_on_belt")

@@ -33,7 +33,7 @@ ServerEvents.recipes((event) => {
 	backpackTiers.forEach((tier) => {
 		let output = `sophisticatedbackpacks:${tier.backpackId}_backpack`;
 		let input = `sophisticatedbackpacks:${tier.previousTier}${tier.previousTier == "" ? "" : "_"}backpack`;
-		let stitching = `2x create_cc:${tier.stitching}_stitching`;
+		let stitching = `2x create_cosmic_contraptions:${tier.stitching}_stitching`;
 		event.shapeless(output, [input, stitching]).modifyResult((inventory, itemstack) => {
 			return upgradeBackpack(inventory, itemstack, input);
 		});

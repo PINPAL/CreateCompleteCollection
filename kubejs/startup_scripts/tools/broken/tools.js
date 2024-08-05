@@ -4,15 +4,15 @@ const toolMaterials = ["netherite", "diamond", "copper", "steel", "iron", "stone
 StartupEvents.registry("item", (event) => {
 	toolMaterials.forEach((material) => {
 		event
-			.create("create_cc:" + `broken_${material}_paxel`)
+			.create("create_cosmic_contraptions:" + `broken_${material}_paxel`)
 			.displayName("Broken " + formatName(material) + " Paxel")
 			.unstackable();
 		event
-			.create("create_cc:" + `broken_${material}_sword`)
+			.create("create_cosmic_contraptions:" + `broken_${material}_sword`)
 			.displayName("Broken " + formatName(material) + " Sword")
 			.unstackable();
 		event
-			.create("create_cc:" + `broken_${material}_hoe`)
+			.create("create_cosmic_contraptions:" + `broken_${material}_hoe`)
 			.displayName("Broken " + formatName(material) + " Hoe")
 			.unstackable();
 	});

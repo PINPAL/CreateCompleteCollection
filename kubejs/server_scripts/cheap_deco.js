@@ -8,17 +8,17 @@ ServerEvents.recipes((event) => {
 				M: "#forge:nuggets/" + designDecoLamp,
 				G: "minecraft:glowstone_dust",
 			})
-			.id("create_cc:deco/" + designDecoLamp + "_lamp");
+			.id("create_cosmic_contraptions:deco/" + designDecoLamp + "_lamp");
 	});
 	// Cheap Cast Iron
 	event.recipes.create
 		.compacting("#forge:ingots/industrial_iron", "#forge:ingots/iron")
-		.id("create_cc:deco/industrial_iron_ingot");
+		.id("create_cosmic_contraptions:deco/industrial_iron_ingot");
 	// Cheap Asphalt
 	event.recipes.create
 		.mixing("16x tfmg:asphalt_block", ["2x create:scoria", "minecraft:slime_ball"])
 		.heated()
-		.id("create_cc:deco/asphalt_block");
+		.id("create_cosmic_contraptions:deco/asphalt_block");
 	// Cheaper Everything else
 	const lampColors = ["yellow", "red", "green", "blue"];
 	const decorativeMats = [
@@ -105,7 +105,7 @@ ServerEvents.recipes((event) => {
 						B: decorativeMat.bars,
 					}
 				)
-				.id("create_cc:deco/crafting/" + decorativeMat.outputMat + "_support");
+				.id("create_cosmic_contraptions:deco/crafting/" + decorativeMat.outputMat + "_support");
 
 			// Hull
 			event.remove({
@@ -116,7 +116,7 @@ ServerEvents.recipes((event) => {
 					Item.of("createdeco:" + decorativeMat.outputMat + "_hull", 6 * outputMultiplier),
 					`#forge:plates/${decorativeMat.outputMat}`
 				)
-				.id("create_cc:deco/sonecutting/" + decorativeMat.outputMat + "_hull");
+				.id("create_cosmic_contraptions:deco/sonecutting/" + decorativeMat.outputMat + "_hull");
 
 			// Lamp
 			lampColors.forEach((lampColor) => {
@@ -137,7 +137,13 @@ ServerEvents.recipes((event) => {
 							D: "minecraft:" + lampColor + "_dye",
 						}
 					)
-					.id("create_cc:deco/crafting/" + lampColor + "_" + decorativeMat.outputMat + "_lamp");
+					.id(
+						"create_cosmic_contraptions:deco/crafting/" +
+							lampColor +
+							"_" +
+							decorativeMat.outputMat +
+							"_lamp"
+					);
 			});
 			// Catwalk
 			event.remove({
@@ -152,7 +158,7 @@ ServerEvents.recipes((event) => {
 						B: decorativeMat.bars,
 					}
 				)
-				.id("create_cc:deco/crafting/" + decorativeMat.outputMat + "_catwalk");
+				.id("create_cosmic_contraptions:deco/crafting/" + decorativeMat.outputMat + "_catwalk");
 
 			// Catwalk Stairs
 			event.remove({
@@ -167,7 +173,7 @@ ServerEvents.recipes((event) => {
 						B: decorativeMat.bars,
 					}
 				)
-				.id("create_cc:deco/crafting/" + decorativeMat.outputMat + "_catwalk_stairs");
+				.id("create_cosmic_contraptions:deco/crafting/" + decorativeMat.outputMat + "_catwalk_stairs");
 
 			// Catwalk Railing
 			event.remove({
@@ -182,7 +188,7 @@ ServerEvents.recipes((event) => {
 						B: decorativeMat.bars,
 					}
 				)
-				.id("create_cc:deco/crafting/" + decorativeMat.outputMat + "_catwalk_railing");
+				.id("create_cosmic_contraptions:deco/crafting/" + decorativeMat.outputMat + "_catwalk_railing");
 
 			// Sheet Metal
 			event.remove({
@@ -193,7 +199,7 @@ ServerEvents.recipes((event) => {
 					Item.of("createdeco:" + decorativeMat.outputMat + "_sheet_metal", 6 * outputMultiplier),
 					`#forge:plates/${decorativeMat.outputMat}`
 				)
-				.id("create_cc:deco/sonecutting/" + decorativeMat.outputMat + "_sheet_metal");
+				.id("create_cosmic_contraptions:deco/sonecutting/" + decorativeMat.outputMat + "_sheet_metal");
 		}
 		// Ladder
 		if (decorativeMat.hasOwnProperty("ladder")) {
@@ -205,7 +211,7 @@ ServerEvents.recipes((event) => {
 					Item.of(decorativeMat.ladder, 4 * outputMultiplier),
 					`#forge:ingots/${decorativeMat.outputMat}`
 				)
-				.id("create_cc:deco/stonecutting/" + decorativeMat.outputMat + "_ladder");
+				.id("create_cosmic_contraptions:deco/stonecutting/" + decorativeMat.outputMat + "_ladder");
 		}
 		// Trapdoor
 		if (decorativeMat.hasOwnProperty("trapdoor")) {
@@ -217,7 +223,7 @@ ServerEvents.recipes((event) => {
 					Item.of(decorativeMat.trapdoor, 4 * outputMultiplier),
 					`#forge:ingots/${decorativeMat.outputMat}`
 				)
-				.id("create_cc:deco/stonecutting/" + decorativeMat.outputMat + "_trapdoor");
+				.id("create_cosmic_contraptions:deco/stonecutting/" + decorativeMat.outputMat + "_trapdoor");
 		}
 		// Door
 		if (decorativeMat.hasOwnProperty("door")) {
@@ -229,7 +235,7 @@ ServerEvents.recipes((event) => {
 					Item.of(decorativeMat.door, 2 * outputMultiplier),
 					`#forge:ingots/${decorativeMat.outputMat}`
 				)
-				.id("create_cc:deco/stonecutting/" + decorativeMat.outputMat + "_door");
+				.id("create_cosmic_contraptions:deco/stonecutting/" + decorativeMat.outputMat + "_door");
 		}
 	});
 });

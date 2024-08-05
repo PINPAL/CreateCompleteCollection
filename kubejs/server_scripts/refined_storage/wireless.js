@@ -88,7 +88,7 @@ ServerEvents.recipes((event) => {
 				event.recipes.create.pressing("refinedstorage:upgrade", "refinedstorage:upgrade"),
 			]
 		)
-		.id("create_cc:refined_storage/infinity_card")
+		.id("create_cosmic_contraptions:refined_storage/infinity_card")
 		.transitionalItem("refinedstorage:upgrade")
 		.loops(12);
 
@@ -113,7 +113,7 @@ ServerEvents.recipes((event) => {
 				]),
 			]
 		)
-		.id("create_cc:refined_storage/dimension_card")
+		.id("create_cosmic_contraptions:refined_storage/dimension_card")
 		.transitionalItem("rsinfinitybooster:infinity_card")
 		.loops(3);
 });

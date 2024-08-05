@@ -2,7 +2,7 @@ ServerEvents.recipes((event) => {
 	event.remove({ id: "tfmg:mixing/liquid_concrete_from_slag" });
 	event.recipes.create
 		.mixing(Fluid.of("tfmg:liquid_concrete", 1500), ["tfmg:slag", Fluid.of("minecraft:water", 500), "tfmg:cement"])
-		.id("create_cc:tfmg/liquid_concrete_from_slag");
+		.id("create_cosmic_contraptions:tfmg/liquid_concrete_from_slag");
 
 	event.remove({ id: "tfmg:industrial_blasting/steel" });
 	event
@@ -26,5 +26,5 @@ ServerEvents.recipes((event) => {
 				},
 			],
 		})
-		.id("create_cc:tfmg/steel_industrial_blasting");
+		.id("create_cosmic_contraptions:tfmg/steel_industrial_blasting");
 });

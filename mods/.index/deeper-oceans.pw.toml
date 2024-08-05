@@ -1,0 +1,13 @@
+filename = 'deeper-oceans-mc1.20-v1.0.1a.jar'
+name = 'Deeper Oceans'
+side = 'both'
+
+[download]
+hash = 'c8f8a36896675b09ed0f008c49112ae962132e6f'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 4573339
+project-id = 714177

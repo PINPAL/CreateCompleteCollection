@@ -40,63 +40,63 @@ ServerEvents.recipes((event) => {
 	placard[chars[11]] = `create:placard`;
 
 	event.recipes.create.mechanical_crafting(
-		"create_cc:rainbow_toolbox",
+		"create_cosmic_contraptions:rainbow_toolbox",
 		[" R O ", "YLGC0", " B P ", "M1W23", " 4 5 "],
 		toolbox
 	);
 
 	event.recipes.create.mechanical_crafting(
-		"create_cc:rainbow_valve_handle",
+		"create_cosmic_contraptions:rainbow_valve_handle",
 		[" R O ", "YLGC0", " B P ", "M1W23", " 4 5 "],
 		valve_handle
 	);
 
 	event.recipes.create.mechanical_crafting(
-		"create_cc:rainbow_wool",
+		"create_cosmic_contraptions:rainbow_wool",
 		[" R O ", "YLGC0", " B P ", "M1W23", " 4 5 "],
 		wool
 	);
 
 	event.recipes.create.mechanical_crafting(
-		"create_cc:rainbow_concrete",
+		"create_cosmic_contraptions:rainbow_concrete",
 		[" R O ", "YLGC0", " B P ", "M1W23", " 4 5 "],
 		concrete
 	);
 
 	event.recipes.create.mechanical_crafting(
-		"create_cc:rainbow_dye",
+		"create_cosmic_contraptions:rainbow_dye",
 		[" R O ", "YLGC0", " B P ", "M1W23", " 4 5 "],
 		dye
 	);
 
 	event.recipes.create.mechanical_crafting(
-		"create_cc:rainbow_candle",
+		"create_cosmic_contraptions:rainbow_candle",
 		[" R O ", "YLGC0", " B P ", "M1W23", " 4 5 "],
 		candle
 	);
 
 	event.recipes.create.mechanical_crafting(
-		"create_cc:rainbow_canvas_sign",
+		"create_cosmic_contraptions:rainbow_canvas_sign",
 		[" R O ", "YLGC0", " B P ", "M1W23", " 4 5 "],
 		canvas_sign
 	);
 
 	event.recipes.create.mechanical_crafting(
-		"create_cc:rainbow_placard",
+		"create_cosmic_contraptions:rainbow_placard",
 		[" R O ", "YLGC0", " B P ", "M1W23", " 4 5 "],
 		placard
 	);
 
 	// Rainbow Core
-	event.recipes.create.mechanical_crafting("create_cc:rainbow_core", ["123", "4M5", "678"], {
-		1: "create_cc:rainbow_toolbox",
-		2: "create_cc:rainbow_valve_handle",
-		3: "create_cc:rainbow_wool",
-		4: "create_cc:rainbow_concrete",
-		5: "create_cc:rainbow_dye",
-		6: "create_cc:rainbow_candle",
-		7: "create_cc:rainbow_canvas_sign",
-		8: "create_cc:rainbow_placard",
+	event.recipes.create.mechanical_crafting("create_cosmic_contraptions:rainbow_core", ["123", "4M5", "678"], {
+		1: "create_cosmic_contraptions:rainbow_toolbox",
+		2: "create_cosmic_contraptions:rainbow_valve_handle",
+		3: "create_cosmic_contraptions:rainbow_wool",
+		4: "create_cosmic_contraptions:rainbow_concrete",
+		5: "create_cosmic_contraptions:rainbow_dye",
+		6: "create_cosmic_contraptions:rainbow_candle",
+		7: "create_cosmic_contraptions:rainbow_canvas_sign",
+		8: "create_cosmic_contraptions:rainbow_placard",
 		M: "create_things_and_misc:vibration_mechanism",
 	});
 });

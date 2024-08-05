@@ -22,7 +22,7 @@ function handleDurability(event) {
 	];
 	breakableItems.forEach((item) => {
 		if (
-			item.item.hasTag("create_cc:paxel") ||
+			item.item.hasTag("create_cosmic_contraptions:paxel") ||
 			item.item.hasTag("forge:armors") ||
 			item.item.hasTag("forge:tools/swords") ||
 			item.item.hasTag("forge:tools/knives") ||
@@ -41,7 +41,7 @@ function handleDurability(event) {
 			itemID = itemID.replace(item.item.getMod() + ":", "");
 
 			// Generate Replacement Item
-			let replacementItem = Item.of(`create_cc:broken_${itemID}`);
+			let replacementItem = Item.of(`create_cosmic_contraptions:broken_${itemID}`);
 			replacementItem = replacementItem.enchant(itemEnchants);
 
 			// If item is broken, replace it

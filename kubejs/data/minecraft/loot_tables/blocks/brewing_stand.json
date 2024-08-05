@@ -11,7 +11,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "create_cc:brewing_stand"
+					"name": "create_cosmic_contraptions:brewing_stand"
 				}
 			],
 			"rolls": 1.0

@@ -87,7 +87,7 @@ ServerEvents.recipes((event) => {
 	// Feeding Upgrade
 	event.shaped("sophisticatedbackpacks:advanced_feeding_upgrade", ["SPS", "NUN", "ZZZ"], {
 		S: "#forge:string",
-		P: "create_cc:creative_omega_potion",
+		P: "create_cosmic_contraptions:creative_omega_potion",
 		N: "create_things_and_misc:vibration_mechanism",
 		U: "sophisticatedbackpacks:upgrade_base",
 		Z: "#forge:plates/shadow_steel",

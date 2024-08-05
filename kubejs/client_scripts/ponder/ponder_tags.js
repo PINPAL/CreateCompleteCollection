@@ -1,6 +1,6 @@
 Ponder.tags((event) => {
 	event.createTag(
-		"create_cc:digital_storage",
+		"create_cosmic_contraptions:digital_storage",
 		"refinedstorage:crafting_grid",
 		"Digital Storage",
 		"Storing Items Digitally",
@@ -20,10 +20,12 @@ Ponder.tags((event) => {
 		]
 	);
 
-	event.createTag("create_cc:melting", "melter:melter", "Melter", "Melting Blocks into Fluids", ["melter:melter"]);
+	event.createTag("create_cosmic_contraptions:melting", "melter:melter", "Melter", "Melting Blocks into Fluids", [
+		"melter:melter",
+	]);
 
 	event.createTag(
-		"create_cc:coin_stacks",
+		"create_cosmic_contraptions:coin_stacks",
 		"createdeco:gold_coinstack",
 		"Coin Stacking",
 		"Display Your Wealth in Style",
