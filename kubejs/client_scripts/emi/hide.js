@@ -32,11 +32,18 @@ const hideFromJEI = [
 	"create_cosmic_contraptions:belt_scroll",
 	/create_cosmic_contraptions:broken_.*/,
 	"create_cosmic_contraptions:wrench_axe",
+	"create_cosmic_contraptions:radiant_knife",
+	"create_cosmic_contraptions:radiant_paxel",
+	"create_cosmic_contraptions:radiant_sword",
+	"create_cosmic_contraptions:radiant_hoe",
+	"create_cosmic_contraptions:radiant_helmet",
+	"create_cosmic_contraptions:radiant_chestplate",
+	"create_cosmic_contraptions:radiant_leggings",
+	"create_cosmic_contraptions:radiant_boots",
 
 	// Replaced by NBT items
 	"create:extendo_grip",
 	"createaddition:diamond_grit_sandpaper",
-	"farmersdelight:netherite_knife",
 
 	// Minecraft
 	/spawn_egg/,

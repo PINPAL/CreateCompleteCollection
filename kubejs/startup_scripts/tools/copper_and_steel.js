@@ -36,7 +36,7 @@ ItemEvents.armorTierRegistry((event) => {
 		tier.toughness = 1;
 		tier.knockbackResistance = 0;
 	});
-	event.add("radiance", (tier) => {
+	event.add("radiant", (tier) => {
 		tier.durabilityMultiplier = 40;
 		tier.slotProtections = [3, 9, 7, 3];
 		tier.equipSound = "item.armor.equip_netherite";
@@ -46,7 +46,7 @@ ItemEvents.armorTierRegistry((event) => {
 });
 
 StartupEvents.registry("item", (event) => {
-	const materials = [{ name: "copper" }, { name: "steel" }, { name: "radiance", rarity: "uncommon", glow: true }];
+	const materials = [{ name: "copper" }, { name: "steel" }, { name: "radiant", rarity: "uncommon", glow: true }];
 	const types = ["sword", "hoe", "helmet", "chestplate", "leggings", "boots"];
 	types.forEach((type) => {
 		materials.forEach((material) => {
@@ -71,4 +71,8 @@ StartupEvents.registry("item", (event) => {
 		.create("create_cosmic_contraptions:" + `steel_knife`, "farmersdelight:knife")
 		.displayName("Steel Knife")
 		.tier("steel");
+	event
+		.create("create_cosmic_contraptions:" + `radiant_knife`, "farmersdelight:knife")
+		.displayName("Radiant Knife")
+		.tier("radiant");
 });

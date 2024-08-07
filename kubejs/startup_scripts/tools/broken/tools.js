@@ -1,5 +1,5 @@
 // Broken Tools
-const toolMaterials = ["netherite", "diamond", "copper", "steel", "iron", "stone", "wooden"];
+const toolMaterials = ["radiant", "netherite", "diamond", "copper", "steel", "iron", "stone", "wooden"];
 
 StartupEvents.registry("item", (event) => {
 	toolMaterials.forEach((material) => {

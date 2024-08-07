@@ -35,8 +35,8 @@ let paxelTiers = [
 		maxDamage: 8192,
 	},
 	{
-		name: "radiance",
-		material: "radiance",
+		name: "radiant",
+		material: "radiant",
 		maxDamage: 10240,
 		glow: true,
 		rarity: "uncommon",

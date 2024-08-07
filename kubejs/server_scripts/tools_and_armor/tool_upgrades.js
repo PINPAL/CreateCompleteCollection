@@ -128,6 +128,24 @@ const toolUpgradingTiers = [
 			knife: "farmersdelight:diamond_knife",
 		},
 	},
+	{
+		tier: "radiant",
+		properties: {
+			prefix: "refined_radiance",
+			hasArmor: true,
+			hasHorseArmor: false,
+			hasTools: true,
+			hasKnife: true,
+			hasBackpack: false,
+			knife: "create_cosmic_contraptions:netherite_knife",
+		},
+		previousTier: {
+			name: "netherite",
+			prefix: "minecraft:netherite",
+			armorPrefix: "minecraft:netherite",
+			knife: "farmersdelight:netherite_knife",
+		},
+	},
 ];
 
 ServerEvents.recipes((event) => {

@@ -5,6 +5,7 @@ const toolUpgradeMats = [
 	{ name: "iron", cost: "#forge:ingots/iron", costMultiplier: 3 },
 	{ name: "copper", cost: "#forge:ingots/copper", costMultiplier: 1 },
 	{ name: "stone", cost: "create_cosmic_contraptions:refined_stone", costMultiplier: 1 },
+	{ name: "radiant", cost: "#forge:ingots/refined_radiance", costMultiplier: 2 },
 ];
 const armorUpgradeMats = [
 	{ name: "netherite", cost: "#forge:ingots/netherite", costMultiplier: 0.5 },
@@ -13,6 +14,7 @@ const armorUpgradeMats = [
 	{ name: "iron", cost: "#forge:ingots/iron", costMultiplier: 3 },
 	{ name: "copper", cost: "#forge:ingots/copper", costMultiplier: 1 },
 	{ name: "chainmail", cost: "minecraft:chain", costMultiplier: 1 },
+	{ name: "radiant", cost: "#forge:ingots/refined_radiance", costMultiplier: 2 },
 ];
 
 ServerEvents.recipes((event) => {
