@@ -34,14 +34,31 @@ let paxelTiers = [
 		material: "netherite",
 		maxDamage: 8192,
 	},
+	{
+		name: "radiance",
+		material: "radiance",
+		maxDamage: 10240,
+		glow: true,
+		rarity: "uncommon",
+	},
 ];
 paxelTiers.forEach((tier) => {
+	let rarity = "common";
+	if (tier.hasOwnProperty("rarity")) {
+		rarity = tier.rarity;
+	}
+	let glow = false;
+	if (tier.hasOwnProperty("glow")) {
+		glow = true;
+	}
 	// Register Paxel
 	StartupEvents.registry("item", (event) => {
 		event
 			.create("create_cosmic_contraptions:" + `${tier.name}_paxel`, "paxel")
 			.displayName(`${formatName(tier.name)} Paxel`)
 			.tier(tier.material)
+			.glow(glow)
+			.rarity(rarity)
 			.unstackable();
 	});
 	// Adjust Durability

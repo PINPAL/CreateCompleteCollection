@@ -1,0 +1,13 @@
+filename = 'vintage_kubejs-1.20.1-1.0.0rc.jar'
+name = 'Vintage KubeJS'
+side = 'both'
+
+[download]
+hash = '31bed866160e447457f7ab9f8bcfc326bc5305e8'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5596002
+project-id = 1077532

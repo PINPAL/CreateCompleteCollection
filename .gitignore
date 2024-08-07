@@ -13,6 +13,7 @@
 !resources
 !config
 !defaultconfigs
+!_assets
 # Ignore subdirectory and all including directories and files to match pattern as valid for the next pattern
 /kubejs/*
 # This pattern only works with the two previous patterns
