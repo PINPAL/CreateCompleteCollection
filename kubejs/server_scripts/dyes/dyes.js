@@ -1,3 +1,5 @@
+//priority: 0
+
 let colors = [
 	{
 		color: "white",
@@ -105,35 +107,6 @@ ServerEvents.recipes((event) => {
 		let color = colorObject.color;
 		let ingredients = colorObject.ingredients;
 
-		event.remove({ output: "minecraft:" + color + "_dye" });
-		event.remove({
-			output: "minecraft:" + color + "_concrete_powder",
-		});
-		event.remove({
-			output: "minecraft:" + color + "_stained_glass",
-		});
-		event.remove({
-			output: "minecraft:" + color + "_stained_glass_pane",
-		});
-		event.remove({
-			output: "farmersdelight:" + color + "_canvas_sign",
-		});
-		event.remove({ output: "minecraft:" + color + "_wool" });
-		event.remove({ output: "minecraft:" + color + "_carpet" });
-		event.remove({ output: "minecraft:" + color + "_terracotta" });
-		event.remove({ output: "minecraft:" + color + "_bed" });
-		event.remove({ output: "minecraft:" + color + "_shulker_box" });
-		event.remove({ output: "minecraft:" + color + "_candle" });
-		if (color != "brown") {
-			event.remove({ output: "create:" + color + "_toolbox" });
-		}
-		event.remove({
-			output: "supplementaries:candle_holder_" + color,
-		});
-		event.remove({ output: "createdeco:" + color + "_placard" });
-		event.remove({ output: "minecraft:" + color + "_banner" });
-		event.remove({ output: "create:" + color + "_valve_handle" });
-
 		// Dye Fluid
 		if (ingredients.length > 0) {
 			event.recipes.create
@@ -145,6 +118,7 @@ ServerEvents.recipes((event) => {
 		}
 
 		// Dye
+		event.remove({ output: "minecraft:" + color + "_dye" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_dye"],
@@ -155,6 +129,9 @@ ServerEvents.recipes((event) => {
 			)
 			.id("create_cosmic_contraptions:dyes/dye/" + color);
 		// Concrete
+		event.remove({
+			output: "minecraft:" + color + "_concrete_powder",
+		});
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_concrete"],
@@ -166,6 +143,9 @@ ServerEvents.recipes((event) => {
 			.crushing(["minecraft:" + color + "_concrete_powder"], ["minecraft:" + color + "_concrete"])
 			.id("create_cosmic_contraptions:dyes/concrete_powder/" + color);
 		// Stained Glass
+		event.remove({
+			output: "minecraft:" + color + "_stained_glass",
+		});
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_stained_glass"],
@@ -173,6 +153,9 @@ ServerEvents.recipes((event) => {
 			)
 			.id("create_cosmic_contraptions:dyes/stained_glass/" + color);
 		// Stained Glass Pane
+		event.remove({
+			output: "minecraft:" + color + "_stained_glass_pane",
+		});
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_stained_glass_pane"],
@@ -183,6 +166,9 @@ ServerEvents.recipes((event) => {
 			.shapeless("12x minecraft:" + color + "_stained_glass_pane", ["#forge:glass/" + color])
 			.id("create_cosmic_contraptions:dyes/stained_glass_pane/" + color + "_crafting");
 		// Toolbox
+		if (color != "brown") {
+			event.remove({ output: "create:" + color + "_toolbox" });
+		}
 		event.recipes.create
 			.mixing(
 				["create:" + color + "_toolbox"],
@@ -190,6 +176,9 @@ ServerEvents.recipes((event) => {
 			)
 			.id("create_cosmic_contraptions:dyes/toolbox/" + color);
 		// Canvas Sign
+		event.remove({
+			output: "farmersdelight:" + color + "_canvas_sign",
+		});
 		event.recipes.create
 			.mixing(
 				["farmersdelight:" + color + "_canvas_sign"],
@@ -197,6 +186,7 @@ ServerEvents.recipes((event) => {
 			)
 			.id("create_cosmic_contraptions:dyes/canvas_sign/" + color);
 		// Wool
+		event.remove({ output: "minecraft:" + color + "_wool" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_wool"],
@@ -204,6 +194,7 @@ ServerEvents.recipes((event) => {
 			)
 			.id("create_cosmic_contraptions:dyes/wool/" + color);
 		// Carpet
+		event.remove({ output: "minecraft:" + color + "_carpet" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_carpet"],
@@ -214,6 +205,7 @@ ServerEvents.recipes((event) => {
 			.shapeless("3x minecraft:" + color + "_carpet", ["2x minecraft:" + color + "_wool"])
 			.id("create_cosmic_contraptions:dyes/carpet/" + color + "_crafting");
 		// Terracotta
+		event.remove({ output: "minecraft:" + color + "_terracotta" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_terracotta"],
@@ -221,6 +213,7 @@ ServerEvents.recipes((event) => {
 			)
 			.id("create_cosmic_contraptions:dyes/terracotta/" + color);
 		// Bed
+		event.remove({ output: "minecraft:" + color + "_bed" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_bed"],
@@ -239,6 +232,7 @@ ServerEvents.recipes((event) => {
 			)
 			.id(`create_cosmic_contraptions:dyes/shulker_box/${color}`);
 		// Banner
+		event.remove({ output: "minecraft:" + color + "_banner" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_banner"],
@@ -252,6 +246,7 @@ ServerEvents.recipes((event) => {
 			})
 			.id("create_cosmic_contraptions:dyes/banner/" + color + "_crafting");
 		// Candle
+		event.remove({ output: "minecraft:" + color + "_candle" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_candle"],
@@ -259,6 +254,9 @@ ServerEvents.recipes((event) => {
 			)
 			.id("create_cosmic_contraptions:dyes/candle/" + color);
 		// Supplementaries Candle Holder
+		event.remove({
+			output: "supplementaries:candle_holder_" + color,
+		});
 		event.recipes.create
 			.mixing(
 				["supplementaries:candle_holder_" + color],
@@ -272,6 +270,7 @@ ServerEvents.recipes((event) => {
 			])
 			.id("create_cosmic_contraptions:dyes/candle_holder/" + color + "_crafting");
 		// Create Placard
+		event.remove({ output: "createdeco:" + color + "_placard" });
 		if (color != "white") {
 			event.recipes.create
 				.mixing(
@@ -281,6 +280,7 @@ ServerEvents.recipes((event) => {
 				.id("create_cosmic_contraptions:dyes/placard/" + color);
 		}
 		// Create Valve Handle
+		event.remove({ output: "create:" + color + "_valve_handle" });
 		event.recipes.create
 			.mixing(
 				["create:" + color + "_valve_handle"],
@@ -328,25 +328,19 @@ ServerEvents.recipes((event) => {
 				G: `#forge:glass/${color}`,
 			})
 			.id("create_cosmic_contraptions:dyes/frame_trapdoors/" + color + "_crafting");
-	});
 
-	// Create Deco Bricks
-	const decoBrickColors = [
-		{ color: "light_gray", output: "pearl" },
-		{ color: "blue", output: "blue" },
-		{ color: "red", output: "scarlet" },
-		{ color: "yellow", output: "dean" },
-		{ color: "black", output: "dusk" },
-	];
-	decoBrickColors.forEach((brickObject) => {
-		let brick = "createdeco:" + brickObject.output + "_brick";
-		let fluid = Fluid.of("create_cosmic_contraptions:" + brickObject.color + "_dye_fluid", 50);
-
-		event.remove({ output: brick });
-		// Mix Color with (any other brick that's not the same color)
+		// Shipping Container
+		event.remove({ output: `createdeco:${color}_shipping_container` });
+		event.remove({ id: `create_cosmic_contraptions:unified/createdeco/${color}_shipping_container` });
 		event.recipes.create
-			.mixing(brick, [`#create_cosmic_contraptions:bricks_not_${brickObject.output}`, fluid])
-			.id("create_cosmic_contraptions:dyes/bricks/" + brickObject.color);
+			.mixing(
+				[`createdeco:${color}_shipping_container`],
+				[
+					"#create_cosmic_contraptions:item_vaults",
+					Fluid.of(`create_cosmic_contraptions:${color}_dye_fluid`, 50),
+				]
+			)
+			.id(`create_cosmic_contraptions:dyes/shipping_container/${color}`);
 	});
 });
 

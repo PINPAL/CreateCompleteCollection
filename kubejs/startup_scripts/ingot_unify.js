@@ -1,28 +1,24 @@
-const unifiedIngots = [
-	{ name: "steel", type: "ingot" },
-	{ name: "industrial_iron", type: "ingot" },
-	{ name: "zinc", type: "ingot" },
-	{ name: "brass", type: "ingot" },
-	{ name: "copper", type: "ingot" },
-	{ name: "netherite", type: "ingot" },
-	{ name: "iron", type: "ingot" },
-	{ name: "gold", type: "ingot" },
-	{ name: "aluminum", type: "ingot" },
+global.unifiedIngots = [
+	{ name: "steel", type: "ingot", modsUsing: ["tfmg", "create_dd", "createmetallurgy"] },
+	{ name: "industrial_iron", type: "ingot", modsUsing: ["create", "createdeco"] },
+	{ name: "zinc", type: "ingot", modsUsing: ["create", "create_dd", "createaddition", "destroy"] },
+	{ name: "brass", type: "ingot", modsUsing: ["create"] },
+	{ name: "copper", type: "ingot", modsUsing: ["create", "minecraft"] },
+	{ name: "netherite", type: "ingot", modsUsing: ["minecraft", "createdeco"] },
+	{ name: "iron", type: "ingot", modsUsing: ["minecraft", "create"] },
+	{ name: "gold", type: "ingot", modsUsing: ["minecraft", "create"] },
+	{ name: "aluminum", type: "ingot", modsUsing: ["tfmg"] },
 
-	{ name: "nickel", type: "ingot" },
-	{ name: "lead", type: "ingot" },
+	{ name: "nickel", type: "ingot", modsUsing: ["destroy", "tfmg"] },
+	{ name: "lead", type: "ingot", modsUsing: ["tfmg"] },
 
-	{ name: "desh", type: "ingot" },
-	{ name: "ostrum", type: "ingot" },
-	{ name: "calorite", type: "ingot" },
-
-	{ name: "andesite", type: "alloy" },
-	{ name: "refined_radiance", type: "null", rarity: "uncommon", glow: true },
-	{ name: "shadow_steel", type: "null", rarity: "uncommon" },
-	{ name: "lapis", type: "alloy" },
+	{ name: "andesite", type: "alloy", modsUsing: ["create", "createdeco", "vintageimprovements"] },
+	{ name: "refined_radiance", type: "null", rarity: "uncommon", glow: true, modsUsing: ["create"] },
+	{ name: "shadow_steel", type: "null", rarity: "uncommon", modsUsing: ["create"] },
+	{ name: "lapis", type: "alloy", modsUsing: [] },
 ];
 
-unifiedIngots.forEach((ingotObject) => {
+global.unifiedIngots.forEach((ingotObject) => {
 	let ingot = ingotObject.name;
 	let type = formatName(ingotObject.type);
 	if (ingotObject.type === "null") {

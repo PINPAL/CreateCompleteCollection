@@ -139,6 +139,47 @@ const idsToRemove = [
 	"tfmg:colored_concrete/full_block/pink_concrete_q",
 	"casualness_delight:cooked_diced_potatoes_with_chicken_cuts",
 	"casualness_delight:mashed_potatoes",
+
+	"createdeco:industrial_iron_ingot_from_industrial_iron_block",
+	"create:industrial_iron_block_from_ingots_iron_stonecutting",
+
+	// Block Compacting
+	"createmetallurgy:steel_block_from_steel_ingots",
+	"createdeco:industrial_iron_block",
+	"create:crafting/materials/zinc_block_from_compacting",
+	"create:crafting/materials/brass_block_from_compacting",
+	"minecraft:copper_block",
+	"minecraft:netherite_block",
+	"minecraft:iron_block",
+	"minecraft:gold_block",
+	"tfmg:crafting/aluminum_block",
+	"tfmg:crafting/nickel_block",
+	"destroy:crafting/nickel_block",
+	"tfmg:crafting/lead_block",
+
+	// Iron from Furnaces
+	"minecraft:iron_ingot_from_smelting_raw_iron",
+	"minecraft:iron_ingot_from_smelting_iron_ore",
+	"minecraft:iron_ingot_from_smelting_deepslate_iron_ore",
+	"northstar:iron_ingot_from_smelting_space_ores",
+	"northstar:iron_ingot_from_mars_ores",
+	"northstar:smelting/iron_ingot_from_space_ores",
+	"northstar:smelting/iron_ingot_from_mars_ores",
+	"northstar:smelting/iron_ingot_from_moon_ore",
+	"destroy:smelting/iron_from_powder",
+
+	"minecraft:iron_ingot_from_blasting_raw_iron",
+	"minecraft:iron_ingot_from_blasting_iron_ore",
+	"minecraft:iron_ingot_from_blasting_deepslate_iron_ore",
+	"northstar:iron_ingot_from_blasting_space_ores",
+	"northstar:iron_ingot_from_blasting_mars_ores",
+	"northstar:blasting/iron_ingot_from_space_ores",
+	"northstar:blasting/iron_ingot_from_mars_ores",
+	"northstar:blasting/iron_ingot_from_moon_ore",
+	"destroy:blasting/iron_from_powder",
+
+	/destroy:splashing\/.*_infused_beetroot_ashes/,
+	/createmetallurgy:casting_in_table\/.*_plate/,
 ];
 
 ServerEvents.recipes((event) => {

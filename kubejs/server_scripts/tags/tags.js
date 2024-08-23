@@ -1,6 +1,15 @@
 //priority: 0
 
 ServerEvents.tags("item", (event) => {
+	// Replace createdeco:internal tags with unified tags
+	const decoInternalIngots = ["andesite", "copper", "iron", "industrial_iron", "brass", "zinc"];
+	decoInternalIngots.forEach((ingot) => {
+		event.add(`createdeco:internal/ingots/${ingot}_ingots`, `create_cosmic_contraptions:${ingot}_ingot`);
+		event.add(`createdeco:internal/plates/${ingot}_plates`, `create_cosmic_contraptions:${ingot}_sheet`);
+		event.add(`createdeco:internal/nuggets/${ingot}_nuggets`, `create:cosmic_contraptions/${ingot}_nugget`);
+		event.add(`createdeco:internal/blocks/${ingot}_blocks`, `create_cosmic_contraptions:${ingot}_block`);
+	});
+
 	let leather_armor = [
 		"minecraft:leather_chestplate",
 		"minecraft:leather_leggings",
@@ -35,6 +44,16 @@ ServerEvents.tags("item", (event) => {
 	let item_vaults = ["create_cosmic_contraptions:item_vault", "create_connected:item_silo"];
 	item_vaults.forEach((item) => {
 		event.add("create_cosmic_contraptions:item_vaults", item);
+	});
+
+	let radiant_armor = [
+		"create_cosmic_contraptions:radiant_chestplate",
+		"create_cosmic_contraptions:radiant_leggings",
+		"create_cosmic_contraptions:radiant_boots",
+		"create_cosmic_contraptions:radiant_helmet",
+	];
+	radiant_armor.forEach((item) => {
+		event.add("create_cosmic_contraptions:radiant_armor", item);
 	});
 
 	let forge_armors = [
@@ -102,13 +121,21 @@ ServerEvents.tags("item", (event) => {
 
 	event.add("forge:nuggets/bronze", "#forge:nuggets/strong_bronze");
 
-	let forge_hoes = ["create_cosmic_contraptions:steel_hoe", "create_cosmic_contraptions:copper_hoe"];
+	let forge_hoes = [
+		"create_cosmic_contraptions:steel_hoe",
+		"create_cosmic_contraptions:copper_hoe",
+		"create_cosmic_contraptions:radiant_hoe",
+	];
 	forge_hoes.forEach((item) => {
 		event.add("forge:tools/hoes", item);
 		event.add("forge:hoes", item);
 	});
 
-	let forge_swords = ["create_cosmic_contraptions:steel_sword", "create_cosmic_contraptions:copper_sword"];
+	let forge_swords = [
+		"create_cosmic_contraptions:steel_sword",
+		"create_cosmic_contraptions:copper_sword",
+		"create_cosmic_contraptions:radiant_sword",
+	];
 	forge_swords.forEach((item) => {
 		event.add("forge:tools/swords", item);
 		event.add("forge:swords", item);
@@ -117,13 +144,18 @@ ServerEvents.tags("item", (event) => {
 	let forge_chestplates = [
 		"create_cosmic_contraptions:steel_chestplate",
 		"create_cosmic_contraptions:copper_chestplate",
+		"create_cosmic_contraptions:radiant_chestplate",
 	];
 	forge_chestplates.forEach((item) => {
 		event.add("forge:chestplates", item);
 		event.add("forge:armors/chestplates", item);
 	});
 
-	let forge_leggings = ["create_cosmic_contraptions:steel_leggings", "create_cosmic_contraptions:copper_leggings"];
+	let forge_leggings = [
+		"create_cosmic_contraptions:steel_leggings",
+		"create_cosmic_contraptions:copper_leggings",
+		"create_cosmic_contraptions:radiant_leggings",
+	];
 	forge_leggings.forEach((item) => {
 		event.add("forge:leggings", item);
 		event.add("forge:armors/leggings", item);
@@ -177,11 +209,6 @@ ServerEvents.tags("item", (event) => {
 		event.add("forge:nutrients/carbs", item);
 	});
 
-	let andesite_storage = ["sophisticatedstorage:gold_barrel", "sophisticatedstorage:gold_chest"];
-	andesite_storage.forEach((item) => {
-		event.add("quests:andesite_storage", item);
-	});
-
 	event.add("quests:storage_blocks", "#forge:barrels");
 	event.add("quests:storage_blocks", "#forge:chests");
 	event.add("quests:storage_blocks", "#storagedrawers:drawers");
@@ -195,17 +222,6 @@ ServerEvents.tags("item", (event) => {
 		event.add(`forge:gems/${gem}`, `minecraft:${gem}`);
 	});
 
-	let brickTypes = ["blue", "scarlet", "dean", "dusk", "pearl"];
-	let bricks = event.get("forge:ingots/brick").getObjectIds();
-	brickTypes.forEach((type) => {
-		let blacklist = Ingredient.of(`createdeco:${type}_brick`);
-		bricks.forEach((item) => {
-			if (!blacklist.test(item)) event.add(`create_cosmic_contraptions:bricks_not_${type}`, item);
-		});
-	});
-
-	event.add("forge:storage_blocks/bronze", "create_dd:bronze_block");
-
 	let notAllowedtoSlice = [
 		"minecraft:wooden_axe",
 		"minecraft:stone_axe",
@@ -213,14 +229,12 @@ ServerEvents.tags("item", (event) => {
 		"minecraft:golden_axe",
 		"minecraft:diamond_axe",
 		"minecraft:netherite_axe",
-		"create_cosmic_contraptions:steel_axe",
 		"minecraft:wooden_shovel",
 		"minecraft:stone_shovel",
 		"minecraft:iron_shovel",
 		"minecraft:golden_shovel",
 		"minecraft:diamond_shovel",
 		"minecraft:netherite_shovel",
-		"create_cosmic_contraptions:steel_shovel",
 	];
 	notAllowedtoSlice.forEach((item) => {
 		event.remove("sliceanddice:allowed_tools", item);

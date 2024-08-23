@@ -30,11 +30,6 @@ ServerEvents.recipes((event) => {
 			output: "#forge:ingots/gold",
 			count: 4,
 		},
-		{
-			input: "ad_astra:steel_trapdoor",
-			output: "#forge:ingots/steel",
-			count: 2,
-		},
 	];
 
 	unpackingRecipes.forEach((recipe) => {

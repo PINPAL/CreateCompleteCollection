@@ -1,3 +1,4 @@
+// priority: 0
 ServerEvents.recipes((event) => {
 	const automatedPacking = [
 		{ item: "coal", type: "gems" },
@@ -26,18 +27,28 @@ ServerEvents.recipes((event) => {
 	];
 	automatedPacking.forEach((block) => {
 		// Block from Ingots
-		event.remove({
-			type: "minecraft:crafting_shaped",
-			output: `#forge:storage_blocks/${block.item}`,
-			input: `#forge:${block.type}/${block.item}`,
-		});
+		event.remove([
+			{
+				type: "minecraft:crafting_shaped",
+				output: `#forge:storage_blocks/${block.item}`,
+			},
+			{
+				type: "minecraft:crafting_shapeless",
+				output: `#forge:storage_blocks/${block.item}`,
+			},
+		]);
 		// Ingots from Nuggets
 		if (block.type == "ingots") {
-			event.remove({
-				type: "minecraft:crafting_shaped",
-				output: `#forge:ingots/${block.item}`,
-				input: `#forge:nuggets/${block.item}`,
-			});
+			event.remove([
+				{
+					type: "minecraft:crafting_shaped",
+					output: `#forge:ingots/${block.item}`,
+				},
+				{
+					type: "minecraft:crafting_shapeless",
+					output: `#forge:ingots/${block.item}`,
+				},
+			]);
 		}
 
 		// Block from ingots
@@ -62,14 +73,26 @@ ServerEvents.recipes((event) => {
 		]);
 	});
 
+	// Industrial Iron Fix
+	event
+		.stonecutting("2x create:industrial_iron_block", "#forge:ingots/iron")
+		.id("create_cosmic_contraptions:create/industrial_iron_block");
+
 	// Lapis Alloy
 	event.recipes.create
-		.mixing("create_dd:lapis_alloy", ["minecraft:lapis_lazuli", "#forge:nuggets/tin"])
+		.mixing("#forge:ingots/lapis", ["#forge:gems/lapis", "#forge:nuggets/iron"])
 		.id("create_cosmic_contraptions:create/lapis_alloy");
+	// Vault Casing
+	event.recipes.create
+		.item_application("create_cosmic_contraptions:vault_casing", [
+			"create:industrial_iron_block",
+			"#forge:ingots/lapis",
+		])
+		.id("create_cosmic_contraptions:create/vault_casing");
 
 	// Raw Iron Washing
 	event.recipes.create
-		.splashing("9x minecraft:iron_nugget", "create:crushed_raw_iron")
+		.splashing("9x #forge:nuggets/iron", "create:crushed_raw_iron")
 		.id("create_cosmic_contraptions:create/raw_iron_washing");
 
 	// Harder Minecart Assembler
@@ -133,7 +156,7 @@ ServerEvents.recipes((event) => {
 		.mechanical_crafting("create_dd:hydraulic_press", [" S ", " H ", "CPC"], {
 			S: "create_dd:sealed_mechanism",
 			H: "create_dd:hydraulic_casing",
-			B: "#forge:storage_blocks/copper",
+			C: "#forge:storage_blocks/copper",
 			P: "create:mechanical_press",
 		})
 		.id("create_cosmic_contraptions:create/hydraulic_press");

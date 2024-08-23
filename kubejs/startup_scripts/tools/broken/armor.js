@@ -1,5 +1,5 @@
 const armors = ["helmet", "chestplate", "leggings", "boots"];
-const armorMaterials = ["leather", "copper", "chainmail", "iron", "steel", "diamond", "netherite"];
+const armorMaterials = ["leather", "copper", "chainmail", "iron", "steel", "diamond", "netherite", "radiant"];
 const divingGear = ["netherite_diving_helmet", "netherite_diving_boots", "copper_diving_helmet", "copper_diving_boots"];
 
 StartupEvents.registry("item", (event) => {

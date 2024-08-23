@@ -1,4 +1,4 @@
-// priority: -999
+// priority: -99
 // Fetch from global store
 let itemsToRemove = global.removedItems;
 

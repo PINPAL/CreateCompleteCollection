@@ -148,7 +148,8 @@
     "earth.terrarium.adastra.client.screens.machines.SolarPanelScreen": true,
     "earth.terrarium.adastra.client.screens.vehicles.LanderScreen": true,
     "me.shedaniel.rei.impl.client.gui.screen.CompositeDisplayViewingScreen": true,
-    "com.negodya1.vintageimprovements.content.kinetics.lathe.recipe_card.RecipeCardScreen": true
+    "com.negodya1.vintageimprovements.content.kinetics.lathe.recipe_card.RecipeCardScreen": true,
+    "com.lightning.northstar.block.tech.telescope.TelescopeScreen": true
   },
   "hideBackground": {
     "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackScreen": false

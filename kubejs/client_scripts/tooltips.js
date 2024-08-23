@@ -58,18 +58,11 @@ ItemEvents.tooltip((tooltip) => {
 		});
 	});
 
-	const decorativeItems = ["create:industrial_iron_block", "design_decor:industrial_plating_block"];
+	const decorativeItems = [];
 	decorativeItems.forEach((decorativeItem) => {
 		tooltip.addAdvanced(decorativeItem, (item, advanced, text) => {
 			text.add(1, [Text.of("Decorative Only").gray()]);
 		});
-	});
-
-	tooltip.addAdvanced("create:industrial_iron_block", (item, advanced, text) => {
-		text.add(2, [Text.of("Connected Textures: ").color(0xc7954b), Text.of("Disabled").color(0xeeda78)]);
-	});
-	tooltip.addAdvanced("design_decor:industrial_plating_block", (item, advanced, text) => {
-		text.add(2, [Text.of("Connected Textures: ").color(0xc7954b), Text.of("Enabled").color(0xeeda78)]);
 	});
 
 	const moltenMetals = [

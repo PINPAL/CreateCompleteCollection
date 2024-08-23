@@ -14,14 +14,14 @@ ClientEvents.highPriorityAssets((event) => {
 		Item.of("refinedstorage:hollow_cover", '{Item:{Count:1b,id:"create:brass_casing"}}'),
 		Item.of("wands:netherite_wand").withNBT({ Unbreakable: "1b" }),
 		Item.of("createaddition:diamond_grit_sandpaper").withNBT({ Unbreakable: "1b" }),
-		Item.of("create_cosmic_contraptions:radiant_knife").withNBT({ Unbreakable: "1b" }),
-		Item.of("create_cosmic_contraptions:radiant_paxel").withNBT({ Unbreakable: "1b" }),
-		Item.of("create_cosmic_contraptions:radiant_sword").withNBT({ Unbreakable: "1b" }),
-		Item.of("create_cosmic_contraptions:radiant_hoe").withNBT({ Unbreakable: "1b" }),
-		Item.of("create_cosmic_contraptions:radiant_helmet").withNBT({ Unbreakable: "1b" }),
-		Item.of("create_cosmic_contraptions:radiant_chestplate").withNBT({ Unbreakable: "1b" }),
-		Item.of("create_cosmic_contraptions:radiant_leggings").withNBT({ Unbreakable: "1b" }),
-		Item.of("create_cosmic_contraptions:radiant_boots").withNBT({ Unbreakable: "1b" }),
+		Item.of("create_cosmic_contraptions:radiant_knife", "{Unbreakable:1b}"),
+		Item.of("create_cosmic_contraptions:radiant_paxel", "{Unbreakable:1b}"),
+		Item.of("create_cosmic_contraptions:radiant_sword", "{Unbreakable:1b}"),
+		Item.of("create_cosmic_contraptions:radiant_hoe", "{Unbreakable:1b}"),
+		Item.of("create_cosmic_contraptions:radiant_helmet", "{Unbreakable:1b}"),
+		Item.of("create_cosmic_contraptions:radiant_chestplate", "{Unbreakable:1b}"),
+		Item.of("create_cosmic_contraptions:radiant_leggings", "{Unbreakable:1b}"),
+		Item.of("create_cosmic_contraptions:radiant_boots", "{Unbreakable:1b}"),
 	];
 
 	// Define the JSON

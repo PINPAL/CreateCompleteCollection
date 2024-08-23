@@ -1,71 +1,25 @@
-const hideFromJEI = [
-	// Mod Match
-	/sophisticatedbackpacks:*/,
-	/refinedstorage:*/,
-	/itemfilters:*/,
-	/simplemagnets:*/,
-	/wands:*/,
-	/ftbquests:*/,
-	/chunkloaders:*/,
-	/metalbarrels:.*/,
-	/petrolpark:.*/,
-	"dragonlib:dragon",
-	"moonlight:placeable_item",
-	"amendmends:dye_bottle",
-
-	// Unfinished Items
-	/tfmg:unprocessed_.*/,
-	/create_central_kitchen:incomplete_.*/,
-	/create_cosmic_contraptions:incomplete_.*/,
-	/destroy:unprocessed_.*/,
-	/create:unprocessed_.*/,
-	/tfmg:unfinished_.*/,
-	/vintageimprovements:incomplete_.*/,
-	/railways:.*_incomplete_.*/,
-	/create_central_kitchen:incomplete_.*/,
-	/create_dd:incomplete_.*/,
-	/deepdrilling:incomplete_.*/,
-	/create:incomplete_.*/,
-	/create_connected:incomplete_.*/,
-
-	// Create-CC
-	"create_cosmic_contraptions:belt_scroll",
-	/create_cosmic_contraptions:broken_.*/,
-	"create_cosmic_contraptions:wrench_axe",
-	"create_cosmic_contraptions:radiant_knife",
-	"create_cosmic_contraptions:radiant_paxel",
-	"create_cosmic_contraptions:radiant_sword",
-	"create_cosmic_contraptions:radiant_hoe",
-	"create_cosmic_contraptions:radiant_helmet",
-	"create_cosmic_contraptions:radiant_chestplate",
-	"create_cosmic_contraptions:radiant_leggings",
-	"create_cosmic_contraptions:radiant_boots",
-
-	// Replaced by NBT items
-	"create:extendo_grip",
-	"createaddition:diamond_grit_sandpaper",
-
-	// Minecraft
-	/spawn_egg/,
-	"minecraft:infested_stone",
-	"minecraft:infested_cobblestone",
-	"minecraft:infested_stone_bricks",
-	"minecraft:infested_mossy_stone_bricks",
-	"minecraft:infested_cracked_stone_bricks",
-	"minecraft:infested_chiseled_stone_bricks",
-	"minecraft:infested_deepslate",
-	"minecraft:bedrock",
-	"minecraft:end_portal_frame",
-	"minecraft:petrified_oak_slab",
-	"minecraft:tipped_arrow",
-];
-
 JEIEvents.hideItems((event) => {
 	// Hide Items
-	hideFromJEI.forEach((item) => {
+	global.hideFromJEI.forEach((item) => {
 		event.hide(item);
 	});
 	global.removedItems.forEach((item) => {
 		event.hide(item);
+	});
+	global.unifiedIngots.forEach((ingot) => {
+		ingot.modsUsing.forEach((mod) => {
+			if (ingot.type == "ingot") {
+				event.hide(mod + ":" + ingot.name + "_ingot");
+			} else if (ingot.type == "alloy") {
+				event.hide(mod + ":" + ingot.name + "_alloy");
+			} else {
+				event.hide(mod + ":" + ingot.name);
+			}
+			event.hide(mod + ":" + ingot.name + "_nugget");
+			event.hide(mod + ":" + ingot.name + "_sheet");
+			event.hide(mod + ":" + ingot.name + "en_sheet");
+			event.hide(mod + ":" + ingot.name + "_plate");
+			event.hide(mod + ":" + ingot.name + "_block");
+		});
 	});
 });

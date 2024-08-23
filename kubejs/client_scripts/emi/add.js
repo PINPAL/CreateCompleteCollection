@@ -73,6 +73,27 @@ const addToJEI = [
 	"create:brass_encased_shaft",
 	"create:brass_encased_cogwheel",
 	"create:brass_encased_large_cogwheel",
+	"create:refined_radiance_casing",
+	"create:shadow_steel_casing",
+
+	"createcasing:railway_encased_cogwheel",
+	"createcasing:railway_encased_large_cogwheel",
+	"createcasing:railway_encased_shaft",
+	"createcasing:copper_encased_cogwheel",
+	"createcasing:copper_encased_large_cogwheel",
+	"createcasing:copper_encased_shaft",
+	"createcasing:shadow_steel_encased_cogwheel",
+	"createcasing:shadow_steel_encased_large_cogwheel",
+	"createcasing:shadow_steel_encased_shaft",
+	"createcasing:refined_radiance_encased_cogwheel",
+	"createcasing:refined_radiance_encased_large_cogwheel",
+	"createcasing:refined_radiance_encased_shaft",
+	"createcasing:creative_encased_cogwheel",
+	"createcasing:creative_encased_large_cogwheel",
+	"createcasing:creative_encased_shaft",
+	"createcasing:industrial_iron_encased_cogwheel",
+	"createcasing:industrial_iron_encased_large_cogwheel",
+	"createcasing:industrial_iron_encased_shaft",
 ];
 
 JEIEvents.addItems((event) => {

@@ -8,8 +8,10 @@
 			coconut = true
 			walnut = true
 
-		[types.leaves_type.ad_astra]
-			glacian = false
+		[types.leaves_type.northstar]
+			coiler = true
+			argyre = true
+			wilter = true
 
 	[types.cake]
 
@@ -25,10 +27,11 @@
 			coconut = true
 			walnut = true
 
-		[types.wood_type.ad_astra]
-			aeronos = false
-			strophar = false
-			glacian = false
+		[types.wood_type.northstar]
+			coiler = false
+			wilter = false
+			argyre = false
+			calorian = false
 
 #Disables specific entries
 [entries]

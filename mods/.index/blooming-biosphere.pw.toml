@@ -1,0 +1,13 @@
+filename = 'blooming-biosphere-1.1.0.jar'
+name = 'Blooming Biosphere'
+side = 'both'
+
+[download]
+hash = '011d8869b0d6b12e05ddf47bd00bffeaedfd1b34927981e0584b3d39414fc9ef93a1264b215879da9443aa6e1b56cf9adfaf997d435ce68faf328119f63bfea4'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Ds9FyUc7/versions/oD56Neuj/blooming-biosphere-1.1.0.jar'
+
+[update.modrinth]
+mod-id = 'Ds9FyUc7'
+version = 'oD56Neuj'

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 2,
+  "items": [
+    "$minecraft:weapon",
+    "farmersdelight:skillet"
+  ],
+  "incompatible": [
+    "minecraft:fire_aspect"
+  ]
+}

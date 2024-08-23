@@ -37,7 +37,7 @@ ItemEvents.armorTierRegistry((event) => {
 		tier.knockbackResistance = 0;
 	});
 	event.add("radiant", (tier) => {
-		tier.durabilityMultiplier = 40;
+		tier.durabilityMultiplier = 100;
 		tier.slotProtections = [3, 9, 7, 3];
 		tier.equipSound = "item.armor.equip_netherite";
 		tier.toughness = 4;

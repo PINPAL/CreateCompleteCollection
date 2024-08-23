@@ -1,0 +1,5 @@
+{
+	"item.artifacts.eternal_steak": "Creative Steak",
+	"gamerule.artifacts.eternalSteak.cooldown": "Artifacts: Creative Steak eating cooldown",
+	"gamerule.artifacts.eternalSteak.enabled": "Artifacts: Creative Steak enabled"
+}

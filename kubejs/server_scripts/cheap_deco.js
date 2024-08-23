@@ -10,6 +10,11 @@ ServerEvents.recipes((event) => {
 			})
 			.id("create_cosmic_contraptions:deco/" + designDecoLamp + "_lamp");
 	});
+	event.remove({ output: "tfmg:heavy_casing_door" });
+	event.recipes.create
+		.item_application("tfmg:heavy_casing_door", ["#minecraft:wooden_doors", "tfmg:heavy_machinery_casing"])
+		.keepHeldItem()
+		.id("create_cosmic_contraptions:deco/heavy_casing_door");
 	// Cheap Cast Iron
 	event.recipes.create
 		.compacting("#forge:ingots/industrial_iron", "#forge:ingots/iron")
@@ -20,7 +25,7 @@ ServerEvents.recipes((event) => {
 		.heated()
 		.id("create_cosmic_contraptions:deco/asphalt_block");
 	// Cheaper Everything else
-	const lampColors = ["yellow", "red", "green", "blue"];
+	const lampColors = ["red", "green", "blue"];
 	const decorativeMats = [
 		{
 			outputMat: "andesite",
@@ -80,7 +85,6 @@ ServerEvents.recipes((event) => {
 		},
 		{
 			outputMat: "steel",
-			trapdoor: "ad_astra:steel_trapdoor",
 			door: "tfmg:steel_door",
 			outputMultiplier: 2,
 		},
@@ -119,31 +123,36 @@ ServerEvents.recipes((event) => {
 				.id("create_cosmic_contraptions:deco/sonecutting/" + decorativeMat.outputMat + "_hull");
 
 			// Lamp
+			event
+				.shaped(
+					Item.of("createdeco:yellow_" + decorativeMat.outputMat + "_lamp", 3 * outputMultiplier),
+					[" N ", " L ", " S "],
+					{
+						S: `#forge:plates/${decorativeMat.outputMat}`,
+						L: "minecraft:torch",
+						N: `#forge:nuggets/${decorativeMat.outputMat}`,
+					}
+				)
+				.id("create_cosmic_contraptions:deco/crafting/yellow_" + decorativeMat.outputMat + "_lamp");
 			lampColors.forEach((lampColor) => {
 				event.remove({
 					output: "createdeco:" + lampColor + "_" + decorativeMat.outputMat + "_lamp",
 				});
 				event
-					.shaped(
-						Item.of(
-							"createdeco:" + lampColor + "_" + decorativeMat.outputMat + "_lamp",
-							3 * outputMultiplier
-						),
-						[" N ", " L ", "DS "],
-						{
-							S: `#forge:plates/${decorativeMat.outputMat}`,
-							L: "minecraft:lantern",
-							N: `#forge:nuggets/${decorativeMat.outputMat}`,
-							D: "minecraft:" + lampColor + "_dye",
-						}
+					.shapeless(Item.of("createdeco:" + lampColor + "_" + decorativeMat.outputMat + "_lamp"), [
+						"createdeco:yellow_" + decorativeMat.outputMat + "_lamp",
+						`#forge:dyes/${lampColor}`,
+					])
+					.id("create_cosmic_contraptions:deco/dying/" + lampColor + "_" + decorativeMat.outputMat + "_lamp");
+				event.recipes.create
+					.mixing(
+						[Item.of("createdeco:" + lampColor + "_" + decorativeMat.outputMat + "_lamp")],
+						[
+							"createdeco:yellow_" + decorativeMat.outputMat + "_lamp",
+							Fluid.of("create_cosmic_contraptions:" + lampColor + "_dye_fluid", 10),
+						]
 					)
-					.id(
-						"create_cosmic_contraptions:deco/crafting/" +
-							lampColor +
-							"_" +
-							decorativeMat.outputMat +
-							"_lamp"
-					);
+					.id("create_cosmic_contraptions:deco/lamps/" + decorativeMat.outputMat + "/" + lampColor);
 			});
 			// Catwalk
 			event.remove({

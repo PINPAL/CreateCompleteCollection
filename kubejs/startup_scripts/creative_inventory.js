@@ -34,7 +34,6 @@ let creativeTabs = [
 	"creativecrafter:creativecrafter",
 	"lootr:lootr",
 	"create_power_loader:main",
-	"ad_astra:main",
 	"create_things_and_misc:tab",
 	"illagerinvasion:main",
 	"sophisticatedbackpacks:main",

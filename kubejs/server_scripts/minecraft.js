@@ -5,6 +5,13 @@ ServerEvents.recipes((event) => {
 		D: "#forge:ingots/brass",
 	});
 
+	// Hopper
+	event.remove({ output: "minecraft:hopper" });
+	event.shaped("minecraft:hopper", ["ILI", "ICI", " I "], {
+		I: "#forge:ingots/copper",
+		C: "#forge:chests/wooden",
+	});
+
 	// White Wool
 	event.recipes.create.compacting("minecraft:white_wool", "4x #forge:string");
 

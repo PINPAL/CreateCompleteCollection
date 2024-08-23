@@ -1,17 +1,26 @@
 // priority: -120
 
-let removedItems = global.removedItems;
-
-removedItems.forEach((item) => {
+global.removedItems.forEach((item) => {
 	ServerEvents.tags("item", (event) => {
 		event.removeAllTagsFrom(item);
+		event.add("c:hidden_from_recipe_viewers", item);
 	});
 	ServerEvents.tags("block", (event) => {
 		event.removeAllTagsFrom(item);
+		event.add("c:hidden_from_recipe_viewers", item);
 	});
 });
 
-unifiedIngots.forEach((ingot) => {
+global.hideFromJEI.forEach((item) => {
+	ServerEvents.tags("item", (event) => {
+		event.add("c:hidden_from_recipe_viewers", item);
+	});
+	ServerEvents.tags("block", (event) => {
+		event.add("c:hidden_from_recipe_viewers", item);
+	});
+});
+
+global.unifiedIngots.forEach((ingot) => {
 	ServerEvents.tags("item", (event) => {
 		// Remove tags for all modded ingots
 		ingot.modsUsing.forEach((mod) => {
