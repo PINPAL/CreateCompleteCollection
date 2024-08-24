@@ -152,6 +152,10 @@ ServerEvents.recipes((event) => {
 		C: "minecraft:copper_block",
 	});
 
+	// Cheaper Brass Hand
+	event.replaceInput({ output: "create:brass_hand" }, "#forge:plates/brass", "create_dd:andesite_sheet");
+	event.remove({ id: "create_dd:crafting/brass_hand" });
+
 	// Harder Deployer
 	event.shaped(Item.of("create:deployer"), [" E ", " A ", " B "], {
 		E: "create:electron_tube",
