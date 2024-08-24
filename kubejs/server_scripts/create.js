@@ -169,6 +169,13 @@ ServerEvents.recipes((event) => {
 		L: "naturescompass:naturescompass",
 	});
 
+	// Cheaper Enchants
+	EntityEvents.replaceInput(
+		{ output: "create_enchantment_industry:enchanting_guide" },
+		"create:sturdy_sheet",
+		"create_dd:andesite_sheet"
+	);
+
 	// Sandpaper
 	event.shaped("2x kubejs:sugar_paper", ["SSS", "   ", "   "], {
 		S: "minecraft:sugar_cane",

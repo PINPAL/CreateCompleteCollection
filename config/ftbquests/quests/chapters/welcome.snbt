@@ -1115,12 +1115,19 @@
 			description: ["&lTip: &r&7Soul Beeds can be used to quickly locate the a fortress. When used they fly towards the nearest fortress.&r"]
 			icon: "minecraft:netherrack"
 			id: "6DD58DEC49782F4E"
-			rewards: [{
-				count: 8
-				id: "4018AD0AD040B22C"
-				item: "quark:soul_bead"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 8
+					id: "4018AD0AD040B22C"
+					item: "quark:soul_bead"
+					type: "item"
+				}
+				{
+					id: "6F56BB56DD835403"
+					item: "kubejs:lootbox_enchantments_generic"
+					type: "item"
+				}
+			]
 			subtitle: "Enter the&6 Nether"
 			tasks: [{
 				dimension: "minecraft:the_nether"
@@ -1158,11 +1165,18 @@
 			dependencies: ["3013996FDD5C82B3"]
 			icon: "create:brass_casing"
 			id: "26B607339F9A9909"
-			rewards: [{
-				id: "71EE6929C3B7BFF5"
-				item: "kubejs:lootbox_brass"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "71EE6929C3B7BFF5"
+					item: "kubejs:lootbox_brass"
+					type: "item"
+				}
+				{
+					id: "2724AAA7F743FC59"
+					item: "kubejs:lootbox_enchantments_armor"
+					type: "item"
+				}
+			]
 			size: 1.5d
 			subtitle: "Where the real Create begins."
 			tasks: [{
@@ -2100,7 +2114,6 @@
 			y: 8.5d
 		}
 		{
-			dependencies: ["5D83A0E68CAC463B"]
 			description: [
 				"&l&nEnchanting Overview"
 				""
@@ -2142,8 +2155,8 @@
 				value: 1L
 			}]
 			title: "Enchanting"
-			x: -0.125d
-			y: 17.5d
+			x: -6.75d
+			y: 3.75d
 		}
 		{
 			dependencies: ["11E1B19181CD6D2D"]
@@ -2165,8 +2178,8 @@
 				type: "item"
 			}]
 			title: "Blaze Enchanting"
-			x: -0.625d
-			y: 16.25d
+			x: -7.25d
+			y: 2.5d
 		}
 		{
 			dependencies: ["11E1B19181CD6D2D"]
@@ -2200,8 +2213,8 @@
 				type: "item"
 			}]
 			title: "Enchanting Your Books"
-			x: 1.125d
-			y: 18.0d
+			x: -5.5d
+			y: 4.25d
 		}
 		{
 			dependencies: ["11E1B19181CD6D2D"]
@@ -2219,8 +2232,8 @@
 				item: "create_enchantment_industry:disenchanter"
 				type: "item"
 			}]
-			x: -0.625d
-			y: 18.75d
+			x: -7.25d
+			y: 5.0d
 		}
 		{
 			dependencies: ["56A83A4BF3CEFC3E"]
@@ -2237,8 +2250,8 @@
 				type: "item"
 			}]
 			title: "Disenchanting"
-			x: 0.875d
-			y: 19.75d
+			x: -5.75d
+			y: 6.0d
 		}
 		{
 			dependencies: ["11E1B19181CD6D2D"]
@@ -2251,8 +2264,8 @@
 				type: "item"
 			}]
 			title: "Leveling Up"
-			x: 0.5d
-			y: 18.875d
+			x: -6.125d
+			y: 5.125d
 		}
 		{
 			dependencies: ["11E1B19181CD6D2D"]
@@ -2270,8 +2283,8 @@
 				type: "item"
 			}]
 			title: "Storing XP"
-			x: -1.375d
-			y: 18.0d
+			x: -8.0d
+			y: 4.25d
 		}
 		{
 			dependencies: ["26B607339F9A9909"]
@@ -4093,11 +4106,18 @@
 			description: ["Did you know you can give a Blaze Burner a straw to allow it to be pumped fluids?"]
 			hide: true
 			id: "26E7E34402E3FA5E"
-			rewards: [{
-				id: "3C47661D2CC8DB4F"
-				item: "minecraft:lava_bucket"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "3C47661D2CC8DB4F"
+					item: "minecraft:lava_bucket"
+					type: "item"
+				}
+				{
+					id: "5C84D07863F53013"
+					item: "kubejs:lootbox_andesite"
+					type: "item"
+				}
+			]
 			subtitle: "Easy fluids!"
 			tasks: [{
 				id: "41ADD28ADC5F2B39"
@@ -7067,6 +7087,32 @@
 			title: "Copper Armor"
 			x: 4.875d
 			y: 6.25d
+		}
+		{
+			dependencies: ["3013996FDD5C82B3"]
+			icon: "kubejs:steel_casing"
+			id: "22633EF43D2F33D2"
+			rewards: [
+				{
+					id: "16BB884A3A49FB29"
+					item: "kubejs:lootbox_steel"
+					type: "item"
+				}
+				{
+					id: "679F2DBD85F53B2A"
+					item: "kubejs:lootbox_steel"
+					type: "item"
+				}
+			]
+			size: 2.0d
+			tasks: [{
+				id: "407AA9461653D140"
+				item: "create_dd:steel_ingot"
+				type: "item"
+			}]
+			title: "The Steel Age"
+			x: 3.0d
+			y: 11.75d
 		}
 	]
 	title: "Create Modpack"
