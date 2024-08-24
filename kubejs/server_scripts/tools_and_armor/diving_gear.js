@@ -17,4 +17,9 @@ ServerEvents.recipes((event) => {
 		C: "#forge:ingots/copper",
 		B: "kubejs:copper_chestplate",
 	});
+
+	// Upgrading past copper
+	event.smithing("minecraft:iron_helmet", "create:copper_diving_helmet", "kubejs:iron_stitching");
+	event.smithing("minecraft:iron_boots", "create:copper_diving_boots", "kubejs:iron_stitching");
+	event.smithing("minecraft:iron_chestplate", "create:copper_backtank", "kubejs:iron_stitching");
 });
