@@ -12,6 +12,8 @@ const outputsToRemove = [
 	"#forge:armors/leggings",
 	"#forge:armors/boots",
 
+	"minecraft:wooden_axe",
+
 	// Minecraft
 	"minecraft:lodestone",
 	"minecraft:stone_pickaxe",
