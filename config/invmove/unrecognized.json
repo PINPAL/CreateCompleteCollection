@@ -132,7 +132,8 @@
     "de.keksuccino.fancymenu.menu.fancy.helper.ui.FMConfigScreen": true,
     "fr.iglee42.createcasing.screen.BrassShaftScreen": true,
     "com.jaquadro.minecraft.storagedrawers.inventory.DrawerScreen$Slot2": true,
-    "net.coderbot.iris.gui.screen.ShaderPackScreen": true
+    "net.coderbot.iris.gui.screen.ShaderPackScreen": true,
+    "me.flashyreese.mods.reeses_sodium_options.client.gui.SodiumVideoOptionsScreen": true
   },
   "hideBackground": {
     "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackScreen": false

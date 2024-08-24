@@ -37,7 +37,7 @@ dotNameScale:1.0
 compassOverEverything:true
 showFlowers:true
 keepWaypointNames:true
-waypointsDistanceExp:7
+waypointsDistanceExp:11
 waypointsDistanceMin:15.0
 defaultWaypointTPCommandFormat:/tp @s {x} {y} {z}
 defaultWaypointTPCommandRotationFormat:/tp @s {x} {y} {z} {yaw} ~
