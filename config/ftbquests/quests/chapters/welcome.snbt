@@ -444,6 +444,13 @@
 			dependency_requirement: "one_completed"
 			id: "26D185F68C821538"
 			progression_mode: "linear"
+			rewards: [{
+				count: 12
+				id: "6D1195899CEDA9E1"
+				item: "farmersdelight:bacon_sandwich"
+				random_bonus: 4
+				type: "item"
+			}]
 			shape: "octagon"
 			subtitle: "Now you can mine stone!"
 			tasks: [{
