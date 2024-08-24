@@ -638,11 +638,18 @@
 			description: ["Combine &6Andesite&r and some nuggets to get &6Andesite Alloy&r."]
 			icon: "minecraft:andesite"
 			id: "06B04C606CE4187C"
-			rewards: [{
-				id: "571D729F87901373"
-				item: "kubejs:lootbox_basic"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "571D729F87901373"
+					item: "kubejs:lootbox_basic"
+					type: "item"
+				}
+				{
+					id: "66BB69B1AD1C5279"
+					item: "kubejs:lootbox_redstone"
+					type: "item"
+				}
+			]
 			subtitle: "Obtain Andesite from any forest biome."
 			tasks: [{
 				id: "18422314A7B67D37"
@@ -936,6 +943,11 @@
 		{
 			dependencies: ["3017843FE3F03B3F"]
 			id: "7453758780D4848F"
+			rewards: [{
+				id: "1731040585FD3F78"
+				item: "kubejs:lootbox_train"
+				type: "item"
+			}]
 			size: 2.0d
 			subtitle: "The beginning of greater things.."
 			tasks: [{
@@ -2366,7 +2378,6 @@
 			y: 12.25d
 		}
 		{
-			dependencies: ["26D185F68C821538"]
 			description: [
 				"&l&nFood Overhauled"
 				""
@@ -6824,13 +6835,25 @@
 			]
 			icon: "create_things_and_misc:sprinkler"
 			id: "61E794076BA52E76"
-			rewards: [{
-				count: 64
-				id: "424C0FA85CE15E2B"
-				item: "minecraft:bone_meal"
-				random_bonus: 64
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 64
+					id: "424C0FA85CE15E2B"
+					item: "minecraft:bone_meal"
+					random_bonus: 64
+					type: "item"
+				}
+				{
+					id: "6E1A71F9A7FCA9F7"
+					item: "kubejs:lootbox_andesite"
+					type: "item"
+				}
+				{
+					id: "7D48E967E16A2AB0"
+					item: "kubejs:lootbox_basic"
+					type: "item"
+				}
+			]
 			subtitle: "Faster crop farms!"
 			tasks: [
 				{
@@ -7113,6 +7136,22 @@
 			title: "The Steel Age"
 			x: 3.0d
 			y: 11.75d
+		}
+		{
+			dependencies: ["26B607339F9A9909"]
+			id: "3EAF2FA6604A0D48"
+			rewards: [{
+				id: "2631F0240CE71B73"
+				item: "kubejs:lootbox_redstone"
+				type: "item"
+			}]
+			tasks: [{
+				id: "49EBFEFF498CC6D7"
+				item: "create:redstone_link"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 14.0d
 		}
 	]
 	title: "Create Modpack"

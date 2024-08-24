@@ -170,7 +170,7 @@ ServerEvents.recipes((event) => {
 	});
 
 	// Cheaper Enchants
-	EntityEvents.replaceInput(
+	event.replaceInput(
 		{ output: "create_enchantment_industry:enchanting_guide" },
 		"create:sturdy_sheet",
 		"create_dd:andesite_sheet"

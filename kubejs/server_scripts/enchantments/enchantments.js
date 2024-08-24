@@ -5,7 +5,7 @@ ServerEvents.recipes((event) => {
 	event.recipes
 		.createSequencedAssembly(
 			[
-				"kubejs:lootbox_enchantments_generic",
+				Item.of("kubejs:lootbox_enchantments_generic").withChance(0.3334),
 				Item.of("kubejs:lootbox_enchantments_weapon").withChance(0.333),
 				Item.of("kubejs:lootbox_enchantments_armor").withChance(0.333),
 			],
