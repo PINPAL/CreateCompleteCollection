@@ -1,7 +1,7 @@
 const toolUpgradeMats = [
 	{ name: "netherite", cost: "#forge:ingots/netherite", costMultiplier: 0.5 },
-	{ name: "diamond", cost: "#forge:gems/diamond", costMultiplier: 2 },
-	{ name: "steel", cost: "#forge:ingots/steel", costMultiplier: 3 },
+	{ name: "diamond", cost: "#forge:gems/diamond", costMultiplier: 3 },
+	{ name: "steel", cost: "#forge:ingots/steel", costMultiplier: 2 },
 	{ name: "iron", cost: "#forge:ingots/iron", costMultiplier: 2 },
 	{ name: "copper", cost: "#forge:ingots/copper", costMultiplier: 1 },
 	{ name: "stone", cost: "kubejs:refined_stone", costMultiplier: 1 },
@@ -9,7 +9,7 @@ const toolUpgradeMats = [
 const armorUpgradeMats = [
 	{ name: "netherite", cost: "#forge:ingots/netherite", costMultiplier: 0.5 },
 	{ name: "diamond", cost: "#forge:gems/diamond", costMultiplier: 3 },
-	{ name: "steel", cost: "#forge:ingots/steel", costMultiplier: 3 },
+	{ name: "steel", cost: "#forge:ingots/steel", costMultiplier: 2 },
 	{ name: "iron", cost: "#forge:ingots/iron", costMultiplier: 3 },
 	{ name: "copper", cost: "#forge:ingots/copper", costMultiplier: 1 },
 	{ name: "chainmail", cost: "minecraft:chain", costMultiplier: 1 },
