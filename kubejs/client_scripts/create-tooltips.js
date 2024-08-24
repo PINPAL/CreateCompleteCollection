@@ -545,6 +545,29 @@ drawerWoodTypes.forEach((woodType) => {
 	});
 });
 
+for (const key in global.lootboxes) {
+	let lootbox = `kubejs:lootbox_${key}`;
+	itemsToTooltip.push({
+		item: lootbox,
+		summary: [
+			`Rolls $${global.lootboxes[key].rolls}$ Time${global.lootboxes[key].rolls > 1 ? "s" : ""}.`,
+			`Contains $${global.lootboxes[key].items.length}$ Unique Items.`,
+		],
+		controls: [
+			{
+				control: "R-Clicked",
+				requiresHold: false,
+				text: ["$Places$ the $Lootbox$ in the world."],
+			},
+			{
+				control: "Crouch & R-Click with Empty Hand",
+				requiresHold: true,
+				text: ["Opens the $Lootbox$. Throws unboxed", "$items$ onto the ground."],
+			},
+		],
+	});
+}
+
 ItemEvents.tooltip((tooltip) => {
 	itemsToTooltip.forEach((tooltipItem) => {
 		// add the tooltip to the item

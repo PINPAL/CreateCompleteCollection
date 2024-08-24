@@ -9,7 +9,11 @@
 		{ item: "kubejs:copper_repair_kit" }
 		{ item: "kubejs:iron_repair_kit" }
 		{ item: "kubejs:stone_repair_kit" }
-		{ item: "kubejs:wood_repair_kit" }
+		{ item: "kubejs:wooden_repair_kit" }
+		{ item: "kubejs:lootbox_andesite" }
+		{ item: "kubejs:lootbox_copper" }
+		{ item: "kubejs:lootbox_redstone" }
+		{ item: "kubejs:lootbox_explorer" }
 	]
 	title: "Repair Kits"
 }

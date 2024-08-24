@@ -1,14 +1,13 @@
-name = "MoreJS"
-filename = "morejs-forge-1.19.2-0.2.1.jar"
-side = "both"
+filename = 'morejs-forge-1.19.2-0.3.0.jar'
+name = 'MoreJS'
+side = 'both'
 
 [download]
-mode = "url"
-url = "https://cdn.modrinth.com/data/mo64mR1W/versions/QqkcJ3Gi/morejs-forge-1.19.2-0.2.1.jar"
-hash-format = "sha512"
-hash = "8d8da4cb62ed47272cd4938fd07cbc6aca131ce09a635f4da5187f6fd3c4af39537fd43f0513d98b159815de221ce9e58af279aad7a15e9252c3cfea9b8598c2"
+hash = 'dc231655da2404202f078a5b9e21374f812237c66a1500cd46f209fd6bc129828672522bc0aeeed4532e6ea82061be29e120d5dbe4f707c9e88ce3d12f6772ed'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/mo64mR1W/versions/OPrF3dPN/morejs-forge-1.19.2-0.3.0.jar'
 
-[update]
 [update.modrinth]
-mod-id = "mo64mR1W"
-version = "QqkcJ3Gi"
+mod-id = 'mo64mR1W'
+version = 'OPrF3dPN'

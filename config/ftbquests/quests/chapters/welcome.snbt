@@ -472,9 +472,8 @@
 			dependencies: ["26D185F68C821538"]
 			id: "27F8B5F7212E9412"
 			rewards: [{
-				count: 16
-				id: "00D4F609D72801D0"
-				item: "minecraft:cobblestone"
+				id: "7996FFED5BA631B4"
+				item: "kubejs:lootbox_basic"
 				type: "item"
 			}]
 			shape: "octagon"
@@ -497,9 +496,8 @@
 			description: ["Drop some Cobble into your &6Sifter&r then power it using your &6Hand Crank&r from underneath or use your free &6Cogwheel&r reward to power it from the side."]
 			id: "37E5D108BDCEA53B"
 			rewards: [{
-				id: "49F46CF713A78F98"
-				item: "kubejs:refined_stone"
-				random_bonus: 1
+				id: "32B22EFA74086655"
+				item: "kubejs:lootbox_basic"
 				type: "item"
 			}]
 			shape: "octagon"
@@ -554,8 +552,8 @@
 			dependencies: ["37E5D108BDCEA53B"]
 			id: "6545EE475DD16057"
 			rewards: [{
-				id: "7831560463923F73"
-				item: "kubejs:stone_repair_kit"
+				id: "674B171626A10324"
+				item: "kubejs:lootbox_basic"
 				type: "item"
 			}]
 			subtitle: "You can mine ores now!"
@@ -580,10 +578,8 @@
 			icon: "create:iron_sheet"
 			id: "26C9C63835C84874"
 			rewards: [{
-				count: 3
-				id: "1EBFF53963F335AB"
-				item: "minecraft:raw_iron"
-				random_bonus: 7
+				id: "1FAAC3C9D22EC961"
+				item: "kubejs:lootbox_andesite"
 				type: "item"
 			}]
 			size: 1.5d
@@ -617,8 +613,8 @@
 			id: "01D1C7A267CC448A"
 			optional: true
 			rewards: [{
-				id: "3AB4C06D7C6D939C"
-				item: "kubejs:wood_repair_kit"
+				id: "528FBACE82562757"
+				item: "kubejs:lootbox_basic"
 				type: "item"
 			}]
 			subtitle: "Create your first weapon."
@@ -642,6 +638,11 @@
 			description: ["Combine &6Andesite&r and some nuggets to get &6Andesite Alloy&r."]
 			icon: "minecraft:andesite"
 			id: "06B04C606CE4187C"
+			rewards: [{
+				id: "571D729F87901373"
+				item: "kubejs:lootbox_basic"
+				type: "item"
+			}]
 			subtitle: "Obtain Andesite from any forest biome."
 			tasks: [{
 				id: "18422314A7B67D37"
@@ -667,9 +668,14 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["26B607339F9A9909"]
+			dependencies: ["6E931AE38AE91C4F"]
 			hide: true
 			id: "6FEF3380D11818AF"
+			rewards: [{
+				id: "6189FD6C9F6FB393"
+				item: "kubejs:lootbox_andesite"
+				type: "item"
+			}]
 			subtitle: "Don't poke it too hard.."
 			tasks: [{
 				id: "670C0A222CE5618B"
@@ -677,8 +683,8 @@
 				type: "item"
 			}]
 			title: "Deploying"
-			x: 3.0d
-			y: 12.0d
+			x: 4.125d
+			y: 10.25d
 		}
 		{
 			dependencies: ["3EAE622A37F47CC4"]
@@ -698,6 +704,11 @@
 			dependencies: ["6E931AE38AE91C4F"]
 			hide: true
 			id: "0301EA6307C18BF2"
+			rewards: [{
+				id: "21B150E3ACF98D90"
+				item: "kubejs:lootbox_andesite"
+				type: "item"
+			}]
 			subtitle: "It's like baking a cake!"
 			tasks: [{
 				id: "60CDE0CC2E8A7707"
@@ -726,6 +737,11 @@
 			dependencies: ["6E931AE38AE91C4F"]
 			hide: true
 			id: "28CE2EDC4F928E0B"
+			rewards: [{
+				id: "5AD29563649D9E89"
+				item: "kubejs:lootbox_basic"
+				type: "item"
+			}]
 			subtitle: "Cutting wood autonomously!"
 			tasks: [{
 				id: "2E2713EAE800BC24"
@@ -781,6 +797,11 @@
 			hide: true
 			icon: "create:crushing_wheel"
 			id: "664B341348EFB352"
+			rewards: [{
+				id: "363F8B54BD5230F3"
+				item: "kubejs:lootbox_brass"
+				type: "item"
+			}]
 			subtitle: "A pair of giants."
 			tasks: [{
 				id: "66F68E9621BE389A"
@@ -801,6 +822,11 @@
 		{
 			dependencies: ["06B04C606CE4187C"]
 			id: "3017843FE3F03B3F"
+			rewards: [{
+				id: "41F0EF3FF198C808"
+				item: "kubejs:lootbox_andesite"
+				type: "item"
+			}]
 			size: 2.0d
 			subtitle: "Powering your machinary."
 			tasks: [{
@@ -892,6 +918,11 @@
 			dependency_requirement: "one_completed"
 			hide: true
 			id: "5EFD1F3E40DBE153"
+			rewards: [{
+				id: "51D07A2A92C758CD"
+				item: "kubejs:lootbox_brass"
+				type: "item"
+			}]
 			subtitle: "Hard to craft, but plenty of rotational force."
 			tasks: [{
 				id: "139E9A9566F861C1"
@@ -927,18 +958,11 @@
 			hide_details_until_startable: false
 			id: "06AD2AF50AE0F143"
 			optional: true
-			rewards: [
-				{
-					id: "19BD22EF0BEB30C9"
-					type: "xp"
-					xp: 50
-				}
-				{
-					id: "4236AF9F055C24A9"
-					item: "kubejs:iron_repair_kit"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "7B17EA8E3E4E3435"
+				item: "kubejs:lootbox_enchantments_generic"
+				type: "item"
+			}]
 			shape: "circle"
 			subtitle: "Forging better tools."
 			tasks: [{
@@ -961,6 +985,11 @@
 			hide: true
 			id: "1822D538FA5F3E98"
 			optional: true
+			rewards: [{
+				id: "32696687F6D2C300"
+				item: "kubejs:lootbox_enchantments_weapon"
+				type: "item"
+			}]
 			shape: "circle"
 			subtitle: "Using your new forging skills for combat."
 			tasks: [{
@@ -983,6 +1012,11 @@
 			hide: true
 			id: "0AA52F5F7E62EBD7"
 			optional: true
+			rewards: [{
+				id: "6AA00CB266AA3488"
+				item: "kubejs:lootbox_enchantments_generic"
+				type: "item"
+			}]
 			shape: "circle"
 			subtitle: "Using your new forging skills for farming."
 			tasks: [{
@@ -1105,6 +1139,11 @@
 			]
 			icon: "create:blaze_burner"
 			id: "3013996FDD5C82B3"
+			rewards: [{
+				id: "3B293A7DA32D86EA"
+				item: "kubejs:lootbox_brass"
+				type: "item"
+			}]
 			subtitle: "A step closer to brass!"
 			tasks: [{
 				id: "57129730C0408BEF"
@@ -1120,10 +1159,8 @@
 			icon: "create:brass_casing"
 			id: "26B607339F9A9909"
 			rewards: [{
-				count: 2
-				id: "1CFF67DE6CE08273"
-				item: "create:brass_ingot"
-				random_bonus: 3
+				id: "71EE6929C3B7BFF5"
+				item: "kubejs:lootbox_brass"
 				type: "item"
 			}]
 			size: 1.5d
@@ -1214,6 +1251,12 @@
 		{
 			dependencies: ["0A1CD692562DF490"]
 			id: "0930A951D3532F0E"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "366523C573F8882A"
+				table_id: 5377619726450836083L
+				type: "choice"
+			}]
 			subtitle: "Increasing your stack size by 64!"
 			tasks: [{
 				id: "679F3FAE00639BD5"
@@ -1254,6 +1297,11 @@
 			dependencies: ["7453758780D4848F"]
 			icon: "createaddition:large_connector"
 			id: "389F49B8EA9807B9"
+			rewards: [{
+				id: "31ABD4121BCC4CBB"
+				item: "kubejs:lootbox_train"
+				type: "item"
+			}]
 			subtitle: "Connectors are used to transfer your electricity around your machines."
 			tasks: [{
 				id: "28D21275C042E2F8"
@@ -1275,6 +1323,11 @@
 			dependencies: ["26B607339F9A9909"]
 			icon: "minecraft:end_stone"
 			id: "191247B3681B4E45"
+			rewards: [{
+				id: "5195EFFFC4F30DDD"
+				item: "kubejs:lootbox_enchantments_generic"
+				type: "item"
+			}]
 			subtitle: "Enter &6The End"
 			tasks: [{
 				dimension: "minecraft:the_end"
@@ -1474,8 +1527,8 @@
 			id: "2E7775FE373386DA"
 			optional: true
 			rewards: [{
-				id: "217B1C1A181385E5"
-				item: "kubejs:diamond_repair_kit"
+				id: "42BA66D1EC4EA6DE"
+				item: "kubejs:lootbox_train"
 				type: "item"
 			}]
 			shape: "circle"
@@ -1630,6 +1683,11 @@
 				"389F49B8EA9807B9"
 			]
 			id: "3D84983EB475FA84"
+			rewards: [{
+				id: "4C333AEAB5C2D9A3"
+				item: "kubejs:lootbox_digital"
+				type: "item"
+			}]
 			size: 2.0d
 			subtitle: "Search through your items with a digitally powered interface."
 			tasks: [{
@@ -1720,6 +1778,11 @@
 		{
 			dependencies: ["6C37D2ED3A1BB762"]
 			id: "122521EBD0B42EB3"
+			rewards: [{
+				id: "3B430AEB1DE90531"
+				item: "kubejs:lootbox_digital"
+				type: "item"
+			}]
 			tasks: [{
 				id: "410388C232FEDFB9"
 				item: "refinedstorage:advanced_processor"
@@ -1859,6 +1922,11 @@
 		{
 			dependencies: ["28455BB910BA3421"]
 			id: "27E919C7ECB9F8FB"
+			rewards: [{
+				id: "5DA394CEEC090F73"
+				item: "kubejs:lootbox_digital"
+				type: "item"
+			}]
 			subtitle: "Use this for basic crafting recipes and inputting into assembly lines."
 			tasks: [{
 				id: "0A6CCA3C0E0A909B"
@@ -1872,6 +1940,11 @@
 		{
 			dependencies: ["28455BB910BA3421"]
 			id: "701CD06412CA32F0"
+			rewards: [{
+				id: "248616E278BC3E52"
+				item: "kubejs:lootbox_digital"
+				type: "item"
+			}]
 			subtitle: "Monitor your autocrafts and keep track of &m if &r when stuff goes wrong."
 			tasks: [{
 				id: "060E680C09EF90D9"
@@ -1902,6 +1975,11 @@
 		{
 			dependencies: ["26B607339F9A9909"]
 			id: "5D83A0E68CAC463B"
+			rewards: [{
+				id: "61DB579EEA02AE94"
+				item: "kubejs:lootbox_enchantments_generic"
+				type: "item"
+			}]
 			size: 2.0d
 			subtitle: "Fast transport for you and your items!"
 			tasks: [{
@@ -1989,10 +2067,9 @@
 			hide: true
 			id: "46B6445D0861E943"
 			rewards: [{
-				exclude_from_claim_all: true
-				id: "4E31CA56DEEE5683"
-				table_id: 4644817619437582358L
-				type: "choice"
+				id: "675B7CC225BC91DD"
+				item: "kubejs:lootbox_andesite"
+				type: "item"
 			}]
 			subtitle: "The heart of create."
 			tasks: [{
@@ -2008,22 +2085,11 @@
 			dependencies: ["497786B7F649F21B"]
 			hide: true
 			id: "55BB62DE3FC965DD"
-			rewards: [
-				{
-					id: "305CCA4B03E7627D"
-					item: "create:cogwheel"
-					random_bonus: 15
-					title: "For your future builds..."
-					type: "item"
-				}
-				{
-					id: "467A108D28B7F16E"
-					item: "create:shaft"
-					random_bonus: 15
-					title: "You deserve it engineer!"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "13C3450D1B3ED3ED"
+				item: "kubejs:lootbox_andesite"
+				type: "item"
+			}]
 			subtitle: "Allows you to see information about your contraptions."
 			tasks: [{
 				id: "28264499A5E345E7"
@@ -2050,11 +2116,23 @@
 			]
 			icon: "minecraft:enchanting_table"
 			id: "11E1B19181CD6D2D"
-			rewards: [{
-				id: "7AE232F9BBEB9F9C"
-				type: "xp_levels"
-				xp_levels: 1
-			}]
+			rewards: [
+				{
+					id: "4BCC512032D03DBC"
+					item: "kubejs:lootbox_enchantments_weapon"
+					type: "item"
+				}
+				{
+					id: "3C396B63B79507D2"
+					item: "kubejs:lootbox_enchantments_generic"
+					type: "item"
+				}
+				{
+					id: "1C3FC9E03F71E30D"
+					item: "kubejs:lootbox_enchantments_armor"
+					type: "item"
+				}
+			]
 			size: 2.0d
 			subtitle: "Enchanting has been greatly modified."
 			tasks: [{
@@ -2098,26 +2176,23 @@
 			]
 			hide: true
 			id: "7FF7BB4DA70B8C78"
-			rewards: [{
-				id: "6A3729BBCF546F1A"
-				item: {
-					Count: 1b
-					id: "minecraft:enchanted_book"
-					tag: {
-						display: {
-							Lore: [
-								"[{\"text\":\"Can contain \",\"color\":\"gray\",\"italic\":false},{\"text\":\"ANY \",\"color\":\"red\",\"italic\":false},{\"text\":\"enchantment.\",\"color\":\"gray\",\"italic\":false}]"
-								"{\"text\":\" \"}"
-								"{\"text\":\"Equal chance of all enchants.\",\"color\":\"gold\",\"italic\":false}"
-								"{\"text\":\"Will always be Level I\",\"color\":\"yellow\",\"italic\":false}"
-							]
-							Name: "{\"text\":\"Random Enchanted Book\",\"color\":\"gold\",\"italic\":false}"
-						}
-					}
+			rewards: [
+				{
+					id: "685B5D35C1D4B11A"
+					item: "kubejs:lootbox_enchantments_generic"
+					type: "item"
 				}
-				title: "Does nothing itself, see it's recipe for details."
-				type: "item"
-			}]
+				{
+					id: "40402201C135B08A"
+					item: "kubejs:lootbox_enchantments_weapon"
+					type: "item"
+				}
+				{
+					id: "0DA915043CA2CAAE"
+					item: "kubejs:lootbox_enchantments_armor"
+					type: "item"
+				}
+			]
 			subtitle: "Look at the recipe for the enchanted book to find out more."
 			tasks: [{
 				id: "6816B4FAD3892E86"
@@ -2183,20 +2258,11 @@
 			dependencies: ["11E1B19181CD6D2D"]
 			hide: true
 			id: "094EE47B94A6CDB0"
-			rewards: [
-				{
-					id: "7701407820F7152B"
-					item: "create:fluid_pipe"
-					random_bonus: 15
-					type: "item"
-				}
-				{
-					id: "2EC67F1BB7A63EAF"
-					item: "create:mechanical_pump"
-					random_bonus: 2
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "1859F918A145202C"
+				item: "kubejs:lootbox_copper"
+				type: "item"
+			}]
 			subtitle: "You can move liquid XP around using Create pipes"
 			tasks: [{
 				id: "28B69D214162EEAE"
@@ -2210,6 +2276,11 @@
 		{
 			dependencies: ["26B607339F9A9909"]
 			id: "7DB05CBC8B579FD8"
+			rewards: [{
+				id: "3AB2E54C8ECAE3C8"
+				item: "kubejs:lootbox_brass"
+				type: "item"
+			}]
 			size: 2.0d
 			subtitle: "Mechanical Crafting allows recipes with sizes upto 5x5"
 			tasks: [{
@@ -2225,6 +2296,11 @@
 			dependencies: ["7DB05CBC8B579FD8"]
 			hide: true
 			id: "0353772AB22352F6"
+			rewards: [{
+				id: "77518636696DFCA8"
+				item: "kubejs:lootbox_enchantments_weapon"
+				type: "item"
+			}]
 			subtitle: "The extendo grip is an essential tool to give you more reach."
 			tasks: [{
 				id: "5BAF76103844FECF"
@@ -2296,12 +2372,19 @@
 			]
 			icon: "farmersdelight:hamburger"
 			id: "7407910917C9F8A9"
-			rewards: [{
-				count: 3
-				id: "743EC2F2D3A46584"
-				item: "farmersdelight:bacon_sandwich"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 3
+					id: "743EC2F2D3A46584"
+					item: "farmersdelight:bacon_sandwich"
+					type: "item"
+				}
+				{
+					id: "2BFC511310E38BC1"
+					item: "kubejs:lootbox_basic"
+					type: "item"
+				}
+			]
 			size: 2.0d
 			subtitle: "Nutritional Balance!"
 			tasks: [
@@ -2541,6 +2624,11 @@
 			dependencies: ["7DB05CBC8B579FD8"]
 			hide: true
 			id: "0F4CCCBB88406D91"
+			rewards: [{
+				id: "042DEC35FB3D8EB4"
+				item: "kubejs:lootbox_enchantments_generic"
+				type: "item"
+			}]
 			subtitle: "Pickup items with ease!"
 			tasks: [{
 				id: "770DF739137A9987"
@@ -2680,6 +2768,11 @@
 			]
 			icon: "minecraft:farmland"
 			id: "372F217BE8C60631"
+			rewards: [{
+				id: "3DC4CFDB12C38C85"
+				item: "kubejs:lootbox_basic"
+				type: "item"
+			}]
 			size: 2.0d
 			subtitle: "Automating the basics."
 			tasks: [{
@@ -2779,6 +2872,11 @@
 			dependencies: ["7900CBBDF3093BC3"]
 			icon: "minecraft:gold_ingot"
 			id: "2C83AEF36C0B1A70"
+			rewards: [{
+				id: "446F1F9E19713047"
+				item: "kubejs:lootbox_brass"
+				type: "item"
+			}]
 			subtitle: "Pack nuggets into Gold Ingots"
 			tasks: [
 				{
@@ -3391,11 +3489,18 @@
 			description: ["Toolboxes provide you a quick way to access your items when nearby. The stack items 4x the normal stack size and can be accessed with a keybind. These are very useful to store items you use a lot like cogs/shafts/belts etc!"]
 			icon: "create:brown_toolbox"
 			id: "6DFE9B670BBBD1D9"
-			rewards: [{
-				id: "4CE4C20ABE4C1174"
-				item: "create:brown_toolbox"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "4CE4C20ABE4C1174"
+					item: "create:brown_toolbox"
+					type: "item"
+				}
+				{
+					id: "0841DB336EDBD4B2"
+					item: "kubejs:lootbox_andesite"
+					type: "item"
+				}
+			]
 			subtitle: "Quick access to your items!"
 			tasks: [{
 				id: "3B11CC8A46B4975B"
@@ -3420,6 +3525,11 @@
 			]
 			icon: "create_dd:tin_ingot"
 			id: "475D7FD7832B3BA8"
+			rewards: [{
+				id: "5F32732FA0578FCF"
+				item: "kubejs:lootbox_andesite"
+				type: "item"
+			}]
 			subtitle: "Pack nuggets into Tin Ingots"
 			tasks: [
 				{
@@ -3815,6 +3925,11 @@
 			description: [""]
 			icon: "createindustry:gasoline_engine"
 			id: "0E1103BC3A77FFC7"
+			rewards: [{
+				id: "7A6BA82E3692BAE5"
+				item: "kubejs:lootbox_redstone"
+				type: "item"
+			}]
 			subtitle: "Harness Oil for MAXIMUM POWAAHHH!"
 			tasks: [
 				{
@@ -3878,6 +3993,11 @@
 			hide: true
 			icon: "createindustry:steel_pump"
 			id: "753BE290D41373D9"
+			rewards: [{
+				id: "07333D5DEBDB626C"
+				item: "kubejs:lootbox_brass"
+				type: "item"
+			}]
 			subtitle: "Collect Oil from a deposit."
 			tasks: [
 				{
@@ -3920,6 +4040,11 @@
 			dependencies: ["753BE290D41373D9"]
 			icon: "createindustry:steel_fluid_tank"
 			id: "717CC1ACE664292F"
+			rewards: [{
+				id: "083636DA9E0DA1EE"
+				item: "kubejs:lootbox_enchantments_armor"
+				type: "item"
+			}]
 			subtitle: "Refine Oil using distillation"
 			tasks: [
 				{
@@ -4369,12 +4494,19 @@
 		{
 			dependencies: ["26B607339F9A9909"]
 			id: "27C6A160DC38BA07"
-			rewards: [{
-				id: "14794A95DD0068FF"
-				item: "supplementaries:cog_block"
-				random_bonus: 4
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "14794A95DD0068FF"
+					item: "supplementaries:cog_block"
+					random_bonus: 4
+					type: "item"
+				}
+				{
+					id: "6B84544EA9651FF3"
+					item: "kubejs:lootbox_enchantments_armor"
+					type: "item"
+				}
+			]
 			subtitle: "Redstone that goes up!"
 			tasks: [{
 				id: "3ACEF802C6E9FE36"
@@ -4390,10 +4522,8 @@
 			icon: "create:copper_sheet"
 			id: "05BEFB7D67ECA089"
 			rewards: [{
-				count: 3
-				id: "0EF3568708B5C5F1"
-				item: "minecraft:raw_copper"
-				random_bonus: 7
+				id: "0BA2090CDA8FB523"
+				item: "kubejs:lootbox_copper"
 				type: "item"
 			}]
 			size: 1.5d
@@ -4416,8 +4546,8 @@
 			hide_dependency_lines: true
 			id: "08035B026259007F"
 			rewards: [{
-				id: "7816264CB97A3C8D"
-				item: "kubejs:copper_repair_kit"
+				id: "3F1DFEF6F9F40813"
+				item: "kubejs:lootbox_andesite"
 				type: "item"
 			}]
 			subtitle: "Copper tools provide great mining level."
@@ -4440,8 +4570,8 @@
 			dependencies: ["05BEFB7D67ECA089"]
 			id: "0E1184C33CD06F00"
 			rewards: [{
-				id: "1CDBED64B47A777F"
-				item: "kubejs:copper_repair_kit"
+				id: "69107E16CB81DAFF"
+				item: "kubejs:lootbox_andesite"
 				type: "item"
 			}]
 			subtitle: "A more powerful weapon!"
@@ -4478,20 +4608,6 @@
 			}]
 			x: 4.75d
 			y: 8.5d
-		}
-		{
-			dependencies: ["6E931AE38AE91C4F"]
-			hide: true
-			id: "4369ACED943A4388"
-			subtitle: "Rolling up rods!"
-			tasks: [{
-				id: "0845E01AF7940888"
-				item: "createaddition:rolling_mill"
-				type: "item"
-			}]
-			title: "Rolling"
-			x: 4.0d
-			y: 10.25d
 		}
 		{
 			dependencies: ["26C9C63835C84874"]
@@ -4567,11 +4683,18 @@
 		{
 			dependencies: ["15A889CC22700F09"]
 			id: "39E9857E217FD35B"
-			rewards: [{
-				id: "78ABC7831A6381E3"
-				item: "minecraft:honeycomb"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "78ABC7831A6381E3"
+					item: "minecraft:honeycomb"
+					type: "item"
+				}
+				{
+					id: "680460ADBA9E0E1A"
+					item: "kubejs:lootbox_andesite"
+					type: "item"
+				}
+			]
 			subtitle: "Buzzy Bees!"
 			tasks: [{
 				id: "0E8E7B52D01571BE"
@@ -4589,10 +4712,8 @@
 			icon: "create:copper_casing"
 			id: "736729461C40555C"
 			rewards: [{
-				count: 3
-				id: "66B49C63B9D6DEBE"
-				item: "create:copper_casing"
-				random_bonus: 2
+				id: "47663059EC44DBD0"
+				item: "kubejs:lootbox_copper"
 				type: "item"
 			}]
 			tasks: [
@@ -4678,6 +4799,11 @@
 			description: [""]
 			icon: "create:spout"
 			id: "4FCC8858C5E88628"
+			rewards: [{
+				id: "5082DD6114C85BCF"
+				item: "kubejs:lootbox_colored"
+				type: "item"
+			}]
 			size: 2.0d
 			subtitle: "&7With &cRed&7, &9Blue&7, &aGreen &7\\& &fWhite&7 you can make any color!"
 			tasks: [
@@ -4719,6 +4845,11 @@
 			]
 			hide: true
 			id: "5C406823B666D49C"
+			rewards: [{
+				id: "04C5444A5C461CF5"
+				item: "kubejs:lootbox_copper"
+				type: "item"
+			}]
 			shape: "circle"
 			tasks: [{
 				id: "374C9DAAF9E2ACD5"
@@ -4768,6 +4899,11 @@
 			]
 			hide: true
 			id: "6DFB6959E8456FA5"
+			rewards: [{
+				id: "44409313D3CC3F85"
+				item: "kubejs:lootbox_copper"
+				type: "item"
+			}]
 			shape: "circle"
 			tasks: [{
 				id: "22DB5911B1255BB3"
@@ -4848,6 +4984,11 @@
 			]
 			hide: true
 			id: "0DF4E0139E18D4AF"
+			rewards: [{
+				id: "4ACCA933DA7CD7D9"
+				item: "kubejs:lootbox_colored"
+				type: "item"
+			}]
 			shape: "circle"
 			tasks: [{
 				id: "6E7D56FE8DBA0C2C"
@@ -4880,6 +5021,11 @@
 			]
 			hide: true
 			id: "3CAE78AFBD8F50A5"
+			rewards: [{
+				id: "77474A5CCD73B7B6"
+				item: "kubejs:lootbox_copper"
+				type: "item"
+			}]
 			shape: "circle"
 			tasks: [{
 				id: "3E07E2359C472C63"
@@ -4896,9 +5042,9 @@
 			]
 			id: "4D195C7EF19B4541"
 			rewards: [{
-				id: "4034A91FE41BA05A"
-				type: "xp_levels"
-				xp_levels: 3
+				id: "291C2D655BD58FC2"
+				item: "kubejs:lootbox_copper"
+				type: "item"
 			}]
 			tasks: [{
 				id: "78DC217647284516"
@@ -4934,11 +5080,18 @@
 			dependencies: ["23C71EAA95B6021A"]
 			hide_dependency_lines: true
 			id: "15AE25C7E70FF992"
-			rewards: [{
-				id: "4A3FAB540D45B7D5"
-				item: "create:depot"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "159BC94FFCA27D67"
+					item: "kubejs:lootbox_colored"
+					type: "item"
+				}
+				{
+					id: "2CA053B3F80005C3"
+					item: "kubejs:lootbox_copper"
+					type: "item"
+				}
+			]
 			size: 1.5d
 			subtitle: "Pouring Fluid onto Items"
 			tasks: [{
@@ -5454,6 +5607,11 @@
 			dependencies: ["3EE22F912CE4780D"]
 			icon: "minecraft:diamond"
 			id: "34D86C430479325D"
+			rewards: [{
+				id: "05621E8B255729AC"
+				item: "kubejs:lootbox_brass"
+				type: "item"
+			}]
 			subtitle: "Pack Diamond Shards into Diamonds"
 			tasks: [
 				{
@@ -5490,6 +5648,11 @@
 			]
 			icon: "minecraft:emerald"
 			id: "015B10C45EDD63CD"
+			rewards: [{
+				id: "2E81A6F95194C165"
+				item: "kubejs:lootbox_brass"
+				type: "item"
+			}]
 			subtitle: "Feed produce into the auto trader for Emeralds"
 			tasks: [
 				{
@@ -5559,11 +5722,10 @@
 			id: "60EC2DACD3C92008"
 			optional: true
 			rewards: [{
-				count: 5
-				id: "4B3D67AE3D97AB6E"
-				item: "farmersdelight:horse_feed"
-				random_bonus: 5
-				type: "item"
+				exclude_from_claim_all: true
+				id: "5833D076DF04CCDE"
+				table_id: 1792698340290304743L
+				type: "choice"
 			}]
 			subtitle: "Prepare your horse for battle!"
 			tasks: [{
@@ -6819,13 +6981,35 @@
 			dependencies: ["60EC2DACD3C92008"]
 			icon: "netherite_horse_armor:netherite_horse_armor"
 			id: "36655AED6CF061E6"
-			rewards: [{
-				count: 10
-				id: "0987ED671A213C05"
-				item: "farmersdelight:horse_feed"
-				random_bonus: 10
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 10
+					id: "0987ED671A213C05"
+					item: "farmersdelight:horse_feed"
+					random_bonus: 10
+					type: "item"
+				}
+				{
+					id: "488EEE00D8077B85"
+					item: "kubejs:lootbox_explorer"
+					type: "item"
+				}
+				{
+					id: "6B6B834E781FA4DB"
+					item: "kubejs:lootbox_brass"
+					type: "item"
+				}
+				{
+					id: "3409C7BF992B0A2B"
+					item: "kubejs:lootbox_andesite"
+					type: "item"
+				}
+				{
+					id: "434210F0109C2279"
+					item: "kubejs:lootbox_enchantments_generic"
+					type: "item"
+				}
+			]
 			subtitle: "Truly protected!"
 			tasks: [{
 				id: "6B4B3E0A84AD4E2D"

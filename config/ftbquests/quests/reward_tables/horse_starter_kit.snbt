@@ -8,6 +8,9 @@
 		{ count: 5, item: "farmersdelight:horse_feed", random_bonus: 5 }
 		{ item: "minecraft:diamond_horse_armor" }
 		{ count: 3, item: "minecraft:lead" }
+		{ item: "kubejs:lootbox_explorer" }
+		{ item: "kubejs:lootbox_andesite" }
+		{ item: "kubejs:lootbox_redstone" }
 	]
 	title: "Horse Starter Kit"
 }

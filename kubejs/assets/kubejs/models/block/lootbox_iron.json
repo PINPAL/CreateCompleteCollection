@@ -1,0 +1,6 @@
+{
+	"parent": "kubejs:block/lootbox",
+	"textures": {
+		"icon": "kubejs:block/lootbox_icons/iron"
+	}
+}

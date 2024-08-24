@@ -1,0 +1,14 @@
+{
+	"lootbox_place": {
+		"subtitle": "subtitle.kubejs.lootbox_place",
+		"sounds": ["kubejs:lootbox_place"]
+	},
+	"lootbox_break": {
+		"subtitle": "subtitle.kubejs.lootbox_break",
+		"sounds": ["kubejs:lootbox_break"]
+	},
+	"lootbox_open": {
+		"subtitle": "subtitle.kubejs.lootbox_open",
+		"sounds": ["kubejs:lootbox_open"]
+	}
+}

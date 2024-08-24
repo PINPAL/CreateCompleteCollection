@@ -137,31 +137,36 @@ ServerEvents.recipes((event) => {
 		// ============================
 		if (tier.properties.hasArmor) {
 			// Helmet
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_helmet`, `${tier.properties.prefix}_helmet`);
+			event.recipes.create
+				.crushing(`kubejs:broken_${tier.tier}_helmet`, `${tier.properties.prefix}_helmet`)
+				.id(`kubejs:crushing_${tier.tier}_helmet`);
 			event.smithing(
 				`${tier.properties.prefix}_helmet`,
 				`${tier.previousTier.armorPrefix}_helmet`,
 				`kubejs:${tier.tier}_stitching`
 			);
 			// Chestplate
-			event.recipes.create.crushing(
-				`kubejs:broken_${tier.tier}_chestplate`,
-				`${tier.properties.prefix}_chestplate`
-			);
+			event.recipes.create
+				.crushing(`kubejs:broken_${tier.tier}_chestplate`, `${tier.properties.prefix}_chestplate`)
+				.id(`kubejs:crushing_${tier.tier}_chestplate`);
 			event.smithing(
 				`${tier.properties.prefix}_chestplate`,
 				`${tier.previousTier.armorPrefix}_chestplate`,
 				`kubejs:${tier.tier}_stitching`
 			);
 			// Leggings
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_leggings`, `${tier.properties.prefix}_leggings`);
+			event.recipes.create
+				.crushing(`kubejs:broken_${tier.tier}_leggings`, `${tier.properties.prefix}_leggings`)
+				.id(`kubejs:crushing_${tier.tier}_leggings`);
 			event.smithing(
 				`${tier.properties.prefix}_leggings`,
 				`${tier.previousTier.armorPrefix}_leggings`,
 				`kubejs:${tier.tier}_stitching`
 			);
 			// Boots
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_boots`, `${tier.properties.prefix}_boots`);
+			event.recipes.create
+				.crushing(`kubejs:broken_${tier.tier}_boots`, `${tier.properties.prefix}_boots`)
+				.id(`kubejs:crushing_${tier.tier}_boots`);
 			event.smithing(
 				`${tier.properties.prefix}_boots`,
 				`${tier.previousTier.armorPrefix}_boots`,
@@ -171,7 +176,9 @@ ServerEvents.recipes((event) => {
 		// KNIFE
 		// ============================
 		if (tier.properties.hasKnife) {
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_knife`, tier.properties.knife);
+			event.recipes.create
+				.crushing(`kubejs:broken_${tier.tier}_knife`, tier.properties.knife)
+				.id(`kubejs:crushing_${tier.tier}_knife`);
 			event.smithing(
 				// Unbreakable IF netherite
 				tier.tier == "netherite"
@@ -185,21 +192,27 @@ ServerEvents.recipes((event) => {
 		// ============================
 		if (tier.properties.hasTools) {
 			// Sword
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_sword`, `${tier.properties.prefix}_sword`);
+			event.recipes.create
+				.crushing(`kubejs:broken_${tier.tier}_sword`, `${tier.properties.prefix}_sword`)
+				.id(`kubejs:crushing_${tier.tier}_sword`);
 			event.smithing(
 				`${tier.properties.prefix}_sword`,
 				`${tier.previousTier.prefix}_sword`,
 				`kubejs:${tier.tier}_blade`
 			);
 			// Hoe
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_hoe`, `${tier.properties.prefix}_hoe`);
+			event.recipes.create
+				.crushing(`kubejs:broken_${tier.tier}_hoe`, `${tier.properties.prefix}_hoe`)
+				.id(`kubejs:crushing_${tier.tier}_hoe`);
 			event.smithing(
 				`${tier.properties.prefix}_hoe`,
 				`${tier.previousTier.prefix}_hoe`,
 				`kubejs:${tier.tier}_blade`
 			);
 			// Paxel
-			event.recipes.create.crushing(`kubejs:broken_${tier.tier}_paxel`, tier.properties.paxel);
+			event.recipes.create
+				.crushing(`kubejs:broken_${tier.tier}_paxel`, `kubejs:${tier.tier}_paxel`)
+				.id(`kubejs:crushing_${tier.tier}_paxel`);
 			event.smithing(
 				`kubejs:${tier.tier}_paxel`,
 				`kubejs:${tier.previousTier.name}_paxel`,

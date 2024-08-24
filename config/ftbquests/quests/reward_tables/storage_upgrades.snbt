@@ -10,6 +10,10 @@
 		{ item: "storagedrawers:diamond_storage_upgrade" }
 		{ item: "storagedrawers:emerald_storage_upgrade" }
 		{ item: "storagedrawers:creative_storage_upgrade", weight: 0.5f }
+		{ item: "kubejs:lootbox_explorer" }
+		{ item: "kubejs:lootbox_enchantments_generic" }
+		{ item: "kubejs:lootbox_enchantments_weapon" }
+		{ item: "kubejs:lootbox_enchantments_armor" }
 	]
 	title: "Storage Upgrades"
 }

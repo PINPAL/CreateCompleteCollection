@@ -163,6 +163,12 @@ ServerEvents.recipes((event) => {
 		B: "create:brass_hand",
 	});
 
+	// Explorer Lootbox
+	event.shaped("kubejs:lootbox_explorer", ["EEE", "ELE", "EEE"], {
+		E: "#minecraft:planks",
+		L: "naturescompass:naturescompass",
+	});
+
 	// Sandpaper
 	event.shaped("2x kubejs:sugar_paper", ["SSS", "   ", "   "], {
 		S: "minecraft:sugar_cane",
