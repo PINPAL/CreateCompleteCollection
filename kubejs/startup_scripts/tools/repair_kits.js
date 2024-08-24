@@ -16,6 +16,6 @@ StartupEvents.registry("item", (event) => {
 		event
 			.create(material + "_repair_kit")
 			.displayName(formatName(material) + " Repair Kit")
-			.unstackable();
+			.maxStackSize(4);
 	});
 });
