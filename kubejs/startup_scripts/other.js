@@ -50,4 +50,6 @@ StartupEvents.registry("item", (event) => {
 		.displayName("Cornflower Bush")
 		.tag("minecraft:flowers")
 		.tag("minecraft:tall_flowers");
+	// Sugar Paper
+	event.create("kubejs:sugar_paper").displayName("Sugar Paper");
 });

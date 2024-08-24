@@ -10,6 +10,10 @@ ServerEvents.tags("item", (event) => {
 		event.add("kubejs:leather_armor", item);
 	});
 
+	["minecraft:paper", "kubejs:sugar_paper"].forEach((item) => {
+		event.add("kubejs:low_quality_paper", item);
+	});
+
 	[
 		"minecraft:chainmail_chestplate",
 		"minecraft:chainmail_leggings",

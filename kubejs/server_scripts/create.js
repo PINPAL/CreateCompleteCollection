@@ -163,6 +163,15 @@ ServerEvents.recipes((event) => {
 		B: "create:brass_hand",
 	});
 
+	// Sandpaper
+	event.shaped("2x kubejs:sugar_paper", ["SSS", "   ", "   "], {
+		S: "minecraft:sugar_cane",
+	});
+	event.remove({ output: "create:sand_paper" });
+	event.remove({ output: "create:red_sand_paper" });
+	event.shapeless("create:sand_paper", ["minecraft:sand", "#kubejs:low_quality_paper"]);
+	event.shapeless("create:red_sand_paper", ["minecraft:red_sand", "#kubejs:low_quality_paper"]);
+
 	// Harder Train Controls
 	event.shaped("create:controls", [" L ", " T ", "P I"], {
 		L: "minecraft:lever",
