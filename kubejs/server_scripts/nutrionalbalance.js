@@ -31,6 +31,22 @@ function roundToNearestHalf(number) {
 	return Math.round(number * 2) / 2;
 }
 
+function setHunchVisiblity(isVisible, event) {
+	if (isVisible) {
+		event.player.paint({
+			"*": {
+				visible: true,
+			},
+		});
+	} else {
+		event.player.paint({
+			"*": {
+				visible: false,
+			},
+		});
+	}
+}
+
 PlayerEvents.loggedIn((event) => {
 	// Draw Hunches (empty)
 	event.player.paint({
@@ -131,8 +147,21 @@ var hunchYPos = -37;
 var hunchSkakePos = 1;
 
 PlayerEvents.tick((event) => {
-	if (event.player.isCreative()) return;
-	if (event.player.isSpectator()) return;
+	// Hide Hunches IF:
+	// the player is under water
+	// the player is in creative mode or spectator mode
+	// the player is riding a horse
+	if (
+		event.player.isUnderWater() ||
+		event.player.isCreative() ||
+		event.player.isSpectator() ||
+		event.player.isPassenger()
+	) {
+		setHunchVisiblity(false, event);
+		return;
+	} else {
+		setHunchVisiblity(true, event);
+	}
 	// Fetch Nutrients
 	let nutrients = nutritionAPI.getWorldNutritionData().getNutritionalBalancePlayer(event.player).getPlayerNutrients();
 	let nutrientVeggies = "";
