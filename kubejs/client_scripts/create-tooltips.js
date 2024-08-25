@@ -412,6 +412,10 @@ const itemsToTooltip = [
 			},
 		],
 	},
+	{
+		item: "kubejs:sugar_paper",
+		summary: ["A $low quality$ alternative to", "regular paper.", "Not suitable for $books$."],
+	},
 ];
 
 const allPaxels = [
