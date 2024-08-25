@@ -242,6 +242,12 @@ ServerEvents.tags("item", (event) => {
 		event.remove("sliceanddice:allowed_tools", item);
 	});
 
+	const casings = ["kubejs:steel_casing"];
+	casings.forEach((item) => {
+		event.add("create:casing", item);
+		event.add("create:wrench_pickup", item);
+	});
+
 	const paxels = [
 		"kubejs:wooden_paxel",
 		"kubejs:stone_paxel",
@@ -347,6 +353,11 @@ ServerEvents.tags("item", (event) => {
 ServerEvents.tags("block", (event) => {
 	[/quark:.*blossom.*/, /quark:.*ancient.*/].forEach((item) => {
 		event.removeAllTagsFrom(item);
+	});
+
+	const casings = ["kubejs:steel_casing"];
+	casings.forEach((item) => {
+		event.add("create:wrench_pickup", item);
 	});
 
 	event.remove("forge:stone", /quark:/);
