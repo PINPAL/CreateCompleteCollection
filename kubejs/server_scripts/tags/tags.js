@@ -248,6 +248,11 @@ ServerEvents.tags("item", (event) => {
 		event.add("create:wrench_pickup", item);
 	});
 
+	const airSources = ["create:copper_backtank", "create:netherite_backtank"];
+	airSources.forEach((item) => {
+		event.add("create:pressurized_air_sources", item);
+	});
+
 	const paxels = [
 		"kubejs:wooden_paxel",
 		"kubejs:stone_paxel",
