@@ -537,7 +537,7 @@ global.lootboxes = {
 	},
 	colored: {
 		name: "Colored",
-		rolls: 16,
+		rolls: 1,
 		items: [
 			{
 				item: "kubejs:white_dye_fluid_bucket",
