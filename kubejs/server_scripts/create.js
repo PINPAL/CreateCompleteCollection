@@ -105,6 +105,15 @@ ServerEvents.recipes((event) => {
 		B: "create_dd:bronze_casing",
 	});
 
+	// Fix Bronze Saw
+	event.remove({ output: "create_dd:bronze_saw" });
+	event.shaped("create_dd:bronze_saw", [" S ", "B6B", " C "], {
+		B: "#forge:plates/bronze",
+		S: "#forge:ingots/steel",
+		6: "create:mechanical_saw",
+		C: "create_dd:bronze_casing",
+	});
+
 	// Harder Spout
 	event.shaped(Item.of("create:spout"), [" C ", " K ", " S "], {
 		C: "create:copper_casing",

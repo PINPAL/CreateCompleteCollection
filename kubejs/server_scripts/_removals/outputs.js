@@ -138,6 +138,9 @@ const outputsToRemove = [
 	"createaddition:electrum_rod",
 	"createaddition:electrum_sheet",
 	"createaddition:electrum_wire",
+	"createaddition:electrum_spool",
+	"createaddition:electrum_amulet",
+	"createaddition:electrum_ingot",
 	"createaddition:zinc_sheet",
 	Item.of("createaddition:diamond_grit_sandpaper").weakNBT(),
 

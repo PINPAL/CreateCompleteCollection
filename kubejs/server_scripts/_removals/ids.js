@@ -38,6 +38,10 @@ const idsToRemove = [
 	"farmersdelight:integration/create/mixing/pie_crust_from_mixing",
 	"farmersdelight:integration/create/mixing/tomato_sauce_from_mixing",
 
+	// Create Addition
+	"createaddition:crafting/large_connector_electrum",
+	"createaddition:crafting/modular_accumulator_electrum",
+
 	// Create Dreams & Desires
 	"create_dd:mixing/asphalt",
 	"create_dd:industrial_iron/mechanical_press",

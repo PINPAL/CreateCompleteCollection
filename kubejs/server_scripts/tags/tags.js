@@ -14,6 +14,8 @@ ServerEvents.tags("item", (event) => {
 		event.add("kubejs:low_quality_paper", item);
 	});
 
+	event.add("forge:storage_blocks/aluminum", "createindustry:aluminum_block");
+
 	[
 		"minecraft:chainmail_chestplate",
 		"minecraft:chainmail_leggings",
