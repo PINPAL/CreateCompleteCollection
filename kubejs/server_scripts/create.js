@@ -105,6 +105,11 @@ ServerEvents.recipes((event) => {
 		B: "create_dd:bronze_casing",
 	});
 
+	// Undo Coal Coke Block to Coal Coke
+	event
+		.shapeless("createindustry:coal_coke", ["createindustry:coal_coke_block"])
+		.id("kubejs:coal_coke_block_whoopsie");
+
 	// Fix Bronze Saw
 	event.remove({ output: "create_dd:bronze_saw" });
 	event.shaped("create_dd:bronze_saw", [" S ", "B6B", " C "], {
