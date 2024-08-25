@@ -17,7 +17,7 @@ StartupEvents.registry("block", (event) => {
 	event
 		.create("anvil", "cardinal")
 		.displayName("Anvil")
-		.material("anvil")
+		.material("heavy_metal")
 		.hardness(5.0)
 		.resistance(1200.0)
 		.defaultCutout()
