@@ -397,7 +397,7 @@ global.lootboxes = {
 	},
 	redstone: {
 		name: "Redstone",
-		rolls: 10,
+		rolls: 16,
 		items: [
 			{
 				item: "#forge:gems/redstone",
@@ -414,6 +414,10 @@ global.lootboxes = {
 			{
 				item: "minecraft:comparator",
 				weight: 10,
+			},
+			{
+				item: "supplementaries:cog_block",
+				weight: 3,
 			},
 			{
 				item: "minecraft:observer",
@@ -707,10 +711,74 @@ global.lootboxes = {
 			},
 		],
 	},
-	enchantments_weapon: {
-		name: "Weapon Enchants",
+	enchantments_generic: {
+		name: "Random Enchants",
 		rolls: 1,
 		items: [
+			{
+				item: Item.of("create:experience_nugget"),
+				weight: 11.25,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:protection", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:fire_protection", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:feather_falling", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:blast_protection", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:projectile_protection", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:respiration", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:aqua_affinity", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:thorns", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:depth_strider", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:frost_walker", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:binding_curse", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:swift_sneak", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of("minecraft:enchanted_book").enchant("minecraft:soul_speed", 1),
+				weight: 1,
+			},
+			{
+				item: Item.of(
+					"minecraft:enchanted_book",
+					1,
+					'{StoredEnchantments:[{id:"ensorcellation:air_affinity",lvl:1s}]}'
+				),
+				weight: 1,
+			},
 			{
 				item: Item.of("minecraft:enchanted_book").enchant("minecraft:sharpness", 1),
 				weight: 1,
@@ -799,12 +867,6 @@ global.lootboxes = {
 				),
 				weight: 1,
 			},
-		],
-	},
-	enchantments_generic: {
-		name: "Random Enchants",
-		rolls: 1,
-		items: [
 			{
 				item: Item.of("minecraft:enchanted_book").enchant("minecraft:luck_of_the_sea", 1),
 				weight: 1,
@@ -855,72 +917,6 @@ global.lootboxes = {
 			},
 			{
 				item: Item.of("minecraft:enchanted_book").enchant("minecraft:fortune", 1),
-				weight: 1,
-			},
-		],
-	},
-	enchantments_armor: {
-		name: "Armor Enchants",
-		rolls: 1,
-		items: [
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:protection", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:fire_protection", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:feather_falling", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:blast_protection", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:projectile_protection", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:respiration", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:aqua_affinity", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:thorns", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:depth_strider", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:frost_walker", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:binding_curse", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:swift_sneak", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of("minecraft:enchanted_book").enchant("minecraft:soul_speed", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of(
-					"minecraft:enchanted_book",
-					1,
-					'{StoredEnchantments:[{id:"ensorcellation:air_affinity",lvl:1s}]}'
-				),
 				weight: 1,
 			},
 		],

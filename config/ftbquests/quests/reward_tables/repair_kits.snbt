@@ -14,6 +14,7 @@
 		{ item: "kubejs:lootbox_copper" }
 		{ item: "kubejs:lootbox_redstone" }
 		{ item: "kubejs:lootbox_explorer" }
+		{ item: "kubejs:lootbox_enchantments_generic" }
 	]
 	title: "Repair Kits"
 }

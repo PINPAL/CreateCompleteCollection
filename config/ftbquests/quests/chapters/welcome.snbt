@@ -663,6 +663,11 @@
 		{
 			dependencies: ["06B04C606CE4187C"]
 			id: "6E931AE38AE91C4F"
+			rewards: [{
+				id: "7343F5DC0E467297"
+				item: "kubejs:lootbox_andesite"
+				type: "item"
+			}]
 			size: 2.0d
 			subtitle: "The beginning of Create mod."
 			tasks: [{
@@ -849,6 +854,11 @@
 			dependencies: ["3017843FE3F03B3F"]
 			hide: true
 			id: "7ACDD2A3B9D129A4"
+			rewards: [{
+				id: "24F1B2CE516439E2"
+				item: "kubejs:lootbox_basic"
+				type: "item"
+			}]
 			subtitle: "Your first power without having to crank it."
 			tasks: [{
 				id: "654B0BF9A5AF1F86"
@@ -863,15 +873,22 @@
 			dependencies: ["7ACDD2A3B9D129A4"]
 			hide: true
 			id: "5DFCA69367100FC6"
-			rewards: [{
-				id: "5FF469414CD932C0"
-				item: {
-					Count: 1b
-					id: "minecraft:water_bucket"
-					tag: { }
+			rewards: [
+				{
+					id: "5FF469414CD932C0"
+					item: {
+						Count: 1b
+						id: "minecraft:water_bucket"
+						tag: { }
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "062A525528BCE7D5"
+					item: "kubejs:lootbox_andesite"
+					type: "item"
+				}
+			]
 			subtitle: "The water wheels big cousin."
 			tasks: [{
 				id: "7494FDDA692C5324"
@@ -998,8 +1015,8 @@
 			id: "1822D538FA5F3E98"
 			optional: true
 			rewards: [{
-				id: "32696687F6D2C300"
-				item: "kubejs:lootbox_enchantments_weapon"
+				id: "6C14DE1649C53ED0"
+				item: "kubejs:lootbox_enchantments_generic"
 				type: "item"
 			}]
 			shape: "circle"
@@ -1094,10 +1111,10 @@
 			icon: "storagedrawers:shroud_key"
 			id: "75F594821E72D1B4"
 			rewards: [{
-				auto: "disabled"
-				id: "4E4811AF827812F1"
+				exclude_from_claim_all: true
+				id: "4F41DDA47AF08F30"
 				table_id: 5377619726450836083L
-				type: "random"
+				type: "choice"
 			}]
 			subtitle: "Keys are your friend!"
 			tasks: [
@@ -1184,8 +1201,8 @@
 					type: "item"
 				}
 				{
-					id: "2724AAA7F743FC59"
-					item: "kubejs:lootbox_enchantments_armor"
+					id: "01DC7E183FF0DA27"
+					item: "kubejs:lootbox_enchantments_generic"
 					type: "item"
 				}
 			]
@@ -1342,6 +1359,7 @@
 			icon: "minecraft:end_stone"
 			id: "191247B3681B4E45"
 			rewards: [{
+				count: 3
 				id: "5195EFFFC4F30DDD"
 				item: "kubejs:lootbox_enchantments_generic"
 				type: "item"
@@ -1510,11 +1528,18 @@
 			}
 			id: "11866A0A040998FA"
 			optional: true
-			rewards: [{
-				id: "67EF1291E5020661"
-				item: "kubejs:steel_repair_kit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "67EF1291E5020661"
+					item: "kubejs:steel_repair_kit"
+					type: "item"
+				}
+				{
+					id: "38BB861F3B1BBCE5"
+					item: "kubejs:lootbox_enchantments_generic"
+					type: "item"
+				}
+			]
 			shape: "circle"
 			tasks: [{
 				id: "6CE66F0BF87F4DE1"
@@ -1545,8 +1570,8 @@
 			id: "2E7775FE373386DA"
 			optional: true
 			rewards: [{
-				id: "42BA66D1EC4EA6DE"
-				item: "kubejs:lootbox_train"
+				id: "3522A6F3DDBDF7C3"
+				item: "kubejs:lootbox_enchantments_generic"
 				type: "item"
 			}]
 			shape: "circle"
@@ -1578,12 +1603,19 @@
 			}
 			id: "165135DFCF0DE1E4"
 			optional: true
-			rewards: [{
-				id: "46176DCA2ED2BBFC"
-				item: "kubejs:netherite_repair_kit"
-				random_bonus: 2
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "46176DCA2ED2BBFC"
+					item: "kubejs:netherite_repair_kit"
+					random_bonus: 2
+					type: "item"
+				}
+				{
+					id: "6C3872DB8CE2D0CE"
+					item: "kubejs:lootbox_enchantments_generic"
+					type: "item"
+				}
+			]
 			shape: "circle"
 			tasks: [{
 				id: "67EF0A6F9B34C957"
@@ -1624,11 +1656,18 @@
 			dependencies: ["7326963563960996"]
 			hide: true
 			id: "1EC42DB4CEEF6909"
-			rewards: [{
-				id: "0CD81CDA7F226A70"
-				type: "xp_levels"
-				xp_levels: 10
-			}]
+			rewards: [
+				{
+					id: "0CD81CDA7F226A70"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					id: "3B6BA618C1D6B20E"
+					item: "kubejs:lootbox_enchantments_generic"
+					type: "item"
+				}
+			]
 			subtitle: "The power of magical stars."
 			tasks: [{
 				id: "232DD1DFE2646BC8"
@@ -1914,6 +1953,11 @@
 			dependencies: ["3D84983EB475FA84"]
 			hide: true
 			id: "28455BB910BA3421"
+			rewards: [{
+				id: "3D84A6B1B3618AF2"
+				item: "kubejs:lootbox_digital"
+				type: "item"
+			}]
 			subtitle: "The pattern grid allows you to program patterns to automatically craft items and input items into your assembly lines."
 			tasks: [{
 				id: "61F31E1769C72BA0"
@@ -2133,23 +2177,12 @@
 			]
 			icon: "minecraft:enchanting_table"
 			id: "11E1B19181CD6D2D"
-			rewards: [
-				{
-					id: "4BCC512032D03DBC"
-					item: "kubejs:lootbox_enchantments_weapon"
-					type: "item"
-				}
-				{
-					id: "3C396B63B79507D2"
-					item: "kubejs:lootbox_enchantments_generic"
-					type: "item"
-				}
-				{
-					id: "1C3FC9E03F71E30D"
-					item: "kubejs:lootbox_enchantments_armor"
-					type: "item"
-				}
-			]
+			rewards: [{
+				count: 3
+				id: "3C396B63B79507D2"
+				item: "kubejs:lootbox_enchantments_generic"
+				type: "item"
+			}]
 			size: 2.0d
 			subtitle: "Enchanting has been greatly modified."
 			tasks: [{
@@ -2193,23 +2226,11 @@
 			]
 			hide: true
 			id: "7FF7BB4DA70B8C78"
-			rewards: [
-				{
-					id: "685B5D35C1D4B11A"
-					item: "kubejs:lootbox_enchantments_generic"
-					type: "item"
-				}
-				{
-					id: "40402201C135B08A"
-					item: "kubejs:lootbox_enchantments_weapon"
-					type: "item"
-				}
-				{
-					id: "0DA915043CA2CAAE"
-					item: "kubejs:lootbox_enchantments_armor"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "685B5D35C1D4B11A"
+				item: "kubejs:lootbox_enchantments_generic"
+				type: "item"
+			}]
 			subtitle: "Look at the recipe for the enchanted book to find out more."
 			tasks: [{
 				id: "6816B4FAD3892E86"
@@ -2247,6 +2268,11 @@
 				"Instead you will need to enchant a tool of your choice using &bhyper enchanting&r then extract it's enchantments using the Disenchanter."
 			]
 			id: "1B7EDE54D07C9212"
+			rewards: [{
+				id: "18B8E4AA9E050E96"
+				item: "kubejs:lootbox_enchantments_generic"
+				type: "item"
+			}]
 			subtitle: "Creating OP enchantments.."
 			tasks: [{
 				id: "6157F658E844B803"
@@ -2261,6 +2287,11 @@
 			dependencies: ["11E1B19181CD6D2D"]
 			hide: true
 			id: "56A83A4BF3CEFC3E"
+			rewards: [{
+				id: "58E26635068C9D79"
+				item: "kubejs:lootbox_enchantments_generic"
+				type: "item"
+			}]
 			subtitle: "Hyper experience can be used to increase the level of an enchantment."
 			tasks: [{
 				id: "479B815D6A1FA36B"
@@ -2276,8 +2307,8 @@
 			hide: true
 			id: "094EE47B94A6CDB0"
 			rewards: [{
-				id: "1859F918A145202C"
-				item: "kubejs:lootbox_copper"
+				id: "077B946D7FC6E83C"
+				item: "kubejs:lootbox_enchantments_generic"
 				type: "item"
 			}]
 			subtitle: "You can move liquid XP around using Create pipes"
@@ -2314,8 +2345,8 @@
 			hide: true
 			id: "0353772AB22352F6"
 			rewards: [{
-				id: "77518636696DFCA8"
-				item: "kubejs:lootbox_enchantments_weapon"
+				id: "1BEADE9AFC706447"
+				item: "kubejs:lootbox_enchantments_generic"
 				type: "item"
 			}]
 			subtitle: "The extendo grip is an essential tool to give you more reach."
@@ -4020,6 +4051,11 @@
 			hide: true
 			icon: "createindustry:crude_oil_fluid_bucket"
 			id: "30E1C70200A72928"
+			rewards: [{
+				id: "5D00C4243105C701"
+				item: "kubejs:lootbox_steel"
+				type: "item"
+			}]
 			subtitle: "Find some Oil using the Surface Scanner"
 			tasks: [{
 				id: "5D2D5CA5DEB3738D"
@@ -4543,19 +4579,12 @@
 		{
 			dependencies: ["26B607339F9A9909"]
 			id: "27C6A160DC38BA07"
-			rewards: [
-				{
-					id: "14794A95DD0068FF"
-					item: "supplementaries:cog_block"
-					random_bonus: 4
-					type: "item"
-				}
-				{
-					id: "6B84544EA9651FF3"
-					item: "kubejs:lootbox_enchantments_armor"
-					type: "item"
-				}
-			]
+			rewards: [{
+				count: 2
+				id: "069748BB098FC266"
+				item: "kubejs:lootbox_redstone"
+				type: "item"
+			}]
 			subtitle: "Redstone that goes up!"
 			tasks: [{
 				id: "3ACEF802C6E9FE36"
@@ -4618,11 +4647,18 @@
 		{
 			dependencies: ["05BEFB7D67ECA089"]
 			id: "0E1184C33CD06F00"
-			rewards: [{
-				id: "69107E16CB81DAFF"
-				item: "kubejs:lootbox_andesite"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "69107E16CB81DAFF"
+					item: "kubejs:lootbox_andesite"
+					type: "item"
+				}
+				{
+					id: "0A8E75B27F0B8DF4"
+					item: "kubejs:lootbox_enchantments_generic"
+					type: "item"
+				}
+			]
 			subtitle: "A more powerful weapon!"
 			tasks: [{
 				id: "5710E9A05FE7CA46"
@@ -4644,9 +4680,8 @@
 			hide: true
 			id: "3EAE622A37F47CC4"
 			rewards: [{
-				id: "489E41DBABEC589E"
-				item: "create:crushed_raw_iron"
-				random_bonus: 4
+				id: "75A531083499342E"
+				item: "kubejs:lootbox_basic"
 				type: "item"
 			}]
 			subtitle: "Can be smelted into an Iron Block."
@@ -4707,6 +4742,11 @@
 				}
 			}
 			id: "15A889CC22700F09"
+			rewards: [{
+				id: "7004F738A09F4F6D"
+				item: "kubejs:lootbox_enchantments_generic"
+				type: "item"
+			}]
 			tasks: [{
 				icon: {
 					Count: 1b

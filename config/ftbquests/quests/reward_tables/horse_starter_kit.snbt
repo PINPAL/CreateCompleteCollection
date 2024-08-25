@@ -5,12 +5,12 @@
 	order_index: 2
 	rewards: [
 		{ count: 2, item: "minecraft:name_tag" }
-		{ count: 5, item: "farmersdelight:horse_feed", random_bonus: 5 }
+		{ count: 10, item: "farmersdelight:horse_feed", random_bonus: 6 }
 		{ item: "minecraft:diamond_horse_armor" }
 		{ count: 3, item: "minecraft:lead" }
 		{ item: "kubejs:lootbox_explorer" }
-		{ item: "kubejs:lootbox_andesite" }
 		{ item: "kubejs:lootbox_redstone" }
+		{ item: "kubejs:lootbox_enchantments_generic" }
 	]
 	title: "Horse Starter Kit"
 }

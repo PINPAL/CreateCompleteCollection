@@ -620,17 +620,24 @@ for (const key in global.lootboxes) {
 			},
 		],
 	};
-	// Sort the items by weight (highest to lowest)
-	let sortedPool = global.lootboxes[key].items.sort((a, b) => b.weight - a.weight);
-	// Add the items to the summary
-	sortedPool.forEach((item) => {
-		let rarityPercentage = calculateRarityPercentage(item.weight, global.lootboxes[key]) * 100;
-		let rarityString = Math.round(rarityPercentage);
-		if (rarityPercentage < 1) {
-			rarityString = "<1";
-		}
-		lootboxObject.summary.push(`- ${fetchItemName(item.item)} ${rarityString}%`);
-	});
+	// Edge case for enchantment books
+	if (key == "enchantments_generic") {
+		lootboxObject.summary.push(`- Any Enchanted Book 80%`);
+		lootboxObject.summary.push(`- Nugget of Experience 20%`);
+	} else {
+		// Sort the items by weight (highest to lowest)
+		let sortedPool = global.lootboxes[key].items.sort((a, b) => b.weight - a.weight);
+		// Add the items to the summary
+		sortedPool.forEach((item) => {
+			let rarityPercentage = calculateRarityPercentage(item.weight, global.lootboxes[key]) * 100;
+			let rarityString = Math.round(rarityPercentage);
+			if (rarityPercentage < 1) {
+				rarityString = "<1";
+			}
+			lootboxObject.summary.push(`- ${fetchItemName(item.item)} ${rarityString}%`);
+		});
+	}
+
 	itemsToTooltip.push(lootboxObject);
 }
 

@@ -4,11 +4,7 @@
 ServerEvents.recipes((event) => {
 	event.recipes
 		.createSequencedAssembly(
-			[
-				Item.of("kubejs:lootbox_enchantments_generic").withChance(0.3334),
-				Item.of("kubejs:lootbox_enchantments_weapon").withChance(0.333),
-				Item.of("kubejs:lootbox_enchantments_armor").withChance(0.333),
-			],
+			["kubejs:lootbox_enchantments_generic"],
 			// input
 			"minecraft:book",
 			// sequence
@@ -21,5 +17,6 @@ ServerEvents.recipes((event) => {
 			]
 		)
 		.transitionalItem("minecraft:book")
-		.loops(1);
+		.loops(1)
+		.id("kubejs:lootbox_enchantments");
 });
