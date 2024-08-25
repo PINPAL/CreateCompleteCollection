@@ -185,6 +185,10 @@ PlayerEvents.tick((event) => {
 				break;
 		}
 	});
+	// Check not null
+	if (nutrientVeggies == null && nutrientProteins == null && nutrientCarbs == null) {
+		return;
+	}
 	// Update Hunches
 	event.player.paint({
 		proteinOne: {
