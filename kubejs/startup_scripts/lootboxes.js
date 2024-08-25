@@ -79,31 +79,31 @@ global.lootboxes = {
 		items: [
 			{
 				item: "create:andesite_alloy",
-				weight: 16,
+				weight: 40,
 			},
 			{
 				item: "minecraft:dried_kelp",
-				weight: 10,
+				weight: 30,
 			},
 			{
 				item: "create:zinc_ingot",
-				weight: 8,
+				weight: 20,
 			},
 			{
 				item: "create:andesite_casing",
-				weight: 12,
+				weight: 30,
 			},
 			{
 				item: "create:cogwheel",
-				weight: 8,
+				weight: 15,
 			},
 			{
 				item: "create:shaft",
-				weight: 8,
+				weight: 15,
 			},
 			{
 				item: "create:large_cogwheel",
-				weight: 7,
+				weight: 10,
 			},
 			{
 				item: "create:mechanical_saw",
@@ -111,7 +111,7 @@ global.lootboxes = {
 			},
 			{
 				item: "create:andesite_funnel",
-				weight: 1,
+				weight: 5,
 			},
 			{
 				item: "create:andesite_tunnel",
@@ -153,10 +153,22 @@ global.lootboxes = {
 		items: [
 			{
 				item: "#forge:ingots/copper",
-				weight: 30,
+				weight: 50,
 			},
 			{
 				item: "#forge:nuggets/copper",
+				weight: 40,
+			},
+			{
+				item: "create:fluid_pipe",
+				weight: 40,
+			},
+			{
+				item: "create:cogwheel",
+				weight: 20,
+			},
+			{
+				item: "create:shaft",
 				weight: 20,
 			},
 			{
@@ -164,19 +176,23 @@ global.lootboxes = {
 				weight: 10,
 			},
 			{
-				item: "create:spout",
-				weight: 1,
-			},
-			{
-				item: "create:portable_fluid_interface",
-				weight: 1,
-			},
-			{
-				item: "create:fluid_pipe",
-				weight: 9,
+				item: "kubejs:copper_repair_kit",
+				weight: 2,
 			},
 			{
 				item: "create:mechanical_pump",
+				weight: 3,
+			},
+			{
+				item: "create:spout",
+				weight: 0.5,
+			},
+			{
+				item: "create_enchantment_industry:printer",
+				weight: 0.5,
+			},
+			{
+				item: "create:portable_fluid_interface",
 				weight: 1,
 			},
 			{
@@ -199,10 +215,6 @@ global.lootboxes = {
 				item: "create:copper_valve_handle",
 				weight: 1,
 			},
-			{
-				item: "kubejs:copper_repair_kit",
-				weight: 2,
-			},
 		],
 	},
 	brass: {
@@ -211,35 +223,43 @@ global.lootboxes = {
 		items: [
 			{
 				item: "#forge:ingots/brass",
-				weight: 10,
+				weight: 40,
+			},
+			{
+				item: "#forge:nuggets/brass",
+				weight: 38,
+			},
+			{
+				item: "create:cogwheel",
+				weight: 30,
+			},
+			{
+				item: "create:shaft",
+				weight: 30,
 			},
 			{
 				item: "create:brass_casing",
-				weight: 8,
+				weight: 30,
 			},
 			{
 				item: "kubejs:iron_repair_kit",
-				weight: 2,
+				weight: 3,
 			},
 			{
 				item: "kubejs:steel_repair_kit",
 				weight: 1,
 			},
 			{
-				item: "create:blaze_burner",
-				weight: 1,
-			},
-			{
 				item: "create:brass_tunnel",
-				weight: 2,
+				weight: 10,
 			},
 			{
 				item: "create:brass_funnel",
-				weight: 2,
+				weight: 10,
 			},
 			{
 				item: "create:mechanical_crafter",
-				weight: 1,
+				weight: 0.5,
 			},
 			{
 				item: "create:crushing_wheel",
@@ -250,12 +270,20 @@ global.lootboxes = {
 				weight: 1,
 			},
 			{
+				item: "create:sequenced_gearshift",
+				weight: 1,
+			},
+			{
+				item: "create:stockpile_switch",
+				weight: 1,
+			},
+			{
 				item: "create:rotation_speed_controller",
-				weight: 0.5,
+				weight: 0.25,
 			},
 			{
 				item: "create:mechanical_arm",
-				weight: 1,
+				weight: 0.5,
 			},
 		],
 	},
@@ -264,12 +292,16 @@ global.lootboxes = {
 		rolls: 10,
 		items: [
 			{
-				item: "#forge:ingots/steel",
-				weight: 7,
+				item: "kubejs:steel_casing",
+				weight: 50,
 			},
 			{
-				item: "tfmg:coal_coke",
-				weight: 4,
+				item: "createindustry:coal_coke",
+				weight: 25,
+			},
+			{
+				item: "#forge:ingots/steel",
+				weight: 12,
 			},
 			{
 				item: "createindustry:steel_casing",
@@ -281,7 +313,7 @@ global.lootboxes = {
 			},
 			{
 				item: "kubejs:steel_repair_kit",
-				weight: 2,
+				weight: 4,
 			},
 			{
 				item: "createindustry:steel_mechanism",
@@ -294,12 +326,36 @@ global.lootboxes = {
 		rolls: 10,
 		items: [
 			{
-				item: "#forge:gems/diamond",
+				item: "createaddition:connector",
+				weight: 30,
+			},
+			{
+				item: "createaddition:large_connector",
+				weight: 5,
+			},
+			{
+				item: "createaddition:spool",
+				weight: 15,
+			},
+			{
+				item: "createaddition:copper_spool",
+				weight: 20,
+			},
+			{
+				item: "minecraft:obsidian",
+				weight: 10,
+			},
+			{
+				item: "create_dd:diamond_shard",
 				weight: 7,
 			},
 			{
 				item: "create:railway_casing",
 				weight: 6,
+			},
+			{
+				item: "createaddition:rolling_mill",
+				weight: 1,
 			},
 			{
 				item: "createaddition:tesla_coil",
@@ -341,19 +397,19 @@ global.lootboxes = {
 		items: [
 			{
 				item: "#forge:gems/redstone",
-				weight: 7,
+				weight: 60,
 			},
 			{
 				item: "minecraft:redstone_torch",
-				weight: 4,
+				weight: 40,
 			},
 			{
 				item: "minecraft:repeater",
-				weight: 4,
+				weight: 10,
 			},
 			{
 				item: "minecraft:comparator",
-				weight: 4,
+				weight: 10,
 			},
 			{
 				item: "minecraft:observer",
@@ -850,8 +906,8 @@ StartupEvents.registry("block", (event) => {
 			.noValidSpawns(true)
 			.suffocating(false)
 			.item((item) => {
-				item.unstackable();
 				item.rarity("epic");
+				item.maxStackSize(8);
 			});
 	}
 });

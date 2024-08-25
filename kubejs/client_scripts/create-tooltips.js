@@ -545,13 +545,63 @@ drawerWoodTypes.forEach((woodType) => {
 	});
 });
 
+let calculateRarityPercentage = (weight, lootbox) => {
+	let totalWeight = 0;
+	lootbox.items.forEach((item) => {
+		totalWeight += item.weight;
+	});
+	return weight / totalWeight;
+};
+
+const LanguageHandler = Java.loadClass("net.minecraft.client.resources.language.I18n");
+let fetchItemName = (itemID) => {
+	let fetchLangTranslation = (itemIdString) => {
+		let itemObject = Item.of(itemIdString);
+
+		let prefix = "item.";
+		// Check if the item is a block
+		if (itemObject.isBlock()) {
+			prefix = "block.";
+		}
+
+		return LanguageHandler.get(prefix + itemIdString.replace(":", "."));
+	};
+
+	// Check if the itemID is an object
+	if (typeof itemID === "object") {
+		itemID = itemID.getId();
+	}
+	// else it's a string of either an itemID or tag
+	else {
+		// Check if the itemID is a tag
+		if (itemID.startsWith("#")) {
+			// Replace everything before and including :
+			itemID = itemID.replace(/.*:/, "");
+			// Replace all / with space
+			itemID = itemID.replace(/\//g, " ");
+			// Invert the order of the words
+			itemID = itemID.split(" ").reverse().join(" ");
+			// Remove the last character if it's an s
+			if (itemID.endsWith("s")) {
+				itemID = itemID.slice(0, -1);
+			}
+			return formatName(itemID);
+		}
+	}
+
+	let itemName = fetchLangTranslation(itemID);
+	return itemName;
+};
+
 for (const key in global.lootboxes) {
 	let lootbox = `kubejs:lootbox_${key}`;
-	itemsToTooltip.push({
+	let lootboxObject = {
 		item: lootbox,
 		summary: [
 			`Rolls $${global.lootboxes[key].rolls}$ Time${global.lootboxes[key].rolls > 1 ? "s" : ""}.`,
 			`Contains $${global.lootboxes[key].items.length}$ Unique Items.`,
+			"",
+			`$Contains:$`,
 		],
 		controls: [
 			{
@@ -565,7 +615,19 @@ for (const key in global.lootboxes) {
 				text: ["Opens the $Lootbox$. Throws unboxed", "$items$ onto the ground."],
 			},
 		],
+	};
+	// Sort the items by weight (highest to lowest)
+	let sortedPool = global.lootboxes[key].items.sort((a, b) => b.weight - a.weight);
+	// Add the items to the summary
+	sortedPool.forEach((item) => {
+		let rarityPercentage = calculateRarityPercentage(item.weight, global.lootboxes[key]) * 100;
+		let rarityString = Math.round(rarityPercentage);
+		if (rarityPercentage < 1) {
+			rarityString = "<1";
+		}
+		lootboxObject.summary.push(`- ${fetchItemName(item.item)} ${rarityString}%`);
 	});
+	itemsToTooltip.push(lootboxObject);
 }
 
 ItemEvents.tooltip((tooltip) => {
@@ -602,7 +664,7 @@ ItemEvents.tooltip((tooltip) => {
 
 				// Add Controls
 				if (tooltipItem.hasOwnProperty("controls")) {
-					if (tooltipItem.controls.length < 3) {
+					if (tooltipItem.controls.length < 3 && tooltipItem.summary.length < 3) {
 						tooltipItem.controls.forEach((control) => {
 							text.add(lineNumber, []);
 							lineNumber++;
