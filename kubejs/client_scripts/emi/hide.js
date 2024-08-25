@@ -71,6 +71,7 @@ const hideFromJEI = [
 	// Item Match
 	"kubejs:unfinished_leather_stitching",
 	"kubejs:belt_scroll",
+	"kubejs:wrench_axe",
 
 	"create:extendo_grip",
 
