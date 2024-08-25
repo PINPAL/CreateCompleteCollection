@@ -623,7 +623,7 @@ for (const key in global.lootboxes) {
 	// Edge case for enchantment books
 	if (key == "enchantments_generic") {
 		lootboxObject.summary.push(`- Any Enchanted Book 80%`);
-		lootboxObject.summary.push(`- Nugget of Experience 20%`);
+		lootboxObject.summary.push(`- Block of Experience 20%`);
 	} else {
 		// Sort the items by weight (highest to lowest)
 		let sortedPool = global.lootboxes[key].items.sort((a, b) => b.weight - a.weight);

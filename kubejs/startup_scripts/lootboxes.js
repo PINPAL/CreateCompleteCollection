@@ -716,8 +716,8 @@ global.lootboxes = {
 		rolls: 1,
 		items: [
 			{
-				item: Item.of("create:experience_nugget"),
-				weight: 11.25,
+				item: Item.of("create:experience_block"),
+				weight: 10.75,
 			},
 			{
 				item: Item.of("minecraft:enchanted_book").enchant("minecraft:protection", 1),
@@ -849,22 +849,6 @@ global.lootboxes = {
 			},
 			{
 				item: Item.of("minecraft:enchanted_book").enchant("minecraft:channeling", 1),
-				weight: 1,
-			},
-			{
-				item: Item.of(
-					"minecraft:enchanted_book",
-					1,
-					'{StoredEnchantments:[{id:"modification_of_critical_hit:criteffect",lvl:1s}]}'
-				),
-				weight: 1,
-			},
-			{
-				item: Item.of(
-					"minecraft:enchanted_book",
-					1,
-					'{StoredEnchantments:[{id:"modification_of_critical_hit:critchance",lvl:1s}]}'
-				),
 				weight: 1,
 			},
 			{
