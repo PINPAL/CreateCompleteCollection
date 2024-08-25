@@ -578,8 +578,8 @@
 			icon: "create:iron_sheet"
 			id: "26C9C63835C84874"
 			rewards: [{
-				id: "1FAAC3C9D22EC961"
-				item: "kubejs:lootbox_andesite"
+				id: "187E861AD5F1A7C6"
+				item: "kubejs:lootbox_basic"
 				type: "item"
 			}]
 			size: 1.5d
@@ -1296,19 +1296,11 @@
 			dependencies: ["7453758780D4848F"]
 			hide: true
 			id: "72B561894C6AC831"
-			rewards: [
-				{
-					count: 2
-					id: "4ADABC9923C0CC24"
-					item: "createaddition:large_connector"
-					type: "item"
-				}
-				{
-					id: "57B5BE61D32D2933"
-					item: "createaddition:gold_spool"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "2FF853349A3009BC"
+				item: "kubejs:lootbox_train"
+				type: "item"
+			}]
 			subtitle: "A multiblock structure to store electricity."
 			tasks: [{
 				id: "35F877062C50CD39"
@@ -2439,12 +2431,19 @@
 			hide: true
 			icon: "minecraft:bread"
 			id: "62B5628A3CD272C6"
-			rewards: [{
-				id: "41E31A86EC9A18E2"
-				item: "farmersdelight:bacon_sandwich"
-				random_bonus: 2
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "41E31A86EC9A18E2"
+					item: "farmersdelight:bacon_sandwich"
+					random_bonus: 2
+					type: "item"
+				}
+				{
+					id: "55A5E113765A0E18"
+					item: "kubejs:lootbox_basic"
+					type: "item"
+				}
+			]
 			subtitle: "Obtain enough &6Carbs&r to last a while."
 			tasks: [{
 				count: 32L
@@ -2468,12 +2467,19 @@
 			hide: true
 			icon: "minecraft:cooked_beef"
 			id: "3D1A262754A16E06"
-			rewards: [{
-				id: "6156B27EA8527DA0"
-				item: "farmersdelight:noodle_soup"
-				random_bonus: 2
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "6156B27EA8527DA0"
+					item: "farmersdelight:noodle_soup"
+					random_bonus: 2
+					type: "item"
+				}
+				{
+					id: "611E35AFF506ACD8"
+					item: "kubejs:lootbox_basic"
+					type: "item"
+				}
+			]
 			subtitle: "Obtain enough &6Protein&r to last a while."
 			tasks: [{
 				count: 32L
@@ -2497,12 +2503,19 @@
 			hide: true
 			icon: "minecraft:carrot"
 			id: "4EA1AE56A3276FFA"
-			rewards: [{
-				id: "3683B9FF5B7BF746"
-				item: "farmersdelight:mutton_wrap"
-				random_bonus: 2
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "3683B9FF5B7BF746"
+					item: "farmersdelight:mutton_wrap"
+					random_bonus: 2
+					type: "item"
+				}
+				{
+					id: "46B1838200C5FFE5"
+					item: "kubejs:lootbox_basic"
+					type: "item"
+				}
+			]
 			subtitle: "Obtain enough &6Vegetables&r to last a while."
 			tasks: [{
 				count: 32L
@@ -2774,6 +2787,11 @@
 			dependencies: ["7453758780D4848F"]
 			hide: true
 			id: "366D9BE3BE6915C8"
+			rewards: [{
+				id: "554ED65D3C6E94C2"
+				item: "kubejs:lootbox_train"
+				type: "item"
+			}]
 			subtitle: "Create an electric motor to convert your electricity to rotation force."
 			tasks: [{
 				id: "43BB5035B13D7AE9"
@@ -4831,7 +4849,7 @@
 			icon: "create:spout"
 			id: "4FCC8858C5E88628"
 			rewards: [{
-				id: "5082DD6114C85BCF"
+				id: "11F1D833A11F96EA"
 				item: "kubejs:lootbox_colored"
 				type: "item"
 			}]
@@ -5111,18 +5129,11 @@
 			dependencies: ["23C71EAA95B6021A"]
 			hide_dependency_lines: true
 			id: "15AE25C7E70FF992"
-			rewards: [
-				{
-					id: "159BC94FFCA27D67"
-					item: "kubejs:lootbox_colored"
-					type: "item"
-				}
-				{
-					id: "2CA053B3F80005C3"
-					item: "kubejs:lootbox_copper"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "159BC94FFCA27D67"
+				item: "kubejs:lootbox_colored"
+				type: "item"
+			}]
 			size: 1.5d
 			subtitle: "Pouring Fluid onto Items"
 			tasks: [{

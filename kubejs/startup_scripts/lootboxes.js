@@ -83,15 +83,19 @@ global.lootboxes = {
 			},
 			{
 				item: "minecraft:dried_kelp",
-				weight: 30,
+				weight: 20,
 			},
 			{
 				item: "create:zinc_ingot",
 				weight: 20,
 			},
 			{
+				item: "minecraft:iron_ingot",
+				weight: 20,
+			},
+			{
 				item: "create:andesite_casing",
-				weight: 30,
+				weight: 20,
 			},
 			{
 				item: "create:cogwheel",
@@ -482,6 +486,10 @@ global.lootboxes = {
 		rolls: 2,
 		items: [
 			{
+				item: "minecraft:kelp",
+				weight: 1,
+			},
+			{
 				item: "minecraft:oak_sapling",
 				weight: 1,
 			},
@@ -531,6 +539,34 @@ global.lootboxes = {
 			},
 			{
 				item: "kubejs:cornflower_bush_item",
+				weight: 1,
+			},
+			{
+				item: "farmersdelight:tomato_seeds",
+				weight: 1,
+			},
+			{
+				item: "farmersdelight:onion",
+				weight: 1,
+			},
+			{
+				item: "farmersdelight:cabbage_seeds",
+				weight: 1,
+			},
+			{
+				item: "farmersdelight:rice_panicle",
+				weight: 1,
+			},
+			{
+				item: "minecraft:cactus",
+				weight: 1,
+			},
+			{
+				item: "minecraft:bamboo",
+				weight: 1,
+			},
+			{
+				item: "minecraft:sugar_cane",
 				weight: 1,
 			},
 		],
