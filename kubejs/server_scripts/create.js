@@ -198,6 +198,12 @@ ServerEvents.recipes((event) => {
 	event.remove({ output: "create:red_sand_paper" });
 	event.shapeless("create:sand_paper", ["minecraft:sand", "#kubejs:low_quality_paper"]);
 	event.shapeless("create:red_sand_paper", ["minecraft:red_sand", "#kubejs:low_quality_paper"]);
+	event.replaceInput({ output: "minecraft:cartography_table" }, "minecraft:paper", "#kubejs:low_quality_paper");
+	event.replaceInput({ output: "create:clipboard" }, "minecraft:paper", "#kubejs:low_quality_paper");
+	event.replaceInput({ output: "supplementaries:notice_board" }, "minecraft:paper", "#kubejs:low_quality_paper");
+	event.replaceInput({ output: "minecraft:map" }, "minecraft:paper", "#kubejs:low_quality_paper");
+	event.replaceInput({ output: "minecraft:filled_map" }, "minecraft:paper", "#kubejs:low_quality_paper");
+	event.replaceInput({ output: "supplementaries:crimson_lantern" }, "minecraft:paper", "#kubejs:low_quality_paper");
 
 	// Harder Train Controls
 	event.shaped("create:controls", [" L ", " T ", "P I"], {
