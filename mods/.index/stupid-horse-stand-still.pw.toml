@@ -1,0 +1,13 @@
+filename = 'horsestandstill-1.19-1.0.3.jar'
+name = 'Stupid Horse Stand Still'
+side = 'both'
+
+[download]
+hash = 'd1b7291dff8b5937c679ee488b8f3e234c643a39'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 3914581
+project-id = 358241
