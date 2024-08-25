@@ -153,7 +153,7 @@ ServerEvents.recipes((event) => {
 	});
 
 	// Cheaper Brass Hand
-	event.replaceInput({ output: "create:brass_hand" }, "#forge:plates/brass", "create_dd:andesite_sheet");
+	event.replaceInput({ output: "create:brass_hand" }, "#forge:plates/brass", "#minecraft:planks");
 	event.remove({ id: "create_dd:crafting/brass_hand" });
 
 	// Harder Deployer
