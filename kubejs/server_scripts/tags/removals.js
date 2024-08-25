@@ -72,6 +72,7 @@ const removedItems = [
 	/metalbarrels:.*_to_.*/,
 
 	"farmersdelight:golden_knife",
+	"farmersdelight:wheat_dough",
 	"create_things_and_misc:zinc_knife",
 	"create_things_and_misc:brass_knife",
 	"create_things_and_misc:cherry_sail",

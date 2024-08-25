@@ -68,6 +68,7 @@ const outputsToRemove = [
 	// Farmers Delight
 	"farmersdelight:cooking_pot",
 	"farmersdelight:golden_knife",
+	"farmersdelight:wheat_dough",
 
 	// Create Deco
 	"createdeco:netherite_bars",

@@ -79,7 +79,7 @@ ServerEvents.recipes((event) => {
 	// Slime
 	event.recipes.create.mixing(
 		[Fluid.of("create_things_and_misc:slime", 100)],
-		["#forge:dough", Fluid.of("kubejs:lime_dye_fluid", 250)]
+		["create:dough", Fluid.of("kubejs:lime_dye_fluid", 250)]
 	);
 	event.recipes.create.mixing(
 		["minecraft:slime_ball"],

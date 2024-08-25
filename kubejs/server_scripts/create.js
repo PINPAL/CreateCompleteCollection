@@ -265,8 +265,7 @@ ServerEvents.recipes((event) => {
 	});
 
 	// Fix Dough
-	event.replaceInput({ input: "create:dough" }, "create:dough", "#forge:dough");
-	event.replaceInput({ input: "farmersdelight:wheat_dough" }, "farmersdelight:wheat_dough", "#forge:dough");
+	event.replaceInput({ input: "farmersdelight:wheat_dough" }, "farmersdelight:wheat_dough", "create:dough");
 
 	// Nerf Tuff Crusing
 	event.recipes.create.crushing(["create_dd:potassic_cobble"], "#create:stone_types/tuff");

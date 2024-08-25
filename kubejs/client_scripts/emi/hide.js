@@ -160,6 +160,7 @@ const hideFromJEI = [
 
 	"farmersdelight:golden_knife",
 	"farmersdelight:netherite_knife",
+	"farmersdelight:wheat_dough",
 
 	"refinedstorageaddons:creative_wireless_crafting_grid",
 
