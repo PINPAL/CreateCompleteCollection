@@ -29,25 +29,24 @@ function handleDurability(event) {
 			item.item.hasTag("forge:tools/hoes") ||
 			item.item.hasTag("forge:shields")
 		) {
-			// Enchantments
-			let itemEnchants = item.item.getEnchantments();
 			// Durability
 			let damage = item.item.getDamageValue();
 			let maxDamage = item.item.getMaxDamage();
 			let durability = maxDamage - damage;
 
-			let itemID = item.item.getId();
-			// Remove everything before and including the colon
-			itemID = itemID.split(":").pop();
-
-			// Generate Replacement Item
-			let replacementItem = Item.of(`kubejs:broken_${itemID}`);
-			replacementItem = replacementItem.enchant(itemEnchants);
-
-			console.log("REPLACING " + itemID + " WITH " + replacementItem);
-
 			// If item is broken, replace it
 			if (durability <= 10) {
+				// Enchantments
+				let itemEnchants = item.item.getEnchantments();
+
+				let itemID = item.item.getId();
+				// Remove everything before and including the colon
+				itemID = itemID.split(":").pop();
+
+				// Generate Replacement Item
+				let replacementItem = Item.of(`kubejs:broken_${itemID}`);
+				replacementItem = replacementItem.enchant(itemEnchants);
+
 				if (item.slot == "helmet") {
 					player.setHeadArmorItem(replacementItem);
 				} else if (item.slot == "chestplate") {
