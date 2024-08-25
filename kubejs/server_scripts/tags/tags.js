@@ -256,6 +256,8 @@ ServerEvents.tags("item", (event) => {
 		event.add("forge:tools/axes", item);
 		event.add("minecraft:axes", item);
 		event.add("minecraft:tools/axes", item);
+		event.add("kubejs:paxels", item);
+		event.add("kubejs:unbroken_paxel", item);
 	});
 
 	const decals = [

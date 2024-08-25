@@ -22,7 +22,7 @@ function handleDurability(event) {
 	];
 	breakableItems.forEach((item) => {
 		if (
-			item.item.hasTag("kubejs:paxel") ||
+			item.item.hasTag("kubejs:unbroken_paxel") ||
 			item.item.hasTag("forge:armors") ||
 			item.item.hasTag("forge:tools/swords") ||
 			item.item.hasTag("forge:tools/knives") ||
@@ -36,13 +36,15 @@ function handleDurability(event) {
 			let maxDamage = item.item.getMaxDamage();
 			let durability = maxDamage - damage;
 
-			// Get ItemID without mod prefix
 			let itemID = item.item.getId();
-			itemID = itemID.replace(item.item.getMod() + ":", "");
+			// Remove everything before and including the colon
+			itemID = itemID.split(":").pop();
 
 			// Generate Replacement Item
 			let replacementItem = Item.of(`kubejs:broken_${itemID}`);
 			replacementItem = replacementItem.enchant(itemEnchants);
+
+			console.log("REPLACING " + itemID + " WITH " + replacementItem);
 
 			// If item is broken, replace it
 			if (durability <= 10) {
