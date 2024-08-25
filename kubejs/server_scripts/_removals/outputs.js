@@ -1,6 +1,37 @@
 // priority: 1
 const outputsToRemove = [
 	// Tools & Armor
+	"minecraft:wooden_pickaxe",
+	"minecraft:wooden_shovel",
+	"minecraft:wooden_axe",
+	"minecraft:wooden_hoe",
+	"minecraft:wooden_sword",
+	"minecraft:stone_pickaxe",
+	"minecraft:stone_shovel",
+	"minecraft:stone_axe",
+	"minecraft:stone_hoe",
+	"minecraft:stone_sword",
+	"minecraft:golden_pickaxe",
+	"minecraft:golden_shovel",
+	"minecraft:golden_axe",
+	"minecraft:golden_hoe",
+	"minecraft:golden_sword",
+	"minecraft:iron_pickaxe",
+	"minecraft:iron_shovel",
+	"minecraft:iron_axe",
+	"minecraft:iron_hoe",
+	"minecraft:iron_sword",
+	"minecraft:diamond_pickaxe",
+	"minecraft:diamond_shovel",
+	"minecraft:diamond_axe",
+	"minecraft:diamond_hoe",
+	"minecraft:diamond_sword",
+	"minecraft:netherite_pickaxe",
+	"minecraft:netherite_shovel",
+	"minecraft:netherite_axe",
+	"minecraft:netherite_hoe",
+	"minecraft:netherite_sword",
+
 	"#forge:pickaxes",
 	"#forge:shovels",
 	"#forge:axes",
@@ -36,6 +67,7 @@ const outputsToRemove = [
 
 	// Farmers Delight
 	"farmersdelight:cooking_pot",
+	"farmersdelight:golden_knife",
 
 	// Create Deco
 	"createdeco:netherite_bars",
@@ -98,6 +130,8 @@ const outputsToRemove = [
 
 	// Create Things and Misc
 	"create_things_and_misc:radar",
+	"create_things_and_misc:brass_knife",
+	"create_things_and_misc:zinc_knife",
 
 	// Create Addition
 	"createaddition:digital_adapter",
