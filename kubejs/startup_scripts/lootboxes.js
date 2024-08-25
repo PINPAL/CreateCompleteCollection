@@ -1,47 +1,63 @@
 global.lootboxes = {
 	basic: {
 		name: "Stone",
-		rolls: 16,
+		rolls: 10,
 		items: [
 			{
 				item: "kubejs:refined_stone",
 				weight: 5,
 			},
 			{
+				item: "minecraft:iron_nugget",
+				weight: 10,
+			},
+			{
+				item: "create:zinc_nugget",
+				weight: 15,
+			},
+			{
+				item: "create:copper_nugget",
+				weight: 15,
+			},
+			{
+				item: "minecraft:gold_nugget",
+				weight: 15,
+			},
+			{
 				item: "minecraft:oak_log",
-				weight: 4,
+				weight: 15,
 			},
 			{
 				item: "minecraft:andesite",
-				weight: 5,
+				weight: 40,
 			},
 			{
 				item: "minecraft:stick",
-				weight: 3,
+				weight: 10,
 			},
 			{
 				item: "minecraft:cobblestone",
-				weight: 2,
+				weight: 30,
 			},
 			{
 				item: "minecraft:coal",
-				weight: 2,
+				weight: 20,
 			},
 			{
 				item: "minecraft:torch",
-				weight: 1,
+				weight: 10,
 			},
 			{
 				item: "farmersdelight:bacon_sandwich",
-				weight: 1,
-			},
-			{
-				item: "kubejs:stone_repair_kit",
 				weight: 2,
 			},
 			{
-				item: "kubejs:wooden_repair_kit",
+				item: "kubejs:stone_repair_kit",
 				weight: 1,
+			},
+			{
+				item: "kubejs:wooden_repair_kit",
+				weight: 0.25,
 			},
 			{
 				item: "kubejs:leather_repair_kit",
@@ -49,33 +65,45 @@ global.lootboxes = {
 			},
 			{
 				item: "create:hand_crank",
+				weight: 0.5,
+			},
+			{
+				item: "create:cogwheel",
 				weight: 1,
 			},
 		],
 	},
 	andesite: {
 		name: "Andesite",
-		rolls: 12,
+		rolls: 10,
 		items: [
 			{
 				item: "create:andesite_alloy",
-				weight: 7,
+				weight: 16,
+			},
+			{
+				item: "minecraft:dried_kelp",
+				weight: 10,
+			},
+			{
+				item: "create:zinc_ingot",
+				weight: 8,
 			},
 			{
 				item: "create:andesite_casing",
-				weight: 6,
+				weight: 12,
 			},
 			{
 				item: "create:cogwheel",
-				weight: 4,
+				weight: 8,
 			},
 			{
 				item: "create:shaft",
-				weight: 4,
+				weight: 8,
 			},
 			{
 				item: "create:large_cogwheel",
-				weight: 3,
+				weight: 7,
 			},
 			{
 				item: "create:mechanical_saw",
@@ -90,8 +118,16 @@ global.lootboxes = {
 				weight: 1,
 			},
 			{
-				item: "sliceanddice:slicer",
+				item: "create:depot",
 				weight: 1,
+			},
+			{
+				item: "create:basin",
+				weight: 1,
+			},
+			{
+				item: "sliceanddice:slicer",
+				weight: 0.5,
 			},
 			{
 				item: "kubejs:copper_repair_kit",
@@ -103,7 +139,7 @@ global.lootboxes = {
 			},
 			{
 				item: "create:deployer",
-				weight: 1,
+				weight: 0.5,
 			},
 			{
 				item: "create:millstone",
@@ -113,15 +149,19 @@ global.lootboxes = {
 	},
 	copper: {
 		name: "Copper",
-		rolls: 10,
+		rolls: 8,
 		items: [
 			{
 				item: "#forge:ingots/copper",
-				weight: 7,
+				weight: 30,
+			},
+			{
+				item: "#forge:nuggets/copper",
+				weight: 20,
 			},
 			{
 				item: "create:copper_casing",
-				weight: 6,
+				weight: 10,
 			},
 			{
 				item: "create:spout",
@@ -133,7 +173,7 @@ global.lootboxes = {
 			},
 			{
 				item: "create:fluid_pipe",
-				weight: 3,
+				weight: 9,
 			},
 			{
 				item: "create:mechanical_pump",
@@ -161,25 +201,29 @@ global.lootboxes = {
 			},
 			{
 				item: "kubejs:copper_repair_kit",
-				weight: 1,
+				weight: 2,
 			},
 		],
 	},
 	brass: {
 		name: "Brass",
-		rolls: 10,
+		rolls: 8,
 		items: [
 			{
 				item: "#forge:ingots/brass",
-				weight: 6,
+				weight: 10,
 			},
 			{
 				item: "create:brass_casing",
-				weight: 4,
+				weight: 8,
 			},
 			{
 				item: "kubejs:iron_repair_kit",
 				weight: 2,
+			},
+			{
+				item: "kubejs:steel_repair_kit",
+				weight: 1,
 			},
 			{
 				item: "create:blaze_burner",
@@ -207,7 +251,7 @@ global.lootboxes = {
 			},
 			{
 				item: "create:rotation_speed_controller",
-				weight: 1,
+				weight: 0.5,
 			},
 			{
 				item: "create:mechanical_arm",
