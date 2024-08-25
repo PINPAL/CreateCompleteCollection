@@ -1,14 +1,13 @@
-name = "Create"
-filename = "create-1.19.2-0.5.1.c.jar"
-side = "both"
+filename = 'create-1.19.2-0.5.1.c.jar'
+name = 'Create'
+side = 'both'
 
 [download]
-mode = "url"
-url = "https://cdn.modrinth.com/data/LNytGWDc/versions/2aUVdjOe/create-1.19.2-0.5.1.c.jar"
-hash-format = "sha512"
-hash = "7c1540970934dee35752560c2fbe64227a73e7492519a2052f479d3e08c981217c858e41b08861ff0c5c013affa6fa548149a5b5ed03f80c8e45ad8c0c5b6864"
+hash = '7c1540970934dee35752560c2fbe64227a73e7492519a2052f479d3e08c981217c858e41b08861ff0c5c013affa6fa548149a5b5ed03f80c8e45ad8c0c5b6864'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/LNytGWDc/versions/2aUVdjOe/create-1.19.2-0.5.1.c.jar'
 
-[update]
 [update.modrinth]
-mod-id = "LNytGWDc"
-version = "2aUVdjOe"
+mod-id = 'LNytGWDc'
+version = '2aUVdjOe'
