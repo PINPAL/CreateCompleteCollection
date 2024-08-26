@@ -264,6 +264,9 @@ ServerEvents.recipes((event) => {
 		P: "createindustry:plastic_sheet",
 	});
 
+	// Easier Framed Glass
+	event.replaceInput({ input: "create:framed_glass" }, "create:framed_glass", "#forge:glass/colorless");
+
 	// Fix Dough
 	event.replaceInput({ input: "farmersdelight:wheat_dough" }, "farmersdelight:wheat_dough", "create:dough");
 

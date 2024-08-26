@@ -618,6 +618,11 @@ for (const key in global.lootboxes) {
 				requiresHold: true,
 				text: ["Opens the $Lootbox$. Throws unboxed", "$items$ onto the ground."],
 			},
+			{
+				control: "Crouch & R-Click with Wrench",
+				requiresHold: true,
+				text: ["Opens the $Lootbox$. Throws unboxed", "$items$ onto the ground."],
+			},
 		],
 	};
 	// Edge case for enchantment books
@@ -631,6 +636,9 @@ for (const key in global.lootboxes) {
 		sortedPool.forEach((item) => {
 			let rarityPercentage = calculateRarityPercentage(item.weight, global.lootboxes[key]) * 100;
 			let rarityString = Math.round(rarityPercentage);
+			if (rarityString == NaN) {
+				console.log("Error rounding" + item.item + " of " + rarityPercentage);
+			}
 			if (rarityPercentage < 1) {
 				rarityString = "<1";
 			}

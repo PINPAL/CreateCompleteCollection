@@ -227,19 +227,19 @@ global.lootboxes = {
 		items: [
 			{
 				item: "#forge:ingots/brass",
-				weight: 40,
+				weight: 30,
 			},
 			{
 				item: "#forge:nuggets/brass",
-				weight: 38,
+				weight: 30,
 			},
 			{
 				item: "create:cogwheel",
-				weight: 30,
+				weight: 25,
 			},
 			{
 				item: "create:shaft",
-				weight: 30,
+				weight: 25,
 			},
 			{
 				item: "create:brass_casing",
@@ -247,7 +247,7 @@ global.lootboxes = {
 			},
 			{
 				item: "kubejs:iron_repair_kit",
-				weight: 3,
+				weight: 4,
 			},
 			{
 				item: "kubejs:steel_repair_kit",
@@ -262,15 +262,15 @@ global.lootboxes = {
 				weight: 10,
 			},
 			{
+				item: "create:smart_chute",
+				weight: 10,
+			},
+			{
 				item: "create:mechanical_crafter",
 				weight: 0.5,
 			},
 			{
 				item: "create:crushing_wheel",
-				weight: 1,
-			},
-			{
-				item: "create:clockwork_bearing",
 				weight: 1,
 			},
 			{

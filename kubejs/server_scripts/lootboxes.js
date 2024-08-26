@@ -36,8 +36,9 @@ let pickWeightedElement = (items) => {
 BlockEvents.rightClicked((event) => {
 	let block = event.getBlock();
 	if (block.hasTag("kubejs:lootbox")) {
-		// If player is crouching and holding nothing
-		if (event.getPlayer().isCrouching() && event.getItem().getId() == "minecraft:air") {
+		let heldItem = event.getItem().getId();
+		// If player is crouching and holding nothing or a wrench
+		if (event.getPlayer().isCrouching() && (heldItem == "minecraft:air" || heldItem == "create:wrench")) {
 			// Play a sound
 			event.server.runCommandSilent(
 				`playsound kubejs:lootbox_open block @a ${block.getX()} ${block.getY()} ${block.getZ()}`
