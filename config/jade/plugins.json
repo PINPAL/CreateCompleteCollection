@@ -73,6 +73,11 @@
     "goggles.detailed": false,
     "placard": true
   },
+  "apotheosis": {
+    "adventure": true,
+    "ench": true,
+    "spawner": true
+  },
   "create_paper_line": {
     "data": true
   },

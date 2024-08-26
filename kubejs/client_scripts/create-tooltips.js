@@ -642,6 +642,15 @@ for (const key in global.lootboxes) {
 }
 
 ItemEvents.tooltip((tooltip) => {
+	// Special case for enchanted books
+	tooltip.addAdvanced("minecraft:enchanted_book", (item, advanced, text) => {
+		text.add(1, createFormattedTextObjectArray("Can be $placed$ onto a book of"));
+		text.add(2, createFormattedTextObjectArray("$the same level$ to upgrade"));
+		text.add(3, createFormattedTextObjectArray("upto the $vanilla max$ level."));
+		text.add(4, "");
+	});
+
+	// Add the tooltips to the items
 	itemsToTooltip.forEach((tooltipItem) => {
 		// add the tooltip to the item
 		tooltip.addAdvanced(tooltipItem.item, (item, advanced, text) => {

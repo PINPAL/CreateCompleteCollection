@@ -133,7 +133,12 @@
     "fr.iglee42.createcasing.screen.BrassShaftScreen": true,
     "com.jaquadro.minecraft.storagedrawers.inventory.DrawerScreen$Slot2": true,
     "net.coderbot.iris.gui.screen.ShaderPackScreen": true,
-    "me.flashyreese.mods.reeses_sodium_options.client.gui.SodiumVideoOptionsScreen": true
+    "me.flashyreese.mods.reeses_sodium_options.client.gui.SodiumVideoOptionsScreen": true,
+    "de.cheaterpaul.enchantmentmachine.client.gui.screens.inventory.DisenchanterScreen": true,
+    "de.cheaterpaul.enchantmentmachine.client.gui.screens.inventory.EnchanterScreen": true,
+    "de.cheaterpaul.enchantmentmachine.client.gui.screens.StorageScreen": true,
+    "fr.frinn.custommachinery.client.screen.CustomMachineScreen": true,
+    "shadows.apotheosis.ench.library.EnchLibraryScreen": true
   },
   "hideBackground": {
     "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackScreen": false
