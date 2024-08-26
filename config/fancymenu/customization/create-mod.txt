@@ -27,9 +27,9 @@ customization {
 customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
   orientation = mid-centered
-  x = -100
+  x = -101
   action = movebutton
-  y = 41
+  y = 42
 }
 
 customization {
@@ -95,7 +95,7 @@ customization {
   orientation = mid-centered
   x = -100
   action = movebutton
-  y = 17
+  y = 18
 }
 
 customization {
@@ -165,7 +165,7 @@ customization {
 
 customization {
   orientation = top-left
-  hidden = false
+  hidden = true
   x = 186
   width = 268
   action = deep_customization_element:title_screen_forge_top
@@ -176,7 +176,7 @@ customization {
 
 customization {
   orientation = top-left
-  hidden = false
+  hidden = true
   x = 411
   width = 228
   action = deep_customization_element:title_screen_forge_copyright
@@ -196,5 +196,25 @@ customization {
   y = -153
   advanced_width = 240
   height = 180
+}
+
+customization {
+  orientation = top-left
+  enable_scrolling = true
+  shadow = true
+  scale = 0.666666
+  source = Create Complete Collection (LEGACY): v1.352
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = 399
+  width = 241
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 82819afd-efe3-4f43-8bcb-60c29284a96a1724672053750
+  y = 344
+  alignment = right
+  base_color = a8a8a8
+  height = 8
 }
 
