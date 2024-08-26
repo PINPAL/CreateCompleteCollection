@@ -110,6 +110,9 @@ ServerEvents.recipes((event) => {
 		.shapeless("9x createindustry:coal_coke", ["createindustry:coal_coke_block"])
 		.id("kubejs:coal_coke_block_whoopsie");
 
+	// Walnut Recycle
+	event.shapeless("ecologics:walnut_sapling", ["ecologics:walnut"]);
+
 	// Fix Bronze Saw
 	event.remove({ output: "create_dd:bronze_saw" });
 	event.shaped("create_dd:bronze_saw", [" S ", "B6B", " C "], {
