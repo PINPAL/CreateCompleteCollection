@@ -23,7 +23,7 @@ ServerEvents.recipes((event) => {
 	// Void Upgrade
 	event.shaped("sophisticatedbackpacks:advanced_void_upgrade", ["SPS", "GUG", "ZDZ"], {
 		S: "#forge:string",
-		P: "minecraft:ender_pearl",
+		P: "#kubejs:void_items",
 		G: "#forge:obsidian",
 		U: "sophisticatedbackpacks:upgrade_base",
 		Z: "#forge:plates/steel",

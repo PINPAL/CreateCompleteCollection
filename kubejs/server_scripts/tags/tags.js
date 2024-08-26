@@ -253,6 +253,11 @@ ServerEvents.tags("item", (event) => {
 		event.add("create:pressurized_air_sources", item);
 	});
 
+	const void_items = ["minecraft:lava_bucket", "minecraft:cactus"];
+	void_items.forEach((item) => {
+		event.add("kubejs:void_items", item);
+	});
+
 	const paxels = [
 		"kubejs:wooden_paxel",
 		"kubejs:stone_paxel",

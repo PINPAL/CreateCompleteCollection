@@ -10,11 +10,10 @@ ServerEvents.recipes((event) => {
 	event.shapeless("storagedrawers:shroud_key", ["storagedrawers:drawer_key", "#forge:nuggets/gold"]);
 
 	// Void Upgrade
-	event.shaped("storagedrawers:void_upgrade", ["EOE", "OUO", "EOE"], {
-		U: "sophisticatedbackpacks:upgrade_base",
-		E: "#forge:ender_pearls",
-		O: "#forge:obsidian",
-	});
+	event.recipes.create.deploying("storagedrawers:void_upgrade", [
+		"sophisticatedbackpacks:upgrade_base",
+		"#kubejs:void_items",
+	]);
 
 	// Redstone Upgrade
 	event.shapeless("storagedrawers:redstone_upgrade", ["sophisticatedbackpacks:upgrade_base", "minecraft:comparator"]);
