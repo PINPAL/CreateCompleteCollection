@@ -5,10 +5,12 @@ ServerEvents.recipes((event) => {
 	});
 
 	// Wood Pulping
-	event.recipes.create.mixing(
-		[Fluid.of("create_paper_line:wood_pulp", 200)],
-		[Fluid.of("minecraft:water", 250), "createindustry:sawdust", "farmersdelight:tree_bark"]
-	);
+	event.recipes.create
+		.mixing(
+			[Fluid.of("create_paper_line:wood_pulp", 200)],
+			[Fluid.of("minecraft:water", 250), "createindustry:sawdust", "farmersdelight:tree_bark"]
+		)
+		.id("kubejs:wood_pulp");
 
 	// Replacing create_paper_line:wood_chips with farmsdelight:tree_bark
 	event.replaceInput(
@@ -23,10 +25,12 @@ ServerEvents.recipes((event) => {
 	);
 
 	// Replace white dye with white dye liquid
-	event.recipes.create.mixing(
-		[Fluid.of("create_paper_line:whitened_wood_pulp", 100)],
-		[Fluid.of("create_paper_line:wood_pulp", 100), Fluid.of("kubejs:white_dye_fluid", 500)]
-	);
+	event.recipes.create
+		.mixing(
+			[Fluid.of("create_paper_line:whitened_wood_pulp", 250)],
+			[Fluid.of("create_paper_line:wood_pulp", 100), Fluid.of("kubejs:white_dye_fluid", 250)]
+		)
+		.id("kubejs:whitened_wood_pulp");
 
 	// Replace frame with canvas
 	event.replaceInput({ input: "create_paper_line:frame" }, "create_paper_line:frame", "farmersdelight:canvas");
