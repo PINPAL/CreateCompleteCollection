@@ -493,7 +493,7 @@
 				"27F8B5F7212E9412"
 				"3B237ADD59BDB02A"
 			]
-			description: ["Drop some Cobble into your &6Sifter&r then power it using your &6Hand Crank&r from underneath or use your free &6Cogwheel&r reward to power it from the side."]
+			description: ["&#c5934aDrop some Cobble into your &#ebd777Sifter&#c5934a then power it using your &#ebd777Hand Crank&#c5934a from underneath or use your free &#ebd777Cogwheel&#c5934a reward to power it from the side."]
 			id: "37E5D108BDCEA53B"
 			rewards: [{
 				id: "32B22EFA74086655"
@@ -513,7 +513,7 @@
 		}
 		{
 			dependencies: ["26D185F68C821538"]
-			description: ["Obtain a &6Sifter&r and take your very first steps to becoming a true engineer!"]
+			description: ["&#c5934aObtain a &#ebd777Sifter&#c5934a and take your very first steps to becoming a true engineer!"]
 			icon: "createsifter:sifter"
 			id: "3B237ADD59BDB02A"
 			rewards: [{
@@ -2163,17 +2163,13 @@
 		}
 		{
 			description: [
-				"&l&nEnchanting Overview"
+				"&l&n&fEnchanting Overview&r"
 				""
-				"Obtaining &6Random Enchanted Books&r is your first step to beginning your enchanting journey."
+				"&#c5934aObtaining &#ebd777Random Enchanted Books&#c5934a is your first step to beginning your enchanting journey."
 				""
-				"Once you have some enchanted books, you can apply them onto your tools using the &6Blaze Enchanter&r."
+				"&7Once you have some enchanted books, you can apply them onto your tools using the &#ebd777Blaze Enchanter."
 				""
-				"&l&nLevel I Only?"
-				""
-				"This means enchanting is more of a challenge, you will need a source of heat for &bsuperheating&r in order to obtain &bHyper Experience&r this will allow your &6Blaze Enchanter&r to enchant the item one level higher than the book in it's &6Enchanting Guide&r."
-				""
-				"Yes you can reach enchantments upto &cLevel X&r. While enchanting is harder than Vanilla, it offers much greater scalability and automation."
+				"&7You can also upgrade books using Book Piles, the \"&#c5934aBeyond Level I&7\" quest will explain more."
 			]
 			icon: "minecraft:enchanting_table"
 			id: "11E1B19181CD6D2D"
@@ -2231,7 +2227,7 @@
 				item: "kubejs:lootbox_enchantments_generic"
 				type: "item"
 			}]
-			subtitle: "Look at the recipe for the enchanted book to find out more."
+			subtitle: "Look at the recipe for the lootbox to find out more."
 			tasks: [{
 				id: "6816B4FAD3892E86"
 				item: "minecraft:book"
@@ -2263,9 +2259,9 @@
 		{
 			dependencies: ["56A83A4BF3CEFC3E"]
 			description: [
-				"The &6Blaze Enchanter&r can't enchant books directly."
+				"&#c5934aThe &#ebd777Blaze Enchanter&#c5934a can't enchant books directly."
 				""
-				"Instead you will need to enchant a tool of your choice using &bhyper enchanting&r then extract it's enchantments using the Disenchanter."
+				"&#c5934aInstead you will need to enchant a tool of your choice using &#ebd777hyper enchanting&#c5934a then extract it's enchantments using the Disenchanter."
 			]
 			id: "1B7EDE54D07C9212"
 			rewards: [{
@@ -2273,34 +2269,43 @@
 				item: "kubejs:lootbox_enchantments_generic"
 				type: "item"
 			}]
-			subtitle: "Creating OP enchantments.."
+			subtitle: "Creating OVERPOWERED enchantments.."
 			tasks: [{
 				id: "6157F658E844B803"
 				item: "disenchanting:disenchanter"
 				type: "item"
 			}]
 			title: "Disenchanting"
-			x: -5.75d
-			y: 6.0d
+			x: -7.375d
+			y: 6.375d
 		}
 		{
-			dependencies: ["11E1B19181CD6D2D"]
+			dependencies: ["2B0E3567473EC234"]
+			description: [
+				"&fBreaking Limits&r"
+				"&7You can beyond the vanila enchantment limits."
+				""
+				"&#c5934aYou will need a source of heat for &bsuperheating&#c5934a in order to obtain &#ebd777Hyper Experience&#c5934a this will allow your &#ebd777Blaze Enchanter&#c5934a to enchant the item one level higher than the book in it's &#ebd777Enchanting Guide&#c5934a."
+				""
+				"&7Yes you can reach enchantments upto &#ebd777Level X&7. While enchanting is harder than Vanilla, it offers much greater scalability and automation."
+			]
 			hide: true
 			id: "56A83A4BF3CEFC3E"
 			rewards: [{
+				count: 3
 				id: "58E26635068C9D79"
 				item: "kubejs:lootbox_enchantments_generic"
 				type: "item"
 			}]
 			subtitle: "Hyper experience can be used to increase the level of an enchantment."
 			tasks: [{
-				id: "479B815D6A1FA36B"
-				item: "create_enchantment_industry:hyper_experience_bottle"
+				id: "4AE973C31BEA5268"
+				item: "create_enchantment_industry:experience_rotor"
 				type: "item"
 			}]
-			title: "Leveling Up"
-			x: -6.125d
-			y: 5.125d
+			title: "Overpowered"
+			x: -6.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["11E1B19181CD6D2D"]
@@ -2402,20 +2407,20 @@
 		}
 		{
 			description: [
-				"&l&nFood Overhauled"
+				"&rFood Overhauled"
 				""
-				"You will now find a button within your inventory to track your food."
-				"Food must be balanced, you must make sure to get your &9Vegtables&r, &9Meat&r and &9Carbs&r."
+				"&#c5934aYou will now find a button within your inventory to track your food."
+				"&#c5934aFood must be balanced, you must make sure to get your &#ebd777Vegtables&#c5934a, &#ebd777Meat&#c5934a and &#ebd777Carbs&#c5934a."
 				""
-				"If you have a poor diet you will be &cmalnourished&r."
-				"- This will halve your max health."
-				"- Your mining speed will be reduced a very small amount."
-				"- Your movement speed will be reduced slightly."
+				"&#c5934aIf you have a poor diet you will be &#ebd777malnourished&#c5934a."
+				"&7- This will halve your max health."
+				"&7- Your mining speed will be reduced a very small amount."
+				"&7- Your movement speed will be reduced slightly."
 				""
-				"&l&nWhy?"
+				"&rWhy?"
 				""
-				"What's the point in having all these unique food types in the game if you only eat one?"
-				"Instead this change aims to incentivize the player to create farms for each of the different nutrient types and potentially even combine them together into a \"Super Food\" like a Burger that provides all the nutrients."
+				"&7What's the point in having all these unique food types in the game if you only eat one?"
+				"&7Instead this change aims to incentivize the player to create farms for each of the different nutrient types and potentially even combine them together into a \"Super Food\" like a Burger that provides all the nutrients."
 			]
 			icon: "farmersdelight:hamburger"
 			id: "7407910917C9F8A9"
@@ -4596,7 +4601,7 @@
 		}
 		{
 			dependencies: ["6545EE475DD16057"]
-			description: ["You will need to make a &6Mechanical Press&r in order to create copper sheets for the Paxel."]
+			description: [""]
 			icon: "create:copper_sheet"
 			id: "05BEFB7D67ECA089"
 			rewards: [{
@@ -7203,6 +7208,41 @@
 			}]
 			x: 0.5d
 			y: 14.0d
+		}
+		{
+			dependencies: ["11E1B19181CD6D2D"]
+			description: [
+				"&7Books can be placed onto the ground and stacked upto 4 books per block."
+				""
+				""
+				"&#ebd777Placing a book&#c5934a onto an existing &#ebd777book pile&#c5934a which is &#ebd777of the same level &#c5934aand enchantment will allow you to upgrade the book &#ebd7771 Level&#c5934a. "
+				""
+				"&7If done correclty you will hear an enchanting noise and see some particles."
+			]
+			icon: "minecraft:enchanted_book"
+			id: "2B0E3567473EC234"
+			rewards: [{
+				id: "3070B14BEDB27642"
+				item: "kubejs:lootbox_enchantments_generic"
+				type: "item"
+			}]
+			subtitle: "Basics of Upgrading"
+			tasks: [
+				{
+					id: "11A0C36F481A7890"
+					title: "I understand!"
+					type: "checkmark"
+				}
+				{
+					id: "081F42D4B770385A"
+					points: false
+					type: "xp"
+					value: 1L
+				}
+			]
+			title: "Beyond Level I"
+			x: -6.125d
+			y: 5.125d
 		}
 	]
 	title: "Create Modpack"
