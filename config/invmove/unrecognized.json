@@ -138,7 +138,8 @@
     "de.cheaterpaul.enchantmentmachine.client.gui.screens.inventory.EnchanterScreen": true,
     "de.cheaterpaul.enchantmentmachine.client.gui.screens.StorageScreen": true,
     "fr.frinn.custommachinery.client.screen.CustomMachineScreen": true,
-    "shadows.apotheosis.ench.library.EnchLibraryScreen": true
+    "shadows.apotheosis.ench.library.EnchLibraryScreen": true,
+    "loaderCommon.forge.com.seibel.distanthorizons.common.wrappers.gui.ClassicConfigGUI$ConfigScreen": true
   },
   "hideBackground": {
     "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackScreen": false
