@@ -23,7 +23,7 @@
 !/kubejs/startup_scripts/
 !/kubejs/assets/
 !kubejs/data/
-!change_version.py
+!update_version.py
 ###############################
 
 # ignore user files
