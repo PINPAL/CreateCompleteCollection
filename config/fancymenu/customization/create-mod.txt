@@ -199,22 +199,22 @@ customization {
 }
 
 customization {
-  orientation = top-left
+  orientation = bottom-right
   enable_scrolling = true
   shadow = true
   scale = 0.666666
   source = Create Complete Collection (LEGACY): v1.352
-  text_border = 0
+  text_border = 2
   case_mode = normal
   source_mode = direct
   line_spacing = 1
-  x = 399
-  width = 241
+  x = -224
+  width = 224
   action = custom_layout_element:fancymenu_customization_item_text
   actionid = 82819afd-efe3-4f43-8bcb-60c29284a96a1724672053750
-  y = 344
+  y = -11
   alignment = right
   base_color = a8a8a8
-  height = 8
+  height = 11
 }
 
