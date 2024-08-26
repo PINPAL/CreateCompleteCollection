@@ -557,46 +557,6 @@ let calculateRarityPercentage = (weight, lootbox) => {
 	return weight / totalWeight;
 };
 
-const LanguageHandler = Java.loadClass("net.minecraft.client.resources.language.I18n");
-let fetchItemName = (itemID) => {
-	let fetchLangTranslation = (itemIdString) => {
-		let itemObject = Item.of(itemIdString);
-
-		let prefix = "item.";
-		// Check if the item is a block
-		if (itemObject.isBlock()) {
-			prefix = "block.";
-		}
-
-		return LanguageHandler.get(prefix + itemIdString.replace(":", "."));
-	};
-
-	// Check if the itemID is an object
-	if (typeof itemID === "object") {
-		itemID = itemID.getId();
-	}
-	// else it's a string of either an itemID or tag
-	else {
-		// Check if the itemID is a tag
-		if (itemID.startsWith("#")) {
-			// Replace everything before and including :
-			itemID = itemID.replace(/.*:/, "");
-			// Replace all / with space
-			itemID = itemID.replace(/\//g, " ");
-			// Invert the order of the words
-			itemID = itemID.split(" ").reverse().join(" ");
-			// Remove the last character if it's an s
-			if (itemID.endsWith("s")) {
-				itemID = itemID.slice(0, -1);
-			}
-			return formatName(itemID);
-		}
-	}
-
-	let itemName = fetchLangTranslation(itemID);
-	return itemName;
-};
-
 for (const key in global.lootboxes) {
 	let lootbox = `kubejs:lootbox_${key}`;
 	let lootboxObject = {
@@ -604,8 +564,6 @@ for (const key in global.lootboxes) {
 		summary: [
 			`Rolls $${global.lootboxes[key].rolls}$ Time${global.lootboxes[key].rolls > 1 ? "s" : ""}.`,
 			`Contains $${global.lootboxes[key].items.length}$ Unique Items.`,
-			"",
-			`$Contains:$`,
 		],
 		controls: [
 			{
@@ -625,27 +583,6 @@ for (const key in global.lootboxes) {
 			},
 		],
 	};
-	// Edge case for enchantment books
-	if (key == "enchantments_generic") {
-		lootboxObject.summary.push(`- Any Enchanted Book 80%`);
-		lootboxObject.summary.push(`- Block of Experience 20%`);
-	} else {
-		// Sort the items by weight (highest to lowest)
-		let sortedPool = global.lootboxes[key].items.sort((a, b) => b.weight - a.weight);
-		// Add the items to the summary
-		sortedPool.forEach((item) => {
-			let rarityPercentage = calculateRarityPercentage(item.weight, global.lootboxes[key]) * 100;
-			let rarityString = Math.round(rarityPercentage);
-			if (rarityString == NaN) {
-				console.log("Error rounding" + item.item + " of " + rarityPercentage);
-			}
-			if (rarityPercentage < 1) {
-				rarityString = "<1";
-			}
-			lootboxObject.summary.push(`- ${fetchItemName(item.item)} ${rarityString}%`);
-		});
-	}
-
 	itemsToTooltip.push(lootboxObject);
 }
 
