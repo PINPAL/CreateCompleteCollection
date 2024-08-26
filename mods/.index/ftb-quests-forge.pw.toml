@@ -1,14 +1,13 @@
-name = "FTB Quests"
-filename = "ftb-quests-forge-1902.5.5-build.297.jar"
-side = "both"
+filename = 'ftb-quests-forge-1902.5.9-build.399.jar'
+name = 'FTB Quests'
+side = 'both'
 
 [download]
-mode = "metadata:curseforge"
-url = ""
-hash-format = "sha1"
-hash = "d04d6ea86bc7410bce323a7adf54adcdb96cce92"
+hash = 'a43d948ff29d77e9f68e758c108d25d6589edc5c'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
 
-[update]
 [update.curseforge]
-file-id = 4760341
+file-id = 5417957
 project-id = 289412

@@ -8,9 +8,18 @@ ServerEvents.recipes((event) => {
 			G: "minecraft:glowstone_dust",
 		});
 	});
+	// Polished dd materials
+	const polishedMats = ["bronze", "zinc", "andesite_alloy", "steel"];
+	polishedMats.forEach((polishedMat) => {
+		event.remove({ output: `create_dd:${polishedMat}_polished_block` });
+		event.shaped(`48x create_dd:${polishedMat}_polished_block`, ["xx", "xx"], {
+			x: `4x #forge:storage_blocks/${polishedMat}`,
+		});
+	});
+
+	// Trapdoor
 	const misc_casings = ["andesite", "brass", "copper"];
 	misc_casings.forEach((casing) => {
-		// Trapdoor
 		event.remove({ output: `create_things_and_misc:${casing}_casing_trapdoor` });
 		event.stonecutting(`4x create_things_and_misc:${casing}_casing_trapdoor`, `create:${casing}_casing`);
 	});

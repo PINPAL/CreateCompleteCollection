@@ -1,14 +1,13 @@
-name = "MaFgLib"
-filename = "MaFgLib-0.1.7-mc1.19.2.jar"
-side = "both"
+filename = 'MaFgLib-0.1.14-mc1.19.2.jar'
+name = 'MaFgLib'
+side = 'both'
 
 [download]
-mode = "url"
-url = "https://cdn.modrinth.com/data/SKI34J7B/versions/p4DsaHYA/MaFgLib-0.1.7-mc1.19.2.jar"
-hash-format = "sha512"
-hash = "0ace037c2c75d7eb93d4de00c71f39bd7fc831010b70f3d573216299176a9d39f9f04c5cd7b143a827de9e31e7c1cf833b87a3254815e3ab18b8b0f13bfce58d"
+hash = '995ccd7a48abd55787ab05022837c3db2d450da1c9b770a64a20746723917e5e44c80a9fe76b4cd72d79b1de07009f5bc205cfacacff15d374272639299ce0b0'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/SKI34J7B/versions/p0vTd2va/MaFgLib-0.1.14-mc1.19.2.jar'
 
-[update]
 [update.modrinth]
-mod-id = "SKI34J7B"
-version = "p4DsaHYA"
+mod-id = 'SKI34J7B'
+version = 'p0vTd2va'
