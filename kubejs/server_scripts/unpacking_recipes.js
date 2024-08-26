@@ -35,9 +35,16 @@ ServerEvents.recipes((event) => {
 			output: "create_dd:steel_ingot",
 			count: 6,
 		},
+		{
+			input: "minecraft:cut_copper",
+			output: "minecraft:copper_ingot",
+			count: 3,
+		},
 	];
 
 	unpackingRecipes.forEach((recipe) => {
-		event.recipes.create.crushing(`${recipe.count}x ${recipe.output}`, recipe.input);
+		let recipeId = "kubejs:unpacking/";
+		recipeId = recipeId + recipe.output.replace(":", "_");
+		event.recipes.create.crushing(`${recipe.count}x ${recipe.output}`, recipe.input).id(recipeId);
 	});
 });
