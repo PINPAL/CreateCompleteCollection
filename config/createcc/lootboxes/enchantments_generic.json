@@ -1,0 +1,14 @@
+{
+	"name": "Random Enchants",
+	"rolls": 1,
+	"items": [
+		{
+			"item": "minecraft:enchanted_book",
+			"weight": 8
+		},
+		{
+			"item": "create:experience_block",
+			"weight": 2
+		}
+	]
+}
