@@ -45,7 +45,7 @@ _version = 2
 				# COMPLETE: LODs will render transparent. 
 				# FAKE: LODs will be opaque, but shaded to match the blocks underneath. 
 				# DISABLED: LODs will be opaque.
-				transparency = "COMPLETE"
+				transparency = "FAKE"
 				#
 				# What blocks shouldn't be rendered as LODs? 
 				# 
@@ -211,7 +211,7 @@ _version = 2
 				#
 				# The radius, measured in pixels, that blurring is calculated for the SSAO. 
 				# Higher numbers will reduce banding at the cost of GPU performance.
-				blurRadius = 2
+				blurRadius = 1
 
 			[client.advanced.graphics.noiseTextureSettings]
 				#
