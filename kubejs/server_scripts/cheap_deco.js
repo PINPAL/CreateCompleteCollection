@@ -8,6 +8,12 @@ ServerEvents.recipes((event) => {
 			G: "minecraft:glowstone_dust",
 		});
 	});
+	const misc_casings = ["andesite", "brass", "copper"];
+	misc_casings.forEach((casing) => {
+		// Trapdoor
+		event.remove({ output: `create_things_and_misc:${casing}_casing_trapdoor` });
+		event.stonecutting(`4x create_things_and_misc:${casing}_casing_trapdoor`, `create:${casing}_casing`);
+	});
 	// Cheap Steel Casing
 	event.recipes.create
 		.deploying("kubejs:steel_casing", ["#forge:stripped_logs", "#forge:nuggets/steel"])
