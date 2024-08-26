@@ -40,6 +40,41 @@ ServerEvents.recipes((event) => {
 			output: "minecraft:copper_ingot",
 			count: 3,
 		},
+		{
+			input: "createdeco:zinc_coin",
+			output: "create:zinc_nugget",
+			count: 1,
+		},
+		{
+			input: "createdeco:copper_coin",
+			output: "create:copper_nugget",
+			count: 1,
+		},
+		{
+			input: "createdeco:gold_coin",
+			output: "minecraft:gold_nugget",
+			count: 1,
+		},
+		{
+			input: "createdeco:brass_coin",
+			output: "create:brass_nugget",
+			count: 1,
+		},
+		{
+			input: "createdeco:iron_coin",
+			output: "minecraft:iron_nugget",
+			count: 1,
+		},
+		{
+			input: "createdeco:netherite_coin",
+			output: "createdeco:netherite_nugget",
+			count: 1,
+		},
+		{
+			input: "createdeco:cast_iron_coin",
+			output: "createdeco:cast_iron_nugget",
+			count: 1,
+		},
 	];
 
 	unpackingRecipes.forEach((recipe) => {
