@@ -33,6 +33,7 @@ config/jei/ingredient-list-type-sort-order.ini
 config/cucumber*
 config/bocchud/*
 config/xaerominimap_entities.json
+config/packetfixer.properties
 
 # ignore config bak files
 config/*.bak
