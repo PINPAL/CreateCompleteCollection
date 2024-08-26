@@ -21,6 +21,9 @@ ServerEvents.recipes((event) => {
 	event.recipes
 		.createItemApplication("kubejs:steel_casing", ["#forge:stripped_wood", "#forge:nuggets/steel"])
 		.keepHeldItem();
+	// Cheap Steel Trapdoor
+	event.remove({ output: "createindustry:steel_trapdoor" });
+	event.stonecutting("4x createindustry:steel_trapdoor", "#forge:ingots/steel");
 	// Cheap Netherite Building Blocks
 	event.stonecutting("16x createdeco:netherite_bars", "#forge:ingots/netherite");
 	event.shaped("64x createdeco:netherite_bars", ["SSS", "SSS"], {
@@ -36,162 +39,145 @@ ServerEvents.recipes((event) => {
 	const lampColors = ["yellow", "red", "green", "blue"];
 	const decorativeMats = [
 		{
-			outputMod: "createdeco",
-			outputMat: "gold",
+			materialName: "gold",
 			bars: "createdeco:gold_bars",
-			sheets: "create:golden_sheet",
-			nuggets: "minecraft:gold_nugget",
 			hasNativeLadder: false,
+			trapdoor: "supplementaries:gold_trapdoor",
 		},
 		{
-			outputMod: "createdeco",
-			outputMat: "netherite",
+			materialName: "netherite",
 			bars: "createdeco:netherite_bars",
-			sheets: "createdeco:netherite_sheet",
-			nuggets: "createdeco:netherite_nugget",
 			hasNativeLadder: false,
+			trapdoor: "supplementaries:netherite_trapdoor",
 		},
 		{
-			outputMod: "createdeco",
-			outputMat: "andesite",
+			materialName: "andesite",
 			bars: "createdeco:andesite_bars",
-			sheets: "create_dd:andesite_sheet",
-			nuggets: "create:andesite_alloy",
 			hasNativeLadder: true,
+			trapdoor: "createdeco:andesite_trapdoor",
 		},
 		{
-			outputMod: "createdeco",
-			outputMat: "brass",
+			materialName: "brass",
 			bars: "createdeco:brass_bars",
-			sheets: "create:brass_sheet",
-			nuggets: "create:brass_nugget",
 			hasNativeLadder: true,
+			trapdoor: "createdeco:brass_trapdoor",
 		},
 		{
-			outputMod: "createdeco",
-			outputMat: "cast_iron",
+			materialName: "cast_iron",
 			bars: "createdeco:cast_iron_bars",
-			sheets: "createdeco:cast_iron_sheet",
-			nuggets: "createdeco:cast_iron_nugget",
 			hasNativeLadder: false,
+			trapdoor: "createdeco:cast_iron_trapdoor",
 		},
 		{
-			outputMod: "createdeco",
-			outputMat: "iron",
+			materialName: "iron",
 			bars: "minecraft:iron_bars",
-			sheets: "create:iron_sheet",
-			nuggets: "minecraft:iron_nugget",
 			hasNativeLadder: false,
+			trapdoor: "minecraft:iron_trapdoor",
 		},
 		{
-			outputMod: "createdeco",
-			outputMat: "copper",
+			materialName: "copper",
 			bars: "createdeco:copper_bars",
-			sheets: "create:copper_sheet",
-			nuggets: "create:copper_nugget",
 			hasNativeLadder: true,
+			trapdoor: "createdeco:copper_trapdoor",
 		},
 		{
-			outputMod: "createdeco",
-			outputMat: "zinc",
+			materialName: "zinc",
 			bars: "createdeco:zinc_bars",
-			sheets: "createdeco:zinc_sheet",
-			nuggets: "create:zinc_nugget",
 			hasNativeLadder: false,
+			trapdoor: "createdeco:zinc_trapdoor",
 		},
-	].forEach((decorativeMat) => {
-		// Catwalk
+	];
+	decorativeMats.forEach((decorativeMat) => {
+		// Mesh Fence
 		event.remove({
-			output: decorativeMat.outputMod + ":" + decorativeMat.outputMat + "_catwalk",
-		});
-		event.shaped(
-			Item.of(decorativeMat.outputMod + ":" + decorativeMat.outputMat + "_catwalk", 24),
-			[" S ", "SBS", " S "],
-			{
-				S: decorativeMat.sheets,
-				B: decorativeMat.bars,
-			}
-		);
-		// Catwalk Stairs
-		event.remove({
-			output: decorativeMat.outputMod + ":" + decorativeMat.outputMat + "_catwalk_stairs",
-		});
-		event.shaped(
-			Item.of(decorativeMat.outputMod + ":" + decorativeMat.outputMat + "_catwalk_stairs", 3),
-			[" S ", "SB "],
-			{
-				S: decorativeMat.sheets,
-				B: decorativeMat.bars,
-			}
-		);
-		// Sheet Metal
-		event.remove({
-			output: decorativeMat.outputMod + ":" + decorativeMat.outputMat + "_sheet_metal",
+			output: "createdeco" + ":" + decorativeMat.materialName + "_mesh_fence",
 		});
 		event.stonecutting(
-			Item.of(decorativeMat.outputMod + ":" + decorativeMat.outputMat + "_sheet_metal", 12),
-			decorativeMat.sheets
+			Item.of("createdeco" + ":" + decorativeMat.materialName + "_mesh_fence", 12),
+			"#forge:ingots/" + decorativeMat.materialName
+		);
+		// Catwalk
+		event.remove({
+			output: "createdeco" + ":" + decorativeMat.materialName + "_catwalk",
+		});
+		event.shaped(Item.of("createdeco" + ":" + decorativeMat.materialName + "_catwalk", 24), [" S ", "SBS", " S "], {
+			S: "#forge:plates/" + decorativeMat.materialName,
+			B: decorativeMat.bars,
+		});
+		// Catwalk Stairs
+		event.remove({
+			output: "createdeco" + ":" + decorativeMat.materialName + "_catwalk_stairs",
+		});
+		event.shaped(Item.of("createdeco" + ":" + decorativeMat.materialName + "_catwalk_stairs", 3), [" S ", "SB "], {
+			S: "#forge:plates/" + decorativeMat.materialName,
+			B: decorativeMat.bars,
+		});
+		// Sheet Metal
+		event.remove({
+			output: "createdeco" + ":" + decorativeMat.materialName + "_sheet_metal",
+		});
+		event.stonecutting(
+			Item.of("createdeco" + ":" + decorativeMat.materialName + "_sheet_metal", 12),
+			"#forge:plates/" + decorativeMat.materialName
 		);
 		// Ladder
 		event.remove({
 			output:
-				(decorativeMat.hasNativeLadder ? "create" : decorativeMat.outputMod) +
+				(decorativeMat.hasNativeLadder ? "create" : "createdeco") +
 				":" +
-				decorativeMat.outputMat +
+				decorativeMat.materialName +
 				"_ladder",
 		});
-
 		event.shaped(
 			Item.of(
-				(decorativeMat.hasNativeLadder ? "create" : decorativeMat.outputMod) +
+				(decorativeMat.hasNativeLadder ? "create" : "createdeco") +
 					":" +
-					decorativeMat.outputMat +
+					decorativeMat.materialName +
 					"_ladder",
 				16
 			),
 			[" N ", " L ", " N "],
 			{
-				N: decorativeMat.nuggets,
+				N: "#forge:nuggets/" + decorativeMat.materialName,
 				L: "#quark:ladders",
 			}
 		);
-		// if mod is createdeco
-		if (decorativeMat.outputMod == "createdeco") {
-			// Support
+		// Trapdoor
+		event.remove({
+			output: decorativeMat.trapdoor,
+		});
+		event.stonecutting(Item.of(decorativeMat.trapdoor, 4), "#forge:ingots/" + decorativeMat.materialName);
+
+		// Support
+		event.remove({
+			output: "createdeco" + ":" + decorativeMat.materialName + "_support",
+		});
+		event.shaped(Item.of("createdeco" + ":" + decorativeMat.materialName + "_support", 24), [" B ", "B B", " B "], {
+			B: decorativeMat.bars,
+		});
+		// Train Hull
+		event.remove({
+			output: "createdeco" + ":" + decorativeMat.materialName + "_hull",
+		});
+		event.stonecutting(
+			Item.of("createdeco" + ":" + decorativeMat.materialName + "_hull", 16),
+			"#forge:plates/" + decorativeMat.materialName
+		);
+		// Lamp
+		lampColors.forEach((lampColor) => {
 			event.remove({
-				output: decorativeMat.outputMod + ":" + decorativeMat.outputMat + "_support",
+				output: "createdeco" + ":" + lampColor + "_" + decorativeMat.materialName + "_lamp",
 			});
 			event.shaped(
-				Item.of(decorativeMat.outputMod + ":" + decorativeMat.outputMat + "_support", 24),
-				[" B ", "B B", " B "],
+				Item.of("createdeco" + ":" + lampColor + "_" + decorativeMat.materialName + "_lamp", 8),
+				[" N ", " L ", "DS "],
 				{
-					B: decorativeMat.bars,
+					S: "#forge:plates/" + decorativeMat.materialName,
+					L: "minecraft:lantern",
+					N: "#forge:nuggets/" + decorativeMat.materialName,
+					D: "minecraft:" + lampColor + "_dye",
 				}
 			);
-			// Train Hull
-			event.remove({
-				output: decorativeMat.outputMod + ":" + decorativeMat.outputMat + "_hull",
-			});
-			event.stonecutting(
-				Item.of(decorativeMat.outputMod + ":" + decorativeMat.outputMat + "_hull", 16),
-				decorativeMat.sheets
-			);
-			// Lamp
-			lampColors.forEach((lampColor) => {
-				event.remove({
-					output: decorativeMat.outputMod + ":" + lampColor + "_" + decorativeMat.outputMat + "_lamp",
-				});
-				event.shaped(
-					Item.of(decorativeMat.outputMod + ":" + lampColor + "_" + decorativeMat.outputMat + "_lamp", 8),
-					[" N ", " L ", "DS "],
-					{
-						S: decorativeMat.sheets,
-						L: "minecraft:lantern",
-						N: decorativeMat.nuggets,
-						D: "minecraft:" + lampColor + "_dye",
-					}
-				);
-			});
-		}
+		});
 	});
 });

@@ -215,6 +215,33 @@ ServerEvents.tags("item", (event) => {
 		});
 	});
 
+	const deepslate = [
+		"minecraft:cobbled_deepslate",
+		"minecraft:polished_deepslate",
+		"minecraft:deepslate_bricks",
+		"minecraft:cracked_deepslate_bricks",
+		"minecraft:deepslate_tiles",
+		"minecraft:cracked_deepslate_tiles",
+		"minecraft:chiseled_deepslate",
+		"minecraft:cobbled_deepslate_wall",
+		"minecraft:polished_deepslate_wall",
+		"minecraft:deepslate_brick_wall",
+		"minecraft:deepslate_tile__wall",
+		"minecraft:cobbled_deepslate_stairs",
+		"minecraft:polished_deepslate_stairs",
+		"minecraft:deepslate_brick_stairs",
+		"minecraft:deepslate_tile_stairs",
+		"minecraft:cobbled_deepslate_slab",
+		"minecraft:polished_deepslate_slab",
+		"minecraft:deepslate_brick_slab",
+		"minecraft:deepslate_tile_slab",
+	];
+	deepslate.forEach((item) => {
+		event.add("create:stone_types/deepslate", item);
+	});
+
+	event.add("forge:ingots/andesite", "create:andesite_alloy");
+
 	event.add("forge:storage_blocks/bronze", "create_dd:bronze_block");
 
 	const notAllowedtoSlice = [
