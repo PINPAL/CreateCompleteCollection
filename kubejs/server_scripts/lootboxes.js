@@ -35,10 +35,26 @@ let pickWeightedElement = (items) => {
 
 BlockEvents.rightClicked((event) => {
 	let block = event.getBlock();
+
+	/**
+	 * @param {player} player
+	 * @returns {boolean} true if the player is crouching or is a fake player
+	 */
+	const isValidPlayer = (player) => {
+		if (player.isFake()) {
+			return true;
+		}
+		if (player.isCrouching()) {
+			return true;
+		}
+		return false;
+	};
+
+	// Check if player is "fake"
 	if (block.hasTag("kubejs:lootbox")) {
 		let heldItem = event.getItem().getId();
 		// If player is crouching and holding nothing or a wrench
-		if (event.getPlayer().isCrouching() && (heldItem == "minecraft:air" || heldItem == "create:wrench")) {
+		if (isValidPlayer(event.getPlayer()) && (heldItem == "minecraft:air" || heldItem == "create:wrench")) {
 			// Play a sound
 			event.server.runCommandSilent(
 				`playsound kubejs:lootbox_open block @a ${block.getX()} ${block.getY()} ${block.getZ()}`
