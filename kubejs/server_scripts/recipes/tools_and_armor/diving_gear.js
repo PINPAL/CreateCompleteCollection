@@ -18,10 +18,15 @@ ServerEvents.recipes((event) => {
 		B: "kubejs:copper_chestplate",
 	});
 
-	// Upgrading Past Copper
+	// Upgrading Past Copper (to Iron Armor)
 	event.smithing("minecraft:iron_helmet", "create:copper_diving_helmet", "kubejs:iron_stitching");
 	event.smithing("minecraft:iron_boots", "create:copper_diving_boots", "kubejs:iron_stitching");
 	event.smithing("minecraft:iron_chestplate", "create:copper_backtank", "kubejs:iron_stitching");
+
+	// Diving Gear from Netherite Armor
+	event.smithing("create:netherite_diving_helmet", "minecraft:netherite_helmet", "create:copper_diving_helmet");
+	event.smithing("create:netherite_diving_boots", "minecraft:netherite_boots", "create:copper_diving_boots");
+	event.smithing("create:netherite_backtank", "minecraft:netherite_chestplate", "create:copper_backtank");
 
 	// Diving Gear Repair Kits
 	const divingGear = [

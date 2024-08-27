@@ -127,10 +127,6 @@ const toolUpgradingTiers = [
 ];
 
 ServerEvents.recipes((event) => {
-	// Create Netherite Armor Upgrades
-	event.smithing("create:netherite_diving_helmet", "minecraft:netherite_helmet", "create:copper_diving_helmet");
-	event.smithing("create:netherite_diving_boots", "minecraft:netherite_boots", "create:copper_diving_boots");
-	event.smithing("create:netherite_backtank", "minecraft:netherite_chestplate", "create:copper_backtank");
 	// Smithing upgrade recipes
 	toolUpgradingTiers.forEach((tier) => {
 		// ARMOR

@@ -59,11 +59,17 @@ ServerEvents.recipes((event) => {
 		if (material.name == "netherite") {
 			event.smithing("kubejs:netherite_repair_kit", "kubejs:diamond_repair_kit", "#forge:ingots/netherite");
 		} else {
-			event.shaped("kubejs:" + material.name + "_repair_kit", [" A ", "ALA", " A "], {
-				A: material.material,
-				L: "minecraft:string",
-			});
+			event
+				.shaped("kubejs:" + material.name + "_repair_kit", [" A ", "ALA", " A "], {
+					A: material.material,
+					L: "minecraft:string",
+				})
+				.id("kubejs:crafting/" + material.name + "_repair_kit");
 		}
+		// Undo/Recycle Repair Kit
+		event.recipes.create
+			.milling(Item.of(material.material, 4), `kubejs:${material.name}_repair_kit`)
+			.id(`kubejs:repair_kits/undo/${material.name}`);
 
 		// Skip paxel/sword/hoe for chainmail and leather
 		if (!material.hasOwnProperty("noTools")) {
