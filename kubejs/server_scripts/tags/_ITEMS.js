@@ -303,7 +303,6 @@ ServerEvents.tags("item", (event) => {
 		event.add("minecraft:axes", item);
 		event.add("minecraft:tools/axes", item);
 		event.add("kubejs:paxels", item);
-		event.add("kubejs:unbroken_paxel", item);
 	});
 
 	const wirelessGrids = [
@@ -392,18 +391,6 @@ ServerEvents.tags("item", (event) => {
 	decals.forEach((decal) => {
 		event.add("kubejs:create_decals", decal);
 	});
-
-	// Add paxel tag
-	event.add("kubejs:paxel", /kubejs:.*_paxel$/);
-
-	// Make paxel break more stuff faster
-	event.add("minecraft:mineable/paxel", "#forge:glass");
-	event.add("minecraft:mineable/paxel", "#minecraft:mineable/hoe");
-	event.add("minecraft:mineable/paxel", "#minecraft:wool");
-	event.add("minecraft:mineable/paxel", "#minecraft:wool_carpets");
-	event.add("minecraft:mineable/paxel", "#minecraft:beehives");
-	event.add("minecraft:mineable/paxel", "#minecraft:shulker_boxes");
-	event.add("minecraft:mineable/paxel", "minecraft:lantern");
 
 	// Yeet Salting from the game
 	event.removeAll("salt:can_be_salted");

@@ -9,4 +9,13 @@ ServerEvents.tags("block", (event) => {
 	});
 
 	event.remove("forge:stone", /quark:/);
+
+	// Make paxel break more stuff faster
+	event.add("minecraft:mineable/pickaxe", "#forge:glass");
+	event.add("minecraft:mineable/pickaxe", "#minecraft:mineable/hoe");
+	event.add("minecraft:mineable/pickaxe", "#minecraft:wool");
+	event.add("minecraft:mineable/pickaxe", "#minecraft:wool_carpets");
+	event.add("minecraft:mineable/pickaxe", "#minecraft:beehives");
+	event.add("minecraft:mineable/pickaxe", "#minecraft:shulker_boxes");
+	event.add("minecraft:mineable/pickaxe", "minecraft:lantern");
 });
