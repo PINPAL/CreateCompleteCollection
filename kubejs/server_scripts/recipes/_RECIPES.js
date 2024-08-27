@@ -462,6 +462,19 @@ ServerEvents.recipes((event) => {
 		I: "#forge:ingots/iron",
 	});
 
+	// Rice
+	event.recipes.create
+		.milling(
+			[
+				Item.of("farmersdelight:rice"),
+				Item.of("farmersdelight:rice").withChance(0.5),
+				Item.of("farmersdelight:straw"),
+				Item.of("farmersdelight:straw").withChance(0.75),
+			],
+			["farmersdelight:rice_panicle"]
+		)
+		.id("kubejs:rice");
+
 	// Melter
 	event.recipes.create.mechanical_crafting("melter:melter", ["N  N", "N  N", "N  N", "pNNp"], {
 		N: "#forge:ingots/netherite",
