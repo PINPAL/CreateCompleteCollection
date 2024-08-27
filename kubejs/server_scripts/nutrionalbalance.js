@@ -1,12 +1,3 @@
-ServerEvents.recipes((event) => {
-	// Cooking Pot
-	event.shaped("farmersdelight:cooking_pot", ["B B", "IWI", "III"], {
-		B: "minecraft:brick",
-		W: "minecraft:water_bucket",
-		I: "#forge:ingots/iron",
-	});
-});
-
 const nutritionAPI = Java.loadClass("com.dannyandson.nutritionalbalance.nutrients.PlayerNutritionData");
 
 const nutrientHunchs = {
@@ -27,271 +18,213 @@ const nutrientHunchs = {
 	},
 };
 
-function roundToNearestHalf(number) {
-	return Math.round(number * 2) / 2;
+/**
+ * Used to turn a number from 0 to 100 into a number between 0 and 3 (to nearest 0.5)
+ * Can be used to convert internal nutrient values to hunches
+ *
+ * @param {number} number number between 0 and 100
+ * @returns {number} number between 0 and 3 (to nearest 0.5)
+ */
+function convertValueToHunch(number) {
+	// Define ranges for the hunch levels
+	if (number >= 83.333) return 3.0;
+	if (number >= 66.666) return 2.5;
+	if (number >= 50) return 2.0;
+	if (number >= 33.333) return 1.5;
+	if (number >= 16.666) return 1.0;
+	if (number > 10) return 0.5;
+	// if the nutrient value is less than 10 (malnourished), it will be considered as 0
+	return 0;
 }
 
-function setHunchVisiblity(isVisible, event) {
-	if (isVisible) {
-		event.player.paint({
-			"*": {
-				visible: true,
-			},
-		});
+/**
+ * Used to create a hunch object for updating the rendering
+ *
+ * @param {boolean} isVisible     if hunche should be visible
+ * @param {number}  nutrientValue number between (0-3) to 0.5 accuracy representing the number of hunches
+ * @param {string}  hunchType     type of hunch (proteins, carbs, veggies)
+ * @param {number}  shakePos      Y position of a shaking hunch
+ * @param {number}  hunchIndex    index of the hunch (1, 2, 3)
+ * @param {number}  shakeIndex    index of the currently shaking hunch
+ *
+ * @returns {object} hunch object
+ */
+function generateUpdatedHunch(isVisible, nutrientValue, hunchType, shakePos, hunchIndex, shakeIndex) {
+	// Get the correct hunch based on the nutrient value and hunch index, eg:
+	// If nutrient value is 1.5, and we are index 1, we should return a filled hunch
+	// If nutrient value is 1.5, and we are index 2, we should return a half hunch
+	// if nutrient value is 1.5, and we are index 3, we should return a empty hunch
+	let textString = "";
+	if (nutrientValue >= hunchIndex) {
+		textString = nutrientHunchs[hunchType].filled;
+	} else if (nutrientValue + 0.5 == hunchIndex) {
+		textString = nutrientHunchs[hunchType].half;
 	} else {
-		event.player.paint({
-			"*": {
-				visible: false,
-			},
-		});
+		textString = nutrientHunchs[hunchType].outline;
 	}
+	// Return the hunch object
+	return {
+		text: textString,
+		// Shake the hunch if the player is malnourished
+		y: hunchIndex == shakeIndex ? (nutrientValue < 0.5 ? shakePos : -37) : -37,
+		// Set the hunch to be visible or not
+		visible: isVisible,
+	};
 }
 
-PlayerEvents.loggedIn((event) => {
-	// Draw Hunches (empty)
+/**
+ * Used to create a hunch object for initializing the rendering
+ *
+ * Expected X Positions: 15, 23, 31, 43, 51, 59, 71, 79, 87
+ * Every 3 Hunches are grouped together with an 8px gap
+ * Every group of hunches has a 12px gap between them
+ *
+ * @param {number} index index of the hunch (1-9)
+ * @returns {object} hunch object
+ */
+function generateInitialHunch(index) {
+	const baseX = 15; // Starting x position
+	const groupSpacing = 4; // Additional Spacing between groups of 3 hunches
+	const itemSpacing = 8; // Spacing between individual hunches in a group
+
+	// Calculate the x position based on the index
+	const groupIndex = Math.floor((index - 1) / 3);
+	const withinGroupIndex = (index - 1) % 3;
+	const xPosition = baseX + groupIndex * (3 * itemSpacing + groupSpacing) + withinGroupIndex * itemSpacing;
+
+	console.log("Hunch " + index + " x position: " + xPosition);
+
+	return {
+		type: "text",
+		text: "",
+		draw: "ingame",
+		scale: 1.0,
+		x: xPosition,
+		y: -37,
+		alignX: "center",
+		alignY: "bottom",
+	};
+}
+
+/**
+ * Used to draw and update the hunches on the player
+ *
+ * @param {boolean} isVisible if hunches should be visible
+ * @param {number}  proteins   number between (0-3) to 0.5 accuracy representing the number of protein hunches
+ * @param {number}  carbs     number between (0-3) to 0.5 accuracy representing the number of carbs hunches
+ * @param {number}  veggies   number between (0-3) to 0.5 accuracy representing the number of veggies hunches
+ * @param {number}  yPos      position of the hunches
+ * @param {event}   event     event that triggered the function
+ *
+ * @returns {void} Draws the hunches on the player
+ */
+function updateHunches(isVisible, proteins, carbs, veggies, yPos, shakeIndex, event) {
+	// Update Hunches
 	event.player.paint({
-		proteinOne: {
-			type: "text",
-			text: "",
-			draw: "ingame",
-			scale: 1.0,
-			x: 15,
-			y: -37,
-			alignX: "center",
-			alignY: "bottom",
-		},
-		proteinTwo: {
-			type: "text",
-			text: "",
-			draw: "ingame",
-			scale: 1.0,
-			x: 23,
-			y: -37,
-			alignX: "center",
-			alignY: "bottom",
-		},
-		proteinThree: {
-			type: "text",
-			text: "",
-			draw: "ingame",
-			scale: 1.0,
-			x: 31,
-			y: -37,
-			alignX: "center",
-			alignY: "bottom",
-		},
-		carbsOne: {
-			type: "text",
-			text: "",
-			draw: "ingame",
-			scale: 1.0,
-			x: 43,
-			y: -37,
-			alignX: "center",
-			alignY: "bottom",
-		},
-		carbsTwo: {
-			type: "text",
-			text: "",
-			draw: "ingame",
-			scale: 1.0,
-			x: 51,
-			y: -37,
-			alignX: "center",
-			alignY: "bottom",
-		},
-		carbsThree: {
-			type: "text",
-			text: "",
-			draw: "ingame",
-			scale: 1.0,
-			x: 59,
-			y: -37,
-			alignX: "center",
-			alignY: "bottom",
-		},
-		veggiesOne: {
-			type: "text",
-			text: "",
-			draw: "ingame",
-			scale: 1.0,
-			x: 71,
-			y: -37,
-			alignX: "center",
-			alignY: "bottom",
-		},
-		veggiesTwo: {
-			type: "text",
-			text: "",
-			draw: "ingame",
-			scale: 1.0,
-			x: 79,
-			y: -37,
-			alignX: "center",
-			alignY: "bottom",
-		},
-		veggiesThree: {
-			type: "text",
-			text: "",
-			draw: "ingame",
-			scale: 1.0,
-			x: 87,
-			y: -37,
-			alignX: "center",
-			alignY: "bottom",
-		},
+		proteinOne: generateUpdatedHunch(isVisible, proteins, "proteins", yPos, 1, shakeIndex),
+		proteinTwo: generateUpdatedHunch(isVisible, proteins, "proteins", yPos, 2, shakeIndex),
+		proteinThree: generateUpdatedHunch(isVisible, proteins, "proteins", yPos, 3, shakeIndex),
+		carbsOne: generateUpdatedHunch(isVisible, carbs, "carbs", yPos, 1, shakeIndex),
+		carbsTwo: generateUpdatedHunch(isVisible, carbs, "carbs", yPos, 2, shakeIndex),
+		carbsThree: generateUpdatedHunch(isVisible, carbs, "carbs", yPos, 3, shakeIndex),
+		veggiesOne: generateUpdatedHunch(isVisible, veggies, "veggies", yPos, 1, shakeIndex),
+		veggiesTwo: generateUpdatedHunch(isVisible, veggies, "veggies", yPos, 2, shakeIndex),
+		veggiesThree: generateUpdatedHunch(isVisible, veggies, "veggies", yPos, 3, shakeIndex),
 	});
+}
+
+/**
+ * Get the internal nutritional data of the player
+ * and return the number of hunches for each nutrient
+ *
+ * @param {event.player} player player object
+ *
+ * @returns {object.protein} number between (0-3) to 0.5 accuracy representing the number of protein hunches
+ * @returns {object.carbs} number between (0-3) to 0.5 accuracy representing the number of carbs hunches
+ * @returns {object.veggies} number between (0-3) to 0.5 accuracy representing the number of veggies hunches
+ */
+function fetchNutrients(player) {
+	// Fetch Internal Nutrients as an array of numbers between 0 and 100
+	let nutrients = nutritionAPI.getWorldNutritionData().getNutritionalBalancePlayer(player).getPlayerNutrients();
+	// Create a new object to store the number of hunches for each nutrient
+	let nutrientsObject = {
+		protein: 0,
+		carbs: 0,
+		veggies: 0,
+	};
+	nutrients.forEach((nutrient) => {
+		let nutrientName = nutrient.getNutrientName();
+		let nutrientValue = nutrient.getValue();
+		switch (nutrientName) {
+			case "vegetables":
+				nutrientsObject.veggies = convertValueToHunch(nutrientValue);
+				break;
+			case "proteins":
+				nutrientsObject.protein = convertValueToHunch(nutrientValue);
+				break;
+			case "carbs":
+				nutrientsObject.carbs = convertValueToHunch(nutrientValue);
+				break;
+		}
+	});
+	return nutrientsObject;
+}
+
+// Initial Hunch Drawing
+PlayerEvents.loggedIn((event) => {
+	const hunches = {
+		proteinOne: generateInitialHunch(1),
+		proteinTwo: generateInitialHunch(2),
+		proteinThree: generateInitialHunch(3),
+		carbsOne: generateInitialHunch(4),
+		carbsTwo: generateInitialHunch(5),
+		carbsThree: generateInitialHunch(6),
+		veggiesOne: generateInitialHunch(7),
+		veggiesTwo: generateInitialHunch(8),
+		veggiesThree: generateInitialHunch(9),
+	};
+
+	event.player.paint(hunches);
 });
 
-var hunchYPos = -37;
-var hunchSkakePos = 1;
+var shakeYPos = -37;
+var shakeIndex = 1;
 
 PlayerEvents.tick((event) => {
 	// Hide Hunches IF:
 	// the player is under water
 	// the player is in creative mode or spectator mode
 	// the player is riding a horse
+	let isHunchesVisible = true;
 	if (
 		event.player.isUnderWater() ||
 		event.player.isCreative() ||
 		event.player.isSpectator() ||
 		event.player.isPassenger()
 	) {
-		setHunchVisiblity(false, event);
-		return;
-	} else {
-		setHunchVisiblity(true, event);
+		isHunchesVisible = false;
 	}
-	// Fetch Nutrients
-	let nutrients = nutritionAPI.getWorldNutritionData().getNutritionalBalancePlayer(event.player).getPlayerNutrients();
-	let nutrientVeggies = "";
-	let nutrientProteins = "";
-	let nutrientCarbs = "";
-	nutrients.forEach((nutrient) => {
-		let nutrientName = nutrient.getNutrientName();
-		let nutrientValue = nutrient.getValue();
-		// Update Variables to store the nutrient values
-		// as a number between 0 and 3, representing the number of hunches
-		// if the nutrient value is less than 10 (malnourished), it will be considered as 0
-		switch (nutrientName) {
-			case "vegetables":
-				nutrientVeggies = nutrientValue < 10 ? 0 : roundToNearestHalf(nutrientValue / 33.333);
-				break;
-			case "proteins":
-				nutrientProteins = nutrientValue < 10 ? 0 : roundToNearestHalf(nutrientValue / 33.333);
-				break;
-			case "carbs":
-				nutrientCarbs = nutrientValue < 10 ? 0 : roundToNearestHalf(nutrientValue / 33.333);
-				break;
-		}
-	});
-	// Check not null
-	if (nutrientVeggies == null && nutrientProteins == null && nutrientCarbs == null) {
-		return;
-	}
-	// Update Hunches
-	event.player.paint({
-		proteinOne: {
-			text:
-				nutrientProteins >= 1
-					? nutrientHunchs.proteins.filled
-					: nutrientProteins >= 0.5
-					? nutrientHunchs.proteins.half
-					: nutrientHunchs.proteins.outline,
-			// Shake hunch if the player is malnourished
-			y: hunchSkakePos == 1 ? (nutrientProteins < 0.5 ? hunchYPos : -37) : -37,
-		},
-		proteinTwo: {
-			text:
-				nutrientProteins >= 2
-					? nutrientHunchs.proteins.filled
-					: nutrientProteins >= 1.5
-					? nutrientHunchs.proteins.half
-					: nutrientHunchs.proteins.outline,
-			// Shake hunch if the player is malnourished
-			y: hunchSkakePos == 2 ? (nutrientProteins < 0.5 ? hunchYPos : -37) : -37,
-		},
-		proteinThree: {
-			text:
-				nutrientProteins >= 3
-					? nutrientHunchs.proteins.filled
-					: nutrientProteins >= 2.5
-					? nutrientHunchs.proteins.half
-					: nutrientHunchs.proteins.outline,
-			// Shake hunch if the player is malnourished
-			y: hunchSkakePos == 3 ? (nutrientProteins < 0.5 ? hunchYPos : -37) : -37,
-		},
-		carbsOne: {
-			text:
-				nutrientCarbs >= 1
-					? nutrientHunchs.carbs.filled
-					: nutrientCarbs >= 0.5
-					? nutrientHunchs.carbs.half
-					: nutrientHunchs.carbs.outline,
-			// Shake hunch if the player is malnourished
-			y: hunchSkakePos == 1 ? (nutrientCarbs < 0.5 ? hunchYPos : -37) : -37,
-		},
-		carbsTwo: {
-			text:
-				nutrientCarbs >= 2
-					? nutrientHunchs.carbs.filled
-					: nutrientCarbs >= 1.5
-					? nutrientHunchs.carbs.half
-					: nutrientHunchs.carbs.outline,
-			// Shake hunch if the player is malnourished
-			y: hunchSkakePos == 2 ? (nutrientCarbs < 0.5 ? hunchYPos : -37) : -37,
-		},
-		carbsThree: {
-			text:
-				nutrientCarbs >= 3
-					? nutrientHunchs.carbs.filled
-					: nutrientCarbs >= 2.5
-					? nutrientHunchs.carbs.half
-					: nutrientHunchs.carbs.outline,
-			// Shake hunch if the player is malnourished
-			y: hunchSkakePos == 3 ? (nutrientCarbs < 0.5 ? hunchYPos : -37) : -37,
-		},
-		veggiesOne: {
-			text:
-				nutrientVeggies >= 1
-					? nutrientHunchs.veggies.filled
-					: nutrientVeggies >= 0.5
-					? nutrientHunchs.veggies.half
-					: nutrientHunchs.veggies.outline,
-			// Shake hunch if the player is malnourished
-			y: hunchSkakePos == 1 ? (nutrientVeggies < 0.5 ? hunchYPos : -37) : -37,
-		},
-		veggiesTwo: {
-			text:
-				nutrientVeggies >= 2
-					? nutrientHunchs.veggies.filled
-					: nutrientVeggies >= 1.5
-					? nutrientHunchs.veggies.half
-					: nutrientHunchs.veggies.outline,
-			// Shake hunch if the player is malnourished
-			y: hunchSkakePos == 2 ? (nutrientVeggies < 0.5 ? hunchYPos : -37) : -37,
-		},
-		veggiesThree: {
-			text:
-				nutrientVeggies >= 3
-					? nutrientHunchs.veggies.filled
-					: nutrientVeggies >= 2.5
-					? nutrientHunchs.veggies.half
-					: nutrientHunchs.veggies.outline,
-			// Shake hunch if the player is malnourished
-			y: hunchSkakePos == 3 ? (nutrientVeggies < 0.5 ? hunchYPos : -37) : -37,
-		},
-	});
 
-	// Update Hunch Y Position
-	if (hunchYPos == -37) {
-		hunchYPos = -38;
+	// Fetch Nutrients
+	let playerNutrients = fetchNutrients(event.player);
+	// Update Hunches
+	updateHunches(
+		isHunchesVisible,
+		playerNutrients.protein,
+		playerNutrients.carbs,
+		playerNutrients.veggies,
+		shakeYPos,
+		shakeIndex,
+		event
+	);
+
+	// Toggle Shake Y Position
+	shakeYPos = shakeYPos == -37 ? -38 : -37;
+	// Reset Shake Index at 3
+	if (shakeIndex == 3) {
+		shakeIndex = 1;
+		// Otherwise Increment Shake Index
 	} else {
-		hunchYPos = -37;
-	}
-	if (hunchSkakePos == 3) {
-		hunchSkakePos = 1;
-	} else {
-		hunchSkakePos++;
+		shakeIndex++;
 	}
 });

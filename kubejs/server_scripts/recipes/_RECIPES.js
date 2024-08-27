@@ -455,6 +455,13 @@ ServerEvents.recipes((event) => {
 		S: "create_dd:steel_sheet",
 	});
 
+	// Cooking Pot
+	event.shaped("farmersdelight:cooking_pot", ["B B", "IWI", "III"], {
+		B: "minecraft:brick",
+		W: "minecraft:water_bucket",
+		I: "#forge:ingots/iron",
+	});
+
 	// Melter
 	event.recipes.create.mechanical_crafting("melter:melter", ["N  N", "N  N", "N  N", "pNNp"], {
 		N: "#forge:ingots/netherite",
