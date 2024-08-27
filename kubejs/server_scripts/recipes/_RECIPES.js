@@ -399,6 +399,9 @@ ServerEvents.recipes((event) => {
 		}
 	);
 
+	// Paxel Hoeing
+	event.recipes.createItemApplication("minecraft:farmland", ["minecraft:dirt_path", "#kubejs:paxel"]);
+
 	// Renewable Create Stone Type
 	// Diorite
 	event.recipes.create
