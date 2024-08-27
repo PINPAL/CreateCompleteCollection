@@ -54,4 +54,6 @@ StartupEvents.registry("item", (event) => {
 	event.create("kubejs:sugar_paper").displayName("Sugar Paper");
 	// Andesite Nugget
 	event.create("kubejs:andesite_nugget").displayName("Andesite Alloy Nugget");
+	// Crushed Bonemeal
+	event.create("kubejs:crushed_bonemeal").displayName("Crushed Bone Meal");
 });

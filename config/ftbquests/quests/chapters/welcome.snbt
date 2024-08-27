@@ -6885,9 +6885,11 @@
 		{
 			dependencies: ["7407910917C9F8A9"]
 			description: [
-				"The &6Sprinkler &rfrom &9Slice \\& Dice&r allows you to water your crops without need for water in the ground!"
+				"&7The &rSprinkler &7from &rSlice \\& Dice"
+				"&#c5934aAllows you to water your crops without need for water in the ground! You can also use it to sprinkle &#ebd777Liquid Fertilizer&#c5934a onto your crops aswell as &#ebd777Potion Effects&#c5934a onto mobs."
 				""
-				"The &6Sprinkler&r from &9Misc \\& Things&r allows you to use dilluted bonemeal to bonemeal your crops easily!"
+				"&7The &rSprinkler&7 from &rMisc \\& Things"
+				"&#c5934aAllows you to use &#ebd777Dilluted Bone Meal&#c5934a to increase your crops by one growth stage in a &#ebd7775x5&#c5934a area every &#ebd7775 seconds&#c5934a!"
 			]
 			icon: "create_things_and_misc:sprinkler"
 			id: "61E794076BA52E76"

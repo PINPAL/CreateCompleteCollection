@@ -446,14 +446,33 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:asurine");
 
 	// Personal Shrinking Device
-	event.recipes.createMechanicalCrafting("shrink:shrinking_device", [" DQD ", "TSSST", "SBSRS", "TSSST"], {
-		D: "create:display_board",
-		Q: "create_things_and_misc:vibration_mechanism",
-		T: "create:railway_casing",
-		B: "infinitybuttons:blue_emergency_button",
-		R: "infinitybuttons:red_emergency_button",
-		S: "create_dd:steel_sheet",
-	});
+	event.recipes
+		.createMechanicalCrafting("shrink:shrinking_device", [" DQD ", "TSSST", "SBSRS", "TSSST"], {
+			D: "create:display_board",
+			Q: "create_things_and_misc:vibration_mechanism",
+			T: "create:railway_casing",
+			B: "infinitybuttons:blue_emergency_button",
+			R: "infinitybuttons:red_emergency_button",
+			S: "create_dd:steel_sheet",
+		})
+		.id("kubejs:shrinking_device");
+
+	// Crushed Bone Meal
+	event.recipes.create
+		.milling(
+			["kubejs:crushed_bonemeal", Item.of("kubejs:crushed_bonemeal").withChance(0.5)],
+			["minecraft:bone_meal"]
+		)
+		.id("kubejs:crushed_bonemeal");
+
+	// Cheaper Diluted Bone Meal
+	event.remove({ output: Fluid.of("create_things_and_misc:diluted_bonemeal") });
+	event.recipes.create
+		.mixing(Fluid.of("create_things_and_misc:diluted_bonemeal", 1000), [
+			Fluid.of("minecraft:water", 1000),
+			"kubejs:crushed_bonemeal",
+		])
+		.id("kubejs:diluted_bonemeal");
 
 	// Cooking Pot
 	event.shaped("farmersdelight:cooking_pot", ["B B", "IWI", "III"], {
