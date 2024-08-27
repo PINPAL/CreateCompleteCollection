@@ -3,7 +3,12 @@ ServerEvents.tags("block", (event) => {
 		event.removeAllTagsFrom(item);
 	});
 
-	const wrench_pickup = ["kubejs:steel_casing", /create_things_and_misc:.*_sail/, "refinedstorage:cable"];
+	const wrench_pickup = [
+		"kubejs:steel_casing",
+		/create_things_and_misc:.*_sail/,
+		"refinedstorage:cable",
+		"create_things_and_misc:sprinkler",
+	];
 	wrench_pickup.forEach((item) => {
 		event.add("create:wrench_pickup", item);
 	});
