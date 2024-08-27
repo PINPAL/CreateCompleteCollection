@@ -430,11 +430,13 @@ const allPaxels = [
 allPaxels.forEach((paxel) => {
 	itemsToTooltip.push({
 		item: paxel,
+		dontPerformYeet: true,
 		summary: [
 			"$Breaks$ blocks like a $Pickaxe$.",
 			"$Digs$ blocks like a $Shovel$.",
 			"$Cuts$ blocks like an $Axe$.",
 			"$Harvests$ blocks like a $Hoe$.",
+			"",
 		],
 	});
 });
@@ -599,9 +601,14 @@ ItemEvents.tooltip((tooltip) => {
 	itemsToTooltip.forEach((tooltipItem) => {
 		// add the tooltip to the item
 		tooltip.addAdvanced(tooltipItem.item, (item, advanced, text) => {
-			// Hide Original Tooltip (leaving just text[0] which is the item name)
-			let name = text.get(0);
-			text.removeIf((e) => e != name);
+			// Only remove the original tooltip if the item doesn't have the dontPerformYeet property
+			if (!tooltipItem.hasOwnProperty("dontPerformYeet")) {
+				if (!tooltipItem.dontPerformYeet) {
+					// Hide Original Tooltip (leaving just text[0] which is the item name)
+					let name = text.get(0);
+					text.removeIf((e) => e != name);
+				}
+			}
 			if (tooltip.shift) {
 				text.add(1, [
 					Text.of("Hold [").darkGray(),
