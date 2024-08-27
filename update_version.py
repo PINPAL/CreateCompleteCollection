@@ -18,6 +18,10 @@ def replace_version(config_path, new_version, line_heading):
             if line_heading in line:
                 new_line = f'{line_heading}{new_version}'
                 config = config.replace(line, new_line)
+                # write the updated config file
+                with open(config_path, "w") as f:
+                    f.write(config)
+                # sucess
                 print(f"Updated version number in {config_path} to \n{new_line}")
                 return
                 
