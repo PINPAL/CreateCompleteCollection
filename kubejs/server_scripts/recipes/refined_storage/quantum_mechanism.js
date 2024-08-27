@@ -1,0 +1,58 @@
+ServerEvents.recipes((event) => {
+  event.remove({ output: "create_things_and_misc:vibration_mechanism" });
+  event.recipes
+    .createSequencedAssembly(
+      [
+        // output
+        Item.of("create_things_and_misc:vibration_mechanism"),
+      ],
+      // the input
+      "create:precision_mechanism",
+      [
+        event.recipes.createDeploying(
+          "create_things_and_misc:incomplete_vibration_mechanism",
+          [
+            "create_things_and_misc:incomplete_vibration_mechanism",
+            "create_dd:integrated_mechanism",
+          ]
+        ),
+        event.recipes.createDeploying(
+          "create_things_and_misc:incomplete_vibration_mechanism",
+          [
+            "create_things_and_misc:incomplete_vibration_mechanism",
+            "create_dd:calculation_mechanism",
+          ]
+        ),
+        event.recipes.createDeploying(
+          "create_things_and_misc:incomplete_vibration_mechanism",
+          [
+            "create_things_and_misc:incomplete_vibration_mechanism",
+            "create_dd:inductive_mechanism",
+          ]
+        ),
+        event.recipes.createDeploying(
+          "create_things_and_misc:incomplete_vibration_mechanism",
+          [
+            "create_things_and_misc:incomplete_vibration_mechanism",
+            "create_dd:infernal_mechanism",
+          ]
+        ),
+        event.recipes.createDeploying(
+          "create_things_and_misc:incomplete_vibration_mechanism",
+          [
+            "create_things_and_misc:incomplete_vibration_mechanism",
+            "create_dd:sealed_mechanism",
+          ]
+        ),
+        event.recipes.createDeploying(
+          "create_things_and_misc:incomplete_vibration_mechanism",
+          [
+            "create_things_and_misc:incomplete_vibration_mechanism",
+            "minecraft:nether_star",
+          ]
+        ),
+      ]
+    )
+    .transitionalItem("create_things_and_misc:incomplete_vibration_mechanism")
+    .loops(2);
+});

@@ -272,7 +272,6 @@ ServerEvents.tags("item", (event) => {
 	const casings = ["kubejs:steel_casing"];
 	casings.forEach((item) => {
 		event.add("create:casing", item);
-		event.add("create:wrench_pickup", item);
 	});
 
 	const airSources = ["create:copper_backtank", "create:netherite_backtank"];
@@ -302,6 +301,28 @@ ServerEvents.tags("item", (event) => {
 		event.add("kubejs:paxels", item);
 		event.add("kubejs:unbroken_paxel", item);
 	});
+
+	const wirelessGrids = [
+		"refinedstorage:wireless_grid",
+		"refinedstorageaddons:wireless_crafting_grid",
+		"refinedstorage:wireless_fluid_grid",
+		"refinedstorage:wireless_crafting_monitor",
+	];
+	wirelessGrids.forEach((grid) => {
+		event.remove("curios:curio", grid);
+		event.add("curios:grid", grid);
+	});
+
+	// Magnet Curios Tag
+	event.remove("curios:charm", "simplemagnets:advancedmagnet");
+	event.add("curios:magnet", "simplemagnets:advancedmagnet");
+
+	// Extendo Grip Curios Tag
+	event.add("curios:hands", "create:extendo_grip");
+
+	// Totem of Undying Curios Tag
+	event.remove("curios:charm", "minecraft:totem_of_undying");
+	event.add("curios:totem", "minecraft:totem_of_undying");
 
 	const decals = [
 		"create_things_and_misc:train_sing",
@@ -368,6 +389,9 @@ ServerEvents.tags("item", (event) => {
 		event.add("kubejs:create_decals", decal);
 	});
 
+	// Yeet Salting from the game
+	event.removeAll("salt:can_be_salted");
+
 	event.add("kubejs:oak_drawers", /storagedrawers:oak_full_drawers_.*/);
 	event.add("kubejs:spruce_drawers", /storagedrawers:spruce_full_drawers_.*/);
 	event.add("kubejs:birch_drawers", /storagedrawers:birch_full_drawers_.*/);
@@ -392,8 +416,8 @@ ServerEvents.tags("block", (event) => {
 		event.removeAllTagsFrom(item);
 	});
 
-	const casings = ["kubejs:steel_casing"];
-	casings.forEach((item) => {
+	const wrench_pickup = ["kubejs:steel_casing", /create_things_and_misc:.*_sail/, "refinedstorage:cable"];
+	wrench_pickup.forEach((item) => {
 		event.add("create:wrench_pickup", item);
 	});
 
