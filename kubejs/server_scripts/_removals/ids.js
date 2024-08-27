@@ -33,6 +33,7 @@ const idsToRemove = [
 	"farmersdelight:iron_nugget_from_blasting_knife",
 	"farmersdelight:iron_nugget_from_smelting_knife",
 	"farmersdelight:integration/create/milling/rice_panicle",
+	"farmersdelight:canvas",
 
 	// Farmers Delight Slicing in Mixer
 	"farmersdelight:integration/create/mixing/cabbage_slice_from_mixing",

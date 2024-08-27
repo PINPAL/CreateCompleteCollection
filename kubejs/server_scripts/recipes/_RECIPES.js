@@ -462,7 +462,7 @@ ServerEvents.recipes((event) => {
 		I: "#forge:ingots/iron",
 	});
 
-	// Rice
+	// Cheaper Rice
 	event.recipes.create
 		.milling(
 			[
@@ -474,6 +474,14 @@ ServerEvents.recipes((event) => {
 			["farmersdelight:rice_panicle"]
 		)
 		.id("kubejs:rice");
+
+	// Cheaper Canvas
+	event
+		.shaped("farmersdelight:canvas", ["SS", "SS"], {
+			S: "farmersdelight:straw",
+		})
+		.id("kubejs:canvas_manual_only");
+	event.recipes.create.compacting("farmersdelight:canvas", ["2x farmersdelight:straw"]).id("kubejs:canvas");
 
 	// Melter
 	event.recipes.create.mechanical_crafting("melter:melter", ["N  N", "N  N", "N  N", "pNNp"], {
