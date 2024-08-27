@@ -11,12 +11,19 @@ LootJS.modifiers((event) => {
 	});
 });
 
-// Disable armor and tool drops from mobs
 EntityEvents.spawned((event) => {
 	const { entity } = event;
 	if (!entity.alive) return;
+	// Fetch entity NBT
 	let nbt = entity.getNbt();
+	// Disable armor and tool drops from mobs
 	nbt.ArmorDropChances = [NBT.f(0), NBT.f(0), NBT.f(0), NBT.f(0)];
 	nbt.HandDropChances = [NBT.f(0), NBT.f(0)];
+	// Horse swim_speed buff
+	if (entity.type == "minecraft:horse") {
+		console.log("Horse spawned");
+		nbt.Attributes.push({ Base: 2.5, Name: "forge:swim_speed" });
+	}
+	// Apply NBT
 	entity.setNbt(nbt);
 });
