@@ -123,15 +123,4 @@ ServerEvents.recipes((event) => {
 			});
 		}
 	});
-
-	// Create Diving Gear
-	const divingGear = [
-		{ id: "netherite_diving_helmet", material: "netherite" },
-		{ id: "netherite_diving_boots", material: "netherite" },
-		{ id: "copper_diving_helmet", material: "copper" },
-		{ id: "copper_diving_boots", material: "copper" },
-	];
-	divingGear.forEach((item) => {
-		event.smithing(`create:${item.id}`, `kubejs:broken_${item.id}`, `kubejs:${item.material}_repair_kit`);
-	});
 });
