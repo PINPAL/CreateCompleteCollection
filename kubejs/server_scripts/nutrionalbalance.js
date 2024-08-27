@@ -92,8 +92,6 @@ function generateInitialHunch(index) {
 	const withinGroupIndex = (index - 1) % 3;
 	const xPosition = baseX + groupIndex * (3 * itemSpacing + groupSpacing) + withinGroupIndex * itemSpacing;
 
-	console.log("Hunch " + index + " x position: " + xPosition);
-
 	return {
 		type: "text",
 		text: "",
