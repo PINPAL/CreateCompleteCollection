@@ -16,7 +16,7 @@
 	#-
 	showPlayerAnimations = true
 	#-
-	playScreenOpenSounds = true
+	playScreenOpenSounds = false
 	#-
-	playMouseClickSounds = true
+	playMouseClickSounds = false
 

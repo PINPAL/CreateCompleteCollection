@@ -288,6 +288,11 @@ ServerEvents.tags("item", (event) => {
 		event.add("kubejs:void_items", item);
 	});
 
+	const paper_like = ["minecraft:paper", "create_paper_line:cardboard_sheet"];
+	paper_like.forEach((item) => {
+		event.add("kubejs:paper_like", item);
+	});
+
 	const paxels = [
 		"kubejs:wooden_paxel",
 		"kubejs:stone_paxel",

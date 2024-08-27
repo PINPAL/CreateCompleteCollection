@@ -49,7 +49,7 @@ ServerEvents.recipes((event) => {
 	});
 
 	// Upgrade Base
-	event.shapeless("sophisticatedbackpacks:upgrade_base", ["create_paper_line:cardboard_sheet", "#minecraft:planks"]);
+	event.shapeless("sophisticatedbackpacks:upgrade_base", ["#kubejs:paper_like", "#minecraft:planks"]);
 
 	// Pickup Upgrade
 	event.shaped("sophisticatedbackpacks:advanced_pickup_upgrade", ["SPS", "GUG", "ZDZ"], {
