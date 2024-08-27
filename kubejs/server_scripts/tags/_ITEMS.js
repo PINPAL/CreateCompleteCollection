@@ -240,8 +240,11 @@ ServerEvents.tags("item", (event) => {
 		event.add("create:stone_types/deepslate", item);
 	});
 
+	// Andesite Alloy
 	event.add("forge:ingots/andesite", "create:andesite_alloy");
+	event.add("forge:plates/andesite", "create_dd:andesite_sheet");
 
+	// Bronze
 	event.add("forge:storage_blocks/bronze", "create_dd:bronze_block");
 
 	const notAllowedtoSlice = [
