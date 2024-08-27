@@ -243,6 +243,7 @@ ServerEvents.tags("item", (event) => {
 	// Andesite Alloy
 	event.add("forge:ingots/andesite", "create:andesite_alloy");
 	event.add("forge:plates/andesite", "create_dd:andesite_sheet");
+	event.add("forge:nuggets/andesite", "kubejs:andesite_nugget");
 
 	// Bronze
 	event.add("forge:storage_blocks/bronze", "create_dd:bronze_block");

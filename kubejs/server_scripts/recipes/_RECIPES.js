@@ -16,7 +16,8 @@ ServerEvents.recipes((event) => {
 		{ mod: "create_dd", item: "steel", type: "ingots" },
 		{ mod: "create_dd", item: "mithril", type: "ingots" },
 		{ mod: "createdeco", item: "cast_iron", type: "ingots" },
-	].forEach((block) => {
+	];
+	automatedPacking.forEach((block) => {
 		// Block from Ingots
 		event.remove({
 			type: "minecraft:crafting_shaped",
@@ -459,6 +460,10 @@ ServerEvents.recipes((event) => {
 		N: "#forge:ingots/netherite",
 		p: "createindustry:plastic_sheet",
 	});
+
+	// Andesite Nugget
+	event.shapeless("9x kubejs:andesite_nugget", ["create:andesite_alloy"]);
+	event.recipes.create.compacting("create:andesite_alloy", "9x kubejs:andesite_nugget");
 
 	// Metal Barrels
 	event.recipes.create.deploying("metalbarrels:iron_barrel", ["minecraft:barrel", "#forge:plates/andesite_alloy"]);

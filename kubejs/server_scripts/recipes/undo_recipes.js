@@ -80,6 +80,6 @@ ServerEvents.recipes((event) => {
 	unpackingRecipes.forEach((recipe) => {
 		let recipeId = "kubejs:undo/";
 		recipeId = recipeId + recipe.output.replace(":", "_");
-		event.recipes.create.crushing(`${recipe.count}x ${recipe.output}`, recipe.input).id(recipeId);
+		event.recipes.create.milling(`${recipe.count}x ${recipe.output}`, recipe.input).id(recipeId);
 	});
 });

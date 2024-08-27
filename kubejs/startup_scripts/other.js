@@ -52,4 +52,6 @@ StartupEvents.registry("item", (event) => {
 		.tag("minecraft:tall_flowers");
 	// Sugar Paper
 	event.create("kubejs:sugar_paper").displayName("Sugar Paper");
+	// Andesite Nugget
+	event.create("kubejs:andesite_nugget").displayName("Andesite Alloy Nugget");
 });
