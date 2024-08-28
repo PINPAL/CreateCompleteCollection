@@ -48,9 +48,6 @@ ServerEvents.recipes((event) => {
 	// Lapis Alloy
 	event.recipes.create.mixing("create_dd:lapis_alloy", ["minecraft:lapis_lazuli", "#forge:nuggets/tin"]);
 
-	// Raw Iron Washing
-	event.recipes.create.splashing("9x minecraft:iron_nugget", "create:crushed_raw_iron");
-
 	// Diamond Grit Sandpaper
 	event.shapeless(Item.of("createaddition:diamond_grit_sandpaper").withNBT("{Unbreakable:1b}"), [
 		"#create:sandpaper",
@@ -513,6 +510,21 @@ ServerEvents.recipes((event) => {
 		event.replaceInput({ type: "minecraft:stonecutting", input: baseBrickBlock }, baseBrickBlock, brickTag);
 		// Add stonecutting recipes to convert tagged bricks (eg stairs/walls) back into base bricks block
 		event.stonecutting(baseBrickBlock, brickTag);
+	});
+
+	// Convert washing recipes from nuggets to ingots
+	const washingRecipes = [
+		{ name: "iron", byproduct: Item.of("minecraft:redstone").withChance(0.05) },
+		{ name: "gold", byproduct: Item.of("minecraft:quartz").withChance(0.5) },
+		{ name: "copper", byproduct: Item.of("minecraft:clay_ball").withChance(0.5) },
+		{ name: "zinc", byproduct: Item.of("minecraft:gunpowder").withChance(0.25) },
+		{ name: "tin", byproduct: Item.of("minecraft:glowstone_dust").withChance(0.35) },
+	];
+	washingRecipes.forEach((item) => {
+		event.remove({ type: "create:splashing", input: `create:crushed_raw_${item.name}` });
+		event.recipes.create
+			.splashing([`#forge:ingots/${item.name}`, item.byproduct], `create:crushed_raw_${item.name}`)
+			.id("kubejs:ingot_from_crushed_" + item.name);
 	});
 
 	// Cheaper Diluted Bone Meal
