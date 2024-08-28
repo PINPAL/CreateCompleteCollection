@@ -203,7 +203,7 @@ customization {
   enable_scrolling = true
   shadow = true
   scale = 0.666666
-source = Create Complete Collection (LEGACY): v1.403
+source = Create Complete Collection (LEGACY): v1.405
   text_border = 2
   case_mode = normal
   source_mode = direct
