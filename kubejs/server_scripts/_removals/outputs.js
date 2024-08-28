@@ -169,6 +169,13 @@ const outputsToRemove = [
 	"createindustry:steel_scaffolding",
 	"createindustry:sawdust",
 
+	// Create Deco Bricks
+	"createdeco:pearl_brick",
+	"createdeco:blue_brick",
+	"createdeco:scarlet_brick",
+	"createdeco:dean_brick",
+	"createdeco:dusk_brick",
+
 	// Every Compat
 	/everycomp:sd\/.*/,
 ];

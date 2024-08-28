@@ -112,6 +112,12 @@ const removedItems = [
 	"create_dd:deforester_saw",
 
 	"createdeco:zinc_sheet",
+	// Create Deco Bricks
+	"createdeco:pearl_brick",
+	"createdeco:blue_brick",
+	"createdeco:scarlet_brick",
+	"createdeco:dean_brick",
+	"createdeco:dusk_brick",
 
 	/createindustry:.*concrete.*/,
 	/v_slab_compat:createindustry\/.*concrete.*/,

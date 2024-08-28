@@ -465,6 +465,22 @@ ServerEvents.recipes((event) => {
 		)
 		.id("kubejs:crushed_bonemeal");
 
+	// Create Deco Bricks
+	const createDecoBricks = [
+		{ name: "pearl", material: "limestone" },
+		{ name: "blue", material: "asurine" },
+		{ name: "scarlet", material: "crimsite" },
+		{ name: "dean", material: "ochrum" },
+		{ name: "dusk", material: "scorchia" },
+	];
+	createDecoBricks.forEach((brick) => {
+		event.remove({ id: `createdeco:${brick.name}_bricks` });
+		event.shaped(`8x createdeco:${brick.name}_bricks`, ["BBB", "BMB", "BBB"], {
+			B: "#forge:ingots/brick",
+			M: "#create:stone_types/" + brick.material,
+		});
+	});
+
 	// Cheaper Diluted Bone Meal
 	event.remove({ output: Fluid.of("create_things_and_misc:diluted_bonemeal") });
 	event.recipes.create

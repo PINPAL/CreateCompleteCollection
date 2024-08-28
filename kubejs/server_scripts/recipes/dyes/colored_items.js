@@ -261,21 +261,6 @@ ServerEvents.recipes((event) => {
 			["supplementaries:present", Fluid.of("kubejs:" + colorObject.color + "_dye_fluid", 500)]
 		);
 	});
-
-	// Create Deco Bricks
-	const decoBrickColors = [
-		{ color: "light_gray", output: "pearl" },
-		{ color: "blue", output: "blue" },
-		{ color: "red", output: "scarlet" },
-		{ color: "yellow", output: "dean" },
-		{ color: "black", output: "dusk" },
-	].forEach((colorObject) => {
-		event.remove({ output: "createdeco:" + colorObject.output + "_brick" });
-		event.recipes.create.mixing(
-			["createdeco:" + colorObject.output + "_brick"],
-			[`#kubejs:bricks_not_${colorObject.output}`, Fluid.of("kubejs:" + colorObject.color + "_dye_fluid", 125)]
-		);
-	});
 });
 
 // Color Handler Tags

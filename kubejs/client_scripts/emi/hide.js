@@ -103,7 +103,14 @@ const hideFromJEI = [
 	"create_dd:industrial_iron_nugget",
 	"create_dd:industrial_iron_sheet",
 	"create_dd:deforester_saw",
+
 	"createdeco:zinc_sheet",
+	// Create Deco Bricks
+	"createdeco:pearl_brick",
+	"createdeco:blue_brick",
+	"createdeco:scarlet_brick",
+	"createdeco:dean_brick",
+	"createdeco:dusk_brick",
 
 	"createaddition:digital_adapter",
 	"createadditon:zinc_sheet",

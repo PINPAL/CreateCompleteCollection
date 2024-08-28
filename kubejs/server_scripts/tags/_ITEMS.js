@@ -206,15 +206,6 @@ ServerEvents.tags("item", (event) => {
 		event.add(`forge:gems/${gem}`, `minecraft:${gem}`);
 	});
 
-	const brickTypes = ["blue", "scarlet", "dean", "dusk", "pearl"];
-	const bricks = event.get("forge:ingots/brick").getObjectIds();
-	brickTypes.forEach((type) => {
-		let blacklist = Ingredient.of(`createdeco:${type}_brick`);
-		bricks.forEach((item) => {
-			if (!blacklist.test(item)) event.add(`kubejs:bricks_not_${type}`, item);
-		});
-	});
-
 	const deepslate = [
 		"minecraft:cobbled_deepslate",
 		"minecraft:polished_deepslate",
