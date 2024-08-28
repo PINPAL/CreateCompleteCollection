@@ -13,8 +13,6 @@ ServerEvents.tags("block", (event) => {
 		event.add("create:wrench_pickup", item);
 	});
 
-	event.remove("forge:stone", /quark:/);
-
 	// Make paxel break more stuff faster
 	event.add("minecraft:mineable/pickaxe", "#forge:glass");
 	event.add("minecraft:mineable/pickaxe", "#minecraft:mineable/hoe");

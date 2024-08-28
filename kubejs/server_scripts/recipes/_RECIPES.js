@@ -481,6 +481,24 @@ ServerEvents.recipes((event) => {
 		});
 	});
 
+	// Cheaper Bricks
+	event.remove({ output: "minecraft:bricks" });
+	event
+		.shaped("minecraft:bricks", ["BB", "BB"], {
+			B: "minecraft:brick",
+		})
+		.id("kubejs:brick_manual_only");
+	event.recipes.create.compacting("minecraft:bricks", "3x minecraft:brick").id("kubejs:bricks");
+
+	event.remove({ output: "createdeco:worn_bricks" });
+	event
+		.shaped("createdeco:worn_bricks", ["BB", "BB"], {
+			B: "createdeco:worn_brick",
+		})
+		.id("kubejs:worn_bricks_manual_only");
+	event.recipes.create.compacting("createdeco:worn_bricks", "3x createdeco:worn_brick").id("kubejs:worn_bricks");
+	event.smelting("createdeco:worn_bricks", "minecraft:bricks").xp(0.3).id("kubejs:worn_bricks_smelting");
+
 	// Cheaper Diluted Bone Meal
 	event.remove({ output: Fluid.of("create_things_and_misc:diluted_bonemeal") });
 	event.recipes.create
