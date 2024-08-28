@@ -4,9 +4,6 @@
 # But not these files...
 !.gitignore
 !.gitattributes
-
-###############################
-# Un-ignore the affected subdirectory
 !/.vscode/
 !/mods/
 !/kubejs/
@@ -14,6 +11,7 @@
 !config
 !defaultconfigs
 !shaderpacks
+
 # Ignore subdirectory and all including directories and files to match pattern as valid for the next pattern
 /kubejs/*
 # This pattern only works with the two previous patterns
