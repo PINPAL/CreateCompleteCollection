@@ -21,7 +21,6 @@ EntityEvents.spawned((event) => {
 	nbt.HandDropChances = [NBT.f(0), NBT.f(0)];
 	// Horse swim_speed buff
 	if (entity.type == "minecraft:horse") {
-		console.log("Horse spawned");
 		nbt.Attributes.push({ Base: 2.5, Name: "forge:swim_speed" });
 	}
 	// Apply NBT
