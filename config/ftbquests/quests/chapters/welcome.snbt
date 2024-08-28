@@ -1258,6 +1258,11 @@
 			dependencies: ["7EFE09C7A87A4FD3"]
 			hide: true
 			id: "2142527C3A2204CA"
+			rewards: [{
+				id: "4B135ECD14B7F774"
+				item: "sophisticatedbackpacks:upgrade_base"
+				type: "item"
+			}]
 			subtitle: "Increasing your stack size by 8!"
 			tasks: [{
 				id: "2879C126365EBB3F"
@@ -1270,6 +1275,11 @@
 		{
 			dependencies: ["2142527C3A2204CA"]
 			id: "23EF04B35C62461B"
+			rewards: [{
+				id: "402AE30B26312B77"
+				item: "sophisticatedbackpacks:upgrade_base"
+				type: "item"
+			}]
 			subtitle: "Increasing your stack size by 16!"
 			tasks: [{
 				id: "76A83AA902A64B48"
@@ -1282,6 +1292,11 @@
 		{
 			dependencies: ["23EF04B35C62461B"]
 			id: "0A1CD692562DF490"
+			rewards: [{
+				id: "6E61AFD58A2B7FBF"
+				item: "sophisticatedbackpacks:upgrade_base"
+				type: "item"
+			}]
 			subtitle: "Increasing your stack size by 32!"
 			tasks: [{
 				id: "5E3394B83B0A3FDC"
@@ -6992,6 +7007,20 @@
 		{
 			dependencies: ["0930A951D3532F0E"]
 			id: "0E177A8CB8C9DD1B"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7C79ED1F8F64BD0C"
+					table_id: 5377619726450836083L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0C2F7A5401E6EDB7"
+					table_id: 5377619726450836083L
+					type: "choice"
+				}
+			]
 			subtitle: "Increasing your stack size by 128!"
 			tasks: [{
 				id: "40C5538BC6C24B2F"
