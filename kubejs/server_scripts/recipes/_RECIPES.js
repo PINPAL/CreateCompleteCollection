@@ -499,6 +499,22 @@ ServerEvents.recipes((event) => {
 	event.recipes.create.compacting("createdeco:worn_bricks", "3x createdeco:worn_brick").id("kubejs:worn_bricks");
 	event.smelting("createdeco:worn_bricks", "minecraft:bricks").xp(0.3).id("kubejs:worn_bricks_smelting");
 
+	// Convert different brick types into each other
+	const brickTypes = ["worn", "pearl", "red", "dusk", "scarlet", "dean", "blue"];
+	brickTypes.forEach((brickType) => {
+		let brickTag = `#ae:brick_types/${brickType}`;
+		let baseBrickBlock = new RegExp(`createdeco:.*${brickType}_.*brick(s)?`);
+		// Edge case for red bricks
+		if (brickType == "red") {
+			brickTag = "#ae:brick_types/default";
+			baseBrickBlock = "minecraft:bricks";
+		}
+		// Replace stonecutting recipes base brick with the unified tag (eg reuse stairs & walls)
+		event.replaceInput({ type: "minecraft:stonecutting", input: baseBrickBlock }, baseBrickBlock, brickTag);
+		// Add stonecutting recipes to convert tagged bricks (eg stairs/walls) back into base bricks block
+		event.stonecutting(baseBrickBlock, brickTag);
+	});
+
 	// Cheaper Diluted Bone Meal
 	event.remove({ output: Fluid.of("create_things_and_misc:diluted_bonemeal") });
 	event.recipes.create

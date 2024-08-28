@@ -23,4 +23,15 @@ ServerEvents.tags("item", (event) => {
 		event.remove("as:gold", item);
 		event.add("as:copper", item);
 	});
+
+	// Create Deco Brick Variants
+	const brickTypes = ["worn", "pearl", "red", "dusk", "scarlet", "dean", "blue"];
+	brickTypes.forEach((brickType) => {
+		let tag = "as:brick_types/" + brickType;
+		// Edge case for red bricks
+		if (brickType == "red") {
+			tag = "as/brick_types/default";
+		}
+		event.remove(tag, /_slab.*/);
+	});
 });
