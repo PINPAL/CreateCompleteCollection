@@ -22,7 +22,7 @@ function handleDurability(event) {
 	];
 	breakableItems.forEach((item) => {
 		if (
-			item.item.hasTag("kubejs:paxel") ||
+			item.item.hasTag("kubejs:paxels") ||
 			item.item.hasTag("forge:armors") ||
 			item.item.hasTag("forge:tools/swords") ||
 			item.item.hasTag("forge:tools/knives") ||
