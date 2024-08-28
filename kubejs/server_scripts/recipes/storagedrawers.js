@@ -4,10 +4,12 @@ ServerEvents.recipes((event) => {
 		C: "createdeco:gold_coin",
 		R: "#forge:rods/gold",
 	});
-	// Quantify Key
-	event.shapeless("storagedrawers:quantify_key", ["storagedrawers:drawer_key", "#minecraft:signs"]);
 	// Concealment Key
-	event.shapeless("storagedrawers:shroud_key", ["storagedrawers:drawer_key", "#forge:nuggets/gold"]);
+	event.shapeless("storagedrawers:shroud_key", ["storagedrawers:drawer_key"]);
+	// Quantify Key
+	event.shapeless("storagedrawers:quantify_key", ["storagedrawers:shroud_key"]);
+	// Back to Drawer Key
+	event.shapeless("storagedrawers:drawer_key", ["storagedrawers:quantify_key"]);
 
 	// Void Upgrade
 	event.recipes.create.deploying("storagedrawers:void_upgrade", [

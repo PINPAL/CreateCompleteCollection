@@ -171,6 +171,11 @@ const itemsToTooltip = [
 				requiresHold: false,
 				text: ["$Locks$ drawers when you $place$ them."],
 			},
+			{
+				control: "Crouch & R-Click Air",
+				requiresHold: true,
+				text: ["$Cycles$ to the next $Key$ mode."],
+			},
 		],
 	},
 	{
@@ -186,6 +191,11 @@ const itemsToTooltip = [
 				control: "in Off Hand",
 				requiresHold: false,
 				text: ["$Hides$ $Item Quantity$ on new drawers", "when you $place$ them."],
+			},
+			{
+				control: "Crouch & R-Click Air",
+				requiresHold: true,
+				text: ["$Cycles$ to the next $Key$ mode."],
 			},
 		],
 	},
@@ -206,6 +216,11 @@ const itemsToTooltip = [
 				control: "in Off Hand",
 				requiresHold: false,
 				text: ["$Hides$ $Everything$ on new drawers", "when you $place$ them."],
+			},
+			{
+				control: "Crouch & R-Click Air",
+				requiresHold: true,
+				text: ["$Cycles$ to the next $Key$ mode."],
 			},
 		],
 	},
