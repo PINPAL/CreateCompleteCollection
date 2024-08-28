@@ -21,3 +21,28 @@ MoreJSEvents.updateVillagerOffers((event) => {
 		}
 	});
 });
+
+// ============================================================================
+// Wandering Trader Trades
+// ============================================================================
+MoreJSEvents.wandererTrades((event) => {
+	// Remove the default trades (for level 2).
+	event.removeVanillaTrades(2);
+	event.removeModdedTrades(2);
+	// Add the lootbox trades.
+	for (const key in global.lootboxes) {
+		// Add the trade to the wandering trader.
+		const trade = event.addTrade(
+			2,
+			VillagerUtils.createSimpleTrade(TradeItem.of("minecraft:emerald", 1, 9), Item.of(`kubejs:lootbox_${key}`))
+		);
+		trade.maxUses(1);
+	}
+});
+MoreJSEvents.updateWandererOffers((event) => {
+	let newTrades = event.getWandererTrades(2);
+	// Add 2 more lootbox trades to garantee that the wandering trades provides 3 lootboxes.
+	for (let i = 0; i < 2; i++) {
+		event.addRandomOffer(newTrades);
+	}
+});
