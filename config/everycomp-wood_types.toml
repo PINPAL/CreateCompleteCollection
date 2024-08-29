@@ -61,7 +61,6 @@
 		[types.cut_block_type.createindustry]
 			concrete = true
 			rebar_concrete = true
-			chipwood = true
 			factory_floor = true
 			cut_bauxite = true
 			polished_cut_bauxite = true
@@ -83,22 +82,6 @@
 			blue_concrete = true
 			magenta_concrete = true
 			pink_concrete = true
-			white_high_quality_concrete = true
-			light_gray_high_quality_concrete = true
-			gray_high_quality_concrete = true
-			black_high_quality_concrete = true
-			brown_high_quality_concrete = true
-			red_high_quality_concrete = true
-			orange_high_quality_concrete = true
-			yellow_high_quality_concrete = true
-			lime_high_quality_concrete = true
-			green_high_quality_concrete = true
-			purple_high_quality_concrete = true
-			cyan_high_quality_concrete = true
-			light_blue_high_quality_concrete = true
-			blue_high_quality_concrete = true
-			magenta_high_quality_concrete = true
-			pink_high_quality_concrete = true
 
 		[types.cut_block_type.create]
 			copper_shingle = true
