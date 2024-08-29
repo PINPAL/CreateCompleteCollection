@@ -1209,4 +1209,17 @@ ServerEvents.recipes((event) => {
 			Fluid.of("minecraft:water", 500),
 		])
 		.id("kubejs:master/mixing/liquid_concrete");
+
+	// Fireclay Balls from Fireclay
+	// Mainly so you can see them in JEI
+	event.recipes.create
+		.milling(
+			[
+				"4x createindustry:fireclay_ball",
+				Item.of("createindustry:fireclay_ball").withChance(0.75),
+				Item.of("createindustry:fireclay_ball").withChance(0.5),
+			],
+			"createindustry:fireclay"
+		)
+		.id("kubejs:master/milling/fireclay_balls");
 });
