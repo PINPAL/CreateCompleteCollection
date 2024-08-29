@@ -132,7 +132,7 @@ global.createToolBreakRecipe = (event, inputItem, outputItem) => {
 	event
 		.shapeless(outputItem, [inputItem, "kubejs:refined_stone"])
 		.modifyResult((inventory, itemstack) => {
-			let item = inventory.find(Item.of(inputItem).ignoreNBT());
+			let item = inventory.find(Item.of(inputItem));
 			let nbt = item.nbt;
 			if (nbt == null) {
 				nbt = {};

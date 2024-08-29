@@ -1,5 +1,5 @@
 function upgradeBackpack(inventory, itemstack, backpack) {
-	let item = inventory.find(Item.of(backpack).ignoreNBT());
+	let item = inventory.find(Item.of(backpack));
 	let nbt = item.nbt;
 	if (nbt == null) {
 		nbt = {};
