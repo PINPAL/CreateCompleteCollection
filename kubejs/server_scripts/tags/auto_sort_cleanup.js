@@ -24,6 +24,19 @@ ServerEvents.tags("item", (event) => {
 		event.add("as:copper", item);
 	});
 
+	let notReallyPolished = [
+		"createdeco:polished_iron_bars",
+		"createdeco:polished_iron_bars_overlay",
+		"create_dd:polished_spectral_ruby",
+		"create:polished_rose_quartz",
+		"minecraft:polished_blackstone_button",
+		"minecraft:polished_blackstone_pressure_plate",
+	];
+	notReallyPolished.forEach((item) => {
+		event.remove("as:polished", item);
+		event.remove("as:polished_metal", item);
+	});
+
 	// Create Deco Brick Variants
 	const brickTypes = ["worn", "pearl", "red", "dusk", "scarlet", "dean", "blue"];
 	brickTypes.forEach((brickType) => {

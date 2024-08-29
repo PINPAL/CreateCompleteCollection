@@ -67,6 +67,9 @@ ServerEvents.tags("item", (event) => {
 	event.add("as:bucket", /(_|:)bucket($|_)/);
 	event.add("as:mechanism", /(_|:)mechanism($|_)/);
 
+	// Create DD
+	event.add("as:polished_metals", /create_dd:(zinc|steel|bronze)_polished_.*/);
+
 	// Colors
 	event.add("as:white", /(_|:)white($|_)/);
 	event.add("as:orange", /(_|:)orange($|_)/);
