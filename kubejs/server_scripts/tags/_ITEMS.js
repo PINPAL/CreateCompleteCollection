@@ -68,12 +68,6 @@ ServerEvents.tags("item", (event) => {
 	);
 
 	[
-		"quark:polished_andesite_vertical_slab",
-		"quark:polished_diorite_vertical_slab",
-		"quark:polished_granite_vertical_slab",
-		"quark:polished_blackstone_vertical_slab",
-		"quark:polished_blackstone_brick_vertical_slab",
-		"quark:polished_deepslate_vertical_slab",
 		"createdeco:gold_sheet_slab_vert",
 		"createdeco:netherite_sheet_slab_vert",
 		"createdeco:andesite_sheet_slab_vert",

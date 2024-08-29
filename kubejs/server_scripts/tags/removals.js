@@ -45,7 +45,6 @@ const removedItems = [
 	/quark:.*hollow.*log.*/,
 	/quark:.*hollow.*stem.*/,
 	/everycomp:.*hollow.*log.*/,
-	/quark:.*polished.*/,
 	/quark:.*egg.*/,
 	/quark:.*raw.*/,
 	/quark:.*diamond.*/,
