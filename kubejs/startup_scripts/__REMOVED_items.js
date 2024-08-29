@@ -238,6 +238,7 @@ global.removedItems = [
 	"createindustry:steel_encased_large_aluminum_cogwheel",
 	"createindustry:heavy_casing_encased_aluminum_cogwheel",
 	"createindustry:heavy_casing_encased_large_aluminum_cogwheel",
+	"createindustry:asphalt",
 
 	"railways:track_create_dd_rose",
 	"railways:track_create_dd_rose_wide",

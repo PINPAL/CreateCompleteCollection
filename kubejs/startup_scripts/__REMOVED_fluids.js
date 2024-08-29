@@ -13,8 +13,11 @@ global.removedFluids = [
 	"create_dd:caramel_milkshake",
 	"create_dd:hot_chocolate",
 	"create_dd:chocolate_milkshake",
+
 	"sophisticatedcore:experience",
+
 	"createindustry:napalm",
+	"createindusry:liquid_asphalt",
 ];
 
 global.removedFluids.forEach((fluid) => {
