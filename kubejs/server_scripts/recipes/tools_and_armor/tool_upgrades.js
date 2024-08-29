@@ -137,6 +137,7 @@ global.createToolBreakRecipe = (event, inputItem, outputItem) => {
 			if (nbt == null) {
 				nbt = {};
 			}
+			nbt.Damage = 0;
 			return Item.of(outputItem).withNBT(nbt);
 		})
 		.id(recipeId);
