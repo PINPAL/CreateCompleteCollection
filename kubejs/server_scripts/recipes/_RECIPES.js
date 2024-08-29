@@ -1181,4 +1181,22 @@ ServerEvents.recipes((event) => {
 			])
 			.id(`kubejs:master/crafting/${wood}_sail`);
 	});
+
+	// Liquid Concrete
+	event.remove({ id: "createindustry:mixing/liquid_concrete_from_slag" });
+	event.recipes.create
+		.mixing(Fluid.of("createindustry:liquid_concrete", 1500), [
+			"createindustry:slag",
+			Fluid.of("minecraft:water", 500),
+			"createindustry:cement",
+		])
+		.id("kubejs:master/mixing/liquid_concrete_from_slag");
+	event.remove({ id: "createindustry:mixing/liquid_concrete_" });
+	event.recipes.create
+		.mixing(Fluid.of("createindustry:liquid_concrete", 1000), [
+			"createindustry:limesand",
+			"minecraft:clay_ball",
+			Fluid.of("minecraft:water", 500),
+		])
+		.id("kubejs:master/mixing/liquid_concrete");
 });
