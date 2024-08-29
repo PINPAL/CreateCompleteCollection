@@ -10,7 +10,6 @@
 		{ item: "storagedrawers:diamond_storage_upgrade" }
 		{ item: "storagedrawers:emerald_storage_upgrade" }
 		{ item: "storagedrawers:creative_storage_upgrade", weight: 0.5f }
-		{ item: "kubejs:lootbox_enchantments_generic" }
 	]
 	title: "Storage Upgrades"
 }

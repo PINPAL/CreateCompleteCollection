@@ -4018,11 +4018,18 @@
 			description: [""]
 			icon: "createindustry:gasoline_engine"
 			id: "0E1103BC3A77FFC7"
-			rewards: [{
-				id: "7A6BA82E3692BAE5"
-				item: "kubejs:lootbox_redstone"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "7A6BA82E3692BAE5"
+					item: "kubejs:lootbox_redstone"
+					type: "item"
+				}
+				{
+					id: "5872029E4E053C23"
+					item: "kubejs:lootbox_steel"
+					type: "item"
+				}
+			]
 			subtitle: "Harness Oil for MAXIMUM POWAAHHH!"
 			tasks: [
 				{
@@ -4078,8 +4085,8 @@
 			}]
 			subtitle: "Find some Oil using the Surface Scanner"
 			tasks: [{
-				id: "5D2D5CA5DEB3738D"
-				item: "createindustry:deposit_scanner"
+				id: "391B95934E5A7543"
+				item: "createindustry:surface_scanner"
 				type: "item"
 			}]
 			title: "Finding Oil"
@@ -4089,11 +4096,11 @@
 		{
 			dependencies: ["30E1C70200A72928"]
 			hide: true
-			icon: "createindustry:steel_pump"
+			icon: "createindustry:pumpjack_crank"
 			id: "753BE290D41373D9"
 			rewards: [{
-				id: "07333D5DEBDB626C"
-				item: "kubejs:lootbox_brass"
+				id: "51245349D392CC51"
+				item: "kubejs:lootbox_steel"
 				type: "item"
 			}]
 			subtitle: "Collect Oil from a deposit."
@@ -4101,11 +4108,6 @@
 				{
 					id: "776F8518615A0BF1"
 					item: "createindustry:pumpjack_crank"
-					type: "item"
-				}
-				{
-					id: "4AD52154C96037DE"
-					item: "createindustry:pumpjack_hammer_holder"
 					type: "item"
 				}
 				{
@@ -4120,13 +4122,18 @@
 					type: "item"
 				}
 				{
-					id: "5E19F1BEB5211A9A"
-					item: "createindustry:steel_pump"
+					id: "54B76F872574C5EC"
+					item: "createindustry:machine_input"
 					type: "item"
 				}
 				{
-					id: "54B76F872574C5EC"
-					item: "createindustry:machine_input"
+					id: "04FD2EB248960DB0"
+					item: "createindustry:pumpjack_hammer"
+					type: "item"
+				}
+				{
+					id: "684C04C85BD20BD3"
+					item: "createindustry:steel_mechanical_pump"
 					type: "item"
 				}
 			]
@@ -4146,11 +4153,6 @@
 			subtitle: "Refine Oil using distillation"
 			tasks: [
 				{
-					id: "234D2B66149C3DC3"
-					item: "createindustry:distillation_tower_controller"
-					type: "item"
-				}
-				{
 					count: 9L
 					id: "521C7F862B51C5FF"
 					item: "createindustry:steel_fluid_tank"
@@ -4163,9 +4165,14 @@
 					type: "item"
 				}
 				{
+					id: "459048F5D257B7B9"
+					item: "createindustry:steel_distillation_controller"
+					type: "item"
+				}
+				{
 					count: 5L
-					id: "25ED308BB93CBFCF"
-					item: "createindustry:distillation_tower_output"
+					id: "0A12F09EABFB46D3"
+					item: "createindustry:steel_distillation_output"
 					type: "item"
 				}
 			]
@@ -7221,8 +7228,8 @@
 				type: "item"
 			}]
 			title: "The Steel Age"
-			x: 3.0d
-			y: 11.75d
+			x: 2.5d
+			y: 11.5d
 		}
 		{
 			dependencies: ["26B607339F9A9909"]
@@ -7274,6 +7281,52 @@
 			title: "Beyond Level I"
 			x: -6.125d
 			y: 5.125d
+		}
+		{
+			dependencies: ["22633EF43D2F33D2"]
+			id: "63ABC6E834676523"
+			rewards: [{
+				id: "038D3EDB432E667B"
+				item: "kubejs:lootbox_steel"
+				type: "item"
+			}]
+			subtitle: "Finally some proper tools."
+			tasks: [{
+				id: "60E2E93961EE2AFF"
+				item: {
+					Count: 1b
+					id: "kubejs:steel_paxel"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: 12.75d
+		}
+		{
+			dependencies: ["63ABC6E834676523"]
+			id: "7F40C9298BDACC22"
+			rewards: [{
+				id: "2FF0BBFDCE3255A0"
+				item: "kubejs:lootbox_steel"
+				type: "item"
+			}]
+			subtitle: "Getting close to the endgame.."
+			tasks: [{
+				id: "0EF6D5BBD8619316"
+				item: {
+					Count: 1b
+					id: "kubejs:diamond_paxel"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 3.875d
+			y: 12.375d
 		}
 	]
 	title: "Create Modpack"
