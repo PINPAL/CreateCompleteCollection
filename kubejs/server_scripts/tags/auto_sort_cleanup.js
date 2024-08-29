@@ -34,7 +34,6 @@ ServerEvents.tags("item", (event) => {
 	];
 	notReallyPolished.forEach((item) => {
 		event.remove("as:polished", item);
-		event.remove("as:polished_metal", item);
 	});
 
 	// Create Deco Brick Variants

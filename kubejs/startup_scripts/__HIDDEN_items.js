@@ -8,10 +8,6 @@ global.hideFromJEI = [
 	/ftbquests:*/,
 	/chunkloaders:*/,
 	/metalbarrels:.*/,
-	/petrolpark:.*/,
-	"dragonlib:dragon",
-	"moonlight:placeable_item",
-	"amendmends:dye_bottle",
 
 	// Unfinished Items
 	/createindustry:unprocessed_.*/,

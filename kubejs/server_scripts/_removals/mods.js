@@ -11,7 +11,6 @@ const modsToRemove = [
 	"simplemagnets",
 	"shrink",
 	"sophisticatedbackpacks",
-	"sophisticatedstorage",
 	"easy_villagers",
 	"wands",
 	"netherite_horse_armor",

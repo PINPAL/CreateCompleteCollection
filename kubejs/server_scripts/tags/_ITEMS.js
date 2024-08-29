@@ -164,10 +164,6 @@ ServerEvents.tags("item", (event) => {
 		event.add("forge:nutrients/carbs", item);
 	});
 
-	["sophisticatedstorage:gold_barrel", "sophisticatedstorage:gold_chest"].forEach((item) => {
-		event.add("quests:andesite_storage", item);
-	});
-
 	[
 		"minecraft:iron_ingot",
 		"minecraft:gold_ingot",
@@ -211,7 +207,7 @@ ServerEvents.tags("item", (event) => {
 		"minecraft:cobbled_deepslate_wall",
 		"minecraft:polished_deepslate_wall",
 		"minecraft:deepslate_brick_wall",
-		"minecraft:deepslate_tile__wall",
+		"minecraft:deepslate_tile_wall",
 		"minecraft:cobbled_deepslate_stairs",
 		"minecraft:polished_deepslate_stairs",
 		"minecraft:deepslate_brick_stairs",
@@ -233,30 +229,8 @@ ServerEvents.tags("item", (event) => {
 	// Bronze
 	event.add("forge:storage_blocks/bronze", "create_dd:bronze_block");
 
-	const notAllowedtoSlice = [
-		"minecraft:wooden_axe",
-		"minecraft:stone_axe",
-		"minecraft:iron_axe",
-		"minecraft:golden_axe",
-		"minecraft:diamond_axe",
-		"minecraft:netherite_axe",
-		"minecraft:wooden_shovel",
-		"minecraft:stone_shovel",
-		"minecraft:iron_shovel",
-		"minecraft:golden_shovel",
-		"minecraft:diamond_shovel",
-		"minecraft:netherite_shovel",
-		"kubejs:wooden_paxel",
-		"kubejs:stone_paxel",
-		"kubejs:copper_paxel",
-		"kubejs:iron_paxel",
-		"kubejs:steel_paxel",
-		"kubejs:diamond_paxel",
-		"kubejs:netherite_paxel",
-	];
-	notAllowedtoSlice.forEach((item) => {
-		event.remove("sliceanddice:allowed_tools", item);
-	});
+	// Remove axes and paxels from knife tag
+	event.remove("sliceanddice:allowed_tools", "#forge:tools/axes");
 
 	const casings = ["kubejs:steel_casing"];
 	casings.forEach((item) => {
@@ -306,21 +280,11 @@ ServerEvents.tags("item", (event) => {
 		event.add("curios:grid", grid);
 	});
 
-	// Create Deco Brick Variants
-	const brickTypes = ["worn", "pearl", "red", "dusk", "scarlet", "dean", "blue"];
-	brickTypes.forEach((brickType) => {
-		let tag = "kubejs:brick_types/" + brickType;
-		// Edge case for red bricks
-		if (brickType == "red") {
-			tag = "kubejs:brick_types/default";
-		}
-		// Tag the item
-		let regex = new RegExp(`createdeco:.*${brickType}_.*brick.*(s|tiles|wall|stairs)`);
-		event.add(tag, regex);
-	});
-
 	const allItemsInTheGame = Item.getTypeList();
 	event.add("kubejs:all_items", allItemsInTheGame);
+	global.removedItems.forEach((item) => {
+		event.remove("kubejs:all_items", item);
+	});
 
 	// Magnet Curios Tag
 	event.remove("curios:charm", "simplemagnets:advancedmagnet");

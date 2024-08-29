@@ -11,7 +11,7 @@ JEIEvents.hideItems((event) => {
 
 JEIEvents.hideFluids((event) => {
 	// Hide Removed Fluids
-	global.removedItems.forEach((fluid) => {
+	global.removedFluids.forEach((fluid) => {
 		event.hide(fluid);
 	});
 });

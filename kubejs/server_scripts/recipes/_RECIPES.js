@@ -116,11 +116,6 @@ ServerEvents.recipes((event) => {
 		})
 		.id("kubejs:master/crafting/hydraulic_press");
 
-	// Undo Coal Coke Block to Coal Coke
-	event
-		.shapeless("9x createindustry:coal_coke", ["createindustry:coal_coke_block"])
-		.id("kubejs:master/crafting/coal_coke_block_undo");
-
 	// Walnut Recycle
 	event.shapeless("ecologics:walnut_sapling", ["ecologics:walnut"]).id("kubejs:master/walnut_recycle");
 
@@ -393,10 +388,13 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/crafting/netherite_bars");
 	// Cheap Cast Iron
 	event.recipes.create
-		.compacting("createdeco:cast_iron_ingot", "minecraft:iron_ingot")
+		.compacting("createdeco:cast_iron_ingot", ["minecraft:iron_ingot", "#minecraft:coals"])
+		.heated()
 		.id("kubejs:master/compacting/cast_iron_ingot");
+	event.remove({ id: "minecraft:compacting/cast_iron_block" });
 	event.recipes.create
-		.compacting("createdeco:cast_iron_block", "minecraft:iron_block")
+		.compacting("createdeco:cast_iron_block", ["minecraft:iron_block", "#forge:storage_blocks/coal"])
+		.heated()
 		.id("kubejs:master/compacting/cast_iron_block");
 	// Cheap Asphalt
 	event.replaceOutput({ input: "create_dd:asphalt_block" }, "create_dd:asphalt_block", "16x create_dd:asphalt_block");
@@ -518,7 +516,7 @@ ServerEvents.recipes((event) => {
 	event.recipes
 		.createMechanicalCrafting("shrink:shrinking_device", [" DQD ", "TSSST", "SBSRS", "TSSST"], {
 			D: "create:display_board",
-			Q: "create_things_and_misc:vibration_mechanism",
+			Q: "create_dd:calculation_mechanism",
 			T: "create:railway_casing",
 			B: "infinitybuttons:blue_emergency_button",
 			R: "infinitybuttons:red_emergency_button",
@@ -603,11 +601,10 @@ ServerEvents.recipes((event) => {
 
 	// Renaming Items using Nametag
 	event
-		.shapeless(Item.of("#kubejs:all_items", '{display:{Name:\'{"text":"Your Name Tag Name HERE!"}\'}}'), [
-			"minecraft:name_tag",
-			"#kubejs:all_items",
-			"supplementaries:antique_ink",
-		])
+		.shapeless(
+			Item.of("minecraft:name_tag", '{display:{Name:\'{"text":"Your Item with the Name Tag Name HERE!"}\'}}'),
+			["minecraft:name_tag", "#kubejs:all_items", "supplementaries:antique_ink"]
+		)
 		.modifyResult((gridInventory, itemstack) => {
 			let items = gridInventory.findAll();
 			let nametag = items.find((item) => item.id == "minecraft:name_tag");
@@ -952,17 +949,30 @@ ServerEvents.recipes((event) => {
 		Item.of("minecraft:air")
 	);
 
-	// Fix Coal Coke
-	event.recipes.create
-		.mixing("createindustry:coal_coke", "#minecraft:coals")
-		.heated()
-		.id("kubejs:master/mixing/coal_coke");
-
-	// Harder Steel
-	event.recipes.create
-		.compacting("create_dd:steel_ingot", ["2x #forge:ingots/cast_iron", "createindustry:coal_coke"])
-		.heated()
-		.id("kubejs:master/compacting/steel_ingot");
+	// Fix Steel
+	event.remove("createindustry:casting/steel");
+	event
+		.custom({
+			type: "createindustry:casting",
+			ingredients: [
+				{
+					fluid: "createindustry:molten_steel",
+					amount: 1,
+				},
+			],
+			processingTime: 300,
+			results: [
+				{
+					count: 1,
+					item: "create_dd:steel_ingot",
+				},
+				{
+					count: 1,
+					item: "create_dd:steel_block",
+				},
+			],
+		})
+		.id("kubejs:master/casting/steel");
 
 	// Vertical Redstone (Cog Block)
 	event

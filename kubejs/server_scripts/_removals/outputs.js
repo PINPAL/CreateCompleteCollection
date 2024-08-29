@@ -162,12 +162,9 @@ const outputsToRemove = [
 	/v_slab_compat:createindustry\/.*factory_floor.*/,
 	"createindustry:industrial_barrel",
 	"createindustry:caution_block",
-	"createindustry:coal_coke",
-	"createindustry:steel_ingot",
 	"createindustry:cast_iron_ingot",
 	"createindustry:cast_iron_block",
 	"createindustry:heavy_plate",
-	"createindustry:steel_scaffolding",
 	"createindustry:sawdust",
 
 	// Create Deco Bricks
