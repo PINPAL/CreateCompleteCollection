@@ -326,6 +326,9 @@
 			stone_tile = true
 			blackstone_tile = true
 
+		[types.cut_block_type.kubejs]
+			waterproof = true
+
 [entries]
 
 	[entries.wood_type]

@@ -158,6 +158,23 @@ ServerEvents.recipes((event) => {
 		"createindustry:liquid_concrete_bucket"
 	);
 
+	// Insulaton Brush
+	event
+		.shaped("kubejs:insulation_brush", ["HP", "NH"], {
+			H: "minecraft:honeycomb",
+			P: "#forge:plates/iron",
+			N: "#forge:nuggets/iron",
+		})
+		.id("kubejs:insulation_brush");
+	event
+		.shapeless("kubejs:insulation_brush", ["2x minecraft:honeycomb", "create_things_and_misc:glue_packaging"])
+		.id("kubejs:insulation_brush_alt");
+
+	// Waterproof Planks
+	event.recipes.create
+		.deploying("kubejs:waterproof_planks", ["#minecraft:planks", "kubejs:insulation_brush"])
+		.id("kubejs:waterproof_planks");
+
 	// Harder steam engine
 	event.shaped(Item.of("create:steam_engine"), [" G ", "IMS", " C "], {
 		G: "create:golden_sheet",

@@ -31,11 +31,6 @@ ServerEvents.recipes((event) => {
 			count: 4,
 		},
 		{
-			input: "createindustry:steel_trapdoor",
-			output: "create_dd:steel_ingot",
-			count: 6,
-		},
-		{
 			input: "minecraft:cut_copper",
 			output: "minecraft:copper_ingot",
 			count: 3,
@@ -79,7 +74,7 @@ ServerEvents.recipes((event) => {
 
 	unpackingRecipes.forEach((recipe) => {
 		let recipeId = "kubejs:undo/";
-		recipeId = recipeId + recipe.output.replace(":", "_");
+		recipeId = recipeId + recipe.input.replace(":", "_");
 		event.recipes.create.milling(`${recipe.count}x ${recipe.output}`, recipe.input).id(recipeId);
 	});
 });
