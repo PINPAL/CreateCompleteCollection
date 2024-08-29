@@ -16,6 +16,10 @@ global.removedFluids = [
 
 	"sophisticatedcore:experience",
 
+	"cofh_core:experience",
+	"cofh_core:honey",
+	"cofh_core:potion",
+
 	"createindustry:napalm",
 	"createindusry:liquid_asphalt",
 ];
