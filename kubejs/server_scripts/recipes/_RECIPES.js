@@ -527,6 +527,90 @@ ServerEvents.recipes((event) => {
 			.id("kubejs:ingot_from_crushed_" + item.name);
 	});
 
+	// Renaming Items using Nametag
+	event
+		.shapeless(Item.of("#kubejs:all_items", '{display:{Name:\'{"text":"Your Name Tag Name HERE!"}\'}}'), [
+			"minecraft:name_tag",
+			"#kubejs:all_items",
+			"supplementaries:antique_ink",
+		])
+		.modifyResult((gridInventory, itemstack) => {
+			let items = gridInventory.findAll();
+			let nametag = items.find((item) => item.id == "minecraft:name_tag");
+			// Remove the everything EXCEPT the item to rename
+			items = items.filter((item) => item.id != "minecraft:name_tag");
+			items = items.filter((item) => item.id != "supplementaries:antique_ink");
+			items = items.filter((item) => item.id != "minecraft:air");
+			// Now we have the item to rename and the nametag
+			let inputItem = items[0];
+
+			// Get the original NBT data
+			let renamedNbt = inputItem.nbt;
+			if (renamedNbt == null) {
+				renamedNbt = { display: {} };
+			}
+			// Apply the new display name
+			renamedNbt.display = nametag.nbt.display;
+
+			// Create the new item with the renamed NBT
+			let outputItem = Item.of(inputItem.id).withNBT(renamedNbt);
+			return outputItem;
+		})
+		.keepIngredient("supplementaries:antique_ink")
+		.keepIngredient("minecraft:name_tag")
+		.id("kubejs:rename_with_nametag");
+
+	// Changing Color of Nametag Name
+	const colors = {
+		white: "FFFFFF",
+		orange: "E39C33",
+		magenta: "C968C3",
+		light_blue: "6E99D8",
+		yellow: "E4E429",
+		lime: "75C410",
+		pink: "EAA5C9",
+		gray: "828282",
+		light_gray: "D6D6D6",
+		cyan: "3B8CAE",
+		purple: "A252CC",
+		blue: "335DC1",
+		brown: "975C32",
+		green: "62842D",
+		red: "CF433E",
+		black: "27263C",
+	};
+	let exampleNametagNBT = '{display:{Name:\'[{"text":"Your ","color":"red"},';
+	exampleNametagNBT += '{"text":"Dye ","color":"gold"},';
+	exampleNametagNBT += '{"text":"Coloured ","color":"green"},';
+	exampleNametagNBT += '{"text":"Name ","color":"aqua"},';
+	exampleNametagNBT += '{"text":"Here!","color":"light_purple"}]\'}}';
+	event
+		.shapeless(Item.of("minecraft:name_tag", exampleNametagNBT), ["minecraft:name_tag", "#forge:dyes"])
+		.modifyResult((gridInventory, itemstack) => {
+			let items = gridInventory.findAll();
+			let nameTag = items.find((item) => item.id == "minecraft:name_tag");
+			let dye = items.find((item) => item.id.includes("dye"));
+			// Fetch the color code
+			let color = dye.id.split(":")[1].replace("_dye", "");
+			color = colors[color];
+
+			console.log(nameTag, dye, color);
+
+			let nbt = nameTag.nbt;
+			if (nbt == null) {
+				nbt = { display: { Name: '{ "text": "Name Tag", "color": "#FFFFFF" }' } };
+			}
+			// Apply the new color
+			console.log("Before: " + nbt.display.Name);
+			nbt.display.Name = nbt.display.Name.replace(/#[0-9A-F]{6}/g, "#" + color);
+			console.log("After: " + nbt.display.Name);
+
+			// Create the new item with the color NBT
+			let outputItem = Item.of(nameTag.id).withNBT(nbt);
+			return nameTag;
+		})
+		.id("kubejs:nametag_dying");
+
 	// Cheaper Diluted Bone Meal
 	event.remove({ output: Fluid.of("create_things_and_misc:diluted_bonemeal") });
 	event.recipes.create

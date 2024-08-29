@@ -312,6 +312,22 @@ ServerEvents.tags("item", (event) => {
 		event.add("curios:grid", grid);
 	});
 
+	// Create Deco Brick Variants
+	const brickTypes = ["worn", "pearl", "red", "dusk", "scarlet", "dean", "blue"];
+	brickTypes.forEach((brickType) => {
+		let tag = "kubejs:brick_types/" + brickType;
+		// Edge case for red bricks
+		if (brickType == "red") {
+			tag = "kubejs:brick_types/default";
+		}
+		// Tag the item
+		let regex = new RegExp(`createdeco:.*${brickType}_.*brick.*(s|tiles|wall|stairs)`);
+		event.add(tag, regex);
+	});
+
+	const allItemsInTheGame = Item.getTypeList();
+	event.add("kubejs:all_items", allItemsInTheGame);
+
 	// Magnet Curios Tag
 	event.remove("curios:charm", "simplemagnets:advancedmagnet");
 	event.add("curios:magnet", "simplemagnets:advancedmagnet");
