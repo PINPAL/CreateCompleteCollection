@@ -225,7 +225,7 @@ ServerEvents.recipes((event) => {
 	event.recipes.create
 		.mixing(
 			[Fluid.of("create_paper_line:wood_pulp", 200)],
-			[Fluid.of("minecraft:water", 250), "createindustry:sawdust", "farmersdelight:tree_bark"]
+			[Fluid.of("minecraft:water", 250), "create_paper_line:saw_dust", "farmersdelight:tree_bark"]
 		)
 		.id("kubejs:wood_pulp");
 
@@ -261,14 +261,6 @@ ServerEvents.recipes((event) => {
 		Fluid.of("create_paper_line:whitened_wood_pulp", 1000),
 		"minecraft:bucket",
 	]);
-
-	// Merging Saw Dust
-	event.replaceInput({ input: "create_paper_line:saw_dust" }, "create_paper_line:saw_dust", "createindustry:sawdust");
-	event.replaceOutput(
-		{ output: "create_paper_line:saw_dust" },
-		"create_paper_line:saw_dust",
-		"createindustry:sawdust"
-	);
 
 	// Infinite Water Bucket
 	event.shaped(

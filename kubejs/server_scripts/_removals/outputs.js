@@ -148,6 +148,7 @@ const outputsToRemove = [
 	// Create Paper Line
 	"create_paper_line:dryer",
 	"create_paper_line:frame",
+	"create_paper_line:saw_dust",
 
 	// Create Industry
 	"createindustry:napalm_bomb",

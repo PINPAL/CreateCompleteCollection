@@ -82,7 +82,6 @@ const hideFromJEI = [
 	"create_things_and_misc:zinc_knife",
 
 	"create_paper_line:frame",
-	"create_paper_line:saw_dust",
 	"create_paper_line:wood_chips",
 
 	"create_dd:kinetic_motor",
