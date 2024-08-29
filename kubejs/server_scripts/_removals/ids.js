@@ -43,6 +43,7 @@ const idsToRemove = [
 	// Create Addition
 	"createaddition:crafting/large_connector_electrum",
 	"createaddition:crafting/modular_accumulator_electrum",
+	"createaddition:crafting/electrum_nugget",
 
 	// Create Dreams & Desires
 	"create_dd:mixing/asphalt",
