@@ -6,7 +6,6 @@ global.hideFromJEI = [
 	/simplemagnets:*/,
 	/wands:*/,
 	/ftbquests:*/,
-	/chunkloaders:*/,
 	/metalbarrels:.*/,
 
 	// Unfinished Items

@@ -344,6 +344,8 @@ global.removedItems = [
 	"storagedrawers:conversion_upgrade",
 
 	"metalbarrels:copper_barrel",
+
+	"create_power_loader:empty_brass_chunk_loader",
 ];
 
 global.removedRecipeTypes = ["minecraft:brewing"];

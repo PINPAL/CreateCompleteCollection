@@ -1152,22 +1152,19 @@ ServerEvents.recipes((event) => {
 		.processingTime(400)
 		.id("kubejs:master/sifting/netherrack");
 
-	// Chunkloader
+	// Brass Chunkloader
+	event.remove({ output: "create_power_loader:empty_brass_chunk_loader" });
+	event.remove({ output: "create_power_loader:brass_chunk_loader" });
 	event
-		.shaped(Item.of("chunkloaders:ultimate_chunk_loader"), [" N ", "NVN", " N "], {
-			N: "createdeco:netherite_sheet",
-			V: "create_things_and_misc:vibration_mechanism",
-		})
-		.id("kubejs:master/crafting/ultimate_chunk_loader");
-
-	// Contraption Chunkloader
-	event
-		.shaped(Item.of("createchunkloading:chunk_loader"), ["GBG", "BCB", "GBG"], {
-			G: "#forge:glass",
+		.shaped(Item.of("create_power_loader:brass_chunk_loader"), ["GGGGG", "G   G", "G Z G", "BPXPB", "BBSBB"], {
+			G: "#forge:glass/colorless",
 			B: "create:brass_sheet",
-			C: "chunkloaders:ultimate_chunk_loader",
+			P: "create:precision_mechanism",
+			X: "create_things_and_misc:vibration_mechanism",
+			Z: "create_power_loader:andesite_chunk_loader",
+			S: "create:shaft",
 		})
-		.id("kubejs:master/crafting/contraption_chunk_loader");
+		.id("kubejs:master/crafting/chunk_loader_brass");
 
 	// Harder Sails
 	const sailWoods = [

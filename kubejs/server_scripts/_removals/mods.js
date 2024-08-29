@@ -3,8 +3,6 @@ const modsToRemove = [
 	"rsinfinitybooster",
 	"refinedstorage",
 	"refinedstorageaddons",
-	"chunkloaders",
-	"createchunkloading",
 	"disenchanting",
 	"itemfilters",
 	"ironjetpacks",
