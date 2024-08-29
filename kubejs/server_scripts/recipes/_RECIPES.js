@@ -146,17 +146,27 @@ ServerEvents.recipes((event) => {
 	]);
 
 	// Concrete
-	event.stonecutting("2x createindustry:concrete_slab", "createindustry:concrete");
-	event.stonecutting("createindustry:concrete_stairs", "createindustry:concrete");
-	event.stonecutting("createindustry:concrete_wall", "createindustry:concrete");
-	event.recipes.create.filling("createindustry:liquid_concrete_bucket", [
-		Fluid.of("createindustry:liquid_concrete_fluid", 500),
-		"minecraft:bucket",
-	]);
-	event.recipes.create.emptying(
-		[Fluid.of("createindustry:liquid_concrete_fluid", 500), "minecraft:bucket"],
-		"createindustry:liquid_concrete_bucket"
-	);
+	event
+		.stonecutting("2x createindustry:concrete_slab", "createindustry:concrete")
+		.id("kubejs:concrete_slab_stonecutting");
+	event
+		.stonecutting("createindustry:concrete_stairs", "createindustry:concrete")
+		.id("kubejs:concrete_stairs_stonecutting");
+	event
+		.stonecutting("createindustry:concrete_wall", "createindustry:concrete")
+		.id("kubejs:concrete_wall_stonecutting");
+	event.recipes.create
+		.filling("createindustry:liquid_concrete_bucket", [
+			Fluid.of("createindustry:liquid_concrete", 500),
+			"minecraft:bucket",
+		])
+		.id("kubejs:liquid_concrete_bucket_filling");
+	event.recipes.create
+		.emptying(
+			[Fluid.of("createindustry:liquid_concrete", 500), "minecraft:bucket"],
+			"createindustry:liquid_concrete_bucket"
+		)
+		.id("kubejs:liquid_concrete_bucket_emptying");
 
 	// Insulaton Brush
 	event
