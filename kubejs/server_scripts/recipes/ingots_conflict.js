@@ -40,26 +40,27 @@ ServerEvents.recipes((event) => {
 			// the input
 			"#forge:plates/steel",
 			[
-				event.recipes.createDeploying("createindustry:unprocessed_steel_mechanism", [
-					"createindustry:unprocessed_steel_mechanism",
+				event.recipes.createDeploying("createindustry:unfinished_steel_mechanism", [
+					"createindustry:unfinished_steel_mechanism",
 					"#forge:ingots/steel",
 				]),
-				event.recipes.createDeploying("createindustry:unprocessed_steel_mechanism", [
-					"createindustry:unprocessed_steel_mechanism",
+				event.recipes.createDeploying("createindustry:unfinished_steel_mechanism", [
+					"createindustry:unfinished_steel_mechanism",
 					"#forge:ingots/aluminum",
 				]),
-				event.recipes.createDeploying("createindustry:unprocessed_steel_mechanism", [
-					"createindustry:unprocessed_steel_mechanism",
+				event.recipes.createDeploying("createindustry:unfinished_steel_mechanism", [
+					"createindustry:unfinished_steel_mechanism",
 					"createindustry:screw",
 				]),
-				event.recipes.createDeploying("createindustry:unprocessed_steel_mechanism", [
-					"createindustry:unprocessed_steel_mechanism",
+				event.recipes.createDeploying("createindustry:unfinished_steel_mechanism", [
+					"createindustry:unfinished_steel_mechanism",
 					"createindustry:screwdriver",
 				]),
 			]
 		)
-		.transitionalItem("createindustry:unprocessed_steel_mechanism")
-		.loops(3);
+		.transitionalItem("createindustry:unfinished_steel_mechanism")
+		.loops(3)
+		.id("kubejs:ingots_conflict/steel_mechanism");
 
 	event.remove({ output: "createindustry:diesel_engine" });
 	event.recipes
