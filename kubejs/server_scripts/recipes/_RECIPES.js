@@ -558,7 +558,7 @@ ServerEvents.recipes((event) => {
 		})
 		.keepIngredient("supplementaries:antique_ink")
 		.keepIngredient("minecraft:name_tag")
-		.id("kubejs:rename_with_nametag");
+		.id("kubejs:rename_with_nametag_manual_only");
 
 	// Changing Color of Nametag Name
 	const colors = {
@@ -609,7 +609,7 @@ ServerEvents.recipes((event) => {
 			let outputItem = Item.of(nameTag.id).withNBT(nbt);
 			return nameTag;
 		})
-		.id("kubejs:nametag_dying");
+		.id("kubejs:nametag_dying_manual_only");
 
 	// Cheaper Diluted Bone Meal
 	event.remove({ output: Fluid.of("create_things_and_misc:diluted_bonemeal") });

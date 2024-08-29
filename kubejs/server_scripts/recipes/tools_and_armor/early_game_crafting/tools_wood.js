@@ -36,4 +36,8 @@ ServerEvents.recipes((event) => {
 	event
 		.shapeless("kubejs:wooden_blade", ["#minecraft:planks", "minecraft:stick", "#minecraft:planks"])
 		.id("kubejs:wooden_blade_crafting");
+
+	global.createToolBreakRecipe(event, "minecraft:wooden_sword", "kubejs:broken_wooden_sword");
+	global.createToolBreakRecipe(event, "minecraft:wooden_hoe", "kubejs:broken_wooden_hoe");
+	global.createToolBreakRecipe(event, "kubejs:wooden_paxel", "kubejs:broken_wooden_paxel");
 });

@@ -54,6 +54,7 @@ ServerEvents.recipes((event) => {
 
 	// Shield
 	event.smithing("minecraft:shield", "kubejs:broken_shield", "kubejs:iron_repair_kit");
+	global.createToolBreakRecipe(event, "minecraft:shield", "kubejs:broken_shield");
 
 	materials.forEach((material) => {
 		if (material.name == "netherite") {

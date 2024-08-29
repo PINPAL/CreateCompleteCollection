@@ -16,4 +16,9 @@ ServerEvents.recipes((event) => {
 		A: "#forge:leather",
 		S: "#forge:rods/wooden",
 	});
+
+	global.createToolBreakRecipe(event, "minecraft:leather_helmet", "kubejs:broken_leather_helmet");
+	global.createToolBreakRecipe(event, "minecraft:leather_chestplate", "kubejs:broken_leather_chestplate");
+	global.createToolBreakRecipe(event, "minecraft:leather_leggings", "kubejs:broken_leather_leggings");
+	global.createToolBreakRecipe(event, "minecraft:leather_boots", "kubejs:broken_leather_boots");
 });

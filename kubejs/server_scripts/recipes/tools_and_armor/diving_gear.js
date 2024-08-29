@@ -38,4 +38,10 @@ ServerEvents.recipes((event) => {
 	divingGear.forEach((item) => {
 		event.smithing(`create:${item.id}`, `kubejs:broken_${item.id}`, `kubejs:${item.material}_repair_kit`);
 	});
+
+	global.createToolBreakRecipe(event, "create:copper_diving_helmet", "kubejs:broken_copper_diving_helmet");
+	global.createToolBreakRecipe(event, "create:copper_diving_boots", "kubejs:broken_copper_diving_boots");
+
+	global.createToolBreakRecipe(event, "create:netherite_diving_helmet", "kubejs:broken_netherite_diving_helmet");
+	global.createToolBreakRecipe(event, "create:netherite_diving_boots", "kubejs:broken_netherite_diving_boots");
 });
