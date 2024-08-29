@@ -40,6 +40,8 @@ StartupEvents.registry("block", (event) => {
 		// second bounding  a 2x2 column in the center that stops 2 pixels short of the top
 		.box(7, 2, 7, 9, 14, 9);
 	event.create("steel_casing").displayName("Steel Casing").material("wood");
+
+	event.create("waterproof_planks").displayName("Waterproof Planks").material("wood");
 });
 
 StartupEvents.registry("item", (event) => {
@@ -56,4 +58,6 @@ StartupEvents.registry("item", (event) => {
 	event.create("kubejs:andesite_nugget").displayName("Andesite Alloy Nugget");
 	// Crushed Bonemeal
 	event.create("kubejs:crushed_bonemeal").displayName("Crushed Bone Meal");
+	// Insulation Tube
+	event.create("kubejs:insulation_brush").displayName("Insulating Glue").maxDamage(99);
 });

@@ -1,14 +1,13 @@
-name = "Create: The Factory Must Grow"
-filename = "createindustry-0.5.4b-1.19.2-yeehaw.jar"
-side = "both"
+filename = 'createindustry-0.7.0c-1.19.2.jar'
+name = 'Create: The Factory Must Grow'
+side = 'both'
 
 [download]
-mode = "metadata:curseforge"
-url = ""
-hash-format = "sha1"
-hash = "456b0e37385348167dfaef4eb55347f989851d33"
+hash = '62d163cea5feee3ef1febec90cecb5ddebb258e9'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
 
-[update]
 [update.curseforge]
-file-id = 4715907
+file-id = 5031494
 project-id = 693815

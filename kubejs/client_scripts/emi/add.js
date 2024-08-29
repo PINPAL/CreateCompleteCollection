@@ -53,7 +53,6 @@ const addToJEI = [
 	"simplemagnets:advancedmagnet",
 	"simplemagnets:advanced_demagnetization_coil",
 	"wands:palette",
-	"chunkloaders:ultimate_chunk_loader",
 	"metalbarrels:iron_barrel",
 	"metalbarrels:gold_barrel",
 	"metalbarrels:diamond_barrel",

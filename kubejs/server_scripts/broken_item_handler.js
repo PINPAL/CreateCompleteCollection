@@ -36,16 +36,20 @@ function handleDurability(event) {
 
 			// If item is broken, replace it
 			if (durability <= 10) {
-				// Enchantments
-				let itemEnchants = item.item.getEnchantments();
+				// Get NBT
+				let itemNBT = item.item.getNbt();
+				if (itemNBT == null) {
+					itemNBT = {};
+				}
+				// Ensure that we reset the damage value
+				itemNBT.Damage = 0;
 
 				let itemID = item.item.getId();
 				// Remove everything before and including the colon
 				itemID = itemID.split(":").pop();
 
 				// Generate Replacement Item
-				let replacementItem = Item.of(`kubejs:broken_${itemID}`);
-				replacementItem = replacementItem.enchant(itemEnchants);
+				let replacementItem = Item.of(`kubejs:broken_${itemID}`, 1, itemNBT);
 
 				if (item.slot == "helmet") {
 					player.setHeadArmorItem(replacementItem);

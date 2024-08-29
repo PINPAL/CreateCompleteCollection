@@ -225,6 +225,26 @@ const itemsToTooltip = [
 		],
 	},
 	{
+		item: "shrink:shrinking_device",
+		summary: ["Allows you to $Shrink$ yourself to a $smaller size$."],
+		controls: [
+			{
+				control: "R-Clicked",
+				requiresHold: false,
+				text: [
+					"$Opens$ the $Shrinking Device$ interface.",
+					"Allows you to $Specify$ the $Size$ you want",
+					"to shrink to.",
+				],
+			},
+			{
+				control: "Sneak & R-Clicked",
+				requiresHold: true,
+				text: ["Toggles the $Shrinking Device$ on or off."],
+			},
+		],
+	},
+	{
 		item: "sophisticatedbackpacks:advanced_pickup_upgrade",
 		summary: ["Makes your backpack $pickup$ items"],
 		controls: [

@@ -21,4 +21,5 @@ ServerEvents.tags("block", (event) => {
 	event.add("minecraft:mineable/pickaxe", "#minecraft:beehives");
 	event.add("minecraft:mineable/pickaxe", "#minecraft:shulker_boxes");
 	event.add("minecraft:mineable/pickaxe", "minecraft:lantern");
+	event.add("minecraft:mineable/pickaxe", "createindustry:fireclay");
 });

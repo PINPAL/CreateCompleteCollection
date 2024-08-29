@@ -107,6 +107,9 @@ ServerEvents.tags("item", (event) => {
 		// Edge case for red bricks
 		if (brickType == "red") {
 			tag = "as:brick_types/default";
+			event.add(tag, "minecraft:bricks");
+			event.add(tag, "minecraft:brick_wall");
+			event.add(tag, "minecraft:brick_stairs");
 		}
 		// We want to find everything of that type (EXCEPT slabs)
 		// Therefore we search for "s", "tiles", "wall" and "stairs"
