@@ -57,8 +57,10 @@ ServerEvents.recipes((event) => {
 	global.createToolBreakRecipe(event, "minecraft:shield", "kubejs:broken_shield");
 
 	materials.forEach((material) => {
+		let repairKitUndoCount = 4;
 		if (material.name == "netherite") {
 			event.smithing("kubejs:netherite_repair_kit", "kubejs:diamond_repair_kit", "#forge:ingots/netherite");
+			repairKitUndoCount = 1;
 		} else {
 			event
 				.shaped("kubejs:" + material.name + "_repair_kit", [" A ", "ALA", " A "], {
@@ -69,7 +71,7 @@ ServerEvents.recipes((event) => {
 		}
 		// Undo/Recycle Repair Kit
 		event.recipes.create
-			.milling(Item.of(material.material, 4), `kubejs:${material.name}_repair_kit`)
+			.milling(Item.of(material.material, repairKitUndoCount), `kubejs:${material.name}_repair_kit`)
 			.id(`kubejs:repair_kits/undo/${material.name}`);
 
 		// Skip paxel/sword/hoe for chainmail and leather
