@@ -30,6 +30,7 @@ global.removedItems = [
 	/quark:.*rang/,
 	"quark:forgotten_hat",
 	"quark:iron_button",
+	"quark:gold_bars",
 
 	/createcasing:.*oak_shaft/,
 	/createcasing:.*spruce_shaft/,
