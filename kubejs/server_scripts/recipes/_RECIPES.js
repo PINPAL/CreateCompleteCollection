@@ -206,6 +206,11 @@ ServerEvents.recipes((event) => {
 	event.recipes.create
 		.item_application("kubejs:waterproof_planks", ["#minecraft:planks", "kubejs:insulation_brush"])
 		.id("kubejs:master/item_application/waterproof_planks");
+	// Copper Casing
+	event.remove({ output: "create:copper_casing" });
+	event.recipes.create
+		.item_application("create:copper_casing", ["kubejs:waterproof_planks", "#forge:ingots/copper"])
+		.id("kubejs:master/item_application/copper_casing");
 
 	// Harder steam engine
 	event
