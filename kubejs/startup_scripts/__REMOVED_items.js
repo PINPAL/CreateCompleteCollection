@@ -369,7 +369,6 @@ global.removedItems = [
 	"refinedstorage:machine_casing",
 	"refinedstorage:security_card",
 	"refinedstorage:wrench",
-	"refinedstorage:regular_upgrade",
 	"refinedstorage:fortune_1_upgrade",
 	"refinedstorage:fortune_2_upgrade",
 	"refinedstorage:fortune_3_upgrade",
