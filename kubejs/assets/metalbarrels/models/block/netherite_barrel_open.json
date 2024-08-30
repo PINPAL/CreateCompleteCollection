@@ -1,0 +1,8 @@
+{
+	"parent": "metalbarrels:block/diamond_barrel",
+	"textures": {
+		"top": "metalbarrels:block/radiant_barrel_top_open",
+		"side": "metalbarrels:block/radiant_barrel_side",
+		"bottom": "metalbarrels:block/radiant_barrel_bottom"
+	}
+}
