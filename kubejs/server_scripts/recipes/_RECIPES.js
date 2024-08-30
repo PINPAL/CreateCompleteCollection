@@ -1290,4 +1290,30 @@ ServerEvents.recipes((event) => {
 			"createindustry:fireclay"
 		)
 		.id("kubejs:master/milling/fireclay_balls");
+
+	// Yeet Create Dreams & Desires Rubber
+	event.replaceInput({ input: "create_dd:rubber" }, "create_dd:rubber", "minecraft:dried_kelp");
+
+	// Shimmer
+	event.recipes.create
+		.mixing(Fluid.of("create_dd:shimmer", 100), [
+			"create_dd:refined_radiance",
+			Fluid.of("create_enchantment_industry:hyper_experience", 500),
+			Fluid.of("createindustry:liquid_plastic", 1000),
+			Fluid.of("create_dd:chromatic_waste", 500),
+			"kubejs:rainbow_core",
+		])
+		.id("kubejs:master/mixing/shimmer");
+
+	// Frozen Nugget of Experience
+	event.remove({ output: "create_dd:frozen_nugget" });
+	event.recipes.create
+		.filling("create_dd:frozen_nugget", [Fluid.of("create_dd:shimmer", 1000), "create_dd:compound_base"])
+		.id("kubejs:master/filling/frozen_nugget");
+
+	// Ingot of Experience
+	event.remove({ output: "create_dd:experience_ingot" });
+	event
+		.shapeless("create_dd:experience_ingot", ["3x create:experience_nugget"])
+		.id("kubejs:master/crafting/experience_ingot");
 });

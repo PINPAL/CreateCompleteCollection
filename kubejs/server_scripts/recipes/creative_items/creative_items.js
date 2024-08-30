@@ -18,7 +18,7 @@ ServerEvents.recipes((event) => {
 				O: "kubejs:creative_omega_potion",
 				Z: "kubejs:rainbow_core",
 				R: "minecraft:recovery_compass",
-				B: "create_dd:overcharge_alloy",
+				B: "kubejs:creative_alloy",
 			}
 		)
 		.id("kubejs:creative/fluid_tank");
@@ -88,4 +88,18 @@ ServerEvents.recipes((event) => {
 		4: "create:creative_blaze_cake",
 		5: "createaddition:creative_energy",
 	});
+
+	let transitionalItem = "kubejs:incomplete_creative_alloy";
+	event.recipes
+		.createSequencedAssembly(["kubejs:creative_alloy"], "create_dd:compound_base", [
+			event.recipes.createDeploying(transitionalItem, [transitionalItem, "create_dd:refined_radiance"]),
+			event.recipes.createDeploying(transitionalItem, [transitionalItem, "create_dd:shadow_steel"]),
+			event.recipes.createDeploying(transitionalItem, [transitionalItem, "create_dd:frozen_nugget"]),
+			event.recipes.createDeploying(transitionalItem, [transitionalItem, "create_dd:mithril_ingot"]),
+			event.recipes.createDeploying(transitionalItem, [transitionalItem, "create_dd:experience_mass"]),
+			event.recipes.create.filling(transitionalItem, [Fluid.of("create_dd:shimmer", 1000), transitionalItem]),
+		])
+		.transitionalItem(transitionalItem)
+		.loops(1)
+		.id("kubejs:creative/sequenced/creative_alloy");
 });

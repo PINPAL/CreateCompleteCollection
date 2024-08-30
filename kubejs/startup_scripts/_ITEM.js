@@ -15,6 +15,9 @@ StartupEvents.registry("item", (event) => {
 	event.create("kubejs:crushed_bonemeal").displayName("Crushed Bone Meal");
 	// Insulation Tube
 	event.create("kubejs:insulation_brush").displayName("Insulating Glue").maxDamage(99);
+	// Creative Alloy
+	event.create("creative_alloy").displayName("Creative Alloy");
+	event.create("incomplete_creative_alloy").displayName("Incomplete Creative Alloy");
 
 	// Broken Shield
 	event.create(`broken_shield`).displayName(`Broken Shield`).unstackable();

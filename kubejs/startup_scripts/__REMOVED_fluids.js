@@ -13,6 +13,7 @@ global.removedFluids = [
 	"create_dd:caramel_milkshake",
 	"create_dd:hot_chocolate",
 	"create_dd:chocolate_milkshake",
+	"create_dd:sap",
 
 	"sophisticatedcore:experience",
 
