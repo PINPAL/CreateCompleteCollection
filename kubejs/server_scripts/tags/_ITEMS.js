@@ -25,6 +25,25 @@ ServerEvents.tags("item", (event) => {
 		event.add("kubejs:chainmail_armor", item);
 	});
 
+	[
+		"kubejs:radiant_helmet",
+		"kubejs:radiant_chestplate",
+		"kubejs:radiant_leggings",
+		"kubejs:radiant_boots",
+		"kubejs:radiant_sword",
+		"kubejs:radiant_hoe",
+		"kubejs:radiant_paxel",
+		"kubejs:radiant_knife",
+	].forEach((item) => {
+		event.add("kubejs:unbreakable", item);
+	});
+
+	["kubejs:radiant_helmet", "kubejs:radiant_chestplate", "kubejs:radiant_leggings", "kubejs:radiant_boots"].forEach(
+		(item) => {
+			event.add("kubejs:radiant_armor", item);
+		}
+	);
+
 	["kubejs:copper_chestplate", "kubejs:copper_leggings", "kubejs:copper_boots", "kubejs:copper_helmet"].forEach(
 		(item) => {
 			event.add("kubejs:copper_armor", item);

@@ -29,6 +29,10 @@ function handleDurability(event) {
 			item.item.hasTag("forge:tools/hoes") ||
 			item.item.hasTag("forge:shields")
 		) {
+			// Ignore unbreakable items
+			if (item.item.hasTag("kubejs:unbreakable")) {
+				return;
+			}
 			// Durability
 			let damage = item.item.getDamageValue();
 			let maxDamage = item.item.getMaxDamage();

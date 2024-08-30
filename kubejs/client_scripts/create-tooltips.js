@@ -461,18 +461,39 @@ const allPaxels = [
 	"kubejs:steel_paxel",
 	"kubejs:diamond_paxel",
 	"kubejs:netherite_paxel",
+	"kubejs:radiant_paxel",
 ];
 allPaxels.forEach((paxel) => {
+	let summaryArray = [];
+	if (paxel == "kubejs:radiant_paxel") {
+		summaryArray.push("Completely $Indestructible$", "This item $Never Breaks$.", "");
+	}
+	summaryArray.push(
+		"$Breaks$ blocks like a $Pickaxe$.",
+		"$Digs$ blocks like a $Shovel$.",
+		"$Cuts$ blocks like an $Axe$.",
+		"$Harvests$ blocks like a $Hoe$."
+	);
 	itemsToTooltip.push({
 		item: paxel,
 		dontPerformYeet: true,
-		summary: [
-			"$Breaks$ blocks like a $Pickaxe$.",
-			"$Digs$ blocks like a $Shovel$.",
-			"$Cuts$ blocks like an $Axe$.",
-			"$Harvests$ blocks like a $Hoe$.",
-			"",
-		],
+		summary: summaryArray,
+	});
+});
+
+const radiantStuff = [
+	"kubejs:radiant_hoe",
+	"kubejs:radiant_sword",
+	"kubejs:radiant_knife",
+	"kubejs:radiant_helmet",
+	"kubejs:radiant_chestplate",
+	"kubejs:radiant_leggings",
+	"kubejs:radiant_boots",
+];
+radiantStuff.forEach((item) => {
+	itemsToTooltip.push({
+		item: item,
+		summary: ["Completely $Indestructible$", "This Item $Never Breaks$."],
 	});
 });
 

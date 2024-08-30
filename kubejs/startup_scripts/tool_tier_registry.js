@@ -14,9 +14,9 @@ ItemEvents.toolTierRegistry((event) => {
 		tier.repairIngredient = "#forge:ingots/steel";
 	});
 	event.add("radiance", (tier) => {
-		tier.uses = 2000;
+		tier.uses = 9999;
 		tier.speed = 11;
-		tier.attackDamageBonus = 5;
+		tier.attackDamageBonus = 10;
 		tier.level = 5;
 		tier.repairIngredient = "#forge:ingots/refined_radiance";
 	});

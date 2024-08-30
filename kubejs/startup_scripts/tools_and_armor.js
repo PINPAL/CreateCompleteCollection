@@ -217,10 +217,23 @@ StartupEvents.registry("item", (event) => {
 ItemEvents.modification((event) => {
 	for (const tierName in global.tiers) {
 		let tier = global.tiers[tierName];
-		// If the tier has a tool, we know it has a paxel
+		// Apply paxel durability
 		if (tier.hasTools) {
 			event.modify(`kubejs:${tierName}_paxel`, (item) => {
 				item.maxDamage = tier.paxelMaxDamage;
+			});
+		}
+		// Make unbreakable tools unbreakable
+		if (tier.hasOwnProperty("cannotBeBroken")) {
+			tools.forEach((tool) => {
+				event.modify(`kubejs:${tierName}_${tool}`, (item) => {
+					item.maxDamage = 0;
+				});
+			});
+			armors.forEach((piece) => {
+				event.modify(`kubejs:${tierName}_${piece}`, (item) => {
+					item.maxDamage = 0;
+				});
 			});
 		}
 	}
