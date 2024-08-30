@@ -17,6 +17,8 @@ ServerEvents.tags("item", (event) => {
 	event.remove("as:oak", /dark_oak($|_)/);
 	event.add("as:dark_oak", /dark_oak($|_)/);
 
+	event.remove("as:mechanism", /.*(incomplete|unfinished).*_mechanism/);
+
 	let copperStuffs = ["minecraft:golden_horse_armor"];
 	copperStuffs.forEach((item) => {
 		event.remove("minecraft:piglin_loved", item);

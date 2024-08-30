@@ -115,4 +115,9 @@ ServerEvents.tags("item", (event) => {
 		let regex = new RegExp(`createdeco:.*${brickType}_.*brick.*(s|_)`);
 		event.add(tag, regex);
 	});
+
+	// Incomplete Mechanisms
+	event.add("as:incomplete_mechanism", /create_dd:incomplete_.*_mechanism/);
+	event.add("as:incomplete_mechanism", "createindustry:unfinished_steel_mechanism");
+	event.add("as:incomplete_mechanism", "create:incomplete_precision_mechanism");
 });
