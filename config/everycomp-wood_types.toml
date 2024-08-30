@@ -13,6 +13,7 @@
 			rose = true
 			smoked = true
 			spirit = true
+			rubber = true
 
 		[types.wood_type.ecologics]
 			flowering_azalea = true
@@ -34,6 +35,9 @@
 		[types.leaves_type.ecologics]
 			coconut = true
 			walnut = true
+
+		[types.leaves_type.create_dd]
+			rubber = true
 
 	[types.cut_block_type]
 
@@ -57,6 +61,15 @@
 			polished_cut_gabbro = true
 			cut_gabbro_brick = true
 			small_gabbro_brick = true
+			rubber = true
+			cut_aethersite = true
+			polished_cut_aethersite = true
+			cut_aethersite_brick = true
+			small_aethersite_brick = true
+			cut_dolomite = true
+			polished_cut_dolomite = true
+			cut_dolomite_brick = true
+			small_dolomite_brick = true
 
 		[types.cut_block_type.createindustry]
 			concrete = true
