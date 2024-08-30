@@ -358,6 +358,14 @@ global.removedItems = [
 	"storagedrawers:conversion_upgrade",
 
 	"create_power_loader:empty_brass_chunk_loader",
+
+	"ironjetpacks:basic_coil",
+	"ironjetpacks:advanced_coil",
+	"ironjetpacks:ultimate_coil",
+	"ironjetpacks:strap",
+	"ironjetpacks:cell",
+	"ironjetpacks:thruster",
+	"ironjetpacks:capacitor",
 ];
 
 global.removedRecipeTypes = ["minecraft:brewing"];
