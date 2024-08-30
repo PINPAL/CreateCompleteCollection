@@ -21,7 +21,7 @@ global.removedFluids = [
 	"cofh_core:potion",
 
 	"createindustry:napalm",
-	"createindusry:liquid_asphalt",
+	"createindustry:liquid_asphalt",
 ];
 
 global.removedFluids.forEach((fluid) => {

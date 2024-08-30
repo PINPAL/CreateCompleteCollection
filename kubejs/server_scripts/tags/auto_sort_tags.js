@@ -59,7 +59,7 @@ ServerEvents.tags("item", (event) => {
 	event.add("as:tiles", /(_|:)tiles($|_)/);
 	event.add("as:brick", /(_|:)brick($|_)/);
 	event.add("as:bricks", /(_|:)bricks($|_)/);
-	event.add("as:long_brick", /(_|:)long_brick($|_)/);
+	event.add("as:long_brick", /(_|:)long_bricks($|_)/);
 	event.add("as:cut", /(_|:)cut($|_)/);
 
 	// Misc

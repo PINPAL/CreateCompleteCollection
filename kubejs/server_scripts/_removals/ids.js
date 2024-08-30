@@ -104,6 +104,9 @@ const idsToRemove = [
 	// Broken Recipes
 	"createindustry:colored_concrete/full_block/pink_concrete",
 	"create_crystal_clear:steel_tinted_glass_casing",
+	"cratedelight:carrots",
+	"cratedelight:potatoes",
+	"cratedelight:beetroots",
 ];
 
 ServerEvents.recipes((event) => {
