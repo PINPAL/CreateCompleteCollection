@@ -25,5 +25,8 @@ global.removedFluids = [
 ];
 
 global.removedFluids.forEach((fluid) => {
-	global.removedItems.push(fluid + "_bucket");
+	let bucket = Item.of(Fluid.of(fluid).getFluid().getBucket());
+	if (bucket.getId() != "minecraft:air") {
+		global.removedItems.push(fluid + "_bucket");
+	}
 });

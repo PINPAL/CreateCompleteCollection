@@ -22,7 +22,9 @@ JEIEvents.information((event) => {
 		},
 		{
 			id: "supplementaries:ash",
-			desc: ["Spawns in veins around the nether, most commonly in Basalt Deltas."],
+			desc: [
+				"Spawns in veins around the nether, most commonly in Basalt Deltas. Can also be obtained when a fire burns out.",
+			],
 		},
 	];
 	itemsToDescriptionate.forEach((item) => event.addItem(item.id, item.desc));

@@ -127,7 +127,7 @@ global.removedItems = [
 	"create_things_and_misc:jaboticaba_sail",
 	"create_things_and_misc:ramboutan_sail",
 
-	"block.create_dd:ponder_in_a_box",
+	"create_dd:ponder_in_a_box",
 	"create_dd:kinetic_motor",
 	"create_dd:accelerator_motor",
 	/create_dd:.*rubber.*/,

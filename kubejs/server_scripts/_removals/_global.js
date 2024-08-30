@@ -14,7 +14,7 @@ global.removedItems.forEach((item) => {
 	});
 });
 
-global.hideFromJEI.forEach((item) => {
+global.hiddenItems.forEach((item) => {
 	ServerEvents.tags("item", (event) => {
 		event.add("c:hidden_from_recipe_viewers", item);
 	});

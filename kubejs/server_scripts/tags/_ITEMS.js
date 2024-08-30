@@ -260,6 +260,7 @@ ServerEvents.tags("item", (event) => {
 		"kubejs:steel_paxel",
 		"kubejs:diamond_paxel",
 		"kubejs:netherite_paxel",
+		"kubejs:radiant_paxel",
 	];
 	paxels.forEach((item) => {
 		event.add("forge:axes", item);
@@ -283,6 +284,9 @@ ServerEvents.tags("item", (event) => {
 	const allItemsInTheGame = Item.getTypeList();
 	event.add("kubejs:all_items", allItemsInTheGame);
 	global.removedItems.forEach((item) => {
+		event.remove("kubejs:all_items", item);
+	});
+	global.hiddenItems.forEach((item) => {
 		event.remove("kubejs:all_items", item);
 	});
 

@@ -1,6 +1,6 @@
 JEIEvents.hideItems((event) => {
 	// Hide Items
-	global.hideFromJEI.forEach((item) => {
+	global.hiddenItems.forEach((item) => {
 		event.hide(item);
 	});
 	// Hide Removed Items

@@ -471,7 +471,7 @@ ServerEvents.recipes((event) => {
 	);
 
 	// Paxel Hoeing
-	event.recipes.createItemApplication("minecraft:farmland", ["minecraft:dirt_path", "#kubejs:paxel"]);
+	event.recipes.createItemApplication("minecraft:farmland", ["minecraft:dirt_path", "#kubejs:paxels"]);
 
 	// Renewable Create Stone Type
 	// Diorite
@@ -574,15 +574,16 @@ ServerEvents.recipes((event) => {
 		.compacting("createdeco:worn_bricks", "3x createdeco:worn_brick")
 		.id("kubejs:master/worn_bricks");
 	event.smelting("createdeco:worn_bricks", "minecraft:bricks").xp(0.3).id("kubejs:master/worn_bricks_smelting");
+	event.blasting("createdeco:worn_bricks", "minecraft:bricks").xp(0.3).id("kubejs:master/worn_bricks_blasting");
 
 	// Convert different brick types into each other
 	const brickTypes = ["worn", "pearl", "red", "dusk", "scarlet", "dean", "blue"];
 	brickTypes.forEach((brickType) => {
-		let brickTag = `#ae:brick_types/${brickType}`;
+		let brickTag = `#as:brick_types/${brickType}`;
 		let baseBrickBlock = new RegExp(`createdeco:.*${brickType}_.*brick(s)?`);
 		// Edge case for red bricks
 		if (brickType == "red") {
-			brickTag = "#ae:brick_types/default";
+			brickTag = "#as:brick_types/default";
 			baseBrickBlock = "minecraft:bricks";
 		}
 		// Replace stonecutting recipes base brick with the unified tag (eg reuse stairs & walls)
@@ -996,7 +997,9 @@ ServerEvents.recipes((event) => {
 
 	// Bones into Ash
 	event.smelting("3x supplementaries:ash", "minecraft:bone").id("kubejs:master/smelting/ash_from_bone");
-	event.smelting("supplementaries:ash", "minecraft:rotten_flesh").id("kubejs:master/smelting/ash_from_flesh");
+	event.smoking("3x supplementaries:ash", "minecraft:bone").id("kubejs:master/smoking/ash_from_bone");
+	event.smelting("2x supplementaries:ash", "minecraft:rotten_flesh").id("kubejs:master/smelting/ash_from_flesh");
+	event.smoking("2x supplementaries:ash", "minecraft:rotten_flesh").id("kubejs:master/smoking/ash_from_flesh");
 
 	// Palette
 	event
