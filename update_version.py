@@ -5,7 +5,7 @@ script_path = os.path.realpath(__file__)
 
 # Get the number of commits total in the repository
 commits = int(os.popen("git rev-list --count HEAD").read().strip())
-new_version = f"1.5.{commits + 1}"
+new_version = f"1.6.{commits + 1}"
 
 # Function to find and replace the version number in a config file
 def replace_version(config_path, new_version, line_heading, needsPunctuation=''):
