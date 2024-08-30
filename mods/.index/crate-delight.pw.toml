@@ -1,0 +1,13 @@
+filename = 'cratedelight-2024.07.12-1.19-forge.jar'
+name = "Crate Delight for Farmer's Delight"
+side = 'both'
+
+[download]
+hash = '9f0d902c0997af9999ee41e24a4dafe9c5e4bbabd21cbb7b99b337110877e78e639e07715548c5818b76da579aefa376ca8fd1d68c1cff46388ecc9090e5cb0f'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/9rlXSyLg/versions/64M3oUWR/cratedelight-2024.07.12-1.19-forge.jar'
+
+[update.modrinth]
+mod-id = '9rlXSyLg'
+version = '64M3oUWR'

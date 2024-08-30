@@ -45,6 +45,13 @@ ServerEvents.recipes((event) => {
 		}
 	});
 
+	// Early Game Smithing Table
+	event.replaceInput(
+		{ output: "minecraft:smithing_table" },
+		"minecraft:iron_ingot",
+		"#minecraft:stone_tool_materials"
+	);
+
 	// Lapis Alloy
 	event.recipes.create
 		.mixing("create_dd:lapis_alloy", ["minecraft:lapis_lazuli", "#forge:nuggets/tin"])

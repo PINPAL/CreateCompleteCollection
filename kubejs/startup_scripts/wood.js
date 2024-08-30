@@ -17,7 +17,7 @@ StartupEvents.registry("block", (event) => {
 				.displayName(`${formatName(wood.name)} ${formatName(replaceWooden(variant))}`)
 				.material("wood")
 				.textureAll(`${wood.namespace}:block/${wood.name}_planks`)
-				.tagBlock("minecraft:mineable/paxel")
+				.tagBlock("minecraft:mineable/pickaxe")
 				// Tag with minecraft:wooden_stairs or minecraft:wooden_slabs
 				// Depending on the variant append an s to the end of the variant
 				.tagBoth(

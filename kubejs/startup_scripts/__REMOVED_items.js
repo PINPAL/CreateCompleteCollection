@@ -90,6 +90,10 @@ global.removedItems = [
 	"minecraft:golden_axe",
 	"minecraft:golden_hoe",
 	"minecraft:golden_sword",
+	"minecraft:golden_boots",
+	"minecraft:golden_chestplate",
+	"minecraft:golden_helmet",
+	"minecraft:golden_leggings",
 	"minecraft:iron_pickaxe",
 	"minecraft:iron_shovel",
 	"minecraft:iron_axe",
@@ -114,6 +118,7 @@ global.removedItems = [
 	/everycomp:sd\/.*_half_drawers.*/,
 	/everycomp:sd\/.*_trim.*/,
 
+	"farmersdelight:flint_knife",
 	"farmersdelight:golden_knife",
 	"farmersdelight:wheat_dough",
 
@@ -311,7 +316,6 @@ global.removedItems = [
 	"refinedstorage:white_grid",
 	"refinedstorage:orange_grid",
 	"refinedstorage:magenta_grid",
-	"refinedstorage:light_blue_grid",
 	"refinedstorage:yellow_grid",
 	"refinedstorage:lime_grid",
 	"refinedstorage:pink_grid",
