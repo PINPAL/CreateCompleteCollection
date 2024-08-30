@@ -62,9 +62,6 @@ const outputsToRemove = [
 	"supplementaries:bamboo_spikes_tipped",
 	"supplementaries:bomb",
 
-	// Nutritional Balance
-	"nutritionalbalance:lunchbox",
-
 	// Farmers Delight
 	"farmersdelight:cooking_pot",
 	"farmersdelight:golden_knife",
@@ -73,47 +70,7 @@ const outputsToRemove = [
 	// Create Deco
 	"createdeco:netherite_bars",
 
-	// Explorers Compass
-	"explorerscompass:explorerscompass",
-
-	// Create
-	"create:cart_assembler",
-	"create:rotation_speed_controller",
-	"create:hand_crank",
-	"create:spout",
-	"create:steam_engine",
-	"create:deployer",
-	"create:controls",
-	"create:mechanical_drill",
-	"create:extendo_grip",
-	"create:fluid_tank",
-
 	// Create Dreams & Desires
-	Fluid.of("create_dd:condense_milk"),
-	Fluid.of("create_dd:cream"),
-	Fluid.of("create_dd:vanilla"),
-	Fluid.of("create_dd:vanilla_milkshake"),
-	Fluid.of("create_dd:strawberry"),
-	Fluid.of("create_dd:strawberry_milkshake"),
-	Fluid.of("create_dd:glowberry"),
-	Fluid.of("create_dd:glowberry_milkshake"),
-	Fluid.of("create_dd:caramel"),
-	Fluid.of("create_dd:caramel_milkshake"),
-	Fluid.of("create_dd:hot_chocolate"),
-	Fluid.of("create_dd:chocolate_milkshake"),
-	"create_dd:condense_milk_bucket",
-	"create_dd:cream_bucket",
-	"create_dd:vanilla_bucket",
-	"create_dd:vanilla_milkshake_bucket",
-	"create_dd:strawberry_bucket",
-	"create_dd:strawberry_milkshake_bucket",
-	"create_dd:glowberry_bucket",
-	"create_dd:glowberry_milkshake_bucket",
-	"create_dd:caramel_bucket",
-	"create_dd:caramel_milkshake_bucket",
-	"create_dd:hot_chocolate_bucket",
-	"create_dd:chocolate_milkshake_bucket",
-
 	"create_dd:steel_block",
 	"create_dd:kinetic_motor",
 	"create_dd:accelerator_motor",
@@ -144,11 +101,6 @@ const outputsToRemove = [
 	"createaddition:electrum_ingot",
 	"createaddition:zinc_sheet",
 	Item.of("createaddition:diamond_grit_sandpaper").weakNBT(),
-
-	// Create Paper Line
-	"create_paper_line:dryer",
-	"create_paper_line:frame",
-	"create_paper_line:saw_dust",
 
 	// Create Industry
 	"createindustry:napalm_bomb",

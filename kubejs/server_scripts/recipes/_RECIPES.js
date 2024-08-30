@@ -66,6 +66,7 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/diamond_grit_sandpaper");
 
 	// Harder Minecart Assembler
+	event.remove({ output: "create:cart_assembler" });
 	event
 		.shaped("create:cart_assembler", ["   ", "TRT", "B B"], {
 			T: "create:railway_casing",
@@ -75,6 +76,7 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/crafting/cart_assembler");
 
 	// Harder Rotation Speed Controller
+	event.remove({ output: "create:rotation_speed_controller" });
 	event
 		.shaped("create:rotation_speed_controller", [" M ", " B ", "   "], {
 			M: "create_dd:integrated_mechanism",
@@ -83,6 +85,7 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/crafting/rotation_speed_controller");
 
 	// Cheap Hand Crank
+	event.remove({ output: "create:hand_crank" });
 	event
 		.shaped(Item.of("create:hand_crank"), ["PPP", "  S", "   "], {
 			P: "#minecraft:planks",
@@ -138,6 +141,7 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/crafting/bronze_saw");
 
 	// Harder Spout
+	event.remove({ output: "create:spout" });
 	event
 		.shaped(Item.of("create:spout"), [" C ", " K ", " S "], {
 			C: "create:copper_casing",
@@ -147,12 +151,21 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/crafting/spout");
 
 	// Harder Fluid Tank
+	event.remove({ output: "create:fluid_tank" });
 	event
 		.shaped("create:fluid_tank", [" C ", " B ", " C "], {
 			C: "#forge:plates/copper",
 			B: "metalbarrels:gold_barrel",
 		})
 		.id("kubejs:master/crafting/fluid_tank");
+	// Harder Steel Fluid Tank
+	event.remove({ output: "createindustry:steel_fluid_tank" });
+	event
+		.shaped("createindustry:steel_fluid_tank", [" C ", " B ", " C "], {
+			C: "#forge:ingots/steel",
+			B: "metalbarrels:obsidian_barrel",
+		})
+		.id("kubejs:master/crafting/steel_tank");
 
 	// Harder Bronze Casing
 	event
@@ -213,6 +226,7 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/item_application/copper_casing");
 
 	// Harder steam engine
+	event.remove({ output: "create:steam_engine" });
 	event
 		.shaped(Item.of("create:steam_engine"), [" G ", "IMS", " C "], {
 			G: "create:golden_sheet",
@@ -228,6 +242,7 @@ ServerEvents.recipes((event) => {
 	event.remove({ id: "create_dd:crafting/brass_hand" });
 
 	// Harder Deployer
+	event.remove({ output: "create:deployer" });
 	event
 		.shaped(Item.of("create:deployer"), [" E ", " A ", " B "], {
 			E: "create:electron_tube",
@@ -245,6 +260,7 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/crafting/lootbox_explorer");
 
 	// Explorer Compass
+	event.remove({ output: "explorerscompass:explorerscompass" });
 	event
 		.shapeless("explorerscompass:explorerscompass", ["naturescompass:naturescompass"])
 		.id("kubejs:master/explorer_compass");
@@ -268,6 +284,7 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/crafting/lattice");
 
 	// Extendo Grip
+	event.remove({ output: "create:extendo_grip" });
 	event.recipes
 		.createMechanicalCrafting(
 			Item.of(
@@ -285,11 +302,29 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/mechanical_crafting/extendo_grip_with_nbt");
 
 	// Fix Dryer Recipe;
+	event.remove({ output: "create_paper_line:dryer" });
 	event
 		.shaped(Item.of("create_paper_line:dryer"), ["SSS", "   ", "SSS"], {
 			S: "#minecraft:wooden_slabs",
 		})
 		.id("kubejs:master/crafting/dryer");
+
+	// Saw Dust and Bark
+	event.remove({ output: "create_paper_line:saw_dust" });
+	event.recipes.create
+		.milling(["2x create_paper_line:saw_dust", "farmersdelight:tree_bark"], ["#minecraft:logs"])
+		.id("kubejs:master/milling/saw_dust");
+	event.recipes.create
+		.crushing(
+			[
+				"2x create_paper_line:saw_dust",
+				Item.of("create_paper_line:saw_dust").withChance(0.5),
+				"farmersdelight:tree_bark",
+				Item.of("farmersdelight:tree_bark").withChance(0.5),
+			],
+			"#minecraft:logs"
+		)
+		.id("kubejs:master/milling/saw_dust_and_bark");
 
 	// Wood Pulping
 	event.recipes.create
@@ -894,6 +929,7 @@ ServerEvents.recipes((event) => {
 	event.replaceInput({ output: "supplementaries:crimson_lantern" }, "minecraft:paper", "#kubejs:low_quality_paper");
 
 	// Harder Train Controls
+	event.remove({ output: "create:controls" });
 	event
 		.shaped("create:controls", [" L ", " T ", "P I"], {
 			L: "minecraft:lever",
@@ -904,6 +940,7 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/crafting/train_controls");
 
 	// Harder Drill
+	event.remove({ output: "create:mechanical_drill" });
 	event
 		.shaped(Item.of("create:mechanical_drill"), [" A ", "ASA", " C "], {
 			A: "create:andesite_alloy",

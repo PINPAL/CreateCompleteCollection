@@ -201,6 +201,8 @@ global.removedItems = [
 	"createsifter:custom_mesh",
 	"createsifter:zinc_mesh",
 
+	"create_paper_line:frame",
+
 	"createindustry:steel_ingot",
 	"createindustry:steel_block",
 	"createindustry:napalm_bomb",
