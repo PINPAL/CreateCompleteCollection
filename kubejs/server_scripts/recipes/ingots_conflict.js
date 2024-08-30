@@ -110,4 +110,9 @@ ServerEvents.tags("item", (event) => {
 	// Create Dreams & Desires: Industrial Iron
 	event.remove("forge:storage_blocks/industrial_iron", "create_dd:industrial_iron_block");
 	event.add("forge:storage_blocks/cast_iron", "create_dd:industrial_iron_block");
+
+	// Unify Industrial Iron & Cast Iron
+	event.add("forge:ingots/industrial_iron", "#forge:ingots/cast_iron");
+	event.add("forge:plates/industrial_iron", "#forge:plates/cast_iron");
+	event.add("forge:storage_blocks/industrial_iron", "#forge:storage_blocks/cast_iron");
 });

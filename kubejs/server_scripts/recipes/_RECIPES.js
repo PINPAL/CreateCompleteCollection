@@ -169,12 +169,10 @@ ServerEvents.recipes((event) => {
 
 	// Harder Bronze Casing
 	event
-		.shapeless("create_dd:reinforcement_plating", [
-			"#forge:storage_blocks/steel",
-			"#forge:storage_blocks/bronze",
-			"#forge:storage_blocks/bronze",
-			"#forge:storage_blocks/steel",
-		])
+		.shaped("create_dd:reinforcement_plating", ["AB", "BA"], {
+			A: "#forge:storage_blocks/steel",
+			B: "#forge:storage_blocks/bronze",
+		})
 		.id("kubejs:master/crafting/reinforcement_plating");
 	event.recipes.create
 		.deploying("create_dd:bronze_casing", ["create_dd:reinforcement_plating", "create_dd:bronze_ingot"])
