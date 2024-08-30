@@ -5,15 +5,15 @@
 
 		[types.wood_type.quark]
 			bamboo = true
-			azalea = true
-			blossom = true
-			ancient = true
+			azalea = false
+			blossom = false
+			ancient = false
 
 		[types.wood_type.create_dd]
 			rose = true
 			smoked = true
 			spirit = true
-			rubber = true
+			rubber = false
 
 		[types.wood_type.ecologics]
 			flowering_azalea = true
@@ -24,20 +24,20 @@
 	[types.leaves_type]
 
 		[types.leaves_type.quark]
-			blue_blossom = true
-			lavender_blossom = true
-			orange_blossom = true
-			pink_blossom = true
-			yellow_blossom = true
-			red_blossom = true
-			ancient = true
+			blue_blossom = false
+			lavender_blossom = false
+			orange_blossom = false
+			pink_blossom = false
+			yellow_blossom = false
+			red_blossom = false
+			ancient = false
 
 		[types.leaves_type.ecologics]
 			coconut = true
 			walnut = true
 
 		[types.leaves_type.create_dd]
-			rubber = true
+			rubber = false
 
 	[types.cut_block_type]
 
@@ -61,7 +61,7 @@
 			polished_cut_gabbro = true
 			cut_gabbro_brick = true
 			small_gabbro_brick = true
-			rubber = true
+			rubber = false
 			cut_aethersite = true
 			polished_cut_aethersite = true
 			cut_aethersite_brick = true
@@ -74,27 +74,27 @@
 		[types.cut_block_type.createindustry]
 			concrete = true
 			rebar_concrete = true
-			factory_floor = true
+			factory_floor = false
 			cut_bauxite = true
 			polished_cut_bauxite = true
 			cut_bauxite_brick = true
 			small_bauxite_brick = true
-			white_concrete = true
-			light_gray_concrete = true
-			gray_concrete = true
-			black_concrete = true
-			brown_concrete = true
-			red_concrete = true
-			orange_concrete = true
-			yellow_concrete = true
-			lime_concrete = true
-			green_concrete = true
-			purple_concrete = true
-			cyan_concrete = true
-			light_blue_concrete = true
-			blue_concrete = true
-			magenta_concrete = true
-			pink_concrete = true
+			white_concrete = false
+			light_gray_concrete = false
+			gray_concrete = false
+			black_concrete = false
+			brown_concrete = false
+			red_concrete = false
+			orange_concrete = false
+			yellow_concrete = false
+			lime_concrete = false
+			green_concrete = false
+			purple_concrete = false
+			cyan_concrete = false
+			light_blue_concrete = false
+			blue_concrete = false
+			magenta_concrete = false
+			pink_concrete = false
 
 		[types.cut_block_type.create]
 			copper_shingle = true
@@ -265,19 +265,19 @@
 			flowering_azalea = true
 
 		[types.cut_block_type.quark]
-			ancient_planks = true
+			ancient_planks = false
 			limestone = true
 			polished_limestone = true
-			jasper = true
-			polished_jasper = true
-			shale = true
-			polished_shale = true
-			myalite = true
-			polished_myalite = true
-			blossom_planks = true
-			permafrost = true
-			permafrost_bricks = true
-			azalea_planks = true
+			jasper = false
+			polished_jasper = false
+			shale = false
+			polished_shale = false
+			myalite = false
+			polished_myalite = false
+			blossom_planks = false
+			permafrost = false
+			permafrost_bricks = false
+			azalea_planks = false
 			soul_sandstone = true
 			cut_soul_sandstone = true
 			smooth_soul_sandstone = true
@@ -308,30 +308,30 @@
 			dripstone_bricks = true
 			tuff_bricks = true
 			limestone_bricks = true
-			jasper_bricks = true
-			shale_bricks = true
-			myalite_bricks = true
-			midori_block = true
-			duskbound_block = true
+			jasper_bricks = false
+			shale_bricks = false
+			myalite_bricks = false
+			midori_block = false
+			duskbound_block = false
 			iron_plate = true
 			rusty_iron_plate = true
-			shingles = true
-			white_shingles = true
-			orange_shingles = true
-			magenta_shingles = true
-			light_blue_shingles = true
-			yellow_shingles = true
-			lime_shingles = true
-			pink_shingles = true
-			gray_shingles = true
-			light_gray_shingles = true
-			cyan_shingles = true
-			purple_shingles = true
-			blue_shingles = true
-			brown_shingles = true
-			green_shingles = true
-			red_shingles = true
-			black_shingles = true
+			shingles = false
+			white_shingles = false
+			orange_shingles = false
+			magenta_shingles = false
+			light_blue_shingles = false
+			yellow_shingles = false
+			lime_shingles = false
+			pink_shingles = false
+			gray_shingles = false
+			light_gray_shingles = false
+			cyan_shingles = false
+			purple_shingles = false
+			blue_shingles = false
+			brown_shingles = false
+			green_shingles = false
+			red_shingles = false
+			black_shingles = false
 
 		[types.cut_block_type.supplementaries]
 			lapis_bricks = true
@@ -354,7 +354,7 @@
 			chest = true
 			stripped_post = true
 			ladder = true
-			hollow_log = true
+			hollow_log = false
 
 		[entries.wood_type.decorative_blocks]
 			beam = true
@@ -374,9 +374,9 @@
 			half_drawers_1 = true
 			full_drawers_4 = true
 			half_drawers_4 = true
-			trim = true
-			half_drawers_2 = true
-			full_drawers_1 = true
+			trim = false
+			half_drawers_2 = false
+			full_drawers_1 = false
 
 	[entries.leaves_type]
 
