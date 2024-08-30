@@ -146,13 +146,10 @@ ServerEvents.recipes((event) => {
 			let previousTierName = tier.previousHorseTier;
 			let previousTier = global.tiers[previousTierName];
 
-			// If the tier has a horseMod, use that instead of the minecraft
-			let horseMod = tier.horseMod ? tier.horseMod : "minecraft";
-
 			event
 				.smithing(
-					`${horseMod}:${tierName}_horse_armor`,
-					`minecraft:${previousTierName}_horse_armor`,
+					tier.horseArmor,
+					previousTier.horseArmor,
 					Item.of(`kubejs:unfinished_${tierName}_stitching`).weakNBT()
 				)
 				.id(`kubejs:tools_and_armor/horse_armor/${tierName}_from_${previousTierName}`);
