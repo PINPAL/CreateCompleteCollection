@@ -1,11 +1,14 @@
 {
-  "block.metalbarrels.iron_barrel": "Andesite Barrel",
-  "block.metalbarrels.gold_barrel": "Copper Barrel",
-  "block.metalbarrels.diamond_barrel": "Brass Barrel",
+	"block.metalbarrels.iron_barrel": "Andesite Barrel",
+	"block.metalbarrels.gold_barrel": "Copper Barrel",
+	"block.metalbarrels.diamond_barrel": "Brass Barrel",
+	"block.metalbarrels.obsidian_barrel": "Industrial Barrel",
+	"block.metalbarrels.netherite_barrel": "Radiant Barrel",
 
-  "item.metalbarrels.wood_to_iron": "Barrel to Andesite Barrel Upgrade",
-
-  "item.metalbarrels.iron_to_gold": "Andesite to Copper Barrel Upgrade",
-
-  "item.metalbarrels.gold_to_diamond": "Copper to Brass Barrel Upgrade"
+	"item.metalbarrels.wood_to_iron": "Barrel to Andesite Barrel Upgrade",
+	"item.metalbarrels.iron_to_gold": "Andesite to Copper Barrel Upgrade",
+	"item.metalbarrels.gold_to_diamond": "Copper to Brass Barrel Upgrade",
+	"item.metalbarrels.diamond_to_obsidian": "Brass to Industrial Barrel Upgrade",
+	"item.metalbarrels.diamond_to_netherite": "Brass to Radiant Barrel Upgrade",
+	"item.metalbarrels.obsidian_to_netherite": "Industrial to Radiant Barrel Upgrade"
 }

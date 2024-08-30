@@ -157,7 +157,7 @@
 	/**
 	 * The subpanels in the left sidebar
 	 */
-	left-sidebar-subpanels: lookup-history 2;
+	left-sidebar-subpanels: none;
 
 	/**
 	 * How many columns and rows of ingredients to limit the left sidebar to
@@ -192,7 +192,7 @@
 	/**
 	 * The subpanels in the right sidebar
 	 */
-	right-sidebar-subpanels: none;
+	right-sidebar-subpanels: lookup-history 2;
 
 	/**
 	 * How many columns and rows of ingredients to limit the right sidebar to

@@ -772,6 +772,27 @@ ServerEvents.recipes((event) => {
 		.deploying("metalbarrels:gold_to_diamond", ["minecraft:stick", "#forge:plates/brass"])
 		.id("kubejs:master/crafting/copper_to_brass_barrel_upgrade");
 
+	event.recipes.create
+		.deploying("metalbarrels:obsidian_barrel", ["metalbarrels:diamond_barrel", "#forge:plates/cast_iron"])
+		.id("kubejs:master/crafting/industrial_barrel");
+	event.recipes.create
+		.deploying("metalbarrels:diamond_to_obsidian", ["minecraft:stick", "#forge:plates/cast_iron"])
+		.id("kubejs:master/crafting/brass_to_industrial_barrel_upgrade");
+
+	event.recipes.create
+		.deploying("metalbarells:netherite_barrel", ["metalbarrels:diamond_barrel", "#forge:ingots/refined_radiance"])
+		.id("kubejs:master/crafting/radiant_barrel");
+	event.recipes.create
+		.deploying("metalbarrels:diamond_to_netherite", ["minecraft:stick", "#forge:ingots/refined_radiance"])
+		.id("kubejs:master/crafting/brass_to_radiant_barrel_upgrade");
+
+	event.recipes.create
+		.deploying("metalbarrels:netherite_barrel", ["metalbarrels:obsidian_barrel", "#forge:ingots/refined_radiance"])
+		.id("kubejs:master/crafting/radiant_barrel_from_industrial");
+	event.recipes.create
+		.deploying("metalbarrels:obsidian_to_netherite", ["minecraft:stick", "#forge:ingots/refined_radiance"])
+		.id("kubejs:master/crafting/industrial_to_radiant_barrel_upgrade");
+
 	// Lodestone
 	event
 		.shaped("8x minecraft:lodestone", ["III", "IDI", "III"], {

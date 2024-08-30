@@ -13,9 +13,3 @@ global.removedItems.forEach((item) => {
 		event.add("c:hidden_from_recipe_viewers", item);
 	});
 });
-
-global.hiddenItems.forEach((item) => {
-	ServerEvents.tags("item", (event) => {
-		event.add("c:hidden_from_recipe_viewers", item);
-	});
-});

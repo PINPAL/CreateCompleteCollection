@@ -476,7 +476,14 @@ allPaxels.forEach((paxel) => {
 	});
 });
 
-const metalBarrelUpgrades = ["metalbarrels:wood_to_iron", "metalbarrels:iron_to_gold", "metalbarrels:gold_to_diamond"];
+const metalBarrelUpgrades = [
+	"metalbarrels:wood_to_iron",
+	"metalbarrels:iron_to_gold",
+	"metalbarrels:gold_to_diamond",
+	"metalbarrels:diamond_to_obsidian",
+	"metalbarrels:diamond_to_netherite",
+	"metalbarrels:obsidian_to_netherite",
+];
 metalBarrelUpgrades.forEach((upgrade) => {
 	itemsToTooltip.push({
 		item: upgrade,
@@ -583,6 +590,24 @@ drawerWoodTypes.forEach((woodType) => {
 		item: woodType.mod + woodType.name + "_full_drawers_4",
 		summary: ["$Four$ Item $Slot$", "Holds $8 Stacks$ per Slot."],
 		controls: drawerControls,
+	});
+});
+
+const metalBarrels = [
+	{ name: "iron", slots: 54 },
+	{ name: "gold", slots: 81 },
+	{ name: "diamond", slots: 108 },
+	{ name: "obsidian", slots: 108, blastResistant: true },
+	{ name: "netherite", slots: 135, blastResistant: true },
+];
+metalBarrels.forEach((barrel) => {
+	let summary = ["Has a total of $" + barrel.slots + "$ Item $Slots$."];
+	if (barrel.blastResistant) {
+		summary.push("", "Is completely $immune$ to all", "$explosion damage$.");
+	}
+	itemsToTooltip.push({
+		item: "metalbarrels:" + barrel.name + "_barrel",
+		summary: summary,
 	});
 });
 

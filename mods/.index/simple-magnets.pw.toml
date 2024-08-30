@@ -1,14 +1,13 @@
-name = "Simple Magnets"
-filename = "simplemagnets-1.1.9-forge-mc1.19.jar"
-side = "both"
+filename = 'simplemagnets-1.1.11-forge-mc1.19.jar'
+name = 'Simple Magnets'
+side = 'both'
 
 [download]
-mode = "url"
-url = "https://cdn.modrinth.com/data/YyNQVpOu/versions/IibeK5lN/simplemagnets-1.1.9-forge-mc1.19.jar"
-hash-format = "sha512"
-hash = "4ddb57d1ee14910e056f1258b1a2fb799941dd050ace857946d4b9918188002062ba6806f60cf8e7617102d5047939558957bc7c3994922aaf8236e92d1325cc"
+hash = '18e316f3abb8869ba60365801b098881c6498690af456171337f5e08136c52347563a71558acd4e27c72c5ed24ff0a87191488249afd08a3fc23e7855dab7458'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/YyNQVpOu/versions/hKNXdVob/simplemagnets-1.1.11-forge-mc1.19.jar'
 
-[update]
 [update.modrinth]
-mod-id = "YyNQVpOu"
-version = "IibeK5lN"
+mod-id = 'YyNQVpOu'
+version = 'hKNXdVob'

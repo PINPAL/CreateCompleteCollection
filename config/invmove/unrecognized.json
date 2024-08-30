@@ -140,7 +140,8 @@
     "fr.frinn.custommachinery.client.screen.CustomMachineScreen": true,
     "shadows.apotheosis.ench.library.EnchLibraryScreen": true,
     "loaderCommon.forge.com.seibel.distanthorizons.common.wrappers.gui.ClassicConfigGUI$ConfigScreen": true,
-    "com.minenash.seamless_loading_screen.FadeScreen": true
+    "com.minenash.seamless_loading_screen.FadeScreen": true,
+    "dev.emi.emi.screen.ConfigEnumScreen": true
   },
   "hideBackground": {
     "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackScreen": false

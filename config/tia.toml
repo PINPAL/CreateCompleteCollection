@@ -3,7 +3,7 @@
 ["General options"]
 	#The speed at which item pickup / insert animations play
 	#Range: 0.01 ~ 10.0
-	animation_speed = 0.5
+	animation_speed = 0.4
 	#The scale at which items are rendered when picked up
 	#Range: 0.01 ~ 10.0
 	pickup_scale = 1.4

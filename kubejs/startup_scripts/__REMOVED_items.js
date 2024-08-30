@@ -112,7 +112,23 @@ global.removedItems = [
 	"easy_villagers:iron_farm",
 	"easy_villagers:farmer",
 
-	/metalbarrels:.*_to_.*/,
+	/metalbarrels:.*_to_crystal/,
+	/metalbarrels:.*_to_silver/,
+	/metalbarrels:silver_to_.*/,
+	/metalbarrels:.*_to_copper/,
+	/metalbarrels:copper_to_.*/,
+	"metalbarrels:copper_barrel",
+	"metalbarrels:crystal_barrel",
+	"metalbarrels:silver_barrel",
+	"metalbarrels:wood_to_obsidian",
+	"metalbarrels:wood_to_netherite",
+	"metalbarrels:wood_to_diamond",
+	"metalbarrels:iron_to_diamond",
+	"metalbarrels:gold_to_obsidian",
+	"metalbarrels:wood_to_gold",
+	"metalbarrels:gold_to_netherite",
+	"metalbarrels:iron_to_obsidian",
+	"metalbarrels:iron_to_netherite",
 
 	/everycomp:sd\/.*_half_drawers.*/,
 	/everycomp:sd\/.*_trim.*/,
@@ -136,6 +152,7 @@ global.removedItems = [
 	/create_dd:.*_asphalt_block/,
 	"create_dd:forest_ravager",
 	"create_dd:deforester_saw",
+	"create_dd:industrial_iron_ingot",
 
 	/supplementaries:.*present.*/,
 	/supplementaries:.*lantern.*/,
@@ -345,8 +362,6 @@ global.removedItems = [
 	"storagedrawers:compacting_drawers_3",
 	"storagedrawers:creative_vending_upgrade",
 	"storagedrawers:conversion_upgrade",
-
-	"metalbarrels:copper_barrel",
 
 	"create_power_loader:empty_brass_chunk_loader",
 ];
