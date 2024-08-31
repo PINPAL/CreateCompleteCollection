@@ -452,7 +452,7 @@ ServerEvents.recipes((event) => {
 		},
 		{
 			name: "create_dd:industrial_casing",
-			inputBlock: ["create_dd:zinc_casing"],
+			inputBlock: ["#forge:stripped_logs", "#forge:stripped_wood"],
 			inputItem: "#forge:plates/industrial_iron",
 		},
 		{
