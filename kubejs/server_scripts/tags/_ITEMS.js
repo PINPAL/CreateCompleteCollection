@@ -276,6 +276,18 @@ ServerEvents.tags("item", (event) => {
 		event.add("kubejs:paper_like", item);
 	});
 
+	const overencumbering = [
+		"supplementaries:sack",
+		"sophisticatedbackpacks:backpack",
+		"sophisticatedbackpacks:iron_backpack",
+		"sophisticatedbackpacks:gold_backpack",
+		"sophisticatedbackpacks:diamond_backpack",
+		"sophisticatedbackpacks:netherite_backpack",
+	];
+	overencumbering.forEach((item) => {
+		event.add("supplementaries:overencumbering", item);
+	});
+
 	const paxels = [
 		"kubejs:wooden_paxel",
 		"kubejs:stone_paxel",
