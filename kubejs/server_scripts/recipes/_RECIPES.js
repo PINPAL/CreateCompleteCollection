@@ -476,7 +476,7 @@ ServerEvents.recipes((event) => {
 		event.remove({ output: casing.name });
 		casing.inputBlock.forEach((inputBlock) => {
 			let id = "kubejs:master/item_application/";
-			id += casing.name.split(":")[1];
+			id += casing.name.replace(":", "_");
 			id += "_from_";
 			id += inputBlock.split(":")[1];
 			event.recipes.createItemApplication(casing.name, [inputBlock, casing.inputItem]).keepHeldItem().id(id);
