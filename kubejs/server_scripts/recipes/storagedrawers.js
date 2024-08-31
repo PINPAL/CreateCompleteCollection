@@ -68,12 +68,6 @@ ServerEvents.recipes((event) => {
 			customIngredient: "#create_dd:spirit_logs",
 		},
 		{
-			name: "rose",
-			type: "custom",
-			mod: "everycomp:sd/create_dd/",
-			customIngredient: "#create_dd:rose_logs",
-		},
-		{
 			name: "smoked",
 			type: "custom",
 			mod: "everycomp:sd/create_dd/",

@@ -371,12 +371,12 @@
 
 		[entries.wood_type.storagedrawers]
 			full_drawers_2 = true
-			half_drawers_1 = true
+			half_drawers_1 = false
 			full_drawers_4 = true
-			half_drawers_4 = true
+			half_drawers_4 = false
 			trim = false
 			half_drawers_2 = false
-			full_drawers_1 = false
+			full_drawers_1 = true
 
 	[entries.leaves_type]
 
