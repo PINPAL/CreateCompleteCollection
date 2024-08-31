@@ -519,6 +519,26 @@ metalBarrelUpgrades.forEach((upgrade) => {
 	});
 });
 
+const decorativeItems = [
+	"kubejs:steel_casing",
+	"create_dd:refined_radiance_casing",
+	"create_dd:shadow_steel_casing",
+	"create_dd:tin_casing",
+	"create_dd:netherite_casing",
+	"create_dd:nether_brick_casing",
+	"create_dd:zinc_casing",
+	"create_dd:industrial_casing",
+	"create_dd:mithril_casing",
+	"create_dd:brick_casing",
+	"create_dd:steel_casing",
+];
+decorativeItems.forEach((decorativeItem) => {
+	itemsToTooltip.push({
+		item: decorativeItem,
+		summary: ["$Decorative$ Only.", "Has $no functionality$."],
+	});
+});
+
 const supportBlocks = [
 	{ name: "oak", mod: "decorative_blocks:" },
 	{ name: "spruce", mod: "decorative_blocks:" },

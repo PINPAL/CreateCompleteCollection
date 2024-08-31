@@ -413,15 +413,87 @@ ServerEvents.recipes((event) => {
 			.stonecutting(`4x create_things_and_misc:${casing}_casing_trapdoor`, `create:${casing}_casing`)
 			.id(`kubejs:master/stonecutting/${casing}_casing_trapdoor`);
 	});
-	// Cheap Steel Casing
-	event.recipes
-		.createItemApplication("kubejs:steel_casing", ["#forge:stripped_logs", "#forge:nuggets/steel"])
-		.keepHeldItem()
-		.id("kubejs:master/item_application/steel_casing_from_log");
-	event.recipes
-		.createItemApplication("kubejs:steel_casing", ["#forge:stripped_wood", "#forge:nuggets/steel"])
-		.keepHeldItem()
-		.id("kubejs:master/item_application/steel_casing_from_wood");
+
+	const decoreativeCasings = [
+		{
+			name: "kubejs:steel_casing",
+			inputBlock: ["#forge:stripped_logs", "#forge:stripped_wood"],
+			inputItem: "#forge:nuggets/steel",
+		},
+		{
+			name: "create_dd:refined_radiance_casing",
+			inputBlock: ["#create_dd:glow_base"],
+			inputItem: "#forge:ingots/refined_radiance",
+		},
+		{
+			name: "create_dd:shadow_steel_casing",
+			inputBlock: ["minecraft:obsidian"],
+			inputItem: "#forge:ingots/shadow_steel",
+		},
+		{
+			name: "create_dd:tin_casing",
+			inputBlock: ["#forge:stripped_logs", "#forge:stripped_wood"],
+			inputItem: "#forge:ingots/tin",
+		},
+		{
+			name: "create_dd:netherite_casing",
+			inputBlock: ["#create_dd:valid_nether_logs"],
+			inputItem: "#forge:ingots/netherite",
+		},
+		{
+			name: "create_dd:nether_brick_casing",
+			inputBlock: ["minecraft:netherrack"],
+			inputItem: "#forge:ingots/nether_brick",
+		},
+		{
+			name: "create_dd:zinc_casing",
+			inputBlock: ["#forge:stripped_logs", "#forge:stripped_wood"],
+			inputItem: "#forge:ingots/zinc",
+		},
+		{
+			name: "create_dd:industrial_casing",
+			inputBlock: ["create_dd:zinc_casing"],
+			inputItem: "#forge:plates/industrial_iron",
+		},
+		{
+			name: "create_dd:mithril_casing",
+			inputBlock: ["#forge:stripped_logs", "#forge:stripped_wood"],
+			inputItem: "#forge:plates/mithril",
+		},
+		{
+			name: "create_dd:brick_casing",
+			inputBlock: ["#forge:stripped_logs", "#forge:stripped_wood"],
+			inputItem: "#forge:ingots/brick",
+		},
+		{
+			name: "create_dd:steel_casing",
+			inputBlock: ["#forge:stripped_logs", "#forge:stripped_wood"],
+			inputItem: "#forge:ingots/steel",
+		},
+	];
+	// Cheap Decorative Casing
+	decoreativeCasings.forEach((casing) => {
+		event.remove({ output: casing.name });
+		casing.inputBlock.forEach((inputBlock) => {
+			let id = "kubejs:master/item_application/";
+			id += casing.name.split(":")[1];
+			id += "_from_";
+			id += inputBlock.split(":")[1];
+			event.recipes.createItemApplication(casing.name, [inputBlock, casing.inputItem]).keepHeldItem().id(id);
+		});
+	});
+	// Replace create_dd:steel_casing with heavy machinary casing
+	event.replaceInput(
+		{ input: "create_dd:steel_casing" },
+		"create_dd:steel_casing",
+		"createindustry:heavy_machinery_casing"
+	);
+	// Replace create_dd:industrial_casing with heavy machinary casing
+	event.replaceInput(
+		{ input: "create_dd:industrial_casing" },
+		"create_dd:industrial_casing",
+		"createindustry:heavy_machinery_casing"
+	);
 	// Cheap Netherite Building Blocks
 	event
 		.stonecutting("16x createdeco:netherite_bars", "#forge:ingots/netherite")

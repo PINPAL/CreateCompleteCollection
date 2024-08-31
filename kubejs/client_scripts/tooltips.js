@@ -52,13 +52,6 @@ ItemEvents.tooltip((tooltip) => {
 		});
 	});
 
-	const decorativeItems = ["kubejs:steel_casing"];
-	decorativeItems.forEach((decorativeItem) => {
-		tooltip.addAdvanced(decorativeItem, (item, advanced, text) => {
-			text.add(1, [Text.of("Decorative Only").gray()]);
-		});
-	});
-
 	const moltenMetals = [
 		{ name: "iron", type: "ingot" },
 		{ name: "copper", type: "ingot" },
