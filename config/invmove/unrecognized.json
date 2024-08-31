@@ -141,7 +141,8 @@
     "shadows.apotheosis.ench.library.EnchLibraryScreen": true,
     "loaderCommon.forge.com.seibel.distanthorizons.common.wrappers.gui.ClassicConfigGUI$ConfigScreen": true,
     "com.minenash.seamless_loading_screen.FadeScreen": true,
-    "dev.emi.emi.screen.ConfigEnumScreen": true
+    "dev.emi.emi.screen.ConfigEnumScreen": true,
+    "com.leobeliik.extremesoundmuffler.gui.MufflerScreen": true
   },
   "hideBackground": {
     "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackScreen": false

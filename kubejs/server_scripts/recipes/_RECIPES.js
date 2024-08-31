@@ -1316,4 +1316,10 @@ ServerEvents.recipes((event) => {
 	event
 		.shapeless("create_dd:experience_ingot", ["3x create:experience_nugget"])
 		.id("kubejs:master/crafting/experience_ingot");
+
+	// Pattern Schematic
+	event.remove({ output: "create_pattern_schematics:empty_pattern_schematic" });
+	event
+		.shapeless("create_pattern_schematics:empty_pattern_schematic", ["minecraft:paper", "minecraft:pink_dye"])
+		.id("kubejs:master/crafting/pattern_schematic");
 });

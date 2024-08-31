@@ -10,10 +10,10 @@
 			ancient = false
 
 		[types.wood_type.create_dd]
-			rose = true
+			rose = false
 			smoked = true
 			spirit = true
-			rubber = false
+			rubber = true
 
 		[types.wood_type.ecologics]
 			flowering_azalea = true

@@ -1,0 +1,13 @@
+filename = 'RS_CraftingMonitorInGrid-1.19.2-3.1.jar'
+name = 'RS: Crafting Monitor in Grid'
+side = 'client'
+
+[download]
+hash = '3e1329ebf5a8872dea9b908339a10dd27ac97715ca45865d22c5743db0943ec6e7bd604c35e6838257616fed6a8d0a36c0d02bd678be7a85c6a6b8b7e10adb53'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/JOA9kmlg/versions/9g5Bqtjy/RS_CraftingMonitorInGrid-1.19.2-3.1.jar'
+
+[update.modrinth]
+mod-id = 'JOA9kmlg'
+version = '9g5Bqtjy'
