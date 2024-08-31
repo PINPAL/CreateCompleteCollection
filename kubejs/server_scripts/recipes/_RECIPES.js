@@ -1002,6 +1002,8 @@ ServerEvents.recipes((event) => {
 
 	// Easier Framed Glass
 	event.replaceInput({ input: "create:framed_glass" }, "create:framed_glass", "#forge:glass/colorless");
+	event.remove({ output: "create:framed_glass_trapdoor" });
+	event.stonecutting("create:framed_glass_trapdoor", "#forge:glass/colorless");
 
 	// Fix Dough
 	event.replaceInput({ input: "farmersdelight:wheat_dough" }, "farmersdelight:wheat_dough", "create:dough");

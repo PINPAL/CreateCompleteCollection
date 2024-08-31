@@ -142,7 +142,8 @@
     "loaderCommon.forge.com.seibel.distanthorizons.common.wrappers.gui.ClassicConfigGUI$ConfigScreen": false,
     "com.minenash.seamless_loading_screen.FadeScreen": false,
     "dev.emi.emi.screen.ConfigEnumScreen": true,
-    "com.leobeliik.extremesoundmuffler.gui.MufflerScreen": false
+    "com.leobeliik.extremesoundmuffler.gui.MufflerScreen": false,
+    "com.railwayteam.railways.content.cycle_menu.RadialTagCycleMenu": true
   },
   "hideBackground": {
     "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackScreen": false
