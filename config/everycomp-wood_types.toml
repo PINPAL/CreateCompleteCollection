@@ -13,7 +13,7 @@
 			rose = false
 			smoked = true
 			spirit = true
-			rubber = true
+			rubber = false
 
 		[types.wood_type.ecologics]
 			flowering_azalea = true
