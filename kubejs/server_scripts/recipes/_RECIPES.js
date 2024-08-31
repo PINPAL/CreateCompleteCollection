@@ -1322,4 +1322,35 @@ ServerEvents.recipes((event) => {
 	event
 		.shapeless("create_pattern_schematics:empty_pattern_schematic", ["minecraft:paper", "minecraft:pink_dye"])
 		.id("kubejs:master/crafting/pattern_schematic");
+
+	// Dark Prismarine
+	event.recipes.create
+		.mixing("minecraft:dark_prismarine", ["minecraft:prismarine", Fluid.of("kubejs:black_dye_fluid", 125)])
+		.id("kubejs:colored_items/dark_prismarine");
+	// Hazard Block
+	event.recipes.create
+		.mixing(["create_dd:hazard_block"], ["create_dd:asphalt_block", Fluid.of("kubejs:yellow_dye_fluid", 125)])
+		.id("kubejs:colored_items/hazard_block");
+	// Slime
+	event.recipes.create
+		.mixing(
+			[Fluid.of("create_things_and_misc:slime", 100)],
+			["create:dough", Fluid.of("kubejs:lime_dye_fluid", 250)]
+		)
+		.id("kubejs:colored_items/slime");
+	event.recipes.create
+		.mixing(["minecraft:slime_ball"], ["create_paper_line:saw_dust", Fluid.of("create_things_and_misc:slime", 100)])
+		.id("kubejs:colored_items/slime_ball");
+
+	// Allow feather blocks in white wool recipes
+	event.remove({ id: "supplementaries:bed_from_feather_block" });
+	event.remove({ id: "supplementaries:stool_from_feather_block" });
+	event.replaceInput(
+		[
+			{ type: "minecraft:crafting_shaped", input: "minecraft:white_wool" },
+			{ type: "minecraft:crafting_shapeless", input: "minecraft:white_wool" },
+		],
+		"minecraft:white_wool",
+		"#kubejs:soft_materials/colorless"
+	);
 });

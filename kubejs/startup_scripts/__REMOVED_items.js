@@ -252,7 +252,7 @@ global.removedItems = [
 	"createindustry:napalm_bomb",
 	"createindustry:napalm_bucket",
 	"createindustry:thermite_grenade",
-	"createindustry:mesh",
+	// "createindustry:mesh",
 	"createindustry:thermite_powder",
 	"createindustry:factory_floor",
 	"createindustry:factory_floor_slab",

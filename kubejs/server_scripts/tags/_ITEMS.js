@@ -256,6 +256,11 @@ ServerEvents.tags("item", (event) => {
 		event.add("create:casing", item);
 	});
 
+	const soft_fluffies = ["minecraft:white_wool", "supplementaries:feather_block"];
+	soft_fluffies.forEach((item) => {
+		event.add("kubejs:soft_materials/colorless", item);
+	});
+
 	const airSources = ["create:copper_backtank", "create:netherite_backtank"];
 	airSources.forEach((item) => {
 		event.add("create:pressurized_air_sources", item);
