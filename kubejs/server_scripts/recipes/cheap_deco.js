@@ -132,16 +132,29 @@ ServerEvents.recipes((event) => {
 			event.remove({
 				output: "createdeco" + ":" + lampColor + "_" + decorativeMat.materialName + "_lamp",
 			});
-			event.shaped(
-				Item.of("createdeco" + ":" + lampColor + "_" + decorativeMat.materialName + "_lamp", 8),
-				[" N ", " L ", "DS "],
-				{
-					S: "#forge:plates/" + decorativeMat.materialName,
-					L: "minecraft:lantern",
-					N: "#forge:nuggets/" + decorativeMat.materialName,
-					D: "minecraft:" + lampColor + "_dye",
-				}
-			);
+			// If the lamp color is yellow, make it the default recipe with NO dye
+			if (lampColor == "yellow") {
+				event.shaped(
+					Item.of("createdeco" + ":" + lampColor + "_" + decorativeMat.materialName + "_lamp", 8),
+					[" N ", " L ", " S "],
+					{
+						S: "#forge:plates/" + decorativeMat.materialName,
+						L: "minecraft:torch",
+						N: "#forge:nuggets/" + decorativeMat.materialName,
+					}
+				);
+			}
+			// If the lamp is not yellow
+			// Create a mixing recipe using the yellow (base) lamp and dye liquid
+			else {
+				event.recipes.create.mixing(
+					"createdeco" + ":" + lampColor + "_" + decorativeMat.materialName + "_lamp",
+					[
+						`createdeco:yellow_${decorativeMat.materialName}_lamp`,
+						Fluid.of(`kubejs:${lampColor}_dye_fluid`, 125),
+					]
+				);
+			}
 		});
 	});
 });

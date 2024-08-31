@@ -6,5 +6,14 @@
 	"block.createdeco.gold_sheet_slab_vert": "Gold Sheet Vertical Slab",
 	"block.createdeco.iron_sheet_slab_vert": "Iron Sheet Vertical Slab",
 	"block.createdeco.netherite_sheet_slab_vert": "Netherite Sheet Vertical Slab",
-	"block.createdeco.zinc_sheet_slab_vert": "Zinc Sheet Vertical Slab"
+	"block.createdeco.zinc_sheet_slab_vert": "Zinc Sheet Vertical Slab",
+
+	"block.createdeco.yellow_andesite_lamp": "Andesite Cage Lamp",
+	"block.createdeco.yellow_brass_lamp": "Brass Cage Lamp",
+	"block.createdeco.yellow_cast_iron_lamp": "Cast Iron Cage Lamp",
+	"block.createdeco.yellow_copper_lamp": "Copper Cage Lamp",
+	"block.createdeco.yellow_gold_lamp": "Gold Cage Lamp",
+	"block.createdeco.yellow_iron_lamp": "Iron Cage Lamp",
+	"block.createdeco.yellow_netherite_lamp": "Netherite Cage Lamp",
+	"block.createdeco.yellow_zinc_lamp": "Zinc Cage Lamp"
 }
