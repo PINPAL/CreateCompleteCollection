@@ -1,6 +1,7 @@
 // Import necessary Create classes from the correct package
 const $CreateRegistrate = Java.loadClass("com.simibubi.create.foundation.data.CreateRegistrate");
 const $DivingHelmetItem = Java.loadClass("com.simibubi.create.content.equipment.armor.DivingHelmetItem");
+const $DivingBootsItem = Java.loadClass("com.simibubi.create.content.equipment.armor.DivingBootsItem");
 const $AllArmorMaterials = Java.loadClass("com.simibubi.create.content.equipment.armor.AllArmorMaterials");
 const $Item = Java.loadClass("net.minecraft.world.item.Item");
 const $EventBuses = Java.loadClass("dev.architectury.platform.forge.EventBuses");
@@ -10,9 +11,10 @@ const $ResourceLocation = Java.loadClass("net.minecraft.resources.ResourceLocati
 const myRegistrate = $CreateRegistrate.create("kubejs");
 
 // Define a ResourceLocation for the texture (you should provide the correct path for your texture)
-const textureLocation = new $ResourceLocation("kubejs", "textures/item/custom_diving_helmet.png");
+const helmetTextureLocation = new $ResourceLocation("kubejs", "textures/item/custom_diving_helmet.png");
+const bootsTextureLocation = new $ResourceLocation("kubejs", "textures/item/custom_diving_boots.png");
 
-// Register a custom diving helmet item with the correct constructor
+// Register a custom diving helmet item
 myRegistrate
 	.item(
 		"custom_diving_helmet",
@@ -20,7 +22,20 @@ myRegistrate
 			new $DivingHelmetItem(
 				$AllArmorMaterials.COPPER, // Armor material
 				new $Item.Properties(), // Item properties
-				textureLocation // Resource location for the texture
+				helmetTextureLocation // Resource location for the texture
+			)
+	)
+	.register();
+
+// Register a custom diving boots item
+myRegistrate
+	.item(
+		"custom_diving_boots",
+		(props) =>
+			new $DivingBootsItem(
+				$AllArmorMaterials.COPPER, // Armor material
+				new $Item.Properties(), // Item properties
+				bootsTextureLocation // Resource location for the texture
 			)
 	)
 	.register();
