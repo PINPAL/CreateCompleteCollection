@@ -35,6 +35,7 @@ global.tiers = {
 	chainmail: {
 		mod: "minecraft",
 		material: "minecraft:chain",
+		armorMaterial: "chain",
 		hasTools: false,
 		hasArmor: true,
 		previousArmorTier: "leather",
@@ -124,7 +125,6 @@ global.tiers = {
 		paxelMaxDamage: 16384,
 		toolCostMultiplier: 1,
 		armorCostMultiplier: 1,
-		needsDivingGear: true,
 	},
 };
 

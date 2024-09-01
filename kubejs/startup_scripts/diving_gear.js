@@ -9,61 +9,52 @@ const $EventBuses = Java.loadClass("dev.architectury.platform.forge.EventBuses")
 const $ResourceLocation = Java.loadClass("net.minecraft.resources.ResourceLocation");
 
 // Create your own instance of CreateRegistrate
-const myRegistrate = $CreateRegistrate.create("kubejs");
+const kubejsRegistrate = $CreateRegistrate.create("kubejs");
 
-// Define a ResourceLocation for the texture (you should provide the correct path for your texture)
-const helmetTextureLocation = new $ResourceLocation("kubejs", "textures/item/custom_diving_helmet");
-const bootsTextureLocation = new $ResourceLocation("kubejs", "textures/item/custom_diving_boots");
+// Loop through all tiers
+for (const tierName in global.tiers) {
+	let tier = global.tiers[tierName];
 
-// Register a custom diving helmet item
-myRegistrate
-	.item(
-		"custom_diving_helmet",
-		(props) =>
-			new $DivingHelmetItem(
-				$AllArmorMaterials.COPPER, // Armor material
-				new $Item.Properties(), // Item properties
-				helmetTextureLocation // Resource location for the texture
-			)
-	)
-	.register();
+	// Skip tiers that don't need diving gear
+	if (!tier.hasOwnProperty("needsDivingGear")) {
+		continue;
+	}
+	if (!tier.needsDivingGear) {
+		continue;
+	}
 
-myRegistrate
-	.item(
-		"iron_diving_helmet",
-		(props) =>
-			new $DivingHelmetItem(
-				$ArmorMaterials.IRON, // Armor material
-				new $Item.Properties(), // Item properties
-				helmetTextureLocation // Resource location for the texture
-			)
-	)
-	.register();
+	// Get the correct armor material depending on Mod
+	let armorMaterial;
+	if (tier.mod === "minecraft") {
+		// Edge case for chainmail (uses "chain" instead of "chainmail")
+		if (tier.hasOwnProperty("armorMaterial")) {
+			armorMaterial = $ArmorMaterials[tier.armorMaterial.toUpperCase()];
+			// Else use the tier name
+		} else {
+			armorMaterial = $ArmorMaterials[tierName.toUpperCase()];
+		}
+	} else {
+		armorMaterial = $AllArmorMaterials[tierName.toUpperCase()];
+	}
 
-// Register a custom diving boots item
-myRegistrate
-	.item(
-		"custom_diving_boots",
-		(props) =>
-			new $DivingBootsItem(
-				$AllArmorMaterials.COPPER, // Armor material
-				new $Item.Properties(), // Item properties
-				bootsTextureLocation // Resource location for the texture
-			)
-	)
-	.register();
+	let textureLocation = new $ResourceLocation("kubejs", `${tierName}_diving`);
 
-myRegistrate
-	.item(
-		"iron_diving_boots",
-		(props) =>
-			new $DivingBootsItem(
-				$ArmorMaterials.IRON, // Armor material
-				new $Item.Properties(), // Item properties
-				bootsTextureLocation // Resource location for the texture
-			)
-	)
-	.register();
+	// Regiser the diving helmet item
+	kubejsRegistrate
+		.item(
+			`${tierName}_diving_helmet`,
+			(props) => new $DivingHelmetItem(armorMaterial, new $Item.Properties(), textureLocation)
+		)
+		.register();
+
+	// Register the diving boots item
+	kubejsRegistrate
+		.item(
+			`${tierName}_diving_boots`,
+			(props) => new $DivingBootsItem(armorMaterial, new $Item.Properties(), textureLocation)
+		)
+		.register();
+}
 
 // Finalize the registration process
-myRegistrate.registerEventListeners($EventBuses.getModEventBus("kubejs").get());
+kubejsRegistrate.registerEventListeners($EventBuses.getModEventBus("kubejs").get());
