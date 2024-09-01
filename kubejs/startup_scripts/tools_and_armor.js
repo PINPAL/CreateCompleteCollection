@@ -20,6 +20,7 @@ global.tiers = {
 		hasTools: false,
 		hasArmor: true,
 		horseArmor: "minecraft:leather_horse_armor",
+		needsDivingGear: true,
 	},
 	stone: {
 		mod: "minecraft",
@@ -38,6 +39,7 @@ global.tiers = {
 		hasArmor: true,
 		previousArmorTier: "leather",
 		armorCostMultiplier: 1,
+		needsDivingGear: true,
 	},
 	copper: {
 		mod: "kubejs",
@@ -66,6 +68,7 @@ global.tiers = {
 		paxelMaxDamage: 2048,
 		toolCostMultiplier: 2,
 		armorCostMultiplier: 3,
+		needsDivingGear: true,
 	},
 	steel: {
 		mod: "kubejs",
@@ -92,6 +95,7 @@ global.tiers = {
 		paxelMaxDamage: 6144,
 		toolCostMultiplier: 3,
 		armorCostMultiplier: 3,
+		needsDivingGear: true,
 	},
 	netherite: {
 		mod: "minecraft",
@@ -120,6 +124,7 @@ global.tiers = {
 		paxelMaxDamage: 16384,
 		toolCostMultiplier: 1,
 		armorCostMultiplier: 1,
+		needsDivingGear: true,
 	},
 };
 
