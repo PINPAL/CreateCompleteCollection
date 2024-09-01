@@ -1,5 +1,14 @@
 {
-  "curios.identifier.grid": "Wireless Grid",
-  "curios.identifier.magnet": "Magnet",
-  "curios.identifier.totem": "Totem"
+	"curios.identifier.grid": "Wireless Grid",
+	"curios.identifier.magnet": "Magnet",
+	"curios.identifier.totem": "Totem",
+
+	"item.kubejs.leather_diving_boots": "Leather Diving Boots",
+	"item.kubejs.leather_diving_helmet": "Leather Diving Helmet",
+	"item.kubejs.chainmail_diving_boots": "Chainmail Diving Boots",
+	"item.kubejs.chainmail_diving_helmet": "Chainmail Diving Helmet",
+	"item.kubejs.iron_diving_boots": "Iron Diving Boots",
+	"item.kubejs.iron_diving_helmet": "Iron Diving Helmet",
+	"item.kubejs.diamond_diving_boots": "Diamond Diving Boots",
+	"item.kubejs.diamond_diving_helmet": "Diamond Diving Helmet"
 }
