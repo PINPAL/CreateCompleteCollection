@@ -55,6 +55,7 @@ global.tiers = {
 		paxelMaxDamage: 1024,
 		toolCostMultiplier: 1,
 		armorCostMultiplier: 2,
+		hasNativeDivingGear: true,
 	},
 	iron: {
 		mod: "minecraft",
@@ -118,6 +119,7 @@ global.tiers = {
 		paxelMaxDamage: 8192,
 		toolCostMultiplier: 0.5,
 		armorCostMultiplier: 0.5,
+		hasNativeDivingGear: true,
 	},
 	radiant: {
 		cannotBeBroken: true,

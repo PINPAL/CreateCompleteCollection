@@ -2,6 +2,7 @@
 const $CreateRegistrate = Java.loadClass("com.simibubi.create.foundation.data.CreateRegistrate");
 const $DivingHelmetItem = Java.loadClass("com.simibubi.create.content.equipment.armor.DivingHelmetItem");
 const $DivingBootsItem = Java.loadClass("com.simibubi.create.content.equipment.armor.DivingBootsItem");
+
 const $ArmorMaterials = Java.loadClass("net.minecraft.world.item.ArmorMaterials");
 const $Item = Java.loadClass("net.minecraft.world.item.Item");
 const $EventBuses = Java.loadClass("dev.architectury.platform.forge.EventBuses");
@@ -21,6 +22,18 @@ for (const tierName in global.tiers) {
 	if (!tier.needsDivingGear) {
 		continue;
 	}
+
+	// Create broken variant of the diving gear
+	StartupEvents.registry("item", (event) => {
+		event
+			.create(`broken_${tierName}_diving_helmet`)
+			.displayName("Broken " + formatName(tierName) + " Diving Helmet")
+			.unstackable();
+		event
+			.create(`broken_${tierName}_diving_boots`)
+			.displayName("Broken " + formatName(tierName) + " Diving Boots")
+			.unstackable();
+	});
 
 	// Get the correct armor material depending on Mod
 	let armorMaterial;
@@ -49,6 +62,10 @@ for (const tierName in global.tiers) {
 			(props) => new $DivingBootsItem(armorMaterial, new $Item.Properties(), textureLocation)
 		)
 		.register();
+
+	// Add the item to JEI
+	global.addToJEI.push(`kubejs:${tierName}_diving_helmet`);
+	global.addToJEI.push(`kubejs:${tierName}_diving_boots`);
 }
 
 // Finalize the registration process

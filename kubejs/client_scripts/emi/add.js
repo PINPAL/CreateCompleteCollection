@@ -1,11 +1,22 @@
 // priority: -1
-JEIEvents.addItems((event) => {
-	// Add Items
+
+ClientEvents.highPriorityAssets((event) => {
+	// Define the JSON
+	let json = {
+		added: [],
+	};
+	// Generate a stack and add each item to the JSON
 	global.addToJEI.forEach((item) => {
-		event.add(item);
 		let itemStack = global.getItemStack(item);
-		if (itemStack.hasTag("c:hidden_from_recipe_viewers")) {
-			console.log("[ERROR] Item is hidden!!!!! " + itemStack);
-		}
+		let stack = {
+			stack: {
+				type: "item",
+				id: itemStack.getId(),
+				nbt: itemStack.getNbtString(),
+			},
+		};
+		json.added.push(stack);
 	});
+	// Save the JSON to the resource location
+	event.add("emi:index/stacks/add.json", json);
 });

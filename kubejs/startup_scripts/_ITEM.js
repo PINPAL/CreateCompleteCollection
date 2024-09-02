@@ -22,20 +22,6 @@ StartupEvents.registry("item", (event) => {
 	// Broken Shield
 	event.create(`broken_shield`).displayName(`Broken Shield`).unstackable();
 
-	// Broken Diving Gear
-	const divingGear = [
-		"netherite_diving_helmet",
-		"netherite_diving_boots",
-		"copper_diving_helmet",
-		"copper_diving_boots",
-	];
-	divingGear.forEach((item) => {
-		event
-			.create(`broken_${item}`)
-			.displayName("Broken " + formatName(item))
-			.unstackable();
-	});
-
 	// Creative Potions
 	event.create("creative_potion").displayName("Creative Potion").unstackable();
 	event

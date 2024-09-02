@@ -50,17 +50,33 @@ ServerEvents.tags("item", (event) => {
 		}
 	);
 
-	[
-		"create:netherite_diving_boots",
-		"create:netherite_diving_helmet",
-		"create:copper_diving_boots",
-		"create:copper_diving_helmet",
-		"kubejs:copper_boots",
-		"kubejs:copper_helmet",
-		"kubejs:copper_chestplate",
-		"kubejs:copper_leggings",
-	].forEach((item) => {
+	// Loop through global tiers
+	let diving_boots = [];
+	let diving_helmets = [];
+	for (const tierName in global.tiers) {
+		let tier = global.tiers[tierName];
+
+		// Skip tiers that don't need diving gear
+		// (eg: doesn't have either a needsDivingGear or hasNativeDivingGear property)
+		if (!tier.needsDivingGear && !tier.hasNativeDivingGear) {
+			continue;
+		}
+
+		diving_boots.push(`kubejs:${tierName}_diving_boots`);
+		diving_helmets.push(`kubejs:${tierName}_diving_helmet`);
+	}
+
+	diving_boots.forEach((item) => {
+		event.add("forge:armor", item);
 		event.add("forge:armors", item);
+		event.add("forge:armors/boots", item);
+		event.add("forge:boots", item);
+	});
+	diving_helmets.forEach((item) => {
+		event.add("forge:armor", item);
+		event.add("forge:armors", item);
+		event.add("forge:armors/helmets", item);
+		event.add("forge:helmets", item);
 	});
 
 	["create:netherite_diving_boots", "create:copper_diving_boots"].forEach((item) => {
