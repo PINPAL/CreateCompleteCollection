@@ -1430,4 +1430,17 @@ ServerEvents.recipes((event) => {
 
 	// Trowel
 	event.replaceInput({ output: "quark:trowel" }, "minecraft:iron_ingot", "#forge:ingots/copper");
+
+	// Empty Schematic
+	event.recipes.create
+		.mixing("create:empty_schematic", ["minecraft:paper", Fluid.of("kubejs:light_blue_dye_fluid", 125)])
+		.id("kubejs:master/mixing/empty_schematic");
+
+	// Pattern Schematic
+	event.recipes.create
+		.mixing("create_pattern_schematics:empty_pattern_schematic", [
+			"minecraft:paper",
+			Fluid.of("kubejs:pink_dye_fluid", 125),
+		])
+		.id("kubejs:master/mixing/empty_pattern_schematic");
 });
