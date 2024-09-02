@@ -24,6 +24,7 @@ ItemEvents.toolTierRegistry((event) => {
 ItemEvents.armorTierRegistry((event) => {
 	event.add("copper", (tier) => {
 		tier.durabilityMultiplier = 15;
+		// Slot Protections are [FEET, LEGS, BODY, HEAD]
 		tier.slotProtections = [2, 4, 5, 2];
 		tier.equipSound = "item.armor.equip_gold";
 		tier.toughness = 0;
@@ -31,7 +32,8 @@ ItemEvents.armorTierRegistry((event) => {
 	});
 	event.add("steel", (tier) => {
 		tier.durabilityMultiplier = 30;
-		tier.slotProtections = [3, 7, 5, 3];
+		// Slot Protections are [FEET, LEGS, BODY, HEAD]
+		tier.slotProtections = [3, 5, 7, 3];
 		tier.equipSound = "item.armor.equip_gold";
 		tier.toughness = 1;
 		tier.knockbackResistance = 0;
@@ -39,7 +41,8 @@ ItemEvents.armorTierRegistry((event) => {
 	event.add("radiant", (tier) => {
 		tier.durabilityMultiplier = 100;
 		tier.durabilityMultiplier = 100;
-		tier.slotProtections = [3, 9, 7, 3];
+		// Slot Protections are [FEET, LEGS, BODY, HEAD]
+		tier.slotProtections = [4, 7, 9, 4];
 		tier.equipSound = "item.armor.equip_netherite";
 		tier.toughness = 4;
 		tier.knockbackResistance = 0.2;

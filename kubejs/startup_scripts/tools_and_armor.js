@@ -35,7 +35,7 @@ global.tiers = {
 	chainmail: {
 		mod: "minecraft",
 		material: "minecraft:chain",
-		armorMaterial: "chain",
+		armorMaterial: "CHAIN",
 		hasTools: false,
 		hasArmor: true,
 		previousArmorTier: "leather",
@@ -82,6 +82,12 @@ global.tiers = {
 		paxelMaxDamage: 4096,
 		toolCostMultiplier: 1,
 		armorCostMultiplier: 2,
+		needsDivingGear: true,
+		armorMaterial: "IRON",
+		armorProperties: {
+			slotProtections: [3, 7, 6, 3],
+			armorToughness: 1.0,
+		},
 	},
 	diamond: {
 		mod: "minecraft",
@@ -125,6 +131,16 @@ global.tiers = {
 		paxelMaxDamage: 16384,
 		toolCostMultiplier: 1,
 		armorCostMultiplier: 1,
+		needsDivingGear: true,
+		armorMaterial: "NETHERITE",
+		armorProperties: {
+			rarity: "EPIC",
+			slotProtections: [4, 9, 7, 4],
+			armorToughness: 4.0,
+			armorKnockbackResistance: 0.1,
+			fireResistant: true,
+			maxDamage: 0,
+		},
 	},
 };
 

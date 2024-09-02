@@ -9,6 +9,10 @@
 	"item.kubejs.chainmail_diving_helmet": "Chainmail Diving Helmet",
 	"item.kubejs.iron_diving_boots": "Iron Diving Boots",
 	"item.kubejs.iron_diving_helmet": "Iron Diving Helmet",
+	"item.kubejs.steel_diving_helmet": "Steel Diving Helmet",
+	"item.kubejs.steel_diving_boots": "Steel Diving Boots",
 	"item.kubejs.diamond_diving_boots": "Diamond Diving Boots",
-	"item.kubejs.diamond_diving_helmet": "Diamond Diving Helmet"
+	"item.kubejs.diamond_diving_helmet": "Diamond Diving Helmet",
+	"item.kubejs.radiant_diving_helmet": "Radiant Diving Helmet",
+	"item.kubejs.radiant_diving_boots": "Radiant Diving Boots"
 }
