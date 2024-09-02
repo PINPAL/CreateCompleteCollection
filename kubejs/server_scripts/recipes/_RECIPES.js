@@ -1427,4 +1427,7 @@ ServerEvents.recipes((event) => {
 		"minecraft:white_wool",
 		"#kubejs:soft_materials/colorless"
 	);
+
+	// Trowel
+	event.replaceInput({ output: "quark:trowel" }, "minecraft:iron_ingot", "#forge:ingots/copper");
 });
