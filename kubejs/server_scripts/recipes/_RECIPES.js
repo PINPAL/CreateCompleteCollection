@@ -1400,21 +1400,21 @@ ServerEvents.recipes((event) => {
 	// Dark Prismarine
 	event.recipes.create
 		.mixing("minecraft:dark_prismarine", ["minecraft:prismarine", Fluid.of("kubejs:black_dye_fluid", 125)])
-		.id("kubejs:colored_items/dark_prismarine");
+		.id("kubejs:master/mixing/dark_prismarine");
 	// Hazard Block
 	event.recipes.create
 		.mixing(["create_dd:hazard_block"], ["create_dd:asphalt_block", Fluid.of("kubejs:yellow_dye_fluid", 125)])
-		.id("kubejs:colored_items/hazard_block");
+		.id("kubejs:master/mixing/hazard_block");
 	// Slime
 	event.recipes.create
 		.mixing(
 			[Fluid.of("create_things_and_misc:slime", 100)],
-			["create:dough", Fluid.of("kubejs:lime_dye_fluid", 250)]
+			["create_paper_line:saw_dust", Fluid.of("kubejs:lime_dye_fluid", 100)]
 		)
-		.id("kubejs:colored_items/slime");
+		.id("kubejs:master/mixing/slime_fluid");
 	event.recipes.create
-		.mixing(["minecraft:slime_ball"], ["create_paper_line:saw_dust", Fluid.of("create_things_and_misc:slime", 100)])
-		.id("kubejs:colored_items/slime_ball");
+		.filling("minecraft:slime_ball", ["create:dough", Fluid.of("create_things_and_misc:slime", 100)])
+		.id("kubejs:master/filling/slime_ball");
 
 	// Allow feather blocks in white wool recipes
 	event.remove({ id: "supplementaries:bed_from_feather_block" });
