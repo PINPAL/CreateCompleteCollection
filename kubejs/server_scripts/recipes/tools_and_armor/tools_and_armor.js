@@ -26,13 +26,11 @@ ServerEvents.recipes((event) => {
 		if (!tier.cannotBeBroken) {
 			// Edge case for Netherite
 			if (tierName == "netherite") {
-				console.log("Created recipe for netherite repair kit");
 				event.smithing(repairKit, "kubejs:diamond_repair_kit", "minecraft:netherite_scrap");
 				event.recipes.create
 					.crushing(Item.of("minecraft:netherite_scrap", 1), repairKit)
 					.id("kubejs:tools_and_armor/repair_kit_crushing/netherite");
 			} else {
-				console.log("Created recipe for " + tierName + " repair kit");
 				event
 					.shaped(repairKit, [" I ", "ISI", " I "], {
 						I: tier.material,
