@@ -114,15 +114,15 @@ StartupEvents.registry("item", (event) => {
 			continue;
 		}
 
-		console.log(`Creating broken diving gear for ${tierName}`);
-
-		event
-			.create(`broken_${tierName}_diving_helmet`)
-			.displayName("Broken " + formatName(tierName) + " Diving Helmet")
-			.unstackable();
-		event
-			.create(`broken_${tierName}_diving_boots`)
-			.displayName("Broken " + formatName(tierName) + " Diving Boots")
-			.unstackable();
+		if (!tier.cannotBeBroken) {
+			event
+				.create(`broken_${tierName}_diving_helmet`)
+				.displayName("Broken " + formatName(tierName) + " Diving Helmet")
+				.unstackable();
+			event
+				.create(`broken_${tierName}_diving_boots`)
+				.displayName("Broken " + formatName(tierName) + " Diving Boots")
+				.unstackable();
+		}
 	}
 });

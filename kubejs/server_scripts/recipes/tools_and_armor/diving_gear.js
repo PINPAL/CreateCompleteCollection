@@ -56,12 +56,26 @@ ServerEvents.recipes((event) => {
 			continue;
 		}
 
-		console.log(`Creating diving gear for ${tierName}`);
-
 		let divingGearId = `${tier.hasNativeDivingGear ? "create" : "kubejs"}:${tierName}_diving`;
 		let originalItemId = `${tier.mod}:${tierName}`;
 
+		// Create diving helmet and boots crafting recipes
 		createDivingGearShapedRecipes(event, originalItemId, divingGearId);
+
+		// Create backtank recipe (only for native diving gear)
+		if (tier.hasNativeDivingGear) {
+			event.shaped(`create:${tierName}_backtank`, ["ASA", "CBC", " C "], {
+				A: "create:andesite_alloy",
+				S: "create:shaft",
+				C: "#forge:ingots/copper",
+				B: `${tier.mod}:${tierName}_chestplate`,
+			});
+		}
+
+		// Skip tiers that cannot be broken
+		if (tier.cannotBeBroken) {
+			continue;
+		}
 
 		// Create broken diving gear recipes
 		global.createToolBreakRecipe(event, divingGearId + "_helmet", `kubejs:broken_${tierName}_diving_helmet`);
@@ -82,15 +96,5 @@ ServerEvents.recipes((event) => {
 				`kubejs:${tierName}_repair_kit`
 			)
 			.id(`kubejs:tools_and_armor/diving_gear/${tierName}_boots_repairing`);
-
-		// Create backtank recipe (only for native diving gear)
-		if (tier.hasNativeDivingGear) {
-			event.shaped(`create:${tierName}_backtank`, ["ASA", "CBC", " C "], {
-				A: "create:andesite_alloy",
-				S: "create:shaft",
-				C: "#forge:ingots/copper",
-				B: `${tier.mod}:${tierName}_chestplate`,
-			});
-		}
 	}
 });
