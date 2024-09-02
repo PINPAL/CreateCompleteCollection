@@ -23,18 +23,6 @@ for (const tierName in global.tiers) {
 		continue;
 	}
 
-	// Create broken variant of the diving gear
-	StartupEvents.registry("item", (event) => {
-		event
-			.create(`broken_${tierName}_diving_helmet`)
-			.displayName("Broken " + formatName(tierName) + " Diving Helmet")
-			.unstackable();
-		event
-			.create(`broken_${tierName}_diving_boots`)
-			.displayName("Broken " + formatName(tierName) + " Diving Boots")
-			.unstackable();
-	});
-
 	// Get the correct armor material depending on Mod
 	let armorMaterial;
 	// Edge case (eg: chainmail uses "chain" instead of "chainmail")
@@ -111,5 +99,30 @@ ItemEvents.modification((event) => {
 				});
 			}
 		}
+	}
+});
+
+// Create broken variant of the diving gear
+StartupEvents.registry("item", (event) => {
+	// Loop through all tiers
+	for (const tierName in global.tiers) {
+		let tier = global.tiers[tierName];
+
+		// Skip tiers that don't need diving gear
+		// (eg: doesn't have either a needsDivingGear or hasNativeDivingGear property)
+		if (!tier.needsDivingGear && !tier.hasNativeDivingGear) {
+			continue;
+		}
+
+		console.log(`Creating broken diving gear for ${tierName}`);
+
+		event
+			.create(`broken_${tierName}_diving_helmet`)
+			.displayName("Broken " + formatName(tierName) + " Diving Helmet")
+			.unstackable();
+		event
+			.create(`broken_${tierName}_diving_boots`)
+			.displayName("Broken " + formatName(tierName) + " Diving Boots")
+			.unstackable();
 	}
 });
