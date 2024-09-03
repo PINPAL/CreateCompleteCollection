@@ -147,8 +147,6 @@ global.removedItems = [
 	"create_dd:industrial_iron_ingot",
 	"create_dd:industrial_iron_nugget",
 	"create_dd:industrial_iron_sheet",
-	"create_dd:copycat_block",
-	"create_dd:copycat_slab",
 	"create_dd:ponder_stone_generation",
 	"create_dd:radiant_panel",
 	"create_dd:shadow_panel",
