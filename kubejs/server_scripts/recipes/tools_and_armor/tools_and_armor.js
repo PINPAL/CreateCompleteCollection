@@ -61,6 +61,44 @@ ServerEvents.recipes((event) => {
 					.smithing(outputItem, inputItem, stitching)
 					.id(`kubejs:tools_and_armor/${piece}/${tierName}_from_${previousTierName}`);
 			});
+			// Diving Gear
+			// Skip tiers that don't need diving gear
+			// (eg: doesn't have either a needsDivingGear or hasNativeDivingGear property)
+			if (tier.needsDivingGear || tier.hasNativeDivingGear) {
+				// let divingGearMod = tier.hasNativeDivingGear ? "create" : "kubejs";
+				let previousTierDivingMod = previousTier.hasNativeDivingGear ? "create" : "kubejs";
+				let divingPieces = [
+					{ diving: "diving_helmet", piece: "helmet" },
+					{ diving: "diving_boots", piece: "boots" },
+					{ diving: "backtank", piece: "chestplate" },
+				];
+				divingPieces.forEach((piece) => {
+					// Check if native diving gear (to upgrade from backtank of the previous tier)
+					// TODO: Implement other tiers of backtank as right now this will only create recipes for:
+					//       copper_backtank -> iron_chestplate
+					//       netherite_backtank -> radiant_chestplate
+					if (piece.diving === "backtank") {
+						if (previousTier.hasNativeDivingGear) {
+							event
+								.smithing(
+									`${tier.mod}:${tierName}_chestplate`,
+									`create:${previousTierName}_backtank`,
+									stitching
+								)
+								.id(`kubejs:tools_and_armor/${tierName}_from_${previousTierName}_backtank`);
+						}
+						return;
+					}
+					// Handle the other diving gear pieces (helmet, boots)
+					event
+						.smithing(
+							`${tier.mod}:${tierName}_${piece.piece}`,
+							`${previousTierDivingMod}:${previousTierName}_${piece.diving}`,
+							stitching
+						)
+						.id(`kubejs:tools_and_armor/${tierName}_from_${previousTierName}_${piece.diving}`);
+				});
+			}
 		}
 		// Tools
 		if (tier.hasTools) {

@@ -77,4 +77,9 @@ StartupEvents.registry("item", (event) => {
 	event.create("rainbow_core").displayName("Rainbow Core").unstackable();
 	event.create("rainbow_dye").displayName("Rainbow Dye");
 	event.create("rainbow_toolbox").displayName("Rainbow Toolbox").unstackable();
+
+	// Diving Gear Upgrade Items
+	event.create("diving_tank").displayName("Air Tank").unstackable();
+	event.create("diving_faceplate").displayName("Helmet Faceplate").unstackable();
+	event.create("diving_flippers").displayName("Heavy Weighted Flippers").unstackable();
 });

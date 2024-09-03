@@ -45,6 +45,27 @@ ServerEvents.recipes((event) => {
 	event.smithing("create:netherite_diving_boots", "minecraft:netherite_boots", "create:copper_diving_boots");
 	event.smithing("create:netherite_backtank", "minecraft:netherite_chestplate", "create:copper_backtank");
     */
+	// Recipes for upgrade items
+	event
+		.shaped("kubejs:diving_faceplate", ["CCC", "CGC", "   "], {
+			C: "#forge:ingots/copper",
+			G: "#forge:glass/colorless",
+		})
+		.id("kubejs:tools_and_armor/diving_gear/faceplate");
+	event
+		.shaped("kubejs:diving_tank", ["ASA", "C C", " C "], {
+			A: "create:andesite_alloy",
+			S: "create:shaft",
+			C: "#forge:ingots/copper",
+		})
+		.id("kubejs:tools_and_armor/diving_gear/tank");
+	event
+		.shaped("kubejs:diving_flippers", ["C C", "CBC", "A A"], {
+			B: "#forge:storage_blocks/copper",
+			C: "#forge:ingots/copper",
+			A: "create:andesite_alloy",
+		})
+		.id("kubejs:tools_and_armor/diving_gear/flippers");
 
 	// Loop through global tiers
 	for (const tierName in global.tiers) {
@@ -59,18 +80,15 @@ ServerEvents.recipes((event) => {
 		let divingGearId = `${tier.hasNativeDivingGear ? "create" : "kubejs"}:${tierName}_diving`;
 		let originalItemId = `${tier.mod}:${tierName}`;
 
-		// Create diving helmet and boots crafting recipes
-		createDivingGearShapedRecipes(event, originalItemId, divingGearId);
-
 		// Create backtank recipe (only for native diving gear)
 		if (tier.hasNativeDivingGear) {
-			event.shaped(`create:${tierName}_backtank`, ["ASA", "CBC", " C "], {
-				A: "create:andesite_alloy",
-				S: "create:shaft",
-				C: "#forge:ingots/copper",
-				B: `${tier.mod}:${tierName}_chestplate`,
-			});
+			event
+				.smithing(`create:${tierName}_backtank`, `${tier.mod}:${tierName}_chestplate`, "kubejs:diving_tank")
+				.id(`kubejs:tools_and_armor/diving_gear/${tierName}_backtank`);
 		}
+		// Create Boots & Helmet recipes
+		event.smithing(`${divingGearId}_helmet`, `${originalItemId}_helmet`, "kubejs:diving_faceplate");
+		event.smithing(`${divingGearId}_boots`, `${originalItemId}_boots`, "kubejs:diving_flippers");
 
 		// Skip tiers that cannot be broken
 		if (tier.cannotBeBroken) {
