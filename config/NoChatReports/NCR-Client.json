@@ -1,6 +1,6 @@
 {
   "demandOnServer": true,
-  "showServerSafety": true,
+  "showServerSafety": false,
   "hideRedChatIndicators": true,
   "hideYellowChatIndicators": true,
   "hideGrayChatIndicators": true,
