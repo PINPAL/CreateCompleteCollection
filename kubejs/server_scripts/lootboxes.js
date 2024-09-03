@@ -26,6 +26,7 @@ let pickWeightedElement = (items) => {
 	let random = Math.random() * totalWeight;
 	for (let i = 0; i < items.length; i++) {
 		let item = items[i];
+		console.log("rolling item: " + item.item);
 		if (random < item.weight) {
 			return item;
 		}
