@@ -53,15 +53,15 @@ ServerEvents.recipes((event) => {
 		})
 		.id("kubejs:tools_and_armor/diving_gear/faceplate");
 	event
-		.shaped("kubejs:diving_tank", ["ASA", "C C", " C "], {
+		.shaped("kubejs:diving_tank", ["ASA", "CBC", " C "], {
 			A: "create:andesite_alloy",
 			S: "create:shaft",
 			C: "#forge:ingots/copper",
+			B: "#forge:storage_blocks/copper",
 		})
 		.id("kubejs:tools_and_armor/diving_gear/tank");
 	event
-		.shaped("kubejs:diving_flippers", ["C C", "CBC", "A A"], {
-			B: "#forge:storage_blocks/copper",
+		.shaped("kubejs:diving_flippers", ["C C", "C C", "A A"], {
 			C: "#forge:ingots/copper",
 			A: "create:andesite_alloy",
 		})
