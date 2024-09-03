@@ -1,0 +1,70 @@
+// Import necessary Java classes
+const $CreateRegistrate = Java.loadClass("com.simibubi.create.foundation.data.CreateRegistrate");
+const $BacktankItem = Java.loadClass("com.simibubi.create.content.equipment.armor.BacktankItem");
+const $BacktankBlockItem = Java.loadClass("com.simibubi.create.content.equipment.armor.BacktankItem$BacktankBlockItem");
+const $BacktankBlock = Java.loadClass("com.simibubi.create.content.equipment.armor.BacktankBlock");
+const $AllArmorMaterials = Java.loadClass("com.simibubi.create.content.equipment.armor.AllArmorMaterials");
+const $AssetLookup = Java.loadClass("com.simibubi.create.foundation.data.AssetLookup");
+const $SharedProperties = Java.loadClass("com.simibubi.create.foundation.data.SharedProperties");
+const $BuilderTransformers = Java.loadClass("com.simibubi.create.foundation.data.BuilderTransformers");
+const $ResourceLocation = Java.loadClass("net.minecraft.resources.ResourceLocation");
+const $EventBuses = Java.loadClass("dev.architectury.platform.forge.EventBuses");
+
+// Create your own instance of CreateRegistrate
+const myRegistrate = $CreateRegistrate.create("kubejs");
+
+// Define a ResourceLocation for the texture
+const backtankTextureLocation = new $ResourceLocation("kubejs", "textures/item/custom_backtank");
+
+// Register the BacktankBlock
+const customBacktankBlock = myRegistrate
+	.block(
+		"custom_backtank",
+		() => new $BacktankBlock($SharedProperties.copperMetal), // Pass properties directly
+		function (props) {
+			return props;
+		} // Simplify lambda to function
+	)
+	.initialProperties(function () {
+		return $SharedProperties.copperMetal;
+	}) // Simplify lambda to function
+	.transform(
+		$BuilderTransformers.backtank(function () {
+			return backtankItem;
+		})
+	) // Simplify lambda to function
+	.register();
+
+// Register the BacktankBlockItem
+const backtankBlockItem = myRegistrate
+	.item("custom_backtank_placeable", function (props) {
+		return new $BacktankBlockItem(
+			customBacktankBlock, // Use the registered block
+			function () {
+				return backtankItem;
+			}, // Reference to the BacktankItem instance
+			props
+		);
+	})
+	.model(function (c, p) {
+		return p.withExistingParent(c.getName(), p.mcLoc("item/barrier"));
+	})
+	.register();
+
+// Register BacktankItem
+const backtankItem = myRegistrate
+	.item("custom_backtank", function (props) {
+		return new $BacktankItem(
+			$AllArmorMaterials.COPPER, // Armor material
+			props,
+			backtankTextureLocation,
+			function () {
+				return backtankBlockItem;
+			} // Reference to the BacktankBlockItem instance
+		);
+	})
+	.model($AssetLookup.customGenericItemModel("_", "item"))
+	.register();
+
+// Finalize the registration process
+myRegistrate.registerEventListeners($EventBuses.getModEventBus("kubejs").get());

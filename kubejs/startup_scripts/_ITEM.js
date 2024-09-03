@@ -22,20 +22,6 @@ StartupEvents.registry("item", (event) => {
 	// Broken Shield
 	event.create(`broken_shield`).displayName(`Broken Shield`).unstackable();
 
-	// Broken Diving Gear
-	const divingGear = [
-		"netherite_diving_helmet",
-		"netherite_diving_boots",
-		"copper_diving_helmet",
-		"copper_diving_boots",
-	];
-	divingGear.forEach((item) => {
-		event
-			.create(`broken_${item}`)
-			.displayName("Broken " + formatName(item))
-			.unstackable();
-	});
-
 	// Creative Potions
 	event.create("creative_potion").displayName("Creative Potion").unstackable();
 	event
@@ -91,4 +77,9 @@ StartupEvents.registry("item", (event) => {
 	event.create("rainbow_core").displayName("Rainbow Core").unstackable();
 	event.create("rainbow_dye").displayName("Rainbow Dye");
 	event.create("rainbow_toolbox").displayName("Rainbow Toolbox").unstackable();
+
+	// Diving Gear Upgrade Items
+	event.create("diving_tank").displayName("Air Tank").unstackable();
+	event.create("diving_faceplate").displayName("Helmet Faceplate").unstackable();
+	event.create("diving_flippers").displayName("Heavy Weighted Flippers").unstackable();
 });

@@ -1,23 +1,40 @@
+function createDivingGearShapedRecipes(event, input, output) {
+	let id = output.split(":")[1];
+	event
+		.shaped(output + "_helmet", ["CCC", "CGC", " O "], {
+			C: "#forge:ingots/copper",
+			G: "#forge:glass",
+			O: input + "_helmet",
+		})
+		.id(`kubejs:tools_and_armor/diving_gear/${id}_helmet_crafting`)
+		.modifyResult((inventory, itemstack) => {
+			let item = inventory.find(Item.of(input + "_helmet"));
+			let nbt = item.nbt;
+			if (nbt == null) {
+				nbt = {};
+			}
+			return Item.of(output + "_helmet").withNBT(nbt);
+		});
+
+	event
+		.shaped(output + "_boots", ["CBC", "C C", "A A"], {
+			C: "#forge:ingots/copper",
+			A: "create:andesite_alloy",
+			B: input + "_boots",
+		})
+		.id(`kubejs:tools_and_armor/diving_gear/${id}_boots_crafting`)
+		.modifyResult((inventory, itemstack) => {
+			let item = inventory.find(Item.of(input + "_boots"));
+			let nbt = item.nbt;
+			if (nbt == null) {
+				nbt = {};
+			}
+			return Item.of(output + "_boots").withNBT(nbt);
+		});
+}
+
 ServerEvents.recipes((event) => {
-	event.shaped("create:copper_diving_helmet", ["CCC", "CGC", " B "], {
-		C: "#forge:ingots/copper",
-		G: "#forge:glass",
-		B: "kubejs:copper_helmet",
-	});
-
-	event.shaped("create:copper_diving_boots", ["CBC", "C C", "A A"], {
-		C: "#forge:ingots/copper",
-		A: "create:andesite_alloy",
-		B: "kubejs:copper_boots",
-	});
-
-	event.shaped("create:copper_backtank", ["ASA", "CBC", " C "], {
-		A: "create:andesite_alloy",
-		S: "create:shaft",
-		C: "#forge:ingots/copper",
-		B: "kubejs:copper_chestplate",
-	});
-
+	/*
 	// Upgrading Past Copper (to Iron Armor)
 	event.smithing("minecraft:iron_helmet", "create:copper_diving_helmet", "kubejs:iron_stitching");
 	event.smithing("minecraft:iron_boots", "create:copper_diving_boots", "kubejs:iron_stitching");
@@ -27,21 +44,75 @@ ServerEvents.recipes((event) => {
 	event.smithing("create:netherite_diving_helmet", "minecraft:netherite_helmet", "create:copper_diving_helmet");
 	event.smithing("create:netherite_diving_boots", "minecraft:netherite_boots", "create:copper_diving_boots");
 	event.smithing("create:netherite_backtank", "minecraft:netherite_chestplate", "create:copper_backtank");
+    */
+	// Recipes for upgrade items
+	event
+		.shaped("kubejs:diving_faceplate", ["CCC", "CGC", "   "], {
+			C: "#forge:ingots/copper",
+			G: "#forge:glass/colorless",
+		})
+		.id("kubejs:tools_and_armor/diving_gear/faceplate");
+	event
+		.shaped("kubejs:diving_tank", ["ASA", "CBC", " C "], {
+			A: "create:andesite_alloy",
+			S: "create:shaft",
+			C: "#forge:ingots/copper",
+			B: "#forge:storage_blocks/copper",
+		})
+		.id("kubejs:tools_and_armor/diving_gear/tank");
+	event
+		.shaped("kubejs:diving_flippers", ["C C", "C C", "A A"], {
+			C: "#forge:ingots/copper",
+			A: "create:andesite_alloy",
+		})
+		.id("kubejs:tools_and_armor/diving_gear/flippers");
 
-	// Diving Gear Repair Kits
-	const divingGear = [
-		{ id: "netherite_diving_helmet", material: "netherite" },
-		{ id: "netherite_diving_boots", material: "netherite" },
-		{ id: "copper_diving_helmet", material: "copper" },
-		{ id: "copper_diving_boots", material: "copper" },
-	];
-	divingGear.forEach((item) => {
-		event.smithing(`create:${item.id}`, `kubejs:broken_${item.id}`, `kubejs:${item.material}_repair_kit`);
-	});
+	// Loop through global tiers
+	for (const tierName in global.tiers) {
+		let tier = global.tiers[tierName];
 
-	global.createToolBreakRecipe(event, "create:copper_diving_helmet", "kubejs:broken_copper_diving_helmet");
-	global.createToolBreakRecipe(event, "create:copper_diving_boots", "kubejs:broken_copper_diving_boots");
+		// Skip tiers that don't need diving gear
+		// (eg: doesn't have either a needsDivingGear or hasNativeDivingGear property)
+		if (!tier.needsDivingGear && !tier.hasNativeDivingGear) {
+			continue;
+		}
 
-	global.createToolBreakRecipe(event, "create:netherite_diving_helmet", "kubejs:broken_netherite_diving_helmet");
-	global.createToolBreakRecipe(event, "create:netherite_diving_boots", "kubejs:broken_netherite_diving_boots");
+		let divingGearId = `${tier.hasNativeDivingGear ? "create" : "kubejs"}:${tierName}_diving`;
+		let originalItemId = `${tier.mod}:${tierName}`;
+
+		// Create backtank recipe (only for native diving gear)
+		if (tier.hasNativeDivingGear) {
+			event
+				.smithing(`create:${tierName}_backtank`, `${tier.mod}:${tierName}_chestplate`, "kubejs:diving_tank")
+				.id(`kubejs:tools_and_armor/diving_gear/${tierName}_backtank`);
+		}
+		// Create Boots & Helmet recipes
+		event.smithing(`${divingGearId}_helmet`, `${originalItemId}_helmet`, "kubejs:diving_faceplate");
+		event.smithing(`${divingGearId}_boots`, `${originalItemId}_boots`, "kubejs:diving_flippers");
+
+		// Skip tiers that cannot be broken
+		if (tier.cannotBeBroken) {
+			continue;
+		}
+
+		// Create broken diving gear recipes
+		global.createToolBreakRecipe(event, divingGearId + "_helmet", `kubejs:broken_${tierName}_diving_helmet`);
+		global.createToolBreakRecipe(event, divingGearId + "_boots", `kubejs:broken_${tierName}_diving_boots`);
+
+		// Create repairing recipes
+		event
+			.smithing(
+				divingGearId + "_helmet",
+				`kubejs:broken_${tierName}_diving_helmet`,
+				`kubejs:${tierName}_repair_kit`
+			)
+			.id(`kubejs:tools_and_armor/diving_gear/${tierName}_helmet_repairing`);
+		event
+			.smithing(
+				divingGearId + "_boots",
+				`kubejs:broken_${tierName}_diving_boots`,
+				`kubejs:${tierName}_repair_kit`
+			)
+			.id(`kubejs:tools_and_armor/diving_gear/${tierName}_boots_repairing`);
+	}
 });

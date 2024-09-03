@@ -20,6 +20,7 @@ global.tiers = {
 		hasTools: false,
 		hasArmor: true,
 		horseArmor: "minecraft:leather_horse_armor",
+		needsDivingGear: true,
 	},
 	stone: {
 		mod: "minecraft",
@@ -34,10 +35,12 @@ global.tiers = {
 	chainmail: {
 		mod: "minecraft",
 		material: "minecraft:chain",
+		armorMaterial: "CHAIN",
 		hasTools: false,
 		hasArmor: true,
 		previousArmorTier: "leather",
 		armorCostMultiplier: 1,
+		needsDivingGear: true,
 	},
 	copper: {
 		mod: "kubejs",
@@ -52,6 +55,7 @@ global.tiers = {
 		paxelMaxDamage: 1024,
 		toolCostMultiplier: 1,
 		armorCostMultiplier: 2,
+		hasNativeDivingGear: true,
 	},
 	iron: {
 		mod: "minecraft",
@@ -66,6 +70,7 @@ global.tiers = {
 		paxelMaxDamage: 2048,
 		toolCostMultiplier: 2,
 		armorCostMultiplier: 3,
+		needsDivingGear: true,
 	},
 	steel: {
 		mod: "kubejs",
@@ -78,6 +83,12 @@ global.tiers = {
 		paxelMaxDamage: 4096,
 		toolCostMultiplier: 1,
 		armorCostMultiplier: 2,
+		needsDivingGear: true,
+		armorMaterial: "IRON",
+		armorProperties: {
+			slotProtections: [3, 7, 6, 3],
+			armorToughness: 1.0,
+		},
 	},
 	diamond: {
 		mod: "minecraft",
@@ -92,6 +103,7 @@ global.tiers = {
 		paxelMaxDamage: 6144,
 		toolCostMultiplier: 3,
 		armorCostMultiplier: 3,
+		needsDivingGear: true,
 	},
 	netherite: {
 		mod: "minecraft",
@@ -107,6 +119,7 @@ global.tiers = {
 		paxelMaxDamage: 8192,
 		toolCostMultiplier: 0.5,
 		armorCostMultiplier: 0.5,
+		hasNativeDivingGear: true,
 	},
 	radiant: {
 		cannotBeBroken: true,
@@ -120,6 +133,16 @@ global.tiers = {
 		paxelMaxDamage: 16384,
 		toolCostMultiplier: 1,
 		armorCostMultiplier: 1,
+		needsDivingGear: true,
+		armorMaterial: "NETHERITE",
+		armorProperties: {
+			rarity: "EPIC",
+			slotProtections: [4, 9, 7, 4],
+			armorToughness: 4.0,
+			armorKnockbackResistance: 0.1,
+			fireResistant: true,
+			maxDamage: 0,
+		},
 	},
 };
 
