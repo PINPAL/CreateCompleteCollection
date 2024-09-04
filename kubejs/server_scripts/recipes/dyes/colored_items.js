@@ -261,7 +261,7 @@ ServerEvents.recipes((event) => {
 					item.name.replace("$$", colorObject.color),
 					item.input,
 					colorObject.color,
-					125,
+					50,
 					item.shouldRemoveOriginal,
 					null,
 					null,
