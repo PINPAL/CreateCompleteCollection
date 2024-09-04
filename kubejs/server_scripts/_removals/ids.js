@@ -99,6 +99,9 @@ const idsToRemove = [
 	"create:crafting/curiosities/cake",
 	"create:pressing/sugar_cane",
 	"create:crafting/appliances/copper_backtank",
+	"create:splashing/stained_glass",
+	"create:splashing/wool",
+	"create:splashing/stained_glass_pane",
 
 	// Broken Recipes
 	"createindustry:colored_concrete/full_block/pink_concrete",
