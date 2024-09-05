@@ -1445,6 +1445,7 @@ ServerEvents.recipes((event) => {
 		.id("kubejs:master/mixing/empty_pattern_schematic");
 
 	// Cheaper Netherite
+	event.remove({ id: "minecraft:netherite_ingot" });
 	event
 		.shapeless("minecraft:netherite_ingot", ["4x #forge:ingots/gold", "4x minecraft:netherite_scrap"])
 		.id("kubejs:master/crafting/netherite_ingot_manual_only");
