@@ -1,14 +1,13 @@
-name = "Stack Refill"
-filename = "stackrefill-1.19.2-4.0.jar"
-side = "both"
+filename = 'stackrefill-1.19.2-4.4.jar'
+name = 'Stack Refill'
+side = 'both'
 
 [download]
-mode = "url"
-url = "https://cdn.modrinth.com/data/mQWkB9ON/versions/VNRWv819/stackrefill-1.19.2-4.0.jar"
-hash-format = "sha512"
-hash = "f6c6db37000d7e5bdf6dd86a80363f9cfef86c06f7738534083bab0c87c9b4648146675b56edd5cc78e6e946b41cd5128265320f0aa4b2bc43bc29d993cab529"
+hash = '8d9ff558fcee15ea707e9cf3b01e6d0580ba2b880b507877a2484d883a588f6f9952c120a77f977e69e8e2b4c3fb571ab76c192e00b65de6937d681999b91ec6'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/mQWkB9ON/versions/MDA9IAE3/stackrefill-1.19.2-4.4.jar'
 
-[update]
 [update.modrinth]
-mod-id = "mQWkB9ON"
-version = "VNRWv819"
+mod-id = 'mQWkB9ON'
+version = 'MDA9IAE3'

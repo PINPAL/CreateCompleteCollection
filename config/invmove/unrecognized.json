@@ -144,7 +144,8 @@
     "dev.emi.emi.screen.ConfigEnumScreen": true,
     "com.leobeliik.extremesoundmuffler.gui.MufflerScreen": false,
     "com.railwayteam.railways.content.cycle_menu.RadialTagCycleMenu": true,
-    "net.xolt.freecam.ConfigScreen": true
+    "net.xolt.freecam.ConfigScreen": true,
+    "vazkii.quark.content.management.client.screen.HeldShulkerBoxScreen": true
   },
   "hideBackground": {
     "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackScreen": false

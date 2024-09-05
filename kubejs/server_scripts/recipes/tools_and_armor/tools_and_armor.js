@@ -84,6 +84,12 @@ ServerEvents.recipes((event) => {
 				event
 					.smithing(outputItem, inputItem, stitching)
 					.id(`kubejs:tools_and_armor/${piece}/${tierName}_from_${previousTierName}`);
+				// Repair kit repair
+				if (!tier.hasOwnProperty("cannotBeBroken")) {
+					event
+						.smithing(`${tier.mod}:${tierName}_${piece}`, `kubejs:broken_${tierName}_${piece}`, repairKit)
+						.id(`kubejs:tools_and_armor/armor/${piece}/${tierName}_repair`);
+				}
 			});
 			// Diving Gear
 			// Skip tiers that don't need diving gear

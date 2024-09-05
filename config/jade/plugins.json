@@ -64,19 +64,14 @@
   },
   "create": {
     "filter": true,
+    "backtank_capacity": true,
     "goggles.requires_goggles": true,
     "goggles": true,
-    "copper_backtank": true,
     "blaze_burner": true,
     "exact_block": true,
     "crafting_blueprint": true,
     "goggles.detailed": false,
     "placard": true
-  },
-  "apotheosis": {
-    "adventure": true,
-    "ench": true,
-    "spawner": true
   },
   "create_paper_line": {
     "data": true
