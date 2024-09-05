@@ -1498,4 +1498,13 @@ ServerEvents.recipes((event) => {
 		.transitionalItem("create_things_and_misc:incomplete_vibration_mechanism")
 		.loops(2)
 		.id("kubejs:master/sequenced/quantum_entangled_mechanism");
+
+	// Neon Tube
+	event.remove({ output: "create_things_and_misc:neon_tube" });
+	event
+		.shaped("create_things_and_misc:neon_tube", [" G ", " P ", " G "], {
+			G: "#forge:glass/colorless",
+			P: "minecraft:torch",
+		})
+		.id("kubejs:master/crafting/neon_tube");
 });
