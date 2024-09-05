@@ -1443,4 +1443,12 @@ ServerEvents.recipes((event) => {
 			Fluid.of("kubejs:pink_dye_fluid", 125),
 		])
 		.id("kubejs:master/mixing/empty_pattern_schematic");
+
+	// Cheaper Netherite
+	event
+		.shapeless("minecraft:netherite_ingot", ["4x #forge:ingots/gold", "4x minecraft:netherite_scrap"])
+		.id("kubejs:master/crafting/netherite_ingot_manual_only");
+	event.recipes.create
+		.mixing("minecraft:netherite_ingot", ["3x #forge:ingots/gold", "3x minecraft:netherite_scrap"])
+		.id("kubejs:master/mixing/netherite_ingot");
 });
