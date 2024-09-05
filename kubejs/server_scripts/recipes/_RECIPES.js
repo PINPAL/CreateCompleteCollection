@@ -1507,4 +1507,28 @@ ServerEvents.recipes((event) => {
 			P: "minecraft:torch",
 		})
 		.id("kubejs:master/crafting/neon_tube");
+
+	// Brick from Slag
+	event.blasting("minecraft:brick", "createindustry:slag").id("kubejs:master/blasting/brick_from_slag");
+
+	// Cheaper Create DD Sails
+	// (uses tag sails instead of windmill sail)
+	// (uses crafting instead of mechanical crafting)
+	const functionalSails = [
+		{ name: "blasting", input: "minecraft:lava_bucket" },
+		{ name: "smoking", input: "minecraft:campfire" },
+		{ name: "freezing", input: "minecraft:powder_snow_bucket" },
+		{ name: "haunting", input: "minecraft:soul_campfire" },
+		{ name: "splashing", input: "minecraft:water_bucket" },
+	];
+	functionalSails.forEach((sail) => {
+		event.remove({ output: `create_dd:${sail.name}_sail` });
+		event
+			.shaped(`create_dd:${sail.name}_sail`, ["SKS", "KIK", "SKS"], {
+				S: "#kubejs:windmill_sails",
+				K: "minecraft:dried_kelp",
+				I: sail.input,
+			})
+			.id(`kubejs:master/crafting/${sail.name}_sail`);
+	});
 });
