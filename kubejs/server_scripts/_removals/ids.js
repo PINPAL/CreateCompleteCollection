@@ -71,6 +71,8 @@ const idsToRemove = [
 	"create_dd:freezing/frozen_nugget",
 	"create_dd:mechanical_crafting/shimmer_bucket",
 	"create_dd:smoking/experience_nugget",
+	"create_dd:industrial_iron/andesite_alloy",
+	"create_dd:industrial_iron/andesite_alloy_mixing",
 
 	// Create Paper Line
 	"create_paper_line:mixing/wood_pulp",

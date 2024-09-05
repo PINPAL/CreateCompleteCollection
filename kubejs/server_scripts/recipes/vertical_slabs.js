@@ -19,6 +19,29 @@ ServerEvents.tags("item", (event) => {
 	});
 });
 
+const createStoneTypes = [
+	{ name: "andesite", mod: "create" },
+	{ name: "diorite", mod: "create" },
+	{ name: "granite", mod: "create" },
+	{ name: "deepslate", mod: "create" },
+	{ name: "tuff", mod: "create" },
+	{ name: "limestone", mod: "create" },
+	{ name: "scoria", mod: "create" },
+	{ name: "dripstone", mod: "create" },
+	{ name: "asurine", mod: "create" },
+	{ name: "crimsite", mod: "create" },
+	{ name: "ochrum", mod: "create" },
+	{ name: "scorchia", mod: "create" },
+	{ name: "veridium", mod: "create" },
+
+	{ name: "gabbro", mod: "create_dd" },
+	{ name: "weathered_limestone", mod: "create_dd" },
+	{ name: "dolomite", mod: "create_dd" },
+	{ name: "potassic", mod: "create_dd" },
+
+	{ name: "bauxite", mod: "createindustry" },
+];
+
 ServerEvents.recipes((event) => {
 	// Handle Quark Slabs
 	event
@@ -61,5 +84,16 @@ ServerEvents.recipes((event) => {
 	// Handle Supplementaries
 	supplementariesVerticalSlabs.forEach((slab) => {
 		event.shapeless(`supplementaries:${slab}_vertical_slab`, `supplementaries:${slab}_slab`);
+	});
+
+	// Slabs directly from base ingredient
+	createStoneTypes.forEach((stone) => {
+		let regexRecipeId = new RegExp(`v_slab_compat:${stone.mod}/.*${stone.name}.*`);
+		let regexItemId = new RegExp(`${stone.mod}:.*${stone.name}.*`);
+		event.replaceInput(
+			{ type: "minecraft:stonecutting", id: regexRecipeId },
+			regexItemId,
+			`#${stone.mod}:stone_types/${stone.name}`
+		);
 	});
 });

@@ -113,6 +113,7 @@ ServerEvents.tags("item", (event) => {
 
 	// Unify Industrial Iron & Cast Iron
 	event.add("forge:ingots/industrial_iron", "#forge:ingots/cast_iron");
+	event.add("forge:nuggets/industrial_iron", "#forge:nuggets/cast_iron");
 	event.add("forge:plates/industrial_iron", "#forge:plates/cast_iron");
 	event.add("forge:storage_blocks/industrial_iron", "#forge:storage_blocks/cast_iron");
 });
