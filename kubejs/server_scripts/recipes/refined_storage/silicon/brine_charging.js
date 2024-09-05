@@ -1,14 +1,15 @@
-ServerEvents.recipes(event => {
-    event
+ServerEvents.recipes((event) => {
+	event
 		.custom({
-        type:"createaddition:charging",
-        input: {
-            item: "kubejs:brine_canister"
-        },
-        result: {
-            item: "kubejs:chlorine_canister",
-            count: 1
-        },
-		energy: 10000
-    })
-})
+			type: "createaddition:charging",
+			input: {
+				item: "kubejs:brine_canister",
+			},
+			result: {
+				item: "kubejs:chlorine_canister",
+				count: 1,
+			},
+			energy: 10000,
+		})
+		.id("kubejs:refined_storage/silicon/brine_charging");
+});

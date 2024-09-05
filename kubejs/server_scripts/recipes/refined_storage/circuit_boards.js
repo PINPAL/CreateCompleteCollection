@@ -1,13 +1,21 @@
 ServerEvents.recipes((event) => {
-	event.shaped(
-		// output
-		"refinedstorage:processor_binding",
-		["AAA", "ABA", "AAA"],
-		{
-			A: "refinedstorage:silicon",
-			B: "minecraft:green_dye",
-		}
-	);
+	event.recipes.create
+		.mixing("refinedstorage:processor_binding", [
+			"8x refinedstorage:silicon",
+			Fluid.of("kubejs:green_dye_fluid", 50),
+		])
+		.id("kubejs:refined_storage/circuit_boards/incomplete_circuit_board_0_mixing");
+	event
+		.shaped(
+			// output
+			"refinedstorage:processor_binding",
+			["AAA", "ABA", "AAA"],
+			{
+				A: "refinedstorage:silicon",
+				B: "minecraft:green_dye",
+			}
+		)
+		.id("kubejs:refined_storage/circuit_boards/incomplete_circuit_board_0");
 	event.recipes
 		.createSequencedAssembly(
 			[
@@ -35,7 +43,8 @@ ServerEvents.recipes((event) => {
 			]
 		)
 		.transitionalItem("refinedstorage:processor_binding")
-		.loops(5);
+		.loops(5)
+		.id("kubejs:refined_storage/circuit_boards/incomplete_circuit_board_1");
 	event.recipes
 		.createSequencedAssembly(
 			[
@@ -62,7 +71,8 @@ ServerEvents.recipes((event) => {
 			]
 		)
 		.transitionalItem("refinedstorage:basic_processor")
-		.loops(15);
+		.loops(15)
+		.id("kubejs:refined_storage/circuit_boards/incomplete_circuit_board_2");
 	event.recipes
 		.createSequencedAssembly(
 			[
@@ -89,5 +99,6 @@ ServerEvents.recipes((event) => {
 			]
 		)
 		.transitionalItem("refinedstorage:advanced_processor")
-		.loops(10);
+		.loops(10)
+		.id("kubejs:refined_storage/circuit_boards/incomplete_circuit_board_3");
 });

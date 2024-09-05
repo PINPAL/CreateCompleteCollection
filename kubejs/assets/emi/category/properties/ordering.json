@@ -1,8 +1,11 @@
 {
-  "emi:grinding": {
-    "order": 999
-  },
-  "create:sequenced_assembly": {
-    "order": -760
-  }
+	"emi:grinding": {
+		"order": 999
+	},
+	"create:sequenced_assembly": {
+		"order": -760
+	},
+	"createcc:lootbox_results": {
+		"order": 998
+	}
 }

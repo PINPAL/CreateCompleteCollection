@@ -376,9 +376,9 @@ ServerEvents.recipes((event) => {
 				"minecraft:water_bucket",
 				'{CustomModelData:1,HideFlags:1,display:{Name:\'{"text":"Infinite Water Bucket","italic":false}\'}}'
 			).enchant("minecraft:infinity", 1),
-			["NNN", "NWN", "NNN"],
+			["WWW", "WNW", "WWW"],
 			{
-				N: "create_dd:mithril_nugget",
+				N: "create:experience_nugget",
 				W: "minecraft:water_bucket",
 			}
 		)
@@ -1457,4 +1457,45 @@ ServerEvents.recipes((event) => {
 	event.recipes.farmersdelight
 		.cutting("minecraft:rotten_flesh", "#forge:tools/knives", [Item.of("minecraft:leather").withChance(0.5)])
 		.id("kubejs:master/cutting/leather_from_rotten_flesh");
+
+	// Quantum Entangled Mechanism
+	event.remove({ output: "create_things_and_misc:vibration_mechanism" });
+	event.recipes
+		.createSequencedAssembly(
+			[
+				// output
+				Item.of("create_things_and_misc:vibration_mechanism"),
+			],
+			// the input
+			"create:precision_mechanism",
+			[
+				event.recipes.createDeploying("create_things_and_misc:incomplete_vibration_mechanism", [
+					"create_things_and_misc:incomplete_vibration_mechanism",
+					"create_dd:integrated_mechanism",
+				]),
+				event.recipes.createDeploying("create_things_and_misc:incomplete_vibration_mechanism", [
+					"create_things_and_misc:incomplete_vibration_mechanism",
+					"create_dd:calculation_mechanism",
+				]),
+				event.recipes.createDeploying("create_things_and_misc:incomplete_vibration_mechanism", [
+					"create_things_and_misc:incomplete_vibration_mechanism",
+					"create_dd:inductive_mechanism",
+				]),
+				event.recipes.createDeploying("create_things_and_misc:incomplete_vibration_mechanism", [
+					"create_things_and_misc:incomplete_vibration_mechanism",
+					"create_dd:infernal_mechanism",
+				]),
+				event.recipes.createDeploying("create_things_and_misc:incomplete_vibration_mechanism", [
+					"create_things_and_misc:incomplete_vibration_mechanism",
+					"create_dd:sealed_mechanism",
+				]),
+				event.recipes.createDeploying("create_things_and_misc:incomplete_vibration_mechanism", [
+					"create_things_and_misc:incomplete_vibration_mechanism",
+					"minecraft:nether_star",
+				]),
+			]
+		)
+		.transitionalItem("create_things_and_misc:incomplete_vibration_mechanism")
+		.loops(2)
+		.id("kubejs:master/sequenced/quantum_entangled_mechanism");
 });

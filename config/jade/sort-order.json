@@ -62,6 +62,7 @@
   "apotheosis:spawner": null,
   "apotheosis:ench": null,
   "apotheosis:adventure": null,
+  "create:backtank_capacity": null,
   "melter:melter_data": null,
   "corpse:corpse": null,
   "create:blaze_burner": null,

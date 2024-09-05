@@ -1,7 +1,6 @@
 global.hiddenItems = [
 	// Mod Match
 	/sophisticatedbackpacks:*/,
-	/refinedstorage:*/,
 	/itemfilters:*/,
 	/simplemagnets:*/,
 	/wands:*/,

@@ -2,13 +2,16 @@
 
 global.addToJEI = [
 	"create:copper_nugget",
+
 	"createindustry:liquid_concrete_bucket",
 	"createindustry:concrete",
 	"createindustry:concrete_slab",
 	"createindustry:concrete_stairs",
 	"createindustry:concrete_wall",
 	"createindustry:concrete_pillar",
+
 	"ftbquests:book",
+
 	"sophisticatedbackpacks:backpack",
 	"sophisticatedbackpacks:iron_backpack",
 	"sophisticatedbackpacks:gold_backpack",
@@ -25,35 +28,10 @@ global.addToJEI = [
 	"sophisticatedbackpacks:everlasting_upgrade",
 	"sophisticatedbackpacks:crafting_upgrade",
 	"sophisticatedbackpacks:stonecutter_upgrade",
-	"refinedstorage:quartz_enriched_iron",
-	"refinedstorageaddons:wireless_crafting_grid",
-	"refinedstorage:wireless_fluid_grid",
-	"refinedstorage:wireless_crafting_monitor",
-	"refinedstorage:cable",
-	"refinedstorage:crafting_grid",
-	"refinedstorage:fluid_grid",
-	"refinedstorage:pattern_grid",
-	"refinedstorage:crafting_monitor",
-	"refinedstorage:controller",
-	"refinedstorage:external_storage",
-	"refinedstorage:detector",
-	"refinedstorage:importer",
-	"refinedstorage:exporter",
-	"refinedstorage:processor_binding",
-	"refinedstorage:basic_processor",
-	"refinedstorage:improved_processor",
-	"refinedstorage:advanced_processor",
-	"refinedstorage:wireless_transmitter",
-	"refinedstorage:silicon",
-	"refinedstorage:pattern",
-	"refinedstorage:crafter",
-	"refinedstorage:filter",
-	"refinedstorage:upgrade",
-	"refinedstorage:speed_upgrade",
-	"refinedstorage:stack_upgrade",
-	"refinedstorage:crafting_upgrade",
+
 	"simplemagnets:advancedmagnet",
 	"simplemagnets:advanced_demagnetization_coil",
+
 	"wands:palette",
 
 	"metalbarrels:iron_barrel",
@@ -83,16 +61,19 @@ global.addToJEI = [
 	"createdeco:iron_sheet_slab_vert",
 	"createdeco:copper_sheet_slab_vert",
 	"createdeco:zinc_sheet_slab_vert",
+
 	Item.of(
 		"create:extendo_grip",
 		'{Unbreakable:1b,CurioAttributeModifiers:[{AttributeName:"generic.attack_knockback",Name:"generic.attack_knockback",Amount:3,Operation:0,UUID:[I;1203229738,-1965539080,-1341673873,592198839],Slot:"hands"},{AttributeName:"forge:attack_range",Name:"forge:attack_range",Amount:3,Operation:0,UUID:[I;-1826537097,-1713487428,-1545263740,-720620157],Slot:"hands"},{AttributeName:"forge:reach_distance",Name:"forge:reach_distance",Amount:3,Operation:0,UUID:[I;775495772,434720553,-1780503515,1389346287],Slot:"hands"}]}'
 	),
-	Item.of("minecraft:water_bucket").enchant("minecraft:infinity", 1),
-	Item.of("minecraft:diamond").withNBT({ display: { Name: '{"text":"Hello"}' } }),
-	Item.of("refinedstorage:cover", '{Item:{Count:1b,id:"create:andesite_casing"}}'),
-	Item.of("refinedstorage:hollow_cover", '{Item:{Count:1b,id:"create:andesite_casing"}}'),
-	Item.of("refinedstorage:cover", '{Item:{Count:1b,id:"create:brass_casing"}}'),
-	Item.of("refinedstorage:hollow_cover", '{Item:{Count:1b,id:"create:brass_casing"}}'),
+	Item.of(
+		"minecraft:water_bucket",
+		`{CustomModelData: 1, HideFlags: 1, Enchantments: [{lvl: 1s, id: "minecraft:infinity"}], display: {Name: '{"text":"Infinite Water Bucket","italic":false}'}}`
+	),
+	Item.of("refinedstorage:cover", '{Item:{Count:1,id:"create:andesite_casing"}}'),
+	Item.of("refinedstorage:hollow_cover", '{Item:{Count:1,id:"create:andesite_casing"}}'),
+	Item.of("refinedstorage:cover", '{Item:{Count:1,id:"create:brass_casing"}}'),
+	Item.of("refinedstorage:hollow_cover", '{Item:{Count:1,id:"create:brass_casing"}}'),
 	Item.of("wands:netherite_wand").withNBT({ Unbreakable: "1b" }),
 	Item.of("createaddition:diamond_grit_sandpaper").withNBT({ Unbreakable: "1b" }),
 ];
