@@ -199,6 +199,7 @@ StartupEvents.registry("item", (event) => {
 					event
 						.create(tierName + "_knife", "farmersdelight:knife")
 						.displayName(formatName(tierName) + " Knife")
+						.tag("forge:tools/knife")
 						.tier(tierName);
 				}
 			}

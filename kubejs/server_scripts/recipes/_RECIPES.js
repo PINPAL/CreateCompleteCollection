@@ -1452,4 +1452,9 @@ ServerEvents.recipes((event) => {
 	event.recipes.create
 		.mixing("minecraft:netherite_ingot", ["3x #forge:ingots/gold", "3x minecraft:netherite_scrap"])
 		.id("kubejs:master/mixing/netherite_ingot");
+
+	// Rotten Flesh to Leather
+	event.recipes.farmersdelight
+		.cutting("minecraft:rotten_flesh", "#forge:tools/knives", [Item.of("minecraft:leather").withChance(0.5)])
+		.id("kubejs:master/cutting/leather_from_rotten_flesh");
 });
