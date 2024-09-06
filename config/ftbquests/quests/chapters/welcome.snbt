@@ -3881,83 +3881,6 @@
 					type: "item"
 				}
 				{
-					id: "36D8D8C9649009D8"
-					item: {
-						Count: 1b
-						id: "create:netherite_backtank"
-						tag: {
-							Air: 900
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "207F94D9B7E22BE7"
-					item: {
-						Count: 1b
-						id: "create:netherite_diving_helmet"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "7A0A1DF13A0E6281"
-					item: {
-						Count: 1b
-						id: "create:netherite_diving_boots"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "62A30DDF32E11AE4"
-					item: {
-						Count: 1b
-						id: "minecraft:netherite_leggings"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "37361D681CB15CFB"
-					item: {
-						Count: 1b
-						id: "easypaxellite:tempered_netherite_paxel"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "1EE38723F1A0568B"
-					item: {
-						Count: 1b
-						id: "minecraft:netherite_sword"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "06FC83ADB0171B5E"
-					item: {
-						Count: 1b
-						id: "minecraft:netherite_hoe"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
 					id: "276497ED98FA1437"
 					item: "create:clipboard"
 					type: "item"
@@ -4006,6 +3929,47 @@
 						}
 					}
 					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "7FB7F4EF1F7FCABA"
+					item: "kubejs:radiant_paxel"
+					type: "item"
+				}
+				{
+					id: "3750FEB6781734E3"
+					item: "kubejs:radiant_sword"
+					type: "item"
+				}
+				{
+					id: "0CF87706413BCE86"
+					item: "kubejs:radiant_diving_helmet"
+					type: "item"
+				}
+				{
+					id: "71ECB1EE49C10AB2"
+					item: {
+						Count: 1b
+						id: "create:netherite_backtank"
+						tag: {
+							Air: 900
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "58944927C98629D6"
+					item: "kubejs:radiant_leggings"
+					type: "item"
+				}
+				{
+					id: "2AA7B7409585F138"
+					item: "kubejs:radiant_diving_boots"
+					type: "item"
+				}
+				{
+					id: "46F01F567F2144FD"
+					item: "kubejs:radiant_hoe"
 					type: "item"
 				}
 			]
