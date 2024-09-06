@@ -61,9 +61,10 @@ ServerEvents.tags("item", (event) => {
 		if (!tier.needsDivingGear && !tier.hasNativeDivingGear) {
 			continue;
 		}
+		let divingGearMod = tier.hasNativeDivingGear ? "create" : "kubejs";
 
-		diving_boots.push(`kubejs:${tierName}_diving_boots`);
-		diving_helmets.push(`kubejs:${tierName}_diving_helmet`);
+		diving_boots.push(`${divingGearMod}:${tierName}_diving_boots`);
+		diving_helmets.push(`${divingGearMod}:${tierName}_diving_helmet`);
 	}
 
 	const coloredConcrete = [
