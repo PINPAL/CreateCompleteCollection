@@ -1467,7 +1467,7 @@ ServerEvents.recipes((event) => {
 				Item.of("create_things_and_misc:vibration_mechanism"),
 			],
 			// the input
-			"create:precision_mechanism",
+			"minecraft:nether_star",
 			[
 				event.recipes.createDeploying("create_things_and_misc:incomplete_vibration_mechanism", [
 					"create_things_and_misc:incomplete_vibration_mechanism",
@@ -1491,7 +1491,7 @@ ServerEvents.recipes((event) => {
 				]),
 				event.recipes.createDeploying("create_things_and_misc:incomplete_vibration_mechanism", [
 					"create_things_and_misc:incomplete_vibration_mechanism",
-					"minecraft:nether_star",
+					"create:precision_mechanism",
 				]),
 			]
 		)
