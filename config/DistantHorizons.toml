@@ -196,13 +196,13 @@ _version = 2
 				sampleCount = 6
 				#
 				# Determines the radius Screen Space Ambient Occlusion is applied, measured in blocks.
-				radius = "4.0"
+				radius = "2.0"
 				#
 				# Determines how dark the Screen Space Ambient Occlusion effect will be.
 				strength = "0.2"
 				#
 				# Increasing the value can reduce banding at the cost of reducing the strength of the effect.
-				bias = "0.02"
+				bias = "0.04"
 				#
 				# Determines how dark the occlusion shadows can be. 
 				# 0 = totally black at the corners 
@@ -211,7 +211,7 @@ _version = 2
 				#
 				# The radius, measured in pixels, that blurring is calculated for the SSAO. 
 				# Higher numbers will reduce banding at the cost of GPU performance.
-				blurRadius = 2
+				blurRadius = 1
 
 			[client.advanced.graphics.noiseTextureSettings]
 				#
