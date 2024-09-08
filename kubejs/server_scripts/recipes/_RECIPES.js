@@ -1532,4 +1532,8 @@ ServerEvents.recipes((event) => {
 			})
 			.id(`kubejs:master/crafting/${sail.name}_sail`);
 	});
+
+	// Horse Armor Fix
+	event.replaceOutput({ input: "minecraft:golden_horse_armor" }, "minecraft:gold_ingot", "#forge:ingots/copper");
+	event.replaceOutput({ input: "minecraft:golden_horse_armor" }, "minecraft:gold_nugget", "#forge:nuggets/copper");
 });

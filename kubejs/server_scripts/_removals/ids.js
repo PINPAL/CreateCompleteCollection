@@ -6,6 +6,7 @@ const idsToRemove = [
 	"minecraft:book",
 	"minecraft:cake",
 	"minecraft:gold_nugget_from_blasting",
+	"minecraft:gold_nugget_from_smelting",
 
 	// Salt
 	"salt:salting",
