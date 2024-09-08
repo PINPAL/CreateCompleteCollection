@@ -17,6 +17,15 @@ ClientEvents.highPriorityAssets((event) => {
 		};
 		json.added.push(stack);
 	});
+	// Add fluidsto the JSON
+	let fluidStack = Fluid.of("create_enchantment_industry:hyper_experience");
+	let stack = {
+		stack: {
+			type: "fluid",
+			id: fluidStack.getId(),
+		},
+	};
+	json.added.push(stack);
 	// Save the JSON to the resource location
 	event.add("emi:index/stacks/add.json", json);
 });

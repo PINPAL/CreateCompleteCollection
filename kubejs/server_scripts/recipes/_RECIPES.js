@@ -566,6 +566,7 @@ ServerEvents.recipes((event) => {
 				"create_enchantment_industry:experience_rotor",
 			]
 		)
+		.superheated()
 		.id("kubejs:master/hyper_experience");
 
 	// Experience Rotor
