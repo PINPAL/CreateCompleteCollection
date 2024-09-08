@@ -798,6 +798,7 @@ ServerEvents.recipes((event) => {
 			let outputItem = Item.of(nameTag.id).withNBT(nbt);
 			return nameTag;
 		})
+		.keepIngredient("#forge:dyes")
 		.id("kubejs:master/nametag_dying_manual_only");
 
 	// Cheaper Diluted Bone Meal
