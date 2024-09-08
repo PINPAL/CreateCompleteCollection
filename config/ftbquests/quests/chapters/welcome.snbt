@@ -765,46 +765,6 @@
 			y: 7.75d
 		}
 		{
-			dependencies: ["6E931AE38AE91C4F"]
-			description: ["&lTip: &r&7You can acquire your first bits of paper from shipwrecks."]
-			hide: true
-			icon: {
-				Count: 1b
-				id: "create:sand_paper"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "77DDAE3A43C0356F"
-			rewards: [{
-				id: "73559449C540005D"
-				item: {
-					Count: 1b
-					id: "create:sand_paper"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
-			subtitle: "Paper wasn't so easy huh?"
-			tasks: [{
-				id: "12271AE86589AA8A"
-				item: {
-					Count: 1b
-					id: "itemfilters:tag"
-					tag: {
-						value: "create:sandpaper"
-					}
-				}
-				title: "Any Sandpaper"
-				type: "item"
-			}]
-			title: "Sanding"
-			x: 3.0d
-			y: 7.75d
-		}
-		{
 			dependencies: ["7DB05CBC8B579FD8"]
 			hide: true
 			icon: "create:crushing_wheel"
@@ -1824,28 +1784,16 @@
 		}
 		{
 			dependencies: ["5169F5136FEF5FD2"]
-			id: "0063F8A2083F6A3D"
-			subtitle: "Keep your machines running when your offline."
-			tasks: [{
-				id: "774912C26B938FB3"
-				item: "chunkloaders:ultimate_chunk_loader"
-				type: "item"
-			}]
-			title: "Chunk Loading"
-			x: -2.75d
-			y: 10.75d
-		}
-		{
-			dependencies: ["0063F8A2083F6A3D"]
+			description: ["&#c5934aNote: This chunk loader &#ebd777WORKS&#c5934a on &#ebd777contraptions&#c5934a."]
 			id: "711A389A68B465EC"
 			subtitle: "Keep your contraptions on the move while you're away!"
 			tasks: [{
-				id: "6C257B9B52DB7AAF"
-				item: "createchunkloading:chunk_loader"
+				id: "5AD2C1F135E69C15"
+				item: "create_power_loader:brass_chunk_loader"
 				type: "item"
 			}]
-			x: -3.375d
-			y: 10.125d
+			x: -2.75d
+			y: 10.75d
 		}
 		{
 			dependencies: ["6C37D2ED3A1BB762"]
@@ -7291,6 +7239,22 @@
 			}]
 			x: 3.875d
 			y: 12.375d
+		}
+		{
+			dependencies: ["6E931AE38AE91C4F"]
+			description: [
+				"&#c5934aNote: This chunk loader does &#ebd777NOT&#c5934a work on contraptions."
+				"&#c5934aYou will need a &#ebd777Brass Chunk Loader&#c5934a for that."
+			]
+			id: "7BF5BC999BDD6C68"
+			subtitle: "Keep your machines running while you're away."
+			tasks: [{
+				id: "7E98EA8FA0D89E15"
+				item: "create_power_loader:andesite_chunk_loader"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 7.75d
 		}
 	]
 	title: "Create Modpack"
