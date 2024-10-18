@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"half=bottom": {
+			"model": "cosmic_contraptions:block/cornflower_bush_bottom"
+		},
+		"half=top": {
+			"model": "cosmic_contraptions:block/cornflower_bush_top"
+		}
+	}
+}

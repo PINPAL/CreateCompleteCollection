@@ -12,7 +12,7 @@ ServerEvents.recipes((event) => {
 		},
 		{
 			name: "steel",
-			modId: "create_cosmic_contraptions",
+			modId: "cosmic_contraptions",
 			noKnife: true,
 			material: "#forge:ingots/steel",
 		},
@@ -23,12 +23,12 @@ ServerEvents.recipes((event) => {
 		{
 			name: "copper",
 			knifeMod: "create_things_and_misc",
-			modId: "create_cosmic_contraptions",
+			modId: "cosmic_contraptions",
 			material: "#forge:ingots/copper",
 		},
 		{
 			name: "stone",
-			material: "create_cosmic_contraptions:refined_stone",
+			material: "cosmic_contraptions:refined_stone",
 			noArmor: true,
 			noKnife: true,
 		},
@@ -53,21 +53,17 @@ ServerEvents.recipes((event) => {
 	];
 
 	// Shield
-	event.smithing(
-		"minecraft:shield",
-		"create_cosmic_contraptions:broken_shield",
-		"create_cosmic_contraptions:iron_repair_kit"
-	);
+	event.smithing("minecraft:shield", "cosmic_contraptions:broken_shield", "cosmic_contraptions:iron_repair_kit");
 
 	materials.forEach((material) => {
 		if (material.name == "netherite") {
 			event.smithing(
-				"create_cosmic_contraptions:netherite_repair_kit",
-				"create_cosmic_contraptions:diamond_repair_kit",
+				"cosmic_contraptions:netherite_repair_kit",
+				"cosmic_contraptions:diamond_repair_kit",
 				"#forge:ingots/netherite"
 			);
 		} else {
-			event.shaped("create_cosmic_contraptions:" + material.name + "_repair_kit", [" A ", "ALA", " A "], {
+			event.shaped("cosmic_contraptions:" + material.name + "_repair_kit", [" A ", "ALA", " A "], {
 				A: material.material,
 				L: "minecraft:string",
 			});
@@ -83,7 +79,7 @@ ServerEvents.recipes((event) => {
 				// Add the item name (eg: sword)
 				let repairedItem =
 					(item == "paxel"
-						? "create_cosmic_contraptions"
+						? "cosmic_contraptions"
 						: material.hasOwnProperty("modId")
 						? material.modId
 						: "minecraft") +
@@ -94,8 +90,8 @@ ServerEvents.recipes((event) => {
 				// Recipe
 				event.smithing(
 					repairedItem,
-					`create_cosmic_contraptions:broken_${material.name}_${item}`,
-					`create_cosmic_contraptions:${material.name}_repair_kit`
+					`cosmic_contraptions:broken_${material.name}_${item}`,
+					`cosmic_contraptions:${material.name}_repair_kit`
 				);
 			});
 		}
@@ -112,8 +108,8 @@ ServerEvents.recipes((event) => {
 			// Recipe
 			event.smithing(
 				repairedItem,
-				`create_cosmic_contraptions:broken_${material.name}_knife`,
-				`create_cosmic_contraptions:${material.name}_repair_kit`
+				`cosmic_contraptions:broken_${material.name}_knife`,
+				`cosmic_contraptions:${material.name}_repair_kit`
 			);
 		}
 
@@ -133,8 +129,8 @@ ServerEvents.recipes((event) => {
 				// Recipe
 				event.smithing(
 					repairedItem,
-					`create_cosmic_contraptions:broken_${material.name}_${item}`,
-					`create_cosmic_contraptions:${material.name}_repair_kit`
+					`cosmic_contraptions:broken_${material.name}_${item}`,
+					`cosmic_contraptions:${material.name}_repair_kit`
 				);
 			});
 		}
@@ -150,8 +146,8 @@ ServerEvents.recipes((event) => {
 	divingGear.forEach((item) => {
 		event.smithing(
 			`create:${item.id}`,
-			`create_cosmic_contraptions:broken_${item.id}`,
-			`create_cosmic_contraptions:${item.material}_repair_kit`
+			`cosmic_contraptions:broken_${item.id}`,
+			`cosmic_contraptions:${item.material}_repair_kit`
 		);
 	});
 });

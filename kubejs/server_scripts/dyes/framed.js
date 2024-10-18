@@ -47,14 +47,11 @@ ServerEvents.recipes((event) => {
 
 	framedGlassTypes.forEach((type) => {
 		colors.forEach((color) => {
-			let fluid = "create_cosmic_contraptions:" + color + "_dye_fluid";
+			let fluid = "cosmic_contraptions:" + color + "_dye_fluid";
 			let output = "createframed:" + type.replace("$$", color);
 			let createBaseGlass = "create:" + type.replace("$$_stained_", "");
 			let formattedID =
-				"create_cosmic_contraptions:framed/" +
-				type.replace("$$_stained_", "").replace("_glass", "") +
-				"/" +
-				color;
+				"cosmic_contraptions:framed/" + type.replace("$$_stained_", "").replace("_glass", "") + "/" + color;
 
 			// Handle Tinted Glass
 			if (color === "tinted") {
@@ -76,7 +73,7 @@ ServerEvents.recipes((event) => {
 
 		// Handle Base Create Glass
 		let output = "create:" + type.replace("$$_stained_", "");
-		let formattedID = "create_cosmic_contraptions:framed/" + type.replace("$$_stained_", "");
+		let formattedID = "cosmic_contraptions:framed/" + type.replace("$$_stained_", "");
 		createRecipes(event, output, "colorless", formattedID);
 	});
 
@@ -84,24 +81,24 @@ ServerEvents.recipes((event) => {
 	event.remove({ id: "minecraft:glass_pane" });
 	event
 		.shaped("12x minecraft:glass_pane", ["GGG", "GGG"], { G: "#forge:glass/colorless" })
-		.id("create_cosmic_contraptions:framed/glass_pane");
+		.id("cosmic_contraptions:framed/glass_pane");
 
 	// Base Create Trapdoors
 	event
 		.stonecutting(`2x create:framed_glass_trapdoor`, ["#forge:glass/colorless"])
-		.id("create_cosmic_contraptions:framed/glass_trapdoor_stonecutting");
+		.id("cosmic_contraptions:framed/glass_trapdoor_stonecutting");
 	event
 		.shaped(`4x create:framed_glass_trapdoor`, ["GG ", "GG "], {
 			G: "#forge:glass/colorless",
 		})
-		.id("create_cosmic_contraptions:framed/glass_trapdoor_crafting");
+		.id("cosmic_contraptions:framed/glass_trapdoor_crafting");
 	// Base Create Door
 	event
 		.stonecutting(`create:framed_glass_door`, ["#forge:glass/colorless"])
-		.id("create_cosmic_contraptions:framed/glass_door_stonecutting");
+		.id("cosmic_contraptions:framed/glass_door_stonecutting");
 	event
 		.shaped(`3x create:framed_glass_door`, ["GG", "GG", "GG"], {
 			G: "#forge:glass/colorless",
 		})
-		.id("create_cosmic_contraptions:framed/glass_door_crafting");
+		.id("cosmic_contraptions:framed/glass_door_crafting");
 });

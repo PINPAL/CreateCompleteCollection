@@ -1,0 +1,14 @@
+{
+	"lootbox_place": {
+		"subtitle": "subtitle.cosmic_contraptions.lootbox_place",
+		"sounds": ["cosmic_contraptions:lootbox_place"]
+	},
+	"lootbox_break": {
+		"subtitle": "subtitle.cosmic_contraptions.lootbox_break",
+		"sounds": ["cosmic_contraptions:lootbox_break"]
+	},
+	"lootbox_open": {
+		"subtitle": "subtitle.cosmic_contraptions.lootbox_open",
+		"sounds": ["cosmic_contraptions:lootbox_open"]
+	}
+}

@@ -11,14 +11,14 @@ LootJS.modifiers((event) => {
 	});
 	// TODO: fix this
 	/* const replacedItems = [
-		{ original: "minecraft:iron_ingot", replace: "create_cosmic_contraptions:iron_ingot" },
-		{ original: "minecraft:gold_ingot", replace: "create_cosmic_contraptions:gold_ingot" },
-		{ original: "minecraft:copper_ingot", replace: "create_cosmic_contraptions:copper_ingot" },
-		{ original: "minecraft:iron_nugget", replace: "create_cosmic_contraptions:iron_nugget" },
-		{ original: "minecraft:gold_nugget", replace: "create_cosmic_contraptions:gold_nugget" },
-		{ original: "minecraft:iron_block", replace: "create_cosmic_contraptions:iron_block" },
-		{ original: "minecraft:gold_block", replace: "create_cosmic_contraptions:gold_block" },
-		{ original: "minecraft:copper_block", replace: "create_cosmic_contraptions:copper_block" },
+		{ original: "minecraft:iron_ingot", replace: "cosmic_contraptions:iron_ingot" },
+		{ original: "minecraft:gold_ingot", replace: "cosmic_contraptions:gold_ingot" },
+		{ original: "minecraft:copper_ingot", replace: "cosmic_contraptions:copper_ingot" },
+		{ original: "minecraft:iron_nugget", replace: "cosmic_contraptions:iron_nugget" },
+		{ original: "minecraft:gold_nugget", replace: "cosmic_contraptions:gold_nugget" },
+		{ original: "minecraft:iron_block", replace: "cosmic_contraptions:iron_block" },
+		{ original: "minecraft:gold_block", replace: "cosmic_contraptions:gold_block" },
+		{ original: "minecraft:copper_block", replace: "cosmic_contraptions:copper_block" },
 	];
 	replacedItems.forEach((item) => {
 		event.addLootTableModifier(LootType.CHEST).replaceLoot(item.original, item.replace, true);

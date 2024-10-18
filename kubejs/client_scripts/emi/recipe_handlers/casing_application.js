@@ -3,7 +3,7 @@ const createGUITextures = Java.loadClass("com.simibubi.create.foundation.gui.All
 JEIAddedEvents.registerCategories((event) => {
 	const guiHelper = event.data.jeiHelpers.guiHelper;
 
-	event.custom("create_cosmic_contraptions:casing_application", (category) => {
+	event.custom("cosmic_contraptions:casing_application", (category) => {
 		const guiWidth = 176;
 		const headerHeight = 12;
 		const guiHeight = 95 + headerHeight;
@@ -66,7 +66,7 @@ JEIAddedEvents.registerCategories((event) => {
 				);
 				// resourceLocation, x, y, startX, StartY, width, height
 				guiGraphics.blit(
-					"create_cosmic_contraptions:textures/gui/widgets.png",
+					"cosmic_contraptions:textures/gui/widgets.png",
 					(guiWidth / 8) * 4 - arrowWidth / 2,
 					48 + headerHeight,
 					0,
@@ -117,7 +117,7 @@ JEIAddedEvents.registerRecipes((event) => {
 			// Generate encased block name
 			let encasedBlockName = modName + ":" + encasedBlockType.name.replace("$$", casing.name);
 			// Register JEI recipe
-			event.custom("create_cosmic_contraptions:casing_application").add({
+			event.custom("cosmic_contraptions:casing_application").add({
 				inputCasing: casing.casingId,
 				inputBlock: encasedBlockType.originalItem,
 				output: encasedBlockName,

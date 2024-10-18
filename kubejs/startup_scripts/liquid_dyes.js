@@ -20,7 +20,7 @@ StartupEvents.registry("fluid", (event) => {
 
 	colors.forEach((color) => {
 		event
-			.create(`create_cosmic_contraptions:${color.name}_dye_fluid`)
+			.create(`cosmic_contraptions:${color.name}_dye_fluid`)
 			.displayName(`${formatName(color.name)} Dye`)
 			.thinTexture(color.hex);
 	});

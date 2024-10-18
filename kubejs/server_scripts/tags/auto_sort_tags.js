@@ -85,15 +85,15 @@ ServerEvents.tags("item", (event) => {
 	event.add("as:black", /(_|:)black($|_)/);
 
 	// Broken Tools
-	event.add("as:broken", /create_cosmic_contraptions:broken($|_)/);
+	event.add("as:broken", /cosmic_contraptions:broken($|_)/);
 
 	// Machine Cores
-	event.add("as:machine_core", /create_cosmic_contraptions:t[0-9]_.*_machine/);
+	event.add("as:machine_core", /cosmic_contraptions:t[0-9]_.*_machine/);
 
 	// Upgrading Materials
-	event.add("as:upgrade_material", /create_cosmic_contraptions:.*_blade/);
-	event.add("as:upgrade_material", /create_cosmic_contraptions:.*_head/);
-	event.add("as:upgrade_material", /create_cosmic_contraptions:.*_stitching/);
+	event.add("as:upgrade_material", /cosmic_contraptions:.*_blade/);
+	event.add("as:upgrade_material", /cosmic_contraptions:.*_head/);
+	event.add("as:upgrade_material", /cosmic_contraptions:.*_stitching/);
 
 	// Lighting
 	event.add("as:lamp", /.*(_|:)lamp.*($|_)/);

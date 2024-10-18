@@ -1,7 +1,7 @@
 Ponder.registry((event) => {
 	event
 		.create("createdeco:brass_coinstack")
-		.scene("brass_coinstack", "Brass Coin Stacking", "create_cosmic_contraptions:coin_stack", (scene, util) => {
+		.scene("brass_coinstack", "Brass Coin Stacking", "cosmic_contraptions:coin_stack", (scene, util) => {
 			// Base Plate
 			for (let x = 0; x < 3; x++) {
 				for (let z = 0; z < 3; z++) {

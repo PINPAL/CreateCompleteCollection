@@ -5,7 +5,7 @@ ServerEvents.recipes((event) => {
 			"refinedstorage:cable",
 			"create:brass_casing",
 		])
-		.id("create_cosmic_contraptions:refined_storage/cable_covers/brass_from_cable");
+		.id("cosmic_contraptions:refined_storage/cable_covers/brass_from_cable");
 	// Brass (Hollow)
 	event
 		.shapeless(
@@ -18,7 +18,7 @@ ServerEvents.recipes((event) => {
 					.strongNBT(),
 			]
 		)
-		.id("create_cosmic_contraptions:refined_storage/cable_covers/brass_hollow_from_cover");
+		.id("cosmic_contraptions:refined_storage/cable_covers/brass_hollow_from_cover");
 	// Brass (Hollow to Cover)
 	event
 		.shapeless(
@@ -31,7 +31,7 @@ ServerEvents.recipes((event) => {
 					.strongNBT(),
 			]
 		)
-		.id("create_cosmic_contraptions:refined_storage/cable_covers/brass_from_hollow");
+		.id("cosmic_contraptions:refined_storage/cable_covers/brass_from_hollow");
 
 	// Andesite
 	event
@@ -39,7 +39,7 @@ ServerEvents.recipes((event) => {
 			"refinedstorage:cable",
 			"create:andesite_casing",
 		])
-		.id("create_cosmic_contraptions:refined_storage/cable_covers/andesite_from_cable");
+		.id("cosmic_contraptions:refined_storage/cable_covers/andesite_from_cable");
 	// Andesite (Hollow)
 	event
 		.shapeless(
@@ -52,7 +52,7 @@ ServerEvents.recipes((event) => {
 					.strongNBT(),
 			]
 		)
-		.id("create_cosmic_contraptions:refined_storage/cable_covers/andesite_hollow_from_cover");
+		.id("cosmic_contraptions:refined_storage/cable_covers/andesite_hollow_from_cover");
 	// Andesite (Hollow to Cover)
 	event
 		.shapeless(
@@ -65,5 +65,5 @@ ServerEvents.recipes((event) => {
 					.strongNBT(),
 			]
 		)
-		.id("create_cosmic_contraptions:refined_storage/cable_covers/andesite_from_hollow");
+		.id("cosmic_contraptions:refined_storage/cable_covers/andesite_from_hollow");
 });

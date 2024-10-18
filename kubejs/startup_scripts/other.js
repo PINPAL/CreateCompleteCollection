@@ -1,6 +1,6 @@
 StartupEvents.registry("block", (event) => {
 	event
-		.create("create_cosmic_contraptions:cornflower_bush")
+		.create("cosmic_contraptions:cornflower_bush")
 		.displayName("Cornflower Bush")
 		.defaultCutout()
 		.soundType("grass")
@@ -13,9 +13,9 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock("minecraft:replaceable_plants")
 		.property(BlockProperties.HALF)
 		.noItem();
-	event.create("create_cosmic_contraptions:belt_scroll").displayName("DEV ITEM");
+	event.create("cosmic_contraptions:belt_scroll").displayName("DEV ITEM");
 	event
-		.create("create_cosmic_contraptions:anvil", "cardinal")
+		.create("cosmic_contraptions:anvil", "cardinal")
 		.displayName("Anvil")
 		.soundType("anvil")
 		.hardness(5.0)
@@ -31,7 +31,7 @@ StartupEvents.registry("block", (event) => {
 		// top of the anvil (16x6x10)
 		.box(3, 10, 0, 13, 16, 16);
 	event
-		.create("create_cosmic_contraptions:brewing_stand")
+		.create("cosmic_contraptions:brewing_stand")
 		.displayName("Brewing Stand")
 		.soundType("stone")
 		.hardness(5.0)
@@ -45,15 +45,15 @@ StartupEvents.registry("block", (event) => {
 
 StartupEvents.registry("item", (event) => {
 	// Refined Rock
-	event.create("create_cosmic_contraptions:refined_stone").displayName("Refined Rock");
+	event.create("cosmic_contraptions:refined_stone").displayName("Refined Rock");
 	// Cornflower Bush Item
 	event
-		.create("create_cosmic_contraptions:cornflower_bush_item")
+		.create("cosmic_contraptions:cornflower_bush_item")
 		.displayName("Cornflower Bush")
 		.tag("minecraft:flowers")
 		.tag("minecraft:tall_flowers");
 	// Insulation Tube
-	event.create("create_cosmic_contraptions:insulation_brush").displayName("Insulating Glue").maxDamage(99);
+	event.create("cosmic_contraptions:insulation_brush").displayName("Insulating Glue").maxDamage(99);
 	// Sugar Paper
-	event.create("create_cosmic_contraptions:sugar_paper").displayName("Sugar Paper");
+	event.create("cosmic_contraptions:sugar_paper").displayName("Sugar Paper");
 });

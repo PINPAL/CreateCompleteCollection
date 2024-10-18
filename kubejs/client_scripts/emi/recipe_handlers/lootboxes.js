@@ -1,7 +1,7 @@
 JEIAddedEvents.registerCategories((event) => {
 	const guiHelper = event.data.jeiHelpers.guiHelper;
 
-	event.custom("create_cosmic_contraptions:lootbox_results", (category) => {
+	event.custom("cosmic_contraptions:lootbox_results", (category) => {
 		let columns = 7;
 		let rows = 3;
 		let slotSize = 24;
@@ -15,15 +15,9 @@ JEIAddedEvents.registerCategories((event) => {
 			//https://github.com/mezz/JustEnoughItems/blob/1.20.1/CommonApi/src/main/java/mezz/jei/api/helpers/IGuiHelper.java
 			.title("Lootbox Results")
 			.background(
-				guiHelper.createDrawable(
-					"create_cosmic_contraptions:textures/gui/lootbox_jei.png",
-					2,
-					2,
-					guiWidth,
-					guiHeight
-				)
+				guiHelper.createDrawable("cosmic_contraptions:textures/gui/lootbox_jei.png", 2, 2, guiWidth, guiHeight)
 			)
-			.icon(guiHelper.createDrawableItemStack(Item.of("create_cosmic_contraptions:lootbox_creative")))
+			.icon(guiHelper.createDrawableItemStack(Item.of("cosmic_contraptions:lootbox_creative")))
 			// Validate
 			// Ensure that the recipe has an input
 			// Ensure that the recipe has outputs
@@ -131,9 +125,9 @@ JEIAddedEvents.registerRecipes((event) => {
 			outputWeights.push(calculateRarityPercentage(item.weight, lootbox));
 		});
 
-		event.custom("create_cosmic_contraptions:lootbox_results").add({
+		event.custom("cosmic_contraptions:lootbox_results").add({
 			name: global.formatName(lootbox.name),
-			input: `create_cosmic_contraptions:lootbox_${key}`,
+			input: `cosmic_contraptions:lootbox_${key}`,
 			outputs: outputs,
 			outputWeights: outputWeights,
 			rolls: lootbox.rolls,

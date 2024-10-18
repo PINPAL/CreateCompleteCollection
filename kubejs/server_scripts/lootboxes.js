@@ -1,19 +1,19 @@
 BlockEvents.placed((event) => {
 	let block = event.getBlock();
-	if (block.hasTag("create_cosmic_contraptions:lootbox")) {
+	if (block.hasTag("cosmic_contraptions:lootbox")) {
 		// Play a sound
 		event.server.runCommandSilent(
-			`playsound create_cosmic_contraptions:lootbox_place block @a ${block.getX()} ${block.getY()} ${block.getZ()}`
+			`playsound cosmic_contraptions:lootbox_place block @a ${block.getX()} ${block.getY()} ${block.getZ()}`
 		);
 	}
 });
 
 BlockEvents.broken((event) => {
 	let block = event.getBlock();
-	if (block.hasTag("create_cosmic_contraptions:lootbox")) {
+	if (block.hasTag("cosmic_contraptions:lootbox")) {
 		// Play a sound
 		event.server.runCommandSilent(
-			`playsound create_cosmic_contraptions:lootbox_break block @a ${block.getX()} ${block.getY()} ${block.getZ()}`
+			`playsound cosmic_contraptions:lootbox_break block @a ${block.getX()} ${block.getY()} ${block.getZ()}`
 		);
 	}
 });
@@ -35,12 +35,12 @@ let pickWeightedElement = (items) => {
 
 BlockEvents.rightClicked((event) => {
 	let block = event.getBlock();
-	if (block.hasTag("create_cosmic_contraptions:lootbox")) {
+	if (block.hasTag("cosmic_contraptions:lootbox")) {
 		// If player is crouching and holding nothing
 		if (event.getPlayer().isCrouching() && event.getItem().getId() == "minecraft:air") {
 			// Play a sound
 			event.server.runCommandSilent(
-				`playsound create_cosmic_contraptions:lootbox_open block @a ${block.getX()} ${block.getY()} ${block.getZ()}`
+				`playsound cosmic_contraptions:lootbox_open block @a ${block.getX()} ${block.getY()} ${block.getZ()}`
 			);
 			// Spawn particles
 			event.server.runCommandSilent(
@@ -50,7 +50,7 @@ BlockEvents.rightClicked((event) => {
 				`particle minecraft:scrape ${block.getX()} ${block.getY()} ${block.getZ()} 0.5 0.5 0.5 1 10 force`
 			);
 			// Get the lootbox type
-			let lootboxType = block.getId().replace("create_cosmic_contraptions:lootbox_", "");
+			let lootboxType = block.getId().replace("cosmic_contraptions:lootbox_", "");
 			// Get the lootbox data
 			let lootboxData = global.lootboxes[lootboxType];
 			// Get the lootbox items

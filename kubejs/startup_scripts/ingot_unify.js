@@ -41,17 +41,17 @@ global.unifiedIngots.forEach((ingotObject) => {
 	}
 	StartupEvents.registry("item", (event) => {
 		event
-			.create("create_cosmic_contraptions:" + ingot + "_ingot")
+			.create("cosmic_contraptions:" + ingot + "_ingot")
 			.displayName(formatName(ingot) + " " + type)
 			.rarity(rarity)
 			.glow(glow);
 		event
-			.create("create_cosmic_contraptions:" + ingot + "_nugget")
+			.create("cosmic_contraptions:" + ingot + "_nugget")
 			.displayName(formatName(ingot) + " Nugget")
 			.rarity(rarity)
 			.glow(glow);
 		event
-			.create("create_cosmic_contraptions:" + ingot + "_sheet")
+			.create("cosmic_contraptions:" + ingot + "_sheet")
 			.displayName(formatName(ingot) + " Sheet")
 			.rarity(rarity)
 			.glow(glow);
@@ -59,7 +59,7 @@ global.unifiedIngots.forEach((ingotObject) => {
 
 	StartupEvents.registry("block", (event) => {
 		event
-			.create("create_cosmic_contraptions:" + ingotObject.name + "_block")
+			.create("cosmic_contraptions:" + ingotObject.name + "_block")
 			.displayName(blockName)
 			.hardness(50)
 			.tagBlock("minecraft:mineable/pickaxe")

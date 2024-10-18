@@ -4,10 +4,10 @@ ServerEvents.tags("item", (event) => {
 	// Replace createdeco:internal tags with unified tags
 	const decoInternalIngots = ["andesite", "copper", "iron", "industrial_iron", "brass", "zinc"];
 	decoInternalIngots.forEach((ingot) => {
-		event.add(`createdeco:internal/ingots/${ingot}_ingots`, `create_cosmic_contraptions:${ingot}_ingot`);
-		event.add(`createdeco:internal/plates/${ingot}_plates`, `create_cosmic_contraptions:${ingot}_sheet`);
+		event.add(`createdeco:internal/ingots/${ingot}_ingots`, `cosmic_contraptions:${ingot}_ingot`);
+		event.add(`createdeco:internal/plates/${ingot}_plates`, `cosmic_contraptions:${ingot}_sheet`);
 		event.add(`createdeco:internal/nuggets/${ingot}_nuggets`, `create:cosmic_contraptions/${ingot}_nugget`);
-		event.add(`createdeco:internal/blocks/${ingot}_blocks`, `create_cosmic_contraptions:${ingot}_block`);
+		event.add(`createdeco:internal/blocks/${ingot}_blocks`, `cosmic_contraptions:${ingot}_block`);
 	});
 
 	let leather_armor = [
@@ -18,7 +18,7 @@ ServerEvents.tags("item", (event) => {
 	];
 
 	leather_armor.forEach((item) => {
-		event.add("create_cosmic_contraptions:leather_armor", item);
+		event.add("cosmic_contraptions:leather_armor", item);
 	});
 
 	let chainmail_armor = [
@@ -28,32 +28,32 @@ ServerEvents.tags("item", (event) => {
 		"minecraft:chainmail_helmet",
 	];
 	chainmail_armor.forEach((item) => {
-		event.add("create_cosmic_contraptions:chainmail_armor", item);
+		event.add("cosmic_contraptions:chainmail_armor", item);
 	});
 
 	let copper_armor = [
-		"create_cosmic_contraptions:copper_chestplate",
-		"create_cosmic_contraptions:copper_leggings",
-		"create_cosmic_contraptions:copper_boots",
-		"create_cosmic_contraptions:copper_helmet",
+		"cosmic_contraptions:copper_chestplate",
+		"cosmic_contraptions:copper_leggings",
+		"cosmic_contraptions:copper_boots",
+		"cosmic_contraptions:copper_helmet",
 	];
 	copper_armor.forEach((item) => {
-		event.add("create_cosmic_contraptions:copper_armor", item);
+		event.add("cosmic_contraptions:copper_armor", item);
 	});
 
-	let item_vaults = ["create_cosmic_contraptions:item_vault", "create_connected:item_silo"];
+	let item_vaults = ["cosmic_contraptions:item_vault", "create_connected:item_silo"];
 	item_vaults.forEach((item) => {
-		event.add("create_cosmic_contraptions:item_vaults", item);
+		event.add("cosmic_contraptions:item_vaults", item);
 	});
 
 	let radiant_armor = [
-		"create_cosmic_contraptions:radiant_chestplate",
-		"create_cosmic_contraptions:radiant_leggings",
-		"create_cosmic_contraptions:radiant_boots",
-		"create_cosmic_contraptions:radiant_helmet",
+		"cosmic_contraptions:radiant_chestplate",
+		"cosmic_contraptions:radiant_leggings",
+		"cosmic_contraptions:radiant_boots",
+		"cosmic_contraptions:radiant_helmet",
 	];
 	radiant_armor.forEach((item) => {
-		event.add("create_cosmic_contraptions:radiant_armor", item);
+		event.add("cosmic_contraptions:radiant_armor", item);
 	});
 
 	let forge_armors = [
@@ -61,18 +61,18 @@ ServerEvents.tags("item", (event) => {
 		"create:netherite_diving_helmet",
 		"create:copper_diving_boots",
 		"create:copper_diving_helmet",
-		"create_cosmic_contraptions:copper_boots",
-		"create_cosmic_contraptions:copper_helmet",
-		"create_cosmic_contraptions:copper_chestplate",
-		"create_cosmic_contraptions:copper_leggings",
+		"cosmic_contraptions:copper_boots",
+		"cosmic_contraptions:copper_helmet",
+		"cosmic_contraptions:copper_chestplate",
+		"cosmic_contraptions:copper_leggings",
 	];
 	forge_armors.forEach((item) => {
 		event.add("forge:armors", item);
 	});
 
 	let forge_boots = [
-		"create_cosmic_contraptions:steel_boots",
-		"create_cosmic_contraptions:copper_boots",
+		"cosmic_contraptions:steel_boots",
+		"cosmic_contraptions:copper_boots",
 		"create:netherite_diving_boots",
 		"create:copper_diving_boots",
 	];
@@ -81,17 +81,17 @@ ServerEvents.tags("item", (event) => {
 		event.add("forge:boots", item);
 	});
 
-	let papers = ["minecraft:paper", "create_cosmic_contraptions:sugar_paper"];
+	let papers = ["minecraft:paper", "cosmic_contraptions:sugar_paper"];
 	papers.forEach((item) => {
-		event.add("create_cosmic_contraptions:cheap_papers", item);
+		event.add("cosmic_contraptions:cheap_papers", item);
 		event.add("exposure:photo_papers", item);
 	});
 
 	let forge_helmets = [
 		"create:netherite_diving_helmet",
 		"create:copper_diving_helmet",
-		"create_cosmic_contraptions:steel_helmet",
-		"create_cosmic_contraptions:copper_helmet",
+		"cosmic_contraptions:steel_helmet",
+		"cosmic_contraptions:copper_helmet",
 	];
 	forge_helmets.forEach((item) => {
 		event.add("forge:armors/helmets", item);
@@ -105,26 +105,26 @@ ServerEvents.tags("item", (event) => {
 		"minecraft:iron_helmet",
 	];
 	iron_armor.forEach((item) => {
-		event.add("create_cosmic_contraptions:iron_armor", item);
+		event.add("cosmic_contraptions:iron_armor", item);
 	});
 
 	let steel_armor = [
-		"create_cosmic_contraptions:steel_chestplate",
-		"create_cosmic_contraptions:steel_leggings",
-		"create_cosmic_contraptions:steel_boots",
-		"create_cosmic_contraptions:steel_helmet",
+		"cosmic_contraptions:steel_chestplate",
+		"cosmic_contraptions:steel_leggings",
+		"cosmic_contraptions:steel_boots",
+		"cosmic_contraptions:steel_helmet",
 	];
 	steel_armor.forEach((item) => {
 		event.add("forge:armors", item);
-		event.add("create_cosmic_contraptions:steel_armor", item);
+		event.add("cosmic_contraptions:steel_armor", item);
 	});
 
 	event.add("forge:nuggets/bronze", "#forge:nuggets/strong_bronze");
 
 	let forge_hoes = [
-		"create_cosmic_contraptions:steel_hoe",
-		"create_cosmic_contraptions:copper_hoe",
-		"create_cosmic_contraptions:radiant_hoe",
+		"cosmic_contraptions:steel_hoe",
+		"cosmic_contraptions:copper_hoe",
+		"cosmic_contraptions:radiant_hoe",
 	];
 	forge_hoes.forEach((item) => {
 		event.add("forge:tools/hoes", item);
@@ -132,9 +132,9 @@ ServerEvents.tags("item", (event) => {
 	});
 
 	let forge_swords = [
-		"create_cosmic_contraptions:steel_sword",
-		"create_cosmic_contraptions:copper_sword",
-		"create_cosmic_contraptions:radiant_sword",
+		"cosmic_contraptions:steel_sword",
+		"cosmic_contraptions:copper_sword",
+		"cosmic_contraptions:radiant_sword",
 	];
 	forge_swords.forEach((item) => {
 		event.add("forge:tools/swords", item);
@@ -142,9 +142,9 @@ ServerEvents.tags("item", (event) => {
 	});
 
 	let forge_chestplates = [
-		"create_cosmic_contraptions:steel_chestplate",
-		"create_cosmic_contraptions:copper_chestplate",
-		"create_cosmic_contraptions:radiant_chestplate",
+		"cosmic_contraptions:steel_chestplate",
+		"cosmic_contraptions:copper_chestplate",
+		"cosmic_contraptions:radiant_chestplate",
 	];
 	forge_chestplates.forEach((item) => {
 		event.add("forge:chestplates", item);
@@ -152,9 +152,9 @@ ServerEvents.tags("item", (event) => {
 	});
 
 	let forge_leggings = [
-		"create_cosmic_contraptions:steel_leggings",
-		"create_cosmic_contraptions:copper_leggings",
-		"create_cosmic_contraptions:radiant_leggings",
+		"cosmic_contraptions:steel_leggings",
+		"cosmic_contraptions:copper_leggings",
+		"cosmic_contraptions:radiant_leggings",
 	];
 	forge_leggings.forEach((item) => {
 		event.add("forge:leggings", item);
@@ -168,7 +168,7 @@ ServerEvents.tags("item", (event) => {
 		"minecraft:diamond_helmet",
 	];
 	diamond_armor.forEach((item) => {
-		event.add("create_cosmic_contraptions:diamond_armor", item);
+		event.add("cosmic_contraptions:diamond_armor", item);
 	});
 
 	let netherite_armor = [
@@ -178,16 +178,16 @@ ServerEvents.tags("item", (event) => {
 		"minecraft:netherite_helmet",
 	];
 	netherite_armor.forEach((item) => {
-		event.add("create_cosmic_contraptions:netherite_armor", item);
+		event.add("cosmic_contraptions:netherite_armor", item);
 	});
 
 	let createTrainTracks = ["create:track", /railways:track_.*/];
 	createTrainTracks.forEach((item) => {
-		event.add("create_cosmic_contraptions:train_tracks", item);
+		event.add("cosmic_contraptions:train_tracks", item);
 	});
-	event.remove("create_cosmic_contraptions:train_tracks", /railways:track_switch.*/);
-	event.remove("create_cosmic_contraptions:train_tracks", "railways:track_coupler");
-	event.remove("create_cosmic_contraptions:train_tracks", /railways:track_incomplete_.*/);
+	event.remove("cosmic_contraptions:train_tracks", /railways:track_switch.*/);
+	event.remove("cosmic_contraptions:train_tracks", "railways:track_coupler");
+	event.remove("cosmic_contraptions:train_tracks", /railways:track_incomplete_.*/);
 
 	let brass_sorters = ["create:brass_funnel", "create:brass_tunnel", "create:smart_chute"];
 	brass_sorters.forEach((item) => {
@@ -196,12 +196,12 @@ ServerEvents.tags("item", (event) => {
 
 	let windmill_sails = [/create:.*sail/, /create_things_and_misc:.*_sail/];
 	windmill_sails.forEach((item) => {
-		event.add("create_cosmic_contraptions:windmill_sails", item);
+		event.add("cosmic_contraptions:windmill_sails", item);
 	});
 
 	let electric_connectors = ["createaddition:connector", "createaddition:large_connector"];
 	electric_connectors.forEach((item) => {
-		event.add("create_cosmic_contraptions:electric_connector", item);
+		event.add("cosmic_contraptions:electric_connector", item);
 	});
 
 	let forge_nutrients_carbs = ["minecraft:bread"];
@@ -241,13 +241,13 @@ ServerEvents.tags("item", (event) => {
 	});
 
 	let paxels = [
-		"create_cosmic_contraptions:wooden_paxel",
-		"create_cosmic_contraptions:stone_paxel",
-		"create_cosmic_contraptions:iron_paxel",
-		"create_cosmic_contraptions:copper_paxel",
-		"create_cosmic_contraptions:steel_paxel",
-		"create_cosmic_contraptions:diamond_paxel",
-		"create_cosmic_contraptions:netherite_paxel",
+		"cosmic_contraptions:wooden_paxel",
+		"cosmic_contraptions:stone_paxel",
+		"cosmic_contraptions:iron_paxel",
+		"cosmic_contraptions:copper_paxel",
+		"cosmic_contraptions:steel_paxel",
+		"cosmic_contraptions:diamond_paxel",
+		"cosmic_contraptions:netherite_paxel",
 	];
 	paxels.forEach((item) => {
 		event.add("forge:axes", item);
@@ -256,21 +256,21 @@ ServerEvents.tags("item", (event) => {
 		event.add("minecraft:tools/axes", item);
 	});
 
-	event.add("create_cosmic_contraptions:oak_drawers", /storagedrawers:oak_full_drawers_.*/);
-	event.add("create_cosmic_contraptions:spruce_drawers", /storagedrawers:spruce_full_drawers_.*/);
-	event.add("create_cosmic_contraptions:birch_drawers", /storagedrawers:birch_full_drawers_.*/);
-	event.add("create_cosmic_contraptions:jungle_drawers", /storagedrawers:jungle_full_drawers_.*/);
-	event.add("create_cosmic_contraptions:acacia_drawers", /storagedrawers:acacia_full_drawers_.*/);
-	event.add("create_cosmic_contraptions:dark_oak_drawers", /storagedrawers:dark_oak_full_drawers_.*/);
-	event.add("create_cosmic_contraptions:crimson_drawers", /storagedrawers:crimson_full_drawers_.*/);
-	event.add("create_cosmic_contraptions:warped_drawers", /storagedrawers:warped_full_drawers_.*/);
-	event.add("create_cosmic_contraptions:azalea_drawers", /everycomp:sd\/ecologics\/azalea_full_drawers_.*/);
+	event.add("cosmic_contraptions:oak_drawers", /storagedrawers:oak_full_drawers_.*/);
+	event.add("cosmic_contraptions:spruce_drawers", /storagedrawers:spruce_full_drawers_.*/);
+	event.add("cosmic_contraptions:birch_drawers", /storagedrawers:birch_full_drawers_.*/);
+	event.add("cosmic_contraptions:jungle_drawers", /storagedrawers:jungle_full_drawers_.*/);
+	event.add("cosmic_contraptions:acacia_drawers", /storagedrawers:acacia_full_drawers_.*/);
+	event.add("cosmic_contraptions:dark_oak_drawers", /storagedrawers:dark_oak_full_drawers_.*/);
+	event.add("cosmic_contraptions:crimson_drawers", /storagedrawers:crimson_full_drawers_.*/);
+	event.add("cosmic_contraptions:warped_drawers", /storagedrawers:warped_full_drawers_.*/);
+	event.add("cosmic_contraptions:azalea_drawers", /everycomp:sd\/ecologics\/azalea_full_drawers_.*/);
 	event.add(
-		"create_cosmic_contraptions:flowering_azalea_drawers",
+		"cosmic_contraptions:flowering_azalea_drawers",
 		/everycomp:sd\/ecologics\/flowering_azalea_full_drawers_.*/
 	);
-	event.add("create_cosmic_contraptions:coconut_drawers", /everycomp:sd\/ecologics\/coconut_full_drawers_.*/);
-	event.add("create_cosmic_contraptions:walnut_drawers", /everycomp:sd\/ecologics\/walnut_full_drawers_.*/);
+	event.add("cosmic_contraptions:coconut_drawers", /everycomp:sd\/ecologics\/coconut_full_drawers_.*/);
+	event.add("cosmic_contraptions:walnut_drawers", /everycomp:sd\/ecologics\/walnut_full_drawers_.*/);
 
-	event.add("forge:tools/knives", "create_cosmic_contraptions:steel_knife");
+	event.add("forge:tools/knives", "cosmic_contraptions:steel_knife");
 });

@@ -47,11 +47,7 @@ let colors = [
 	},
 	{
 		color: "blue",
-		ingredients: [
-			"minecraft:cornflower",
-			"minecraft:lapis_lazuli",
-			"create_cosmic_contraptions:cornflower_bush_item",
-		],
+		ingredients: ["minecraft:cornflower", "minecraft:lapis_lazuli", "cosmic_contraptions:cornflower_bush_item"],
 	},
 	{
 		color: "brown",
@@ -76,30 +72,27 @@ ServerEvents.recipes((event) => {
 	event.recipes.create
 		.mixing("minecraft:dark_prismarine", [
 			"minecraft:prismarine",
-			Fluid.of("create_cosmic_contraptions:black_dye_fluid", 50),
+			Fluid.of("cosmic_contraptions:black_dye_fluid", 50),
 		])
-		.id("create_cosmic_contraptions:dyes/dark_prismarine");
+		.id("cosmic_contraptions:dyes/dark_prismarine");
 	// Hazard Block
 	event.recipes.create
-		.mixing(
-			["create_dd:hazard_block"],
-			["#forge:stones", Fluid.of("create_cosmic_contraptions:yellow_dye_fluid", 50)]
-		)
-		.id("create_cosmic_contraptions:dyes/hazard_block");
+		.mixing(["create_dd:hazard_block"], ["#forge:stones", Fluid.of("cosmic_contraptions:yellow_dye_fluid", 50)])
+		.id("cosmic_contraptions:dyes/hazard_block");
 	// Slime Fluid
 	event.recipes.create
 		.mixing(
 			[Fluid.of("create_things_and_misc:slime", 100)],
-			["#forge:dough", Fluid.of("create_cosmic_contraptions:lime_dye_fluid", 250)]
+			["#forge:dough", Fluid.of("cosmic_contraptions:lime_dye_fluid", 250)]
 		)
-		.id("create_cosmic_contraptions:dyes/slime_fluid");
+		.id("cosmic_contraptions:dyes/slime_fluid");
 	// Slime
 	event.recipes.create
 		.mixing(
 			["minecraft:slime_ball"],
-			["create_cosmic_contraptions:saw_dust", Fluid.of("create_things_and_misc:slime", 100)]
+			["cosmic_contraptions:saw_dust", Fluid.of("create_things_and_misc:slime", 100)]
 		)
-		.id("create_cosmic_contraptions:dyes/slime_ball");
+		.id("cosmic_contraptions:dyes/slime_ball");
 
 	// COLOURED STUFF
 	// =================
@@ -111,10 +104,10 @@ ServerEvents.recipes((event) => {
 		if (ingredients.length > 0) {
 			event.recipes.create
 				.mixing(
-					[Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 1000)],
-					["#create_cosmic_contraptions:makes_" + color + "_dye", Fluid.of("water", 1000)]
+					[Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 1000)],
+					["#cosmic_contraptions:makes_" + color + "_dye", Fluid.of("water", 1000)]
 				)
-				.id("create_cosmic_contraptions:dyes/dye_fluid/" + color);
+				.id("cosmic_contraptions:dyes/dye_fluid/" + color);
 		}
 
 		// Dye
@@ -122,12 +115,9 @@ ServerEvents.recipes((event) => {
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_dye"],
-				[
-					"create_cosmic_contraptions:saw_dust",
-					Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 250),
-				]
+				["cosmic_contraptions:saw_dust", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 250)]
 			)
-			.id("create_cosmic_contraptions:dyes/dye/" + color);
+			.id("cosmic_contraptions:dyes/dye/" + color);
 		// Concrete
 		event.remove({
 			output: "minecraft:" + color + "_concrete_powder",
@@ -135,13 +125,13 @@ ServerEvents.recipes((event) => {
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_concrete"],
-				["tfmg:concrete", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["tfmg:concrete", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/concrete/" + color);
+			.id("cosmic_contraptions:dyes/concrete/" + color);
 		// Concrete Powder
 		event.recipes.create
 			.crushing(["minecraft:" + color + "_concrete_powder"], ["minecraft:" + color + "_concrete"])
-			.id("create_cosmic_contraptions:dyes/concrete_powder/" + color);
+			.id("cosmic_contraptions:dyes/concrete_powder/" + color);
 		// Stained Glass
 		event.remove({
 			output: "minecraft:" + color + "_stained_glass",
@@ -149,9 +139,9 @@ ServerEvents.recipes((event) => {
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_stained_glass"],
-				["#forge:glass/colorless", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["#forge:glass/colorless", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/stained_glass/" + color);
+			.id("cosmic_contraptions:dyes/stained_glass/" + color);
 		// Stained Glass Pane
 		event.remove({
 			output: "minecraft:" + color + "_stained_glass_pane",
@@ -159,12 +149,12 @@ ServerEvents.recipes((event) => {
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_stained_glass_pane"],
-				["#forge:glass_panes/colorless", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 25)]
+				["#forge:glass_panes/colorless", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 25)]
 			)
-			.id("create_cosmic_contraptions:dyes/stained_glass_pane/" + color);
+			.id("cosmic_contraptions:dyes/stained_glass_pane/" + color);
 		event.recipes
 			.shapeless("12x minecraft:" + color + "_stained_glass_pane", ["#forge:glass/" + color])
-			.id("create_cosmic_contraptions:dyes/stained_glass_pane/" + color + "_crafting");
+			.id("cosmic_contraptions:dyes/stained_glass_pane/" + color + "_crafting");
 		// Toolbox
 		if (color != "brown") {
 			event.remove({ output: "create:" + color + "_toolbox" });
@@ -172,9 +162,9 @@ ServerEvents.recipes((event) => {
 		event.recipes.create
 			.mixing(
 				["create:" + color + "_toolbox"],
-				["create:brown_toolbox", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["create:brown_toolbox", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/toolbox/" + color);
+			.id("cosmic_contraptions:dyes/toolbox/" + color);
 		// Canvas Sign
 		event.remove({
 			output: "farmersdelight:" + color + "_canvas_sign",
@@ -182,77 +172,77 @@ ServerEvents.recipes((event) => {
 		event.recipes.create
 			.mixing(
 				["farmersdelight:" + color + "_canvas_sign"],
-				["farmersdelight:canvas_sign", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["farmersdelight:canvas_sign", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/canvas_sign/" + color);
+			.id("cosmic_contraptions:dyes/canvas_sign/" + color);
 		// Wool
 		event.remove({ output: "minecraft:" + color + "_wool" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_wool"],
-				["minecraft:white_wool", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["minecraft:white_wool", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/wool/" + color);
+			.id("cosmic_contraptions:dyes/wool/" + color);
 		// Carpet
 		event.remove({ output: "minecraft:" + color + "_carpet" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_carpet"],
-				["minecraft:white_carpet", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["minecraft:white_carpet", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/carpet/" + color);
+			.id("cosmic_contraptions:dyes/carpet/" + color);
 		event.recipes
 			.shapeless("3x minecraft:" + color + "_carpet", ["2x minecraft:" + color + "_wool"])
-			.id("create_cosmic_contraptions:dyes/carpet/" + color + "_crafting");
+			.id("cosmic_contraptions:dyes/carpet/" + color + "_crafting");
 		// Terracotta
 		event.remove({ output: "minecraft:" + color + "_terracotta" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_terracotta"],
-				["minecraft:terracotta", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["minecraft:terracotta", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/terracotta/" + color);
+			.id("cosmic_contraptions:dyes/terracotta/" + color);
 		// Bed
 		event.remove({ output: "minecraft:" + color + "_bed" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_bed"],
-				["minecraft:white_bed", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["minecraft:white_bed", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/bed/" + color);
+			.id("cosmic_contraptions:dyes/bed/" + color);
 		event.recipes
 			.shapeless("minecraft:" + color + "_bed", ["3x minecraft:" + color + "_wool", "3x #minecraft:planks"])
-			.id("create_cosmic_contraptions:dyes/bed/" + color + "_crafting");
+			.id("cosmic_contraptions:dyes/bed/" + color + "_crafting");
 		// Shulker Box
 		event.remove({ output: `minecraft:${color}_shulker_box` });
 		event.recipes.create
 			.mixing(
 				[`minecraft:${color}_shulker_box`],
-				["minecraft:shulker_box", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["minecraft:shulker_box", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id(`create_cosmic_contraptions:dyes/shulker_box/${color}`);
+			.id(`cosmic_contraptions:dyes/shulker_box/${color}`);
 		// Banner
 		event.remove({ output: "minecraft:" + color + "_banner" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_banner"],
-				["minecraft:white_banner", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["minecraft:white_banner", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/banner/" + color);
+			.id("cosmic_contraptions:dyes/banner/" + color);
 		event
 			.shaped("minecraft:" + color + "_banner", ["WWW", "WWW", " S "], {
 				W: "minecraft:" + color + "_wool",
 				S: "minecraft:stick",
 			})
-			.id("create_cosmic_contraptions:dyes/banner/" + color + "_crafting");
+			.id("cosmic_contraptions:dyes/banner/" + color + "_crafting");
 		// Candle
 		event.remove({ output: "minecraft:" + color + "_candle" });
 		event.recipes.create
 			.mixing(
 				["minecraft:" + color + "_candle"],
-				["minecraft:candle", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["minecraft:candle", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/candle/" + color);
+			.id("cosmic_contraptions:dyes/candle/" + color);
 		// Supplementaries Candle Holder
 		event.remove({
 			output: "supplementaries:candle_holder_" + color,
@@ -260,33 +250,33 @@ ServerEvents.recipes((event) => {
 		event.recipes.create
 			.mixing(
 				["supplementaries:candle_holder_" + color],
-				["supplementaries:candle_holder", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["supplementaries:candle_holder", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/candle_holder/" + color);
+			.id("cosmic_contraptions:dyes/candle_holder/" + color);
 		event.recipes
 			.shapeless("supplementaries:candle_holder_" + color, [
 				"1x minecraft:" + color + "_candle",
 				"1x #forge:ingots/iron",
 			])
-			.id("create_cosmic_contraptions:dyes/candle_holder/" + color + "_crafting");
+			.id("cosmic_contraptions:dyes/candle_holder/" + color + "_crafting");
 		// Create Placard
 		event.remove({ output: "createdeco:" + color + "_placard" });
 		if (color != "white") {
 			event.recipes.create
 				.mixing(
 					["createdeco:" + color + "_placard"],
-					["create:placard", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+					["create:placard", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 				)
-				.id("create_cosmic_contraptions:dyes/placard/" + color);
+				.id("cosmic_contraptions:dyes/placard/" + color);
 		}
 		// Create Valve Handle
 		event.remove({ output: "create:" + color + "_valve_handle" });
 		event.recipes.create
 			.mixing(
 				["create:" + color + "_valve_handle"],
-				["create:copper_valve_handle", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 50)]
+				["create:copper_valve_handle", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/valve_handle/" + color);
+			.id("cosmic_contraptions:dyes/valve_handle/" + color);
 		// Supplementaries Present
 		event.remove({
 			output: `supplementaries:present_${color}`,
@@ -294,53 +284,50 @@ ServerEvents.recipes((event) => {
 		event.recipes.create
 			.mixing(
 				[`supplementaries:present_${color}`],
-				["supplementaries:present", Fluid.of("create_cosmic_contraptions:" + color + "_dye_fluid", 250)]
+				["supplementaries:present", Fluid.of("cosmic_contraptions:" + color + "_dye_fluid", 250)]
 			)
-			.id("create_cosmic_contraptions:dyes/present/" + color);
+			.id("cosmic_contraptions:dyes/present/" + color);
 		// Framed Door
 		event.recipes.create
 			.mixing(
 				[`createframed:${color}_stained_framed_glass_door`],
-				[`create:framed_glass_door`, Fluid.of(`create_cosmic_contraptions:${color}_dye_fluid`, 50)]
+				[`create:framed_glass_door`, Fluid.of(`cosmic_contraptions:${color}_dye_fluid`, 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/frame_doors/" + color);
+			.id("cosmic_contraptions:dyes/frame_doors/" + color);
 		event
 			.stonecutting(`createframed:${color}_stained_framed_glass_door`, [`#forge:glass/${color}`])
-			.id("create_cosmic_contraptions:dyes/frame_doors/" + color + "_stonecutting");
+			.id("cosmic_contraptions:dyes/frame_doors/" + color + "_stonecutting");
 		event
 			.shaped(`3x createframed:${color}_stained_framed_glass_door`, ["GG", "GG", "GG"], {
 				G: `#forge:glass/${color}`,
 			})
-			.id("create_cosmic_contraptions:dyes/frame_doors/" + color + "_crafting");
+			.id("cosmic_contraptions:dyes/frame_doors/" + color + "_crafting");
 
 		// Framed Trapdoor
 		event.recipes.create
 			.mixing(
 				[`createframed:${color}_stained_framed_glass_trapdoor`],
-				[`create:framed_glass_trapdoor`, Fluid.of(`create_cosmic_contraptions:${color}_dye_fluid`, 50)]
+				[`create:framed_glass_trapdoor`, Fluid.of(`cosmic_contraptions:${color}_dye_fluid`, 50)]
 			)
-			.id("create_cosmic_contraptions:dyes/frame_trapdoors/" + color);
+			.id("cosmic_contraptions:dyes/frame_trapdoors/" + color);
 		event
 			.stonecutting(`2x createframed:${color}_stained_framed_glass_trapdoor`, [`#forge:glass/${color}`])
-			.id("create_cosmic_contraptions:dyes/frame_trapdoors/" + color + "_stonecutting");
+			.id("cosmic_contraptions:dyes/frame_trapdoors/" + color + "_stonecutting");
 		event
 			.shaped(`4x createframed:${color}_stained_framed_glass_trapdoor`, ["GG ", "GG "], {
 				G: `#forge:glass/${color}`,
 			})
-			.id("create_cosmic_contraptions:dyes/frame_trapdoors/" + color + "_crafting");
+			.id("cosmic_contraptions:dyes/frame_trapdoors/" + color + "_crafting");
 
 		// Shipping Container
 		event.remove({ output: `createdeco:${color}_shipping_container` });
-		event.remove({ id: `create_cosmic_contraptions:unified/createdeco/${color}_shipping_container` });
+		event.remove({ id: `cosmic_contraptions:unified/createdeco/${color}_shipping_container` });
 		event.recipes.create
 			.mixing(
 				[`createdeco:${color}_shipping_container`],
-				[
-					"#create_cosmic_contraptions:item_vaults",
-					Fluid.of(`create_cosmic_contraptions:${color}_dye_fluid`, 50),
-				]
+				["#cosmic_contraptions:item_vaults", Fluid.of(`cosmic_contraptions:${color}_dye_fluid`, 50)]
 			)
-			.id(`create_cosmic_contraptions:dyes/shipping_container/${color}`);
+			.id(`cosmic_contraptions:dyes/shipping_container/${color}`);
 	});
 });
 
@@ -348,7 +335,7 @@ ServerEvents.recipes((event) => {
 ServerEvents.tags("item", (event) => {
 	colors.forEach((colorObject) => {
 		colorObject.ingredients.forEach((ingredient) => {
-			event.add("create_cosmic_contraptions:makes_" + colorObject.color + "_dye", ingredient);
+			event.add("cosmic_contraptions:makes_" + colorObject.color + "_dye", ingredient);
 		});
 	});
 });

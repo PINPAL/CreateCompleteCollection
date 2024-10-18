@@ -40,7 +40,7 @@ global.unifiedIngots.forEach((material) => {
 		// loop through all search terms
 		searchTerms.forEach((searchTerm) => {
 			let originalID = `${materialName}_${searchTerm}`;
-			let unifiedID = `create_cosmic_contraptions:${material.name}_${type.name}`;
+			let unifiedID = `cosmic_contraptions:${material.name}_${type.name}`;
 			cachedPatterns.push({
 				regex: new RegExp(`"([^"]*):${originalID}"`, "g"),
 				unifiedID: unifiedID,
@@ -51,7 +51,7 @@ global.unifiedIngots.forEach((material) => {
 // Handle tfmg's weird heavy_plate -> steel_plate conversion
 cachedPatterns.push({
 	regex: new RegExp(`"tfmg:heavy_plate"`),
-	unifiedID: "create_cosmic_contraptions:steel_sheet",
+	unifiedID: "cosmic_contraptions:steel_sheet",
 });
 
 ServerEvents.recipes((event) => {
@@ -114,7 +114,7 @@ ServerEvents.recipes((event) => {
 				// remove the old recipe
 				event.remove({ id: recipeId });
 				// create a new recipe ID from the old one
-				let newRecipeID = `create_cosmic_contraptions:unified/${recipeId.replace(":", "/")}`;
+				let newRecipeID = `cosmic_contraptions:unified/${recipeId.replace(":", "/")}`;
 				// if there are multiple recipes with the same ID, add an index to the ID
 				if (index > 1) {
 					newRecipeID += `/${index}`;
@@ -150,19 +150,19 @@ ServerEvents.recipes((event) => {
 	);
 });
 ServerEvents.tags("items", (event) => {
-	event.add("forge:ingots/cast_iron", "create_cosmic_contraptions:industrial_iron_ingot");
-	event.add("forge:plates/cast_iron", "create_cosmic_contraptions:industrial_iron_sheet");
-	event.add("forge:nuggets/cast_iron", "create_cosmic_contraptions:industrial_iron_nugget");
-	event.add("forge:storage_blocks/cast_iron", "create_cosmic_contraptions:industrial_iron_block");
+	event.add("forge:ingots/cast_iron", "cosmic_contraptions:industrial_iron_ingot");
+	event.add("forge:plates/cast_iron", "cosmic_contraptions:industrial_iron_sheet");
+	event.add("forge:nuggets/cast_iron", "cosmic_contraptions:industrial_iron_nugget");
+	event.add("forge:storage_blocks/cast_iron", "cosmic_contraptions:industrial_iron_block");
 });
 
 global.unifiedIngots.forEach((ingot) => {
 	ServerEvents.tags("item", (event) => {
 		// Add tags for all unified ingots
-		event.add("forge:ingots/" + ingot.name, "create_cosmic_contraptions:" + ingot.name + "_ingot");
-		event.add("forge:nuggets/" + ingot.name, "create_cosmic_contraptions:" + ingot.name + "_nugget");
-		event.add("forge:plates/" + ingot.name, "create_cosmic_contraptions:" + ingot.name + "_sheet");
-		event.add("forge:storage_blocks/" + ingot.name, "create_cosmic_contraptions:" + ingot.name + "_block");
+		event.add("forge:ingots/" + ingot.name, "cosmic_contraptions:" + ingot.name + "_ingot");
+		event.add("forge:nuggets/" + ingot.name, "cosmic_contraptions:" + ingot.name + "_nugget");
+		event.add("forge:plates/" + ingot.name, "cosmic_contraptions:" + ingot.name + "_sheet");
+		event.add("forge:storage_blocks/" + ingot.name, "cosmic_contraptions:" + ingot.name + "_block");
 
 		ingot.modsUsing.forEach((mod) => {
 			event.removeAllTagsFrom(mod + ":" + ingot.name + "_alloy");

@@ -4,7 +4,7 @@ global.lootboxes = {
 		rolls: 16,
 		items: [
 			{
-				item: "create_cosmic_contraptions:refined_stone",
+				item: "cosmic_contraptions:refined_stone",
 				weight: 5,
 			},
 			{
@@ -32,11 +32,11 @@ global.lootboxes = {
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:stone_repair_kit",
+				item: "cosmic_contraptions:stone_repair_kit",
 				weight: 2,
 			},
 			{
-				item: "create_cosmic_contraptions:wooden_repair_kit",
+				item: "cosmic_contraptions:wooden_repair_kit",
 				weight: 1,
 			},
 			{
@@ -78,7 +78,7 @@ global.lootboxes = {
 				weight: 3,
 			},
 			{
-				item: "create_cosmic_contraptions:t1_andesite_machine",
+				item: "cosmic_contraptions:t1_andesite_machine",
 				weight: 2,
 			},
 			{
@@ -98,7 +98,7 @@ global.lootboxes = {
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:copper_repair_kit",
+				item: "cosmic_contraptions:copper_repair_kit",
 				weight: 2,
 			},
 			{
@@ -124,7 +124,7 @@ global.lootboxes = {
 				weight: 6,
 			},
 			{
-				item: "create_cosmic_contraptions:t2_copper_machine",
+				item: "cosmic_contraptions:t2_copper_machine",
 				weight: 1,
 			},
 			{
@@ -164,7 +164,7 @@ global.lootboxes = {
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:copper_repair_kit",
+				item: "cosmic_contraptions:copper_repair_kit",
 				weight: 1,
 			},
 		],
@@ -178,15 +178,15 @@ global.lootboxes = {
 				weight: 7,
 			},
 			{
-				item: "create_cosmic_contraptions:industrial_casing",
+				item: "cosmic_contraptions:industrial_casing",
 				weight: 6,
 			},
 			{
-				item: "create_cosmic_contraptions:t3_iron_machine",
+				item: "cosmic_contraptions:t3_iron_machine",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:iron_repair_kit",
+				item: "cosmic_contraptions:iron_repair_kit",
 				weight: 2,
 			},
 			{
@@ -220,11 +220,11 @@ global.lootboxes = {
 				weight: 6,
 			},
 			{
-				item: "create_cosmic_contraptions:t4_brass_machine",
+				item: "cosmic_contraptions:t4_brass_machine",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:iron_repair_kit",
+				item: "cosmic_contraptions:iron_repair_kit",
 				weight: 2,
 			},
 			{
@@ -258,15 +258,15 @@ global.lootboxes = {
 				weight: 4,
 			},
 			{
-				item: "create_cosmic_contraptions:steel_casing",
+				item: "cosmic_contraptions:steel_casing",
 				weight: 6,
 			},
 			{
-				item: "create_cosmic_contraptions:t5_steel_machine",
+				item: "cosmic_contraptions:t5_steel_machine",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:steel_repair_kit",
+				item: "cosmic_contraptions:steel_repair_kit",
 				weight: 2,
 			},
 			{
@@ -300,7 +300,7 @@ global.lootboxes = {
 				weight: 6,
 			},
 			{
-				item: "create_cosmic_contraptions:t6_train_machine",
+				item: "cosmic_contraptions:t6_train_machine",
 				weight: 1,
 			},
 			{
@@ -336,11 +336,11 @@ global.lootboxes = {
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:diamond_repair_kit",
+				item: "cosmic_contraptions:diamond_repair_kit",
 				weight: 2,
 			},
 			{
-				item: "create_cosmic_contraptions:netherite_repair_kit",
+				item: "cosmic_contraptions:netherite_repair_kit",
 				weight: 1,
 			},
 		],
@@ -354,7 +354,7 @@ global.lootboxes = {
 				weight: 7,
 			},
 			{
-				item: "create_cosmic_contraptions:t0_redstone_machine",
+				item: "cosmic_contraptions:t0_redstone_machine",
 				weight: 6,
 			},
 			{
@@ -444,7 +444,7 @@ global.lootboxes = {
 				weight: 7,
 			},
 			{
-				item: "create_cosmic_contraptions:t7_space_machine",
+				item: "cosmic_contraptions:t7_space_machine",
 				weight: 6,
 			},
 			{
@@ -486,7 +486,7 @@ global.lootboxes = {
 				weight: 7,
 			},
 			{
-				item: "create_cosmic_contraptions:t8_mars_machine",
+				item: "cosmic_contraptions:t8_mars_machine",
 				weight: 6,
 			},
 			{
@@ -504,7 +504,7 @@ global.lootboxes = {
 				weight: 7,
 			},
 			{
-				item: "create_cosmic_contraptions:t9_glacio_machine",
+				item: "cosmic_contraptions:t9_glacio_machine",
 				weight: 6,
 			},
 			{
@@ -652,7 +652,7 @@ global.lootboxes = {
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:cornflower_bush_item",
+				item: "cosmic_contraptions:cornflower_bush_item",
 				weight: 1,
 			},
 		],
@@ -662,67 +662,67 @@ global.lootboxes = {
 		rolls: 16,
 		items: [
 			{
-				item: "create_cosmic_contraptions:white_dye_fluid_bucket",
+				item: "cosmic_contraptions:white_dye_fluid_bucket",
 				weight: 2,
 			},
 			{
-				item: "create_cosmic_contraptions:orange_dye_fluid_bucket",
+				item: "cosmic_contraptions:orange_dye_fluid_bucket",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:magenta_dye_fluid_bucket",
+				item: "cosmic_contraptions:magenta_dye_fluid_bucket",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:light_blue_dye_fluid_bucket",
+				item: "cosmic_contraptions:light_blue_dye_fluid_bucket",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:yellow_dye_fluid_bucket",
+				item: "cosmic_contraptions:yellow_dye_fluid_bucket",
 				weight: 2,
 			},
 			{
-				item: "create_cosmic_contraptions:lime_dye_fluid_bucket",
+				item: "cosmic_contraptions:lime_dye_fluid_bucket",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:pink_dye_fluid_bucket",
+				item: "cosmic_contraptions:pink_dye_fluid_bucket",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:gray_dye_fluid_bucket",
+				item: "cosmic_contraptions:gray_dye_fluid_bucket",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:light_gray_dye_fluid_bucket",
+				item: "cosmic_contraptions:light_gray_dye_fluid_bucket",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:cyan_dye_fluid_bucket",
+				item: "cosmic_contraptions:cyan_dye_fluid_bucket",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:purple_dye_fluid_bucket",
+				item: "cosmic_contraptions:purple_dye_fluid_bucket",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:blue_dye_fluid_bucket",
+				item: "cosmic_contraptions:blue_dye_fluid_bucket",
 				weight: 2,
 			},
 			{
-				item: "create_cosmic_contraptions:brown_dye_fluid_bucket",
+				item: "cosmic_contraptions:brown_dye_fluid_bucket",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:green_dye_fluid_bucket",
+				item: "cosmic_contraptions:green_dye_fluid_bucket",
 				weight: 1,
 			},
 			{
-				item: "create_cosmic_contraptions:red_dye_fluid_bucket",
+				item: "cosmic_contraptions:red_dye_fluid_bucket",
 				weight: 2,
 			},
 			{
-				item: "create_cosmic_contraptions:black_dye_fluid_bucket",
+				item: "cosmic_contraptions:black_dye_fluid_bucket",
 				weight: 1,
 			},
 		],
@@ -1088,13 +1088,13 @@ StartupEvents.registry("block", (event) => {
 		let lootbox = global.lootboxes[key];
 
 		event
-			.create(`create_cosmic_contraptions:lootbox_${key}`, "cardinal")
+			.create(`cosmic_contraptions:lootbox_${key}`, "cardinal")
 			.displayName(`${lootbox.name} Lootbox`)
 			.soundType("wood")
 			.hardness(2)
 			.tagBlock("minecraft:mineable/pickaxe")
-			.tagBlock("create_cosmic_contraptions:lootbox")
-			.tagItem("create_cosmic_contraptions:lootbox")
+			.tagBlock("cosmic_contraptions:lootbox")
+			.tagItem("cosmic_contraptions:lootbox")
 			.noValidSpawns(true)
 			.suffocating(false)
 			.item((item) => {

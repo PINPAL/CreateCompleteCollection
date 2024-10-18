@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/cross",
+	"textures": {
+		"cross": "cosmic_contraptions:block/cornflower_bush_top"
+	}
+}

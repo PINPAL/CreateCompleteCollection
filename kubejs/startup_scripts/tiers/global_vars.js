@@ -99,6 +99,7 @@ global.machineItems = {
 	coil: { id: "createaddition:copper_spool" },
 	repeater: { id: "minecraft:repeater" },
 	lever: { id: "minecraft:lever" },
+	drain_mesh: { id: "cosmic_contraptions:drain_mesh" },
 };
 
 let tiers = global.tierMachines;
@@ -245,7 +246,7 @@ global.machineRecipes = [
 		input: items.hopper,
 	},
 	{
-		ouput: "create:track_station",
+		output: "create:track_station",
 		tier: tiers.sturdy,
 		input: items.compass,
 	},

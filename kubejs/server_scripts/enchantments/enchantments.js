@@ -75,5 +75,5 @@ ServerEvents.recipes((event) => {
 		)
 		.transitionalItem("minecraft:book")
 		.loops(1)
-		.id("create_cosmic_contraptions:random_enchanted_book");
+		.id("cosmic_contraptions:random_enchanted_book");
 });

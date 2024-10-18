@@ -1,8 +1,8 @@
 // priority: 999
 ServerEvents.tags("item", (event) => {
 	// Add paxel tag
-	event.add("create_cosmic_contraptions:paxel", /create_cosmic_contraptions:.*_paxel$/);
-	event.add("forge:tools/hoe", /create_cosmic_contraptions:.*_paxel$/);
+	event.add("cosmic_contraptions:paxel", /cosmic_contraptions:.*_paxel$/);
+	event.add("forge:tools/hoe", /cosmic_contraptions:.*_paxel$/);
 });
 
 ServerEvents.tags("block", (event) => {

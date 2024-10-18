@@ -30,54 +30,54 @@ ServerEvents.recipes((event) => {
 	// Name Tag
 	event.recipes
 		.createSequencedAssembly(["minecraft:name_tag"], "minecraft:string", [
-			event.recipes.createDeploying("create_cosmic_contraptions:incomplete_name_tag", [
-				"create_cosmic_contraptions:incomplete_saddle",
+			event.recipes.createDeploying("cosmic_contraptions:incomplete_name_tag", [
+				"cosmic_contraptions:incomplete_saddle",
 				"createdeco:iron_coin",
 			]),
 		])
-		.transitionalItem("create_cosmic_contraptions:incomplete_name_tag")
+		.transitionalItem("cosmic_contraptions:incomplete_name_tag")
 		.loops(5)
-		.id("create_cosmic_contraptions:name_tag");
+		.id("cosmic_contraptions:name_tag");
 
 	// Saddle
 	event.recipes
 		.createSequencedAssembly(["minecraft:saddle"], "#forge:nuggets/iron", [
-			event.recipes.createDeploying("create_cosmic_contraptions:incomplete_saddle", [
-				"create_cosmic_contraptions:incomplete_saddle",
+			event.recipes.createDeploying("cosmic_contraptions:incomplete_saddle", [
+				"cosmic_contraptions:incomplete_saddle",
 				"minecraft:leather",
 			]),
-			event.recipes.createDeploying("create_cosmic_contraptions:incomplete_saddle", [
-				"create_cosmic_contraptions:incomplete_saddle",
+			event.recipes.createDeploying("cosmic_contraptions:incomplete_saddle", [
+				"cosmic_contraptions:incomplete_saddle",
 				"minecraft:string",
 			]),
 		])
-		.transitionalItem("create_cosmic_contraptions:incomplete_saddle")
+		.transitionalItem("cosmic_contraptions:incomplete_saddle")
 		.loops(5)
-		.id("create_cosmic_contraptions:saddle");
+		.id("cosmic_contraptions:saddle");
 
 	// Totem of Undying
 	event.recipes
 		.createSequencedAssembly(["minecraft:totem_of_undying"], "createdeco:gold_coin", [
-			event.recipes.createDeploying("create_cosmic_contraptions:incomplete_totem_of_undying", [
-				"create_cosmic_contraptions:incomplete_totem_of_undying",
+			event.recipes.createDeploying("cosmic_contraptions:incomplete_totem_of_undying", [
+				"cosmic_contraptions:incomplete_totem_of_undying",
 				"minecraft:golden_apple",
 			]),
-			event.recipes.create.filling("create_cosmic_contraptions:incomplete_totem_of_undying", [
+			event.recipes.create.filling("cosmic_contraptions:incomplete_totem_of_undying", [
 				Fluid.of("createmetallurgy:molten_gold", 40),
-				"create_cosmic_contraptions:incomplete_totem_of_undying",
+				"cosmic_contraptions:incomplete_totem_of_undying",
 			]),
-			event.recipes.createDeploying("create_cosmic_contraptions:incomplete_totem_of_undying", [
-				"create_cosmic_contraptions:incomplete_totem_of_undying",
+			event.recipes.createDeploying("cosmic_contraptions:incomplete_totem_of_undying", [
+				"cosmic_contraptions:incomplete_totem_of_undying",
 				"minecraft:emerald",
 			]),
-			event.recipes.createDeploying("create_cosmic_contraptions:incomplete_totem_of_undying", [
-				"create_cosmic_contraptions:incomplete_totem_of_undying",
+			event.recipes.createDeploying("cosmic_contraptions:incomplete_totem_of_undying", [
+				"cosmic_contraptions:incomplete_totem_of_undying",
 				"create:experience_nugget",
 			]),
 		])
-		.transitionalItem("create_cosmic_contraptions:incomplete_totem_of_undying")
+		.transitionalItem("cosmic_contraptions:incomplete_totem_of_undying")
 		.loops(1)
-		.id("create_cosmic_contraptions:totem_of_undying");
+		.id("cosmic_contraptions:totem_of_undying");
 });
 
 ServerEvents.tags("item", (event) => {

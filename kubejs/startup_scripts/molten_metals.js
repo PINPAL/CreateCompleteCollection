@@ -16,7 +16,7 @@ const moltenMetals = [
 StartupEvents.registry("item", (event) => {
 	moltenMetals.forEach((metal) => {
 		event
-			.create("create_cosmic_contraptions:molten_" + metal + "_ingot")
+			.create("cosmic_contraptions:molten_" + metal + "_ingot")
 			.displayName("Molten " + formatName(metal) + " Ingot")
 			.unstackable();
 	});
@@ -25,7 +25,7 @@ StartupEvents.registry("item", (event) => {
 StartupEvents.registry("block", (event) => {
 	moltenMetals.forEach((metal) => {
 		event
-			.create("create_cosmic_contraptions:molten_" + metal + "_block")
+			.create("cosmic_contraptions:molten_" + metal + "_block")
 			.displayName("Molten " + formatName(metal) + " Block")
 			.soundType("metal")
 			.tagBlock("minecraft:mineable/pickaxe")
@@ -33,7 +33,7 @@ StartupEvents.registry("block", (event) => {
 	});
 
 	event
-		.create("create_cosmic_contraptions:metal_alloy_block")
+		.create("cosmic_contraptions:metal_alloy_block")
 		.displayName("Metal Alloy Block")
 		.soundType("metal")
 		.tagBlock("minecraft:mineable/pickaxe")
@@ -43,11 +43,11 @@ StartupEvents.registry("block", (event) => {
 StartupEvents.registry("fluid", (event) => {
 	moltenMetals.forEach((metal) => {
 		event
-			.create("create_cosmic_contraptions:molten_" + metal)
+			.create("cosmic_contraptions:molten_" + metal)
 			.displayName("Molten " + formatName(metal))
-			.stillTexture("create_cosmic_contraptions:block/fluid/molten_" + metal)
-			.flowingTexture("create_cosmic_contraptions:block/fluid/molten_" + metal)
+			.stillTexture("cosmic_contraptions:block/fluid/molten_" + metal)
+			.flowingTexture("cosmic_contraptions:block/fluid/molten_" + metal)
 			.noBlock()
-			.bucketItem.texture("create_cosmic_contraptions:item/bucket/molten_" + metal + "_bucket");
+			.bucketItem.texture("cosmic_contraptions:item/bucket/molten_" + metal + "_bucket");
 	});
 });

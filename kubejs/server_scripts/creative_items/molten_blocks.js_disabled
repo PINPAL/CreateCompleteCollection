@@ -18,7 +18,7 @@ ServerEvents.recipes((event) => {
 	metals.forEach((metal) => {
 		// iron block -> molten iron fluid
 		event.recipes
-			.melterMelting(Fluid.of("create_cosmic_contraptions:molten_" + metal.name, 10), `#forge:storage_blocks/${metal.name}`)
+			.melterMelting(Fluid.of("cosmic_contraptions:molten_" + metal.name, 10), `#forge:storage_blocks/${metal.name}`)
 			.processingTime(200)
 			.minimumHeat(16);
 
@@ -27,12 +27,12 @@ ServerEvents.recipes((event) => {
 			type: "create_dd:freezing",
 			ingredients: [
 				{
-					item: `create_cosmic_contraptions:molten_${metal.name}_bucket`,
+					item: `cosmic_contraptions:molten_${metal.name}_bucket`,
 				},
 			],
 			results: [
 				{
-					item: `create_cosmic_contraptions:molten_${metal.name}_ingot`,
+					item: `cosmic_contraptions:molten_${metal.name}_ingot`,
 					count: 1,
 				},
 				{
@@ -45,29 +45,29 @@ ServerEvents.recipes((event) => {
 		// molten iron ingot -> molten iron block
 		event.recipes.create
 			.compacting(
-				Item.of(`create_cosmic_contraptions:molten_${metal.name}_block`),
-				Item.of(`11x create_cosmic_contraptions:molten_${metal.name}_ingot`)
+				Item.of(`cosmic_contraptions:molten_${metal.name}_block`),
+				Item.of(`11x cosmic_contraptions:molten_${metal.name}_ingot`)
 			)
 			.superheated();
 	});
 
 	event.recipes.create.mechanical_crafting(
-		"create_cosmic_contraptions:metal_alloy_block",
+		"cosmic_contraptions:metal_alloy_block",
 		["  a  ", " 123 ", "b456c", " 789 ", "  d  "],
 		{
-			1: "create_cosmic_contraptions:molten_iron_block",
-			2: "create_cosmic_contraptions:molten_copper_block",
-			3: "create_cosmic_contraptions:molten_gold_block",
-			4: "create_cosmic_contraptions:molten_zinc_block",
-			5: "create_cosmic_contraptions:molten_brass_block",
-			6: "create_cosmic_contraptions:belt_scroll",
-			7: "create_cosmic_contraptions:molten_bronze_block",
-			8: "create_cosmic_contraptions:molten_steel_block",
-			9: "create_cosmic_contraptions:molten_cast_iron_block",
-			a: "create_cosmic_contraptions:molten_diamond_block",
-			b: "create_cosmic_contraptions:molten_emerald_block",
-			c: "create_cosmic_contraptions:molten_powdered_obsidian_block",
-			d: "create_cosmic_contraptions:molten_redstone_block",
+			1: "cosmic_contraptions:molten_iron_block",
+			2: "cosmic_contraptions:molten_copper_block",
+			3: "cosmic_contraptions:molten_gold_block",
+			4: "cosmic_contraptions:molten_zinc_block",
+			5: "cosmic_contraptions:molten_brass_block",
+			6: "cosmic_contraptions:belt_scroll",
+			7: "cosmic_contraptions:molten_bronze_block",
+			8: "cosmic_contraptions:molten_steel_block",
+			9: "cosmic_contraptions:molten_cast_iron_block",
+			a: "cosmic_contraptions:molten_diamond_block",
+			b: "cosmic_contraptions:molten_emerald_block",
+			c: "cosmic_contraptions:molten_powdered_obsidian_block",
+			d: "cosmic_contraptions:molten_redstone_block",
 		}
 	);
 });

@@ -1,0 +1,14 @@
+{
+	"itemGroup.cosmic_contraptions.base": "Create Complete Collection",
+	"platform.cosmic_contraptions.name": "Create Complete Collection",
+	"platform.cosmic_contraptions": "Create Complete Collection",
+	"cosmic_contraptions": "Create Complete Collection",
+
+	"subtitle.cosmic_contraptions.lootbox_place": "Lootbox Placed",
+	"subtitle.cosmic_contraptions.lootbox_open": "Lootbox Opened",
+	"subtitle.cosmic_contraptions.lootbox_break": "Lootbox Broken",
+
+	"curios.identifier.grid": "Wireless Grid",
+	"curios.identifier.magnet": "Magnet",
+	"curios.identifier.totem": "Totem"
+}

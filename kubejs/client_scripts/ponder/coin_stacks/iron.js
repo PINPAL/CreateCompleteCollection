@@ -1,7 +1,7 @@
 Ponder.registry((event) => {
 	event
 		.create("createdeco:iron_coinstack")
-		.scene("iron_coinstack", "Iron Coin Stacking", "create_cosmic_contraptions:coin_stack", (scene, util) => {
+		.scene("iron_coinstack", "Iron Coin Stacking", "cosmic_contraptions:coin_stack", (scene, util) => {
 			// Base Plate
 			for (let x = 0; x < 3; x++) {
 				for (let z = 0; z < 3; z++) {

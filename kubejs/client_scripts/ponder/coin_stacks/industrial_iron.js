@@ -4,7 +4,7 @@ Ponder.registry((event) => {
 		.scene(
 			"industrial_iron_coinstack",
 			"Industrial Iron Coin Stacking",
-			"create_cosmic_contraptions:coin_stack",
+			"cosmic_contraptions:coin_stack",
 			(scene, util) => {
 				// Base Plate
 				for (let x = 0; x < 3; x++) {

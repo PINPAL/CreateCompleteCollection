@@ -1,0 +1,11 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "cosmic_contraptions:item/broken_netherite_diving_boots"
+	},
+	"display": {
+		"head": {
+			"scale": [0, 0, 0]
+		}
+	}
+}

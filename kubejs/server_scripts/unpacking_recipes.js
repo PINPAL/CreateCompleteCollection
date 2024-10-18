@@ -35,6 +35,6 @@ ServerEvents.recipes((event) => {
 	unpackingRecipes.forEach((recipe) => {
 		event.recipes.create
 			.crushing(`${recipe.count}x ${recipe.output}`, recipe.input)
-			.id(`create_cosmic_contraptions:unpacking_recipes/${recipe.input.replace(/.*:/, "")}_crushing`);
+			.id(`cosmic_contraptions:unpacking_recipes/${recipe.input.replace(/.*:/, "")}_crushing`);
 	});
 });

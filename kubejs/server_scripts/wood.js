@@ -1,38 +1,38 @@
 const woodTypes = [
 	{ name: "hardened", namespace: "tfmg" },
-	{ name: "waterproof", namespace: "create_cosmic_contraptions" },
+	{ name: "waterproof", namespace: "cosmic_contraptions" },
 ];
 
 ServerEvents.recipes((event) => {
 	woodTypes.forEach((wood) => {
 		event
-			.shaped(`6x create_cosmic_contraptions:${wood.name}_slab`, ["   ", "PPP", "   "], {
+			.shaped(`6x cosmic_contraptions:${wood.name}_slab`, ["   ", "PPP", "   "], {
 				P: `${wood.namespace}:${wood.name}_planks`,
 			})
-			.id("create_cosmic_contraptions:wood/" + wood.name + "_slab");
+			.id("cosmic_contraptions:wood/" + wood.name + "_slab");
 		event
-			.shaped(`4x create_cosmic_contraptions:${wood.name}_stairs`, ["P  ", "PP ", "PPP"], {
+			.shaped(`4x cosmic_contraptions:${wood.name}_stairs`, ["P  ", "PP ", "PPP"], {
 				P: `${wood.namespace}:${wood.name}_planks`,
 			})
-			.id("create_cosmic_contraptions:wood/" + wood.name + "_stairs");
+			.id("cosmic_contraptions:wood/" + wood.name + "_stairs");
 		event
-			.shaped(Item.of(`create_cosmic_contraptions:${wood.name}_fence`), ["   ", "PSP", "PSP"], {
+			.shaped(Item.of(`cosmic_contraptions:${wood.name}_fence`), ["   ", "PSP", "PSP"], {
 				P: `${wood.namespace}:${wood.name}_planks`,
 				S: "minecraft:stick",
 			})
-			.id("create_cosmic_contraptions:wood/" + wood.name + "_fence");
+			.id("cosmic_contraptions:wood/" + wood.name + "_fence");
 		event
-			.shaped(`create_cosmic_contraptions:${wood.name}_fence_gate`, ["   ", "SPS", "SPS"], {
+			.shaped(`cosmic_contraptions:${wood.name}_fence_gate`, ["   ", "SPS", "SPS"], {
 				P: `${wood.namespace}:${wood.name}_planks`,
 				S: "minecraft:stick",
 			})
-			.id("create_cosmic_contraptions:wood/" + wood.name + "_fence_gate");
-		event.shapeless(`create_cosmic_contraptions:${wood.name}_button`, [`${wood.namespace}:${wood.name}_planks`]);
+			.id("cosmic_contraptions:wood/" + wood.name + "_fence_gate");
+		event.shapeless(`cosmic_contraptions:${wood.name}_button`, [`${wood.namespace}:${wood.name}_planks`]);
 		event
-			.shaped(`create_cosmic_contraptions:${wood.name}_pressure_plate`, ["PP ", "   ", "   "], {
+			.shaped(`cosmic_contraptions:${wood.name}_pressure_plate`, ["PP ", "   ", "   "], {
 				P: `${wood.namespace}:${wood.name}_planks`,
 			})
-			.id("create_cosmic_contraptions:wood/" + wood.name + "_pressure_plate");
+			.id("cosmic_contraptions:wood/" + wood.name + "_pressure_plate");
 	});
 });
 
@@ -48,10 +48,7 @@ ServerEvents.recipes((event) => {
 		let button = "2x " + woodID + "_button";
 		let slab = woodID + "_slab";
 		let recipeID =
-			"create_cosmic_contraptions:wood/" +
-			wood.getNamespace() +
-			"/" +
-			wood.getPath().replace("_planks", "_button");
+			"cosmic_contraptions:wood/" + wood.getNamespace() + "/" + wood.getPath().replace("_planks", "_button");
 
 		event.recipes.create.cutting(button, slab).id(recipeID);
 		event.recipes.create.cutting(button, planks).id(recipeID + "_from_planks");

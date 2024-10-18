@@ -21,11 +21,8 @@ ServerEvents.recipes((event) => {
 
 	// Refined Stone
 	event.recipes
-		.createsifterSifting("create_cosmic_contraptions:refined_stone", [
-			"#forge:cobblestone",
-			"createsifter:string_mesh",
-		])
-		.id("create_cosmic_contraptions:sifting/refined_stone");
+		.createsifterSifting("cosmic_contraptions:refined_stone", ["#forge:cobblestone", "createsifter:string_mesh"])
+		.id("cosmic_contraptions:sifting/refined_stone");
 
 	// Netherite
 	event.recipes
@@ -39,5 +36,5 @@ ServerEvents.recipes((event) => {
 		)
 		.minimumSpeed(256)
 		.processingTime(400)
-		.id("create_cosmic_contraptions:sifting/netherrack");
+		.id("cosmic_contraptions:sifting/netherrack");
 });

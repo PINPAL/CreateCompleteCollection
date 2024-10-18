@@ -413,7 +413,7 @@ const itemsToTooltip = [
 		],
 	},
 	{
-		item: "create_cosmic_contraptions:sugar_paper",
+		item: "cosmic_contraptions:sugar_paper",
 		summary: [
 			"A $cheaper$ alternative to ",
 			"$wood based$ paper. Some",
@@ -509,7 +509,7 @@ drawerWoodTypes.forEach((woodType) => {
 });
 
 for (const key in global.lootboxes) {
-	let lootbox = `create_cosmic_contraptions:lootbox_${key}`;
+	let lootbox = `cosmic_contraptions:lootbox_${key}`;
 	itemsToTooltip.push({
 		item: lootbox,
 		summary: [

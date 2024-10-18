@@ -1,0 +1,7 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "cosmic_contraptions:item/creative_potion_overlay",
+		"layer1": "cosmic_contraptions:item/creative_splash_potion"
+	}
+}

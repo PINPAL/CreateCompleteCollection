@@ -1,6 +1,0 @@
-{
-	"parent": "create_cosmic_contraptions:block/lootbox",
-	"textures": {
-		"icon": "create_cosmic_contraptions:block/lootbox_icons/decorative"
-	}
-}

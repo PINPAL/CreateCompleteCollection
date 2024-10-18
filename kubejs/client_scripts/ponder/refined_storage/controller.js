@@ -4,7 +4,7 @@ Ponder.registry((event) => {
 		.scene(
 			"powering_your_controller",
 			"Powering your Controller",
-			"create_cosmic_contraptions:controller",
+			"cosmic_contraptions:controller",
 			(scene, util) => {
 				// Base Plate
 				for (let x = 0; x < 5; x++) {
