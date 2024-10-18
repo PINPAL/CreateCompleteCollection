@@ -1,13 +1,13 @@
-filename = 'moredelight-2024.07.16-1.20.1-forge.jar'
-name = 'More Delight (Forge)'
+filename = 'moredelight-24.09.27-1.20-forge.jar'
+name = 'More Delight'
 side = 'both'
 
 [download]
-hash = 'a911552829adcee287db342e026d7554b63228f2'
+hash = 'c9dea439e387a00168f0d27c4bb72f4c4e1c9871'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 5536463
+file-id = 5763417
 project-id = 977515

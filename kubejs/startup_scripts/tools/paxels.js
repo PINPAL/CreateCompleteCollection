@@ -54,7 +54,7 @@ paxelTiers.forEach((tier) => {
 	// Register Paxel
 	StartupEvents.registry("item", (event) => {
 		event
-			.create("create_cosmic_contraptions:" + `${tier.name}_paxel`, "paxel")
+			.create("kubejs:" + `${tier.name}_paxel`, "paxel")
 			.displayName(`${formatName(tier.name)} Paxel`)
 			.tier(tier.material)
 			.glow(glow)
@@ -63,7 +63,7 @@ paxelTiers.forEach((tier) => {
 	});
 	// Adjust Durability
 	ItemEvents.modification((event) => {
-		event.modify(`create_cosmic_contraptions:${tier.name}_paxel`, (item) => {
+		event.modify(`kubejs:${tier.name}_paxel`, (item) => {
 			item.maxDamage = tier.maxDamage;
 		});
 	});

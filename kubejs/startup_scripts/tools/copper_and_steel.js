@@ -59,7 +59,7 @@ StartupEvents.registry("item", (event) => {
 				glow = true;
 			}
 			event
-				.create(`create_cosmic_contraptions:${material.name}_${type}`, type)
+				.create(`kubejs:${material.name}_${type}`, type)
 				.displayName(`${formatName(material.name)} ${formatName(type)}`)
 				.tier(material.name)
 				.glow(glow)
@@ -68,11 +68,11 @@ StartupEvents.registry("item", (event) => {
 		});
 	});
 	event
-		.create("create_cosmic_contraptions:" + `steel_knife`, "farmersdelight:knife")
+		.create("kubejs:" + `steel_knife`, "farmersdelight:knife")
 		.displayName("Steel Knife")
 		.tier("steel");
 	event
-		.create("create_cosmic_contraptions:" + `radiant_knife`, "farmersdelight:knife")
+		.create("kubejs:" + `radiant_knife`, "farmersdelight:knife")
 		.displayName("Radiant Knife")
 		.tier("radiant");
 });

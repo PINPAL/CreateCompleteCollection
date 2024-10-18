@@ -1,6 +1,8 @@
 {
-  "block.createcasing.custom_mixer.tooltip.summary": "_Works_ like a _normal_ mixer",
-  "block.createcasing.brass_mixer.tooltip.summary": "_Works_ like a _normal_ mixer",
-  "block.createcasing.copper_mixer.tooltip.summary": "_Works_ like a _normal_ mixer",
-  "block.createcasing.railway_mixer.tooltip.summary": "_Works_ like a _normal_ mixer"
+	"block.createcasing.custom_mixer.tooltip.summary": "_Works_ like a _normal_ mixer",
+	"block.createcasing.brass_mixer.tooltip.summary": "_Works_ like a _normal_ mixer",
+	"block.createcasing.copper_mixer.tooltip.summary": "_Works_ like a _normal_ mixer",
+	"block.createcasing.railway_mixer.tooltip.summary": "_Works_ like a _normal_ mixer",
+	"tooltip.createcasing.mixermixenormaly.title": "",
+	"tooltip.createcasing.mixermixenormaly": "Works like a normal mixer."
 }

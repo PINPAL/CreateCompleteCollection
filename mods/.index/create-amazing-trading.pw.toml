@@ -1,0 +1,13 @@
+filename = 'amazingtrading-1.20.1-0.1.9-universal.jar'
+name = 'Create: Amazing Trading'
+side = 'both'
+
+[download]
+hash = 'a221024cca4ec391f31d9e76018d41c5a8a1b34bf7a6f286630f1f3e8a5fb9903982cdf5336b99bd4cf41a45c84bdcbb1c0369db8631a475a2ca48e6743773ce'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/PPRbie2R/versions/LLPDdXRs/amazingtrading-1.20.1-0.1.9-universal.jar'
+
+[update.modrinth]
+mod-id = 'PPRbie2R'
+version = 'LLPDdXRs'

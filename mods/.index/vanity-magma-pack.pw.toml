@@ -1,0 +1,13 @@
+filename = 'vanity_magma-1.20.x_a.jar'
+name = 'Vanity: Magma Pack'
+side = 'both'
+
+[download]
+hash = '4b89167bfaab4705ec238dcbb9bdddabe1e06e90'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5243004
+project-id = 837609

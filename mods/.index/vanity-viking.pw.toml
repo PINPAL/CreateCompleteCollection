@@ -1,0 +1,13 @@
+filename = 'vanity_viking-1.20.x_a.jar'
+name = 'Vanity: Viking Pack'
+side = 'both'
+
+[download]
+hash = '0193caaca71e558e9fb72f8a845fbb694aad9160'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5243013
+project-id = 839022

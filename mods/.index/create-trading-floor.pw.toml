@@ -1,0 +1,13 @@
+filename = 'trading_floor-1.0.6+forge-1.20.1.jar'
+name = 'Create: Trading Floor'
+side = 'both'
+
+[download]
+hash = 'a3f458384ee2b20a24ea6175dab805847f9db0d42b7d6c11b2d420bab8f1b8f1dfd8b2694ed47c9a4c445b72c5646ccc0b93b49aba21beef230e8f6ef01fda38'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/WROfLLvn/versions/fcCQPHem/trading_floor-1.0.6%2Bforge-1.20.1.jar'
+
+[update.modrinth]
+mod-id = 'WROfLLvn'
+version = 'fcCQPHem'

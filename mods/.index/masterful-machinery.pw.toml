@@ -1,13 +1,13 @@
-filename = 'MasterfulMachinery-3-1.20.1-0.1.12.jar'
+filename = 'MasterfulMachinery-3-1.20.1-0.1.14.jar'
 name = 'Masterful Machinery'
 side = 'both'
 
 [download]
-hash = '9bb1de5ed7e460d9eaf1e856baafd85f6c6b234d0e6c914ef4834e5f3cbbc24439aa2c78aef0e1178e6f6c11c3f42e022215744c629147f08856317c177ac816'
+hash = '1c508e300d226362e6fc847bbf52b3145182a9b2b542049958ae4479e63a2773b561f5798743418d47616040abca52f4cb1289754e87c89720dd6d821a750aea'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/CIQfBdpM/versions/DEP2Q9o5/MasterfulMachinery-3-1.20.1-0.1.12.jar'
+url = 'https://cdn.modrinth.com/data/CIQfBdpM/versions/x50OxBkH/MasterfulMachinery-3-1.20.1-0.1.14.jar'
 
 [update.modrinth]
 mod-id = 'CIQfBdpM'
-version = 'DEP2Q9o5'
+version = 'x50OxBkH'

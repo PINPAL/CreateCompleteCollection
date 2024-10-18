@@ -1,0 +1,13 @@
+filename = 'vanity_spartan-1.20.x_a.jar'
+name = 'Vanity: Spartan Pack'
+side = 'both'
+
+[download]
+hash = 'a5f2ddbbbe51eb4cdd735636870f609426edc6fe'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5243007
+project-id = 837617

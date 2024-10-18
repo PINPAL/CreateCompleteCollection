@@ -1,13 +1,13 @@
-filename = 'AdvancementPlaques-1.20.1-forge-1.5.1.jar'
+filename = 'AdvancementPlaques-1.20.1-forge-1.6.7.jar'
 name = 'Advancement Plaques'
 side = 'both'
 
 [download]
-hash = '6b5bbb387993008c02b50252238ffe29cb092db224ac085aa2226908d102ece2d7027056dd5da5c35d3b0b723df2651673d6d34808ccd0538dce7dc77789b05e'
+hash = 'a7f829d475c7c2d72cdb8a1151b6a3e2bedc0150384e74a569b1fd17bb761645be2781d54acbbdb4fa51a52a00438400670e1e6609427b3472778e1f32d7b0fa'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/9NM0dXub/versions/1GjhWcGQ/AdvancementPlaques-1.20.1-forge-1.5.1.jar'
+url = 'https://cdn.modrinth.com/data/9NM0dXub/versions/kgUIXD9e/AdvancementPlaques-1.20.1-forge-1.6.7.jar'
 
 [update.modrinth]
 mod-id = '9NM0dXub'
-version = '1GjhWcGQ'
+version = 'kgUIXD9e'

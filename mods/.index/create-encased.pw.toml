@@ -1,13 +1,13 @@
-filename = 'CreateCasing-1.20.1-1.6.1-fix1.jar'
+filename = 'CreateCasing-1.20.1-1.6.2.jar'
 name = 'Create : Encased'
 side = 'both'
 
 [download]
-hash = '14d4e6b2ae4312f043300c3b022efce137eb410f4ed7f0c87dc1c738be12bb476afe7d619bab5e4683440305a403a13ff4eac53a15603c7c2bddc162824d1a1b'
+hash = 'e3799feeced8acd130422ca4fa3e9e844beed6ae5a9d3bfc12326faf98949efe744e9daef16c78a2d4bde7fcc05a88fc9df14642da592d6a7e9da8c9b9af583d'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/hSSqdyU1/versions/hGPiOsMX/CreateCasing-1.20.1-1.6.1-fix1.jar'
+url = 'https://cdn.modrinth.com/data/hSSqdyU1/versions/4MpIYxcS/CreateCasing-1.20.1-1.6.2.jar'
 
 [update.modrinth]
 mod-id = 'hSSqdyU1'
-version = 'hGPiOsMX'
+version = '4MpIYxcS'

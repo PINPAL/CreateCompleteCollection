@@ -25,7 +25,8 @@ StartupEvents.registry("item", (event) => {
 	// Register items used to upgrade "base tier machines" into their actual form
 	for (var key of Object.keys(global.machineItems)) {
 		// Check if the item is from the cosmic_contraptions
-		let requiresRegistry = global.machineItems[key].id.contains("cosmic_contraptions:");
+		let itemId = String(global.machineItems[key].id);
+		let requiresRegistry = itemId.includes("cosmic_contraptions:");
 		// If the item isn't native, we need to create it
 		if (requiresRegistry) {
 			let itemId = global.machineItems[key].id;

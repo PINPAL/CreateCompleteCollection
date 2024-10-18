@@ -1,0 +1,13 @@
+filename = 'acedium-0.2.7-beta.jar'
+name = 'Nvidium (Forge)'
+side = 'both'
+
+[download]
+hash = 'a8def1a80485ae2fb48e72bac0d44627634c8b1f'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5670191
+project-id = 1092203

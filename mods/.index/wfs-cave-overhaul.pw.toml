@@ -1,13 +1,13 @@
-filename = 'caveoverhaul-forge-1.20.1-1.3.3.1.jar'
+filename = 'caveoverhaul-forge-1.20.1-1.3.3.3.jar'
 name = "WF's Cave Overhaul"
 side = 'both'
 
 [download]
-hash = '291912b0b41090eb298cf56870991ac0dbda15e1'
+hash = '09b2e225b58fc8c9f57706d2f25284b438a1d94f'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 5594528
+file-id = 5626016
 project-id = 946171

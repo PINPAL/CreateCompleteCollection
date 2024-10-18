@@ -1,13 +1,13 @@
-filename = 'mcwifipnp-1.7.1-1.20.1-forge.jar'
+filename = 'mcwifipnp-1.7.3-1.20.1-forge.jar'
 name = 'LAN World Plug-n-Play'
 side = 'both'
 
 [download]
-hash = 'c73ea4a0bf153bde295b24d4db2267a561222f1e7e110fd99e1d16a78f88f0880e4af3902b9cf488aadb692a3f77ef6c099f1fe9764de06f0a2bd6cd04300ad2'
+hash = '0b4635af4aaa09b4cf531968f8972d1b8a6b01dc6228ca4f50d0fa0ea8d57c60647186763654a7f662a8edc58bbe8c546079029be4031765ba2568a28603b9a9'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/RTWpcTBp/versions/Rr0Y3qKG/mcwifipnp-1.7.1-1.20.1-forge.jar'
+url = 'https://cdn.modrinth.com/data/RTWpcTBp/versions/r19tuFwp/mcwifipnp-1.7.3-1.20.1-forge.jar'
 
 [update.modrinth]
 mod-id = 'RTWpcTBp'
-version = 'Rr0Y3qKG'
+version = 'r19tuFwp'

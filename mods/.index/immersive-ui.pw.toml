@@ -1,13 +1,13 @@
-filename = 'immersiveui-forge-0.1.1.jar'
-name = 'Immersive UI'
-side = 'client'
+filename = 'ImmersiveUI-FORGE-0.2.2.jar'
+name = 'ImmersiveUI'
+side = 'both'
 
 [download]
-hash = 'bc0c321e0ea0faa31a5f0656defc60104f710fc680698cd8aca9f1d835cb26bf13a540cbf8542e641b264b2e31826b49f88eb62805af8b7b1ceb81c73d30a8ad'
+hash = '326ff45036c90efc0de93c332fc7e955dd5f142d03d4f275e821bbbf9d27571a5e41a9cd917de370e62ea541da71cbc1fbfe97f722ba7a696e27947da79f8773'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/9wv7LuMc/versions/N7YSAxPo/immersiveui-forge-0.1.1.jar'
+url = 'https://cdn.modrinth.com/data/9wv7LuMc/versions/qiOPMkRn/ImmersiveUI-FORGE-0.2.2.jar'
 
 [update.modrinth]
 mod-id = '9wv7LuMc'
-version = 'N7YSAxPo'
+version = 'qiOPMkRn'

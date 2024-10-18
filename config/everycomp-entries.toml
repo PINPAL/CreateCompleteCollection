@@ -33,6 +33,51 @@
 			argyre = false
 			calorian = false
 
+	[types.stone_type]
+
+		[types.stone_type.supplementaries]
+			ash = true
+
+		[types.stone_type.copperandtuffbackport]
+			chiseled_tuff = true
+
+		[types.stone_type.northstar]
+			mars_stone = true
+			moon_stone = true
+			venus_stone = true
+			mercury_stone = true
+
+		[types.stone_type.create]
+			cut_granite = true
+			cut_diorite = true
+			cut_andesite = true
+			cut_calcite = true
+			cut_dripstone = true
+			cut_deepslate = true
+			cut_tuff = true
+			cut_asurine = true
+			cut_crimsite = true
+			cut_limestone = true
+			cut_ochrum = true
+			cut_scoria = true
+			cut_scorchia = true
+			cut_veridium = true
+
+		[types.stone_type.create_dd]
+			cut_stone = true
+			cut_packed_mud = true
+			cut_amethyst_block = true
+			cut_netherrack = true
+			cut_basalt = true
+			cut_blackstone = true
+			cut_weathered_limestone = true
+			cut_gabbro = true
+			cut_dolomite = true
+
+		[types.stone_type.tfmg]
+			cut_bauxite = true
+			cut_galena = true
+
 #Disables specific entries
 [entries]
 

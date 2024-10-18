@@ -1,0 +1,13 @@
+filename = 'vanity_steel-1.20.x_a.jar'
+name = 'Vanity: Steel Pack'
+side = 'both'
+
+[download]
+hash = '53347121597fbb3648192c14a9604d30005ede36'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5243010
+project-id = 837310

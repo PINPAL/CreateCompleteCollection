@@ -1,13 +1,13 @@
-filename = 'cratedelight-2024.07.12-1.20.1-forge.jar'
-name = 'Crate Delight (Forge)'
+filename = 'cratedelight-24.09.03-1.20-forge.jar'
+name = 'Crate Delight'
 side = 'both'
 
 [download]
-hash = '7c975b91019663680560552f337285ac1c6ca1fa'
+hash = '22ee6dead190145ce08fdc0c7897b03fb30b951d'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 5522199
+file-id = 5691123
 project-id = 958291

@@ -1,0 +1,13 @@
+filename = 'vanity_druid-1.20.x_a.jar'
+name = 'Vanity: Druid Pack'
+side = 'both'
+
+[download]
+hash = '3613c6c83107d6547280c4a95bc9acb52fcbdee7'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5242998
+project-id = 837268
