@@ -51,6 +51,11 @@ global.unifiedIngots.forEach((ingotObject) => {
 			.rarity(rarity)
 			.glow(glow);
 		event
+			.create("cosmic_contraptions:" + ingot + "_nugget_clump")
+			.displayName(formatName(ingot) + " Nugget Clump")
+			.rarity(rarity)
+			.glow(glow);
+		event
 			.create("cosmic_contraptions:" + ingot + "_sheet")
 			.displayName(formatName(ingot) + " Sheet")
 			.rarity(rarity)

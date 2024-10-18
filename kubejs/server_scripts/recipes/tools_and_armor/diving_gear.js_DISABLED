@@ -1,0 +1,130 @@
+function createDivingGearShapedRecipes(event, input, output) {
+	let id = output.split(":")[1];
+	event
+		.shaped(output + "_helmet", ["CCC", "CGC", " O "], {
+			C: "#forge:ingots/copper",
+			G: "#forge:glass",
+			O: input + "_helmet",
+		})
+		.id(`cosmic_contraptions:tools_and_armor/diving_gear/${id}_helmet_crafting`)
+		.modifyResult((inventory, itemstack) => {
+			let item = inventory.find(Item.of(input + "_helmet"));
+			let nbt = item.nbt;
+			if (nbt == null) {
+				nbt = {};
+			}
+			return Item.of(output + "_helmet").withNBT(nbt);
+		});
+
+	event
+		.shaped(output + "_boots", ["CBC", "C C", "A A"], {
+			C: "#forge:ingots/copper",
+			A: "create:andesite_alloy",
+			B: input + "_boots",
+		})
+		.id(`cosmic_contraptions:tools_and_armor/diving_gear/${id}_boots_crafting`)
+		.modifyResult((inventory, itemstack) => {
+			let item = inventory.find(Item.of(input + "_boots"));
+			let nbt = item.nbt;
+			if (nbt == null) {
+				nbt = {};
+			}
+			return Item.of(output + "_boots").withNBT(nbt);
+		});
+}
+
+ServerEvents.recipes((event) => {
+	/*
+	// Upgrading Past Copper (to Iron Armor)
+	event.smithing("minecraft:iron_helmet", "create:copper_diving_helmet", "cosmic_contraptions:iron_stitching");
+	event.smithing("minecraft:iron_boots", "create:copper_diving_boots", "cosmic_contraptions:iron_stitching");
+	event.smithing("minecraft:iron_chestplate", "create:copper_backtank", "cosmic_contraptions:iron_stitching");
+
+	// Diving Gear from Netherite Armor
+	event.smithing("create:netherite_diving_helmet", "minecraft:netherite_helmet", "create:copper_diving_helmet");
+	event.smithing("create:netherite_diving_boots", "minecraft:netherite_boots", "create:copper_diving_boots");
+	event.smithing("create:netherite_backtank", "minecraft:netherite_chestplate", "create:copper_backtank");
+    */
+	// Recipes for upgrade items
+	event
+		.shaped("cosmic_contraptions:diving_faceplate", ["CCC", "CGC", "   "], {
+			C: "#forge:ingots/copper",
+			G: "#forge:glass/colorless",
+		})
+		.id("cosmic_contraptions:tools_and_armor/diving_gear/faceplate");
+	event
+		.shaped("cosmic_contraptions:diving_tank", ["ASA", "CBC", " C "], {
+			A: "create:andesite_alloy",
+			S: "create:shaft",
+			C: "#forge:ingots/copper",
+			B: "#forge:storage_blocks/copper",
+		})
+		.id("cosmic_contraptions:tools_and_armor/diving_gear/tank");
+	event
+		.shaped("cosmic_contraptions:diving_flippers", ["C C", "C C", "A A"], {
+			C: "#forge:ingots/copper",
+			A: "create:andesite_alloy",
+		})
+		.id("cosmic_contraptions:tools_and_armor/diving_gear/flippers");
+
+	// Loop through global tiers
+	for (const tierName in global.tiers) {
+		let tier = global.tiers[tierName];
+
+		// Skip tiers that don't need diving gear
+		// (eg: doesn't have either a needsDivingGear or hasNativeDivingGear property)
+		if (!tier.needsDivingGear && !tier.hasNativeDivingGear) {
+			continue;
+		}
+
+		let divingGearId = `${tier.hasNativeDivingGear ? "create" : "cosmic_contraptions"}:${tierName}_diving`;
+		let originalItemId = `${tier.mod}:${tierName}`;
+
+		// Create backtank recipe (only for native diving gear)
+		if (tier.hasNativeDivingGear) {
+			event
+				.smithing(
+					`create:${tierName}_backtank`,
+					`${tier.mod}:${tierName}_chestplate`,
+					"cosmic_contraptions:diving_tank"
+				)
+				.id(`cosmic_contraptions:tools_and_armor/diving_gear/${tierName}_backtank`);
+		}
+		// Create Boots & Helmet recipes
+		event.smithing(`${divingGearId}_helmet`, `${originalItemId}_helmet`, "cosmic_contraptions:diving_faceplate");
+		event.smithing(`${divingGearId}_boots`, `${originalItemId}_boots`, "cosmic_contraptions:diving_flippers");
+
+		// Skip tiers that cannot be broken
+		if (tier.cannotBeBroken) {
+			continue;
+		}
+
+		// Create broken diving gear recipes
+		global.createToolBreakRecipe(
+			event,
+			divingGearId + "_helmet",
+			`cosmic_contraptions:broken_${tierName}_diving_helmet`
+		);
+		global.createToolBreakRecipe(
+			event,
+			divingGearId + "_boots",
+			`cosmic_contraptions:broken_${tierName}_diving_boots`
+		);
+
+		// Create repairing recipes
+		event
+			.smithing(
+				divingGearId + "_helmet",
+				`cosmic_contraptions:broken_${tierName}_diving_helmet`,
+				`cosmic_contraptions:${tierName}_repair_kit`
+			)
+			.id(`cosmic_contraptions:tools_and_armor/diving_gear/${tierName}_helmet_repairing`);
+		event
+			.smithing(
+				divingGearId + "_boots",
+				`cosmic_contraptions:broken_${tierName}_diving_boots`,
+				`cosmic_contraptions:${tierName}_repair_kit`
+			)
+			.id(`cosmic_contraptions:tools_and_armor/diving_gear/${tierName}_boots_repairing`);
+	}
+});
